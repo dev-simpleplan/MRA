@@ -290,7 +290,11 @@ select:focus {
 .spacer {
     height: 140px;
 }
-
+.letter {
+    display: inline-block;
+    transform-origin: center;
+    perspective: 1000px;
+}
 /* Header Css */
 header.blue {
     background-color: var(--bg-blue);
@@ -454,6 +458,9 @@ Page CSS
     margin-top: 15px;
 }
 
+.hpbc-top h1{
+    text-transform: none;
+}
 /* Homepage Banner */
 
 /* homepage certification */

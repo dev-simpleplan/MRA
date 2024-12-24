@@ -260,7 +260,9 @@
         top: -65px;
         transform: none;
     }
-
+    .exp-image-big img{
+        transform: none;
+    }
     .collection .exp-content {
         padding-left: 0;
     }
@@ -750,7 +752,7 @@
     }
 }
 
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 600px) {
     h1 {
         font-size: 42px;
     }
@@ -834,5 +836,8 @@
     .pfl-img img {
         width: 80px;
         height: 68px;
+    }
+    .partner-item {
+        aspect-ratio: 1;
     }
 }

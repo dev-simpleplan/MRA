@@ -144,31 +144,42 @@ document.addEventListener("DOMContentLoaded", () => {
 
 gsap.registerPlugin(ScrollTrigger);
 
-document.querySelectorAll(".pSection").forEach((section) => {
-  // Apply animation to each .pContent inside the current .pSection
-  section.querySelectorAll(".pContent").forEach((pContent) => {
-    gsap.to(pContent, {
-      yPercent: -200, // Move the content up by 200%
-      opacity: 1, // Ensure the content is visible
-      ease: "none", // No easing (linear)
-      scrollTrigger: {
-        trigger: section, // Trigger when the section comes into view
-        start: "top bottom", // Animation starts when the top of section reaches the bottom of the viewport
-        end: "bottom top", // Animation ends when the bottom of section reaches the top of the viewport
-        scrub: true, // Scrub the animation based on scroll position
-      },
+document.addEventListener("DOMContentLoaded", () => {
+  // Check if the screen width is 1024px or more
+  if (window.innerWidth >= 1024) {
+    // Apply animation to each .pContent inside the current .pSection
+    document.querySelectorAll(".pSection").forEach((section) => {
+      section.querySelectorAll(".pContent").forEach((pContent) => {
+        gsap.to(pContent, {
+          yPercent: -200, // Move the content up by 200%
+          opacity: 1, // Ensure the content is visible
+          ease: "none", // No easing (linear)
+          scrollTrigger: {
+            trigger: section, // Trigger when the section comes into view
+            start: "top bottom", // Animation starts when the top of section reaches the bottom of the viewport
+            end: "bottom top", // Animation ends when the bottom of section reaches the top of the viewport
+            scrub: true, // Scrub the animation based on scroll position
+          },
+        });
+      });
     });
-  });
-});
-gsap.to(".pImage", {
-  yPercent: 10,
-  ease: "none",
-  scrollTrigger: {
-    trigger: ".pSection",
-    start: "top bottom", // the default values
-    end: "bottom top",
-    scrub: true
-  }, 
+
+    // Apply animation to each .pImage inside the current .pSection
+    document.querySelectorAll(".pSection").forEach((section) => {
+      section.querySelectorAll(".pImage").forEach((pImage) => {
+        gsap.to(pImage, {
+          yPercent: 20, // Move the image up by 20%
+          ease: "none", // No easing (linear)
+          scrollTrigger: {
+            trigger: ".pSection",
+            start: "top bottom", // Animation starts when the top of section reaches the bottom of the viewport
+            end: "bottom top", // Animation ends when the bottom of section reaches the top of the viewport
+            scrub: true, // Scrub the animation based on scroll position
+          },
+        });
+      });
+    });
+  }
 });
 
 // in view fade up image animation

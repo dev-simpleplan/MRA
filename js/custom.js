@@ -142,15 +142,46 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // paralax effect
 
-gsap.to(".pContent", {
-  yPercent: -200,
-  ease: "none",
-  scrollTrigger: {
-    trigger: ".pSection",
-    // start: "top bottom", // the default values
-    // end: "bottom top",
-    scrub: true,
-  },
+gsap.registerPlugin(ScrollTrigger);
+
+document.querySelectorAll(".pSection").forEach((section) => {
+  // Apply animation to each .pContent inside the current .pSection
+  section.querySelectorAll(".pContent").forEach((pContent) => {
+    gsap.to(pContent, {
+      yPercent: -200, // Move the content up by 200%
+      opacity: 1, // Ensure the content is visible
+      ease: "none", // No easing (linear)
+      scrollTrigger: {
+        trigger: section, // Trigger when the section comes into view
+        start: "top bottom", // Animation starts when the top of section reaches the bottom of the viewport
+        end: "bottom top", // Animation ends when the bottom of section reaches the top of the viewport
+        scrub: true, // Scrub the animation based on scroll position
+      },
+    });
+  });
 });
 
+// in view fade up image animation
 
+document.addEventListener("DOMContentLoaded", () => {
+  window.addEventListener("scroll", function () {
+    const experienceSection = document.querySelector(".experience");
+    const expImages = document.querySelectorAll(".exp-img");
+
+    // Get the scroll position relative to the document
+    const scrollPosition = window.scrollY;
+
+    // Loop through each .exp-img and add the 'active' class once
+    expImages.forEach((img) => {
+      const imgOffsetTop = img.getBoundingClientRect().top + scrollPosition;
+
+      // Check if the image is 50px into the experience section
+      if (
+        imgOffsetTop - scrollPosition <= window.innerHeight - 50 &&
+        !img.classList.contains("active")
+      ) {
+        img.classList.add("active");
+      }
+    });
+  });
+});

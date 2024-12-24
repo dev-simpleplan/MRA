@@ -317,9 +317,28 @@ header.blue {
     text-transform: uppercase;
     display: flex;
     align-items: center;
-    gap: 6px;
+    gap: 12px;
 }
-.header-wrap ul li a svg{
+.header-bottom ul li a{
+    gap: 0;
+    position: relative;
+}
+.header-bottom ul li a::after{
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: #fff;
+    transition: all .3s ease;
+    transform: scaleX(0);
+    transform-origin: center;     
+}
+.header-bottom ul li a:hover::after{
+    transform: scaleX(1);
+}
+.header-bottom ul li a svg{
     display: none;
 }
 .header-bottom {

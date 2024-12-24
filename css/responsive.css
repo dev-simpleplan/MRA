@@ -42,7 +42,9 @@
     .header-search a p {
         display: none;
     }
-
+    .header-bottom ul li a{
+        gap: 6px;
+    }
     .mobile {
         display: block !important;
     }

@@ -349,6 +349,7 @@ header.blue {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: relative;
 }
 
 .mobile {
@@ -369,6 +370,10 @@ header.blue {
 .header-top-middle {
     width: 162px;
     display: inline-block;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .header-top-middle picture img {

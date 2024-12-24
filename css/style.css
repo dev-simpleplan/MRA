@@ -1496,7 +1496,24 @@ footer {
 .footer-bottom-middle.mob {
     display: none;
 }
-
+.footer-links ul li a{
+    position: relative;
+}
+.footer-links ul li a::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: #fff;
+    transition: all .3s ease;
+    transform: scaleX(0);
+    transform-origin: center;
+}
+.footer-links ul li a:hover::after {
+    transform: scaleX(1);
+}
 /* footer */
 
 /* Homepage */

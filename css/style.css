@@ -585,11 +585,12 @@ Page CSS
     height: 100%;
     object-fit: cover;
     object-position: 70%;
-    transition: all 0.8s ease ;
+    /* transition: all 0.8s ease ; */
 }
 .exp-image-big img{
-    width: 110%;
-    height: 110%;
+    width: 120%;
+    height: 120%;
+    transform: translateY(-10%);
 }
 
 

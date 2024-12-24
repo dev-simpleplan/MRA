@@ -65,3 +65,54 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 });
+
+// animations
+
+// text flip animation
+
+document.addEventListener("DOMContentLoaded", () => {
+  // Select all elements with the class `text-animation`
+  const headings = document.querySelectorAll(".text-animation");
+
+  // Create a GSAP timeline
+  const timeline = gsap.timeline({ defaults: { ease: "power3.out" } });
+
+  // Loop through each heading and create animation
+  headings.forEach((heading, index) => {
+    // Get the text content of the heading
+    const headingText = heading.textContent;
+
+    // Clear the original text
+    heading.textContent = "";
+
+    // Create spans for each letter
+    headingText.split("").forEach((char) => {
+      const span = document.createElement("span");
+      span.classList.add("letter");
+      span.textContent = char === " " ? "\u00A0" : char; // Use non-breaking space for spaces
+      heading.appendChild(span);
+    });
+
+    // Select all letters in the current heading
+    const letters = heading.querySelectorAll(".letter");
+
+    // Add animation for this heading to the timeline
+    timeline.to(
+      heading,
+      { opacity: 1, duration: 0.1 }, // Fade in the heading
+      index === 0 ? 0 : `+=0.1` // Add delay between headings
+    );
+    timeline.fromTo(
+      letters,
+      { rotateY: 90, opacity: 0 },
+      {
+        rotateY: 0,
+        opacity: 1,
+        duration: 0.6,
+        stagger: 0.08, // Delay between each letter animation
+        ease: "power3.out",
+      },
+      ">-0.2" // Slight overlap for smoother transition
+    );
+  });
+});

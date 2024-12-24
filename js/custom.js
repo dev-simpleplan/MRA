@@ -160,28 +160,38 @@ document.querySelectorAll(".pSection").forEach((section) => {
     });
   });
 });
+gsap.to(".pImage", {
+  yPercent: 10,
+  ease: "none",
+  scrollTrigger: {
+    trigger: ".pSection",
+    start: "top bottom", // the default values
+    end: "bottom top",
+    scrub: true
+  }, 
+});
 
 // in view fade up image animation
 
-document.addEventListener("DOMContentLoaded", () => {
-  window.addEventListener("scroll", function () {
-    const experienceSection = document.querySelector(".experience");
-    const expImages = document.querySelectorAll(".exp-img");
+// document.addEventListener("DOMContentLoaded", () => {
+//   window.addEventListener("scroll", function () {
+//     const experienceSection = document.querySelector(".experience");
+//     const expImages = document.querySelectorAll(".exp-img");
 
-    // Get the scroll position relative to the document
-    const scrollPosition = window.scrollY;
+//     // Get the scroll position relative to the document
+//     const scrollPosition = window.scrollY;
 
-    // Loop through each .exp-img and add the 'active' class once
-    expImages.forEach((img) => {
-      const imgOffsetTop = img.getBoundingClientRect().top + scrollPosition;
+//     // Loop through each .exp-img and add the 'active' class once
+//     expImages.forEach((img) => {
+//       const imgOffsetTop = img.getBoundingClientRect().top + scrollPosition;
 
-      // Check if the image is 50px into the experience section
-      if (
-        imgOffsetTop - scrollPosition <= window.innerHeight - 50 &&
-        !img.classList.contains("active")
-      ) {
-        img.classList.add("active");
-      }
-    });
-  });
-});
+//       // Check if the image is 50px into the experience section
+//       if (
+//         imgOffsetTop - scrollPosition <= window.innerHeight - 50 &&
+//         !img.classList.contains("active")
+//       ) {
+//         img.classList.add("active");
+//       }
+//     });
+//   });
+// });

@@ -16,6 +16,62 @@ window.addEventListener("scroll", function () {
   }
 });
 
+// search modal js
+
+document.addEventListener("DOMContentLoaded", () => {
+  const searchButton = document.querySelector(".header-search");
+  const modal = document.querySelector(".search-modal");
+  const modalWrap = document.querySelector(".search-modal-wrap");
+  const modalClose = document.querySelector(".modal-close");
+  const modalOverlay = document.querySelector(".search-modal-overlay");
+  const body = document.body;
+
+  // Function to open the modal
+  const openModal = () => {
+    modal.classList.add("active");
+    modalOverlay.classList.add("active");
+    body.style.overflow = "hidden";
+    body.style.pointerEvents = "none";
+  };
+
+  // Function to close the modal
+  const closeModal = () => {
+    modal.classList.remove("active");
+    modalOverlay.classList.remove("active");
+    body.style.overflow = "";
+    body.style.pointerEvents = "";
+  };
+
+  // Open modal when clicking on the search button
+  searchButton.addEventListener("click", (e) => {
+    e.stopPropagation(); // Prevent event from bubbling up
+    openModal();
+  });
+
+  // Close modal when clicking on the close button
+  modalClose.addEventListener("click", (e) => {
+    e.stopPropagation(); // Prevent event from bubbling up
+    closeModal();
+  });
+
+  // Close modal when clicking outside the .search-modal-wrap
+  document.addEventListener("click", (e) => {
+    if (
+      modal.classList.contains("active") &&
+      !modalWrap.contains(e.target) &&
+      e.target !== searchButton
+    ) {
+      closeModal();
+    }
+  });
+
+  // Prevent modal click from closing itself
+  modalWrap.addEventListener("click", (e) => {
+    e.stopPropagation();
+  });
+});
+
+
 // testimonial slider
 
 document.addEventListener("DOMContentLoaded", function () {

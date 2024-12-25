@@ -31,7 +31,7 @@ document.addEventListener("DOMContentLoaded", () => {
     modal.classList.add("active");
     modalOverlay.classList.add("active");
     body.style.overflow = "hidden";
-    body.style.pointerEvents = "none";
+    wrapper.style.pointerEvents = "none";
   };
 
   // Function to close the modal
@@ -39,7 +39,7 @@ document.addEventListener("DOMContentLoaded", () => {
     modal.classList.remove("active");
     modalOverlay.classList.remove("active");
     body.style.overflow = "";
-    body.style.pointerEvents = "";
+    wrapper.style.pointerEvents = "";
   };
 
   // Open modal when clicking on the search button

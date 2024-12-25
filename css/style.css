@@ -380,7 +380,12 @@ header.blue {
     gap: 27px;
     align-items: center;
 }
-
+.header-top-left ul li a{
+    transition: all .3s ease;
+}
+.header-top-left ul li:hover a{
+    opacity: 0.5;
+}
 .header-top-left a {
     display: flex;
     align-items: center;

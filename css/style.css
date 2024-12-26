@@ -107,6 +107,14 @@ h2 {
     text-decoration-skip-ink: none;
 }
 
+h2.small {
+    line-height: 42px;
+}
+
+h2.tiny {
+    font-size: 42px;
+}
+
 h3 {
     font-size: 32px;
     font-weight: 400;
@@ -120,6 +128,12 @@ h3 {
 h3.big {
     font-size: 35px;
     line-height: 42px;
+}
+
+h3.tiny {
+    font-size: 32px;
+    line-height: 38px;
+    color: var(--head);
 }
 
 h4 {
@@ -156,6 +170,11 @@ p.small {
     line-height: 21px;
 }
 
+p.big {
+    font-size: 18px;
+    line-height: 25px;
+}
+
 .white {
     color: var(--white);
 }
@@ -176,11 +195,31 @@ p.small {
 }
 
 .label.white {
-    color: #D0DEFF;
+    color: #fff;
 }
 
 .label.blue {
     color: var(--label-blue);
+}
+
+.label.big {
+    font-size: 52px;
+    font-weight: 400;
+    line-height: 52px;
+}
+
+.label.mid {
+    font-size: 42px;
+    font-weight: 400;
+    line-height: 42px;
+}
+
+.label2 {
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 16.8px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
 }
 
 .tiny-text {
@@ -241,6 +280,10 @@ a:focus {
     letter-spacing: 3px;
 }
 
+.custom-button.large {
+    padding: 13px 100px;
+}
+
 .custom-button.full-width {
     width: 100%;
 }
@@ -291,6 +334,10 @@ select:focus {
     height: 140px;
 }
 
+.spacer120 {
+    height: 120px;
+}
+
 .letter {
     display: inline-block;
     transform-origin: center;
@@ -298,7 +345,7 @@ select:focus {
 }
 
 /* Search modal */
-.search-modal-overlay{
+.search-modal-overlay {
     position: fixed;
     left: 50%;
     top: 50%;
@@ -309,9 +356,11 @@ select:focus {
     display: none;
     z-index: 98;
 }
-.search-modal-overlay.active{
+
+.search-modal-overlay.active {
     display: block;
 }
+
 .search-modal {
     position: fixed;
     left: 50%;
@@ -378,7 +427,31 @@ header {
     z-index: 10;
 }
 
-header.active {
+header.transparent {
+    transition: all .3s ease;
+}
+
+header.transparent.scrolled {
+    background-color: var(--bg-blue);
+}
+
+header.transparent.scrolled .header-top-middle {
+    background-color: transparent;
+}
+header.transparent.active {
+    background-color: var(--bg-blue);
+}
+
+header.transparent.active .header-top-middle {
+    background-color: transparent;
+}
+
+header.transparent .header-top-middle {
+    background-color: #000;
+    transition: all .3s ease;
+}
+
+header.scrolled {
     box-shadow: 0 1px 6px 0 rgba(32, 33, 36, 0.28);
 }
 
@@ -941,9 +1014,11 @@ Page CSS
 .loc-btn {
     margin-top: 30px;
 }
-.map{
+
+.map {
     margin-top: 52px;
 }
+
 /* Homepage location */
 
 /* Homepage Innovation */
@@ -1034,6 +1109,7 @@ Page CSS
     clip-path: inset(0 0 0 100%);
     opacity: 0;
     transition: all .5s ease-in;
+    transition-delay: .2s;
 }
 
 #testimonial-slider-list li.is-active .test-image {
@@ -1658,7 +1734,439 @@ footer {
 
 /* Homepage */
 
-/* animation */
+/* About Page */
+/* Banner section */
+.about-banner {
+    width: 100%;
+    height: calc(100vh - 141px);
+}
+
+.ab-bg-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: -1;
+}
+
+.ab-bg-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.ab-bg-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.3) 42.98%), linear-gradient(180deg, rgba(0, 0, 0, 0.5) 30.55%, rgba(0, 0, 0, 0) 45.69%);
+
+}
+
+.ab-content {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    padding-left: 115px;
+    padding-bottom: 98px;
+}
+
+.ab-content h1 {
+    font-size: 165px;
+    font-weight: 400;
+    line-height: 118.8px;
+    letter-spacing: -0.04em;
+}
+
+.ab-content-wrap p {
+    margin-top: 66px;
+    max-width: 40ch;
+}
+
+.ab-content-wrap a {
+    margin-top: 35px;
+}
+
+/* Banner section */
+
+/* Resources section */
+.resources {
+    padding: 0 115px;
+    padding-top: 55px;
+    padding-bottom: 40px;
+}
+
+.resources-wrap {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+
+.resource-left {
+    width: 55%;
+}
+
+.resource-left .rl-top p {
+    color: #172A55;
+    margin-top: 15px;
+}
+
+.resource-right {
+    width: 40%;
+}
+
+.rl-bottom {
+    margin-top: 80px;
+    max-width: 60ch;
+}
+
+.rl-bottom-content {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.rl-bottom-img {
+    margin-top: 48px;
+    aspect-ratio: 1/1;
+    width: 250px;
+}
+.rl-bottom-img.mob{
+    display: none;
+}
+.rl-bottom-img img,
+.rr-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Resources section */
+
+/* Value section */
+.value {
+    padding: 81px 33px;
+    background: url('../images/AboutPage/cream-strip-bg.png');
+    /* background-repeat: no-repeat; */
+    background-size: contain;
+}
+
+.value-wrap {
+    width: 100%;
+    height: auto;
+    position: relative;
+}
+
+.value-bg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+}
+
+.value-bg .value-bg-overlay {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.2) 10.71%),
+        linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.1) 4.18%);
+    position: relative;
+    z-index: 2;
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.value-bg .value-bg-img {
+    width: 100%;
+    height: 100%;
+}
+
+.value-bg .value-bg-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.value-content {
+    display: flex;
+    flex-direction: column;
+    gap: 120px;
+    position: relative;
+    z-index: 3;
+}
+
+.value-content-top {
+    padding-top: 65px;
+    padding-left: 39px;
+    max-width: 52ch;
+}
+
+.value-content-top p {
+    margin-top: 40px;
+}
+
+.value-content-bottom {
+    padding: 100px 90px;
+    background-color: rgba(255, 246, 229, 1);
+    width: fit-content;
+    margin-left: auto;
+}
+
+.value-content-bottom p {
+    max-width: 42ch;
+    margin-top: 40px;
+}
+
+/* Value section */
+
+/* Partnership section */
+.partnership {
+    padding-top: 85px;
+}
+
+.partnership-top {
+    text-align: center;
+    max-width: 80ch;
+    margin: 0 auto;
+}
+
+.partnership-middle {
+    text-align: center;
+    margin-top: 125px;
+}
+
+.partnership-grid {
+    margin-top: 50px;
+    display: flex;
+    gap: 82px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.partner-img {
+    width: 100%;
+    height: 70px;
+    padding: 0 45px;
+}
+
+.partner-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.partner-grid-item p {
+    max-width: 43ch;
+    margin: 0 auto;
+    margin-top: 30px;
+}
+
+.partnership-bottom {
+    text-align: center;
+    margin-top: 80px;
+}
+
+/* Partnership section */
+
+/* Milestone section */
+.milestone {
+    padding: 68px 0;
+    background: url('../images/AboutPage/cream-strip-bg.png');
+    /* background-repeat: no-repeat; */
+    background-size: contain;
+}
+
+.milestone-top {
+    text-align: center;
+}
+
+.milestone-bottom {
+    margin-top: 105px;
+    display: flex;
+    gap: 65px;
+    justify-content: center;
+    text-align: center;
+    flex-wrap: wrap;
+}
+
+.counter {
+    font-family: var(--teodor);
+    font-size: 62px;
+    font-weight: 400;
+    /* line-height: 130.18px; */
+    letter-spacing: -0.04em;
+    color: #172A55;
+}
+
+/* Milestone section */
+
+/* About Location section */
+.about-location .loc-text-wrap a {
+    color: #172A55;
+    font-weight: 600;
+}
+
+.about-location .loc-text {
+    width: 34%;
+}
+
+/* About Location section */
+
+/* FAQ */
+
+.faq-section {
+    padding-left: 115px;
+    padding-top: 65px;
+    padding-bottom: 85px;
+}
+
+.faq.faq-bg-colored {
+    background-color: #F7F1E5;
+}
+
+.faq-section-wrap {
+    display: flex;
+    justify-content: space-between;
+}
+
+.faq-left {
+    width: 58%;
+}
+
+.fi-title {
+    max-width: 55ch;
+}
+
+.accordion {
+    max-width: 100%;
+    margin-top: 60px;
+}
+
+.accordion-item {
+    border: none;
+    border-bottom: .8px solid #EFB083;
+    background: transparent;
+}
+
+.accordion-header {
+    padding-right: 11px;
+    padding-top: 27px;
+    padding-bottom: 25px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    font-size: 18px;
+    line-height: 21.6px;
+    letter-spacing: -0.01em;
+    text-align: left;
+    color: #1A1A1A;
+    font-family: var(--teodor);
+}
+.acc-icon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.acc-icon span {
+    display: inline-block;
+    width: 14px;
+    height: 1px;
+    background-color: #172A55;
+}
+
+.accordion-header .acc-icon span:nth-child(2) {
+    transform: rotate(90deg);
+    transition: all .3s ease;
+   margin-left: -50%;
+    
+}
+.accordion-header.active .acc-icon span:nth-child(2) {
+    transform: rotate(0deg);
+}
 
 
-/* animation */
+.accordion-content {
+    overflow: hidden;
+    transition: height 0.3s ease-out;
+    height: 0;
+}
+
+.accordion-content-inner {
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    max-width: 65ch;
+}
+
+.accordion-content-inner p {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 21.44px;
+    letter-spacing: 0.01em;
+    text-align: left;
+}
+
+.accordion-content-inner p a {
+    border-bottom: 1px solid #5d5d5d;
+}
+
+.accordion-content-inner ul li {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22.4px;
+    color: #5d5d5d;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding-left: 8px;
+}
+.accordion-content-inner ul li::before{
+    content: '';
+    background-color: #5d5d5d;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+}
+.accordion-content.active .accordion-content-inner {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.accordion-item:last-of-type {
+    border-radius: 0;
+}
+
+.faq-right {
+    width: 34%;
+    position: relative;
+    margin-top: 65px;
+}
+
+.fir-img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.fir-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* FAQ */
+
+/* About Page */

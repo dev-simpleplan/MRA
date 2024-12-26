@@ -998,7 +998,7 @@ Page CSS
 .loc-text-wrap {
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 1px;
 }
 
 .loc-text-wrap p a {

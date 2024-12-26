@@ -904,6 +904,7 @@ Page CSS
 .location {
     background-color: #F1E8D6;
     padding: 50px 0;
+    padding-bottom: 0;
 }
 
 .loc-content {
@@ -940,7 +941,9 @@ Page CSS
 .loc-btn {
     margin-top: 30px;
 }
-
+.map{
+    margin-top: 52px;
+}
 /* Homepage location */
 
 /* Homepage Innovation */

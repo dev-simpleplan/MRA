@@ -9,10 +9,10 @@ window.addEventListener("scroll", function () {
 
   if (window.scrollY > 0) {
     // If the page is scrolled, add the 'active' class
-    header.classList.add("active");
+    header.classList.add("scrolled");
   } else {
     // If the page is at the top, remove the 'active' class
-    header.classList.remove("active");
+    header.classList.remove("scrolled");
   }
 });
 
@@ -164,12 +164,14 @@ document.addEventListener("DOMContentLoaded", () => {
   // Select the elements
   const hamburgerIcon = document.querySelector(".hamburger-icon");
   const headerBottom = document.querySelector(".header-bottom");
+  const header = document.querySelector("header.transparent");
   const body = document.body;
 
   // Function to toggle active class
   const toggleActiveClass = () => {
     const isActive = headerBottom.classList.contains("active");
     headerBottom.classList.toggle("active", !isActive);
+    header.classList.toggle("active", !isActive);
     hamburgerIcon.classList.toggle("active", !isActive);
     body.style.overflow = isActive ? "" : "hidden"; // Enable/disable body scroll
   };
@@ -187,6 +189,7 @@ document.addEventListener("DOMContentLoaded", () => {
       !hamburgerIcon.contains(event.target)
     ) {
       headerBottom.classList.remove("active");
+      header.classList.remove("active");
       hamburgerIcon.classList.remove("active");
       body.style.overflow = ""; // Restore body scroll
     }
@@ -286,6 +289,102 @@ document.addEventListener("DOMContentLoaded", () => {
           },
         });
       }
+    });
+  }
+});
+
+// counter animation
+
+document.addEventListener("DOMContentLoaded", () => {
+  const counters = document.querySelectorAll(".counter span");
+  const milestone = document.querySelector(".milestone");
+
+  const startCounterAnimation = (counter) => {
+    const target = +counter.textContent; // Get the target number directly from the content
+    const duration = 1000; // Animation duration in ms
+    const stepTime = 10; // Time between each update in ms
+    const steps = duration / stepTime; // Number of steps
+    const increment = target / steps;
+
+    let current = 0;
+    counter.textContent = "0"; // Start from 0
+    const updateCounter = () => {
+      current += increment;
+      if (current >= target) {
+        counter.textContent = target; // Ensure exact target value
+        clearInterval(interval);
+      } else {
+        counter.textContent = Math.ceil(current);
+      }
+    };
+
+    const interval = setInterval(updateCounter, stepTime);
+  };
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          counters.forEach((counter) => startCounterAnimation(counter));
+          observer.disconnect(); // Stop observing after animation starts
+        }
+      });
+    },
+    { threshold: 0.5 }
+  );
+
+  observer.observe(milestone);
+});
+
+// FAQ
+document.addEventListener("DOMContentLoaded", () => {
+  const faqSection = document.querySelector(".faq");
+
+  if (faqSection) {
+    // Accordion functionality
+    document.querySelectorAll(".accordion-header").forEach((button) => {
+      button.addEventListener("click", () => {
+        const accordionContent = button.nextElementSibling;
+        const isOpening = !button.classList.contains("active");
+
+        // Close all accordion items
+        document.querySelectorAll(".accordion-content").forEach((content) => {
+          if (content !== accordionContent) {
+            content.style.height = "0px";
+            content.classList.remove("active");
+            content.previousElementSibling.classList.remove("active");
+          }
+        });
+
+        // Toggle the clicked accordion item
+        if (isOpening) {
+          button.classList.add("active");
+          accordionContent.classList.add("active");
+          accordionContent.style.height =
+            accordionContent.scrollHeight + 24 + "px";
+        } else {
+          button.classList.remove("active");
+          accordionContent.classList.remove("active");
+          accordionContent.style.height = "0px";
+        }
+      });
+    });
+
+    // Open the first FAQ by default
+    const firstButton = document.querySelector(".accordion-header");
+    const firstContent = firstButton.nextElementSibling;
+
+    firstButton.classList.add("active");
+    firstContent.classList.add("active");
+    firstContent.style.height = firstContent.scrollHeight + 18 + "px";
+
+    // Ensure smooth transitions when window is resized
+    window.addEventListener("resize", () => {
+      document
+        .querySelectorAll(".accordion-content.active")
+        .forEach((content) => {
+          content.style.height = content.scrollHeight + "px";
+        });
     });
   }
 });

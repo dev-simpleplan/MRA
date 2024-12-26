@@ -1,3 +1,15 @@
+@media only screen and (min-width: 1500px) {
+    .exp-content{
+        width: 40%;
+        padding-left: 0px;
+    }
+    .exp-content-wrap {
+        max-width: 100%;
+    }
+    .collection .exp-content{
+        padding-left: 0;
+    }
+}
 @media only screen and (max-width: 1300px) {
     .footor-socials {
         gap: 15px;
@@ -501,7 +513,9 @@
         transform: none;
         opacity: 1;
     }
-
+    .search-modal-wrap{
+        width: 80%;
+    }
 }
 
 @media only screen and (max-width: 767px) {
@@ -753,6 +767,9 @@
     .tip-item-content-wrap {
         transform: translateY(0);
     }
+    .map iframe {
+        height: 400px;
+    }
 } 
 
 @media only screen and (max-width: 600px) {
@@ -842,5 +859,8 @@
     }
     .partner-item {
         aspect-ratio: 1;
+    }
+    .search-modal-wrap{
+        width: 90%;
     }
 }

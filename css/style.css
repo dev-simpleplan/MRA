@@ -1025,7 +1025,10 @@ Page CSS
 .innovation .exp-image-big {
     width: 55%;
 }
-
+.innovation .text{
+    margin-top: 160px;
+    gap: 15px;
+}
 /* Homepage Innovation */
 
 /* Homepage testimonial */
@@ -1334,6 +1337,7 @@ Page CSS
 .find-feature-item .ffi-text p {
     font-weight: 600;
     line-height: 22.4px;
+    color: rgba(26, 26, 26, 1);
 }
 
 /* Homepage Find */

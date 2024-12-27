@@ -1,6 +1,6 @@
-// aos initiate
-AOS.init();
-// aos initiate
+// lenis initiate
+
+// lenis initiate
 
 // nabar sticky
 // Function to add/remove 'active' class to the header when scrolling
@@ -18,58 +18,6 @@ window.addEventListener("scroll", function () {
 
 // search modal js
 
-// document.addEventListener("DOMContentLoaded", () => {
-//   const searchButton = document.querySelector(".header-search");
-//   const modal = document.querySelector(".search-modal");
-//   const modalWrap = document.querySelector(".search-modal-wrap");
-//   const modalClose = document.querySelector(".modal-close");
-//   const modalOverlay = document.querySelector(".search-modal-overlay");
-//   const body = document.body;
-
-//   // Function to open the modal
-//   const openModal = () => {
-//     modal.classList.add("active");
-//     modalOverlay.classList.add("active");
-//     body.style.overflow = "hidden";
-//     // wrapper.style.pointerEvents = "none";
-//   };
-
-//   // Function to close the modal
-//   const closeModal = () => {
-//     modal.classList.remove("active");
-//     modalOverlay.classList.remove("active");
-//     body.style.overflow = "";
-//     // wrapper.style.pointerEvents = "";
-//   };
-
-//   // Open modal when clicking on the search button
-//   searchButton.addEventListener("click", (e) => {
-//     e.stopPropagation(); // Prevent event from bubbling up
-//     openModal();
-//   });
-
-//   // Close modal when clicking on the close button
-//   modalClose.addEventListener("click", (e) => {
-//     e.stopPropagation(); // Prevent event from bubbling up
-//     closeModal();
-//   });
-
-//   // Close modal when clicking outside the .search-modal-wrap
-//   document.addEventListener("click", (e) => {
-//     if (
-//       modal.classList.contains("active") &&
-//       !modalWrap.contains(e.target) &&
-//       e.target !== searchButton
-//     ) {
-//       closeModal();
-//     }
-//   });
-
-//   // Prevent modal click from closing itself
-//   modalWrap.addEventListener("click", (e) => {
-//     e.stopPropagation();
-//   });
-// });
 document.addEventListener("DOMContentLoaded", () => {
   const searchButtons = document.querySelectorAll(".header-search"); // Select all header-search buttons
   const modal = document.querySelector(".search-modal");
@@ -137,6 +85,8 @@ document.addEventListener("DOMContentLoaded", function () {
     splide.mount();
   }
 });
+
+// Tips js
 
 document.addEventListener("DOMContentLoaded", function () {
   const tipsContainer = document.querySelector(".tips");
@@ -207,54 +157,100 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // text flip animation
 
-document.addEventListener("DOMContentLoaded", () => {
-  // Select all elements with the class `text-animation`
-  const headings = document.querySelectorAll(".text-animation");
+document.addEventListener("DOMContentLoaded", function () {
+  gsap.registerPlugin(SplitText);
 
-  // Create a GSAP timeline
-  const timeline = gsap.timeline({ defaults: { ease: "power4.out" } });
+  // Function to initialize the animation for each element
+  function initializeAnimation(target) {
+    if (target) {
+      var tl = gsap.timeline({
+        paused: true, // Pause the timeline initially
+      });
+      var mySplitText = new SplitText(target, { type: "words,chars" }),
+        chars = mySplitText.chars; // An array of all the divs that wrap each character
 
-  // Loop through each heading and create animation
-  headings.forEach((heading, index) => {
-    // Get the text content of the heading
-    const headingText = heading.textContent;
+      gsap.set(target, { perspective: 400 });
 
-    // Clear the original text
-    heading.textContent = "";
+      console.log(chars);
 
-    // Create spans for each letter
-    headingText.split("").forEach((char) => {
-      const span = document.createElement("span");
-      span.classList.add("letter");
-      span.textContent = char === " " ? "\u00A0" : char; // Use non-breaking space for spaces
-      heading.appendChild(span);
+      tl.from(chars, {
+        duration: 0.8,
+        opacity: 0,
+        scale: 1,
+        y: -20,
+        rotationY: 180,
+        transformOrigin: "0% 50% 10",
+        ease: "back",
+        stagger: 0.04,
+      });
+
+      tl.restart(); // Trigger the animation
+    }
+  }
+
+  // Intersection Observer to check if any #letter-animation element is in view
+  const observer = new IntersectionObserver(
+    (entries, observer) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          initializeAnimation(entry.target); // Initialize the animation for each element
+          observer.unobserve(entry.target); // Stop observing after initialization
+        }
+      });
+    },
+    { threshold: 0.3 } // Trigger when 30% of the element is visible
+  );
+
+  // Get all elements with the class 'letter-animation' (or use any other selector)
+  const targets = document.querySelectorAll(".letter-animation");
+  if (targets.length) {
+    targets.forEach((target) => {
+      observer.observe(target); // Observe each element with the class
     });
+  }
+});
 
-    // Select all letters in the current heading
-    const letters = heading.querySelectorAll(".letter");
+// Text fade in from below
 
-    // Add animation for this heading to the timeline
-    timeline.to(
-      heading,
-      { opacity: 1, duration: 1.5 }, // Fade in the heading
-      index === 0 ? 0 : `-=1` // Small delay, just enough to transition smoothly
-    );
+document.addEventListener("DOMContentLoaded", function () {
+  // Function to animate children of the section with a staggered effect
+  const animateTextOnScroll = (section) => {
+    const children = section.querySelectorAll(".fade-in-text"); // Select target child elements
+    if (children.length > 0) {
+      gsap.fromTo(
+        children,
+        { opacity: 0, y: 100 }, // Initial state
+        {
+          opacity: 1, // Final state
+          y: 0, // Moves to its original position
+          duration: 1,
+          ease: "ease",
+          stagger: 0.2, // Stagger delay between animations
+        }
+      );
+    }
+  };
 
-    // Animate letters for the current heading
-    timeline.fromTo(
-      letters,
-      { rotateY: 90, opacity: 0, scale: 0.8 }, // Initial state with a subtle scale effect
-      {
-        rotateY: 0,
-        opacity: 1,
-        scale: 1, // Scale back to normal
-        duration: 0.6, // Duration for smoother animation
-        stagger: 0.05, // Reduce stagger for smoother flow
-        ease: "expo.out", // Smooth easing
+  // Select all sections with the 'text-animate' class
+  const sections = document.querySelectorAll(".text-animate");
+
+  if (sections.length > 0) {
+    // Create a single Intersection Observer instance for better performance
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            animateTextOnScroll(entry.target); // Animate the section's children
+            observer.unobserve(entry.target); // Unobserve the section after animating
+          }
+        });
       },
-      ">-1" // Slight overlap to make animations feel continuous
+      { threshold: 0.1 } // Trigger when 10% of the section is visible
     );
-  });
+
+    // Observe each section
+    sections.forEach((section) => observer.observe(section));
+  } 
 });
 
 // paralax effect
@@ -298,49 +294,6 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
   }
-});
-
-// counter animation
-
-document.addEventListener("DOMContentLoaded", () => {
-  const counters = document.querySelectorAll(".counter span");
-  const milestone = document.querySelector(".milestone");
-
-  const startCounterAnimation = (counter) => {
-    const target = +counter.textContent; // Get the target number directly from the content
-    const duration = 1000; // Animation duration in ms
-    const stepTime = 10; // Time between each update in ms
-    const steps = duration / stepTime; // Number of steps
-    const increment = target / steps;
-
-    let current = 0;
-    counter.textContent = "0"; // Start from 0
-    const updateCounter = () => {
-      current += increment;
-      if (current >= target) {
-        counter.textContent = target; // Ensure exact target value
-        clearInterval(interval);
-      } else {
-        counter.textContent = Math.ceil(current);
-      }
-    };
-
-    const interval = setInterval(updateCounter, stepTime);
-  };
-
-  const observer = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          counters.forEach((counter) => startCounterAnimation(counter));
-          observer.disconnect(); // Stop observing after animation starts
-        }
-      });
-    },
-    { threshold: 0.5 }
-  );
-
-  observer.observe(milestone);
 });
 
 // FAQ

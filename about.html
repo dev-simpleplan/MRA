@@ -10,6 +10,7 @@
     <!-- CSS Starts-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css" />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/lenis@1.1.18/dist/lenis.css">
     <link href="css/style.css" rel="stylesheet" />
     <link href="css/responsive.css" rel="stylesheet" />
 
@@ -277,7 +278,7 @@
             <div class="spacer120"></div>
 
             <!-- Resources section -->
-            <div class="resources">
+            <section class="resources">
                 <div class="container">
                     <div class="resources-wrap">
                         <div class="resource-left">
@@ -327,56 +328,416 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </section>
             <!-- Resources section -->
 
             <div class="spacer120"></div>
 
             <!-- History Slider Section -->
-            <div class="history-slider"></div>
+            <section class="history-slider">
+                <div class="container">
+                    <div class="hs-wrapper">
+                        <div class="hs-left">
+                            <div class="hs-left-head">
+                                <div class="label mid">Our</div>
+                                <h2 class="white">History</h2>
+                                <p class="">From humble beginnings to becoming a household name, we've consistently
+                                    raised the bar in producing the best quality mattresses to meet our customers'
+                                    needs.</p>
+                            </div>
+                            <div class="hs-right mob">
+                                <div class="hs-right-slider">
+                                    <div class="splide right-slider" id="right-slider" role="group"
+                                        aria-label="Splide Basic HTML Example">
+                                        <div class="splide__track">
+                                            <ul class="splide__list">
+                                                <li class="splide__slide">
+                                                    <div class="hs-right-slide">
+                                                        <div class="hsrs-img">
+                                                            <picture>
+                                                                <source media="(max-width:991px)"
+                                                                    srcset="images/AboutPage/history-slide-1.png">
+                                                                <source media="(max-width:767px)"
+                                                                    srcset="images/AboutPage/history-slide-1.png">
+                                                                <img src="images/AboutPage/history-slide-1.png"
+                                                                    alt="About-Us">
+                                                            </picture>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="splide__slide">
+                                                    <div class="hs-right-slide">
+                                                        <div class="hsrs-img">
+                                                            <picture>
+                                                                <source media="(max-width:991px)"
+                                                                    srcset="images/AboutPage/history-slide-1.png">
+                                                                <source media="(max-width:767px)"
+                                                                    srcset="images/AboutPage/history-slide-1.png">
+                                                                <img src="images/AboutPage/history-slide-1.png"
+                                                                    alt="About-Us">
+                                                            </picture>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="splide__slide">
+                                                    <div class="hs-right-slide">
+                                                        <div class="hsrs-img">
+                                                            <picture>
+                                                                <source media="(max-width:991px)"
+                                                                    srcset="images/AboutPage/history-slide-1.png">
+                                                                <source media="(max-width:767px)"
+                                                                    srcset="images/AboutPage/history-slide-1.png">
+                                                                <img src="images/AboutPage/history-slide-1.png"
+                                                                    alt="About-Us">
+                                                            </picture>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="splide__slide">
+                                                    <div class="hs-right-slide">
+                                                        <div class="hsrs-img">
+                                                            <picture>
+                                                                <source media="(max-width:991px)"
+                                                                    srcset="images/AboutPage/history-slide-1.png">
+                                                                <source media="(max-width:767px)"
+                                                                    srcset="images/AboutPage/history-slide-1.png">
+                                                                <img src="images/AboutPage/history-slide-1.png"
+                                                                    alt="About-Us">
+                                                            </picture>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="splide__progress">
+                                            <div class="splide__progress__bar">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="hs-left-slider">
+                                <div class="splide" id="left-slider" role="group"
+                                    aria-label="Splide Basic HTML Example">
+                                    <div class="splide__arrows splide__arrows--ltr">
+                                        <button class="splide__arrow splide__arrow--prev" type="button"
+                                            aria-label="Previous slide" aria-controls="testimonial-slider-track"
+                                            disabled="">
+                                            <svg width="9" height="15" viewBox="0 0 9 15" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M1.64865 1.49219L7.64865 7.49219L1.64865 13.4922"
+                                                    stroke="white" stroke-width="1.5" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                            </svg>
+                                        </button>
+                                        <button class="splide__arrow splide__arrow--next" type="button"
+                                            aria-label="Next slide" aria-controls="testimonial-slider-track">
+                                            <svg width="9" height="15" viewBox="0 0 9 15" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M1.64865 1.49219L7.64865 7.49219L1.64865 13.4922"
+                                                    stroke="white" stroke-width="1.5" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                            </svg>
+                                        </button>
+                                    </div>
+                                    <div class="splide__track">
+                                        <ul class="splide__list">
+                                            <li class="splide__slide">
+                                                <div class="hs-left-slide">
+                                                    <div class="hsls-top">
+                                                        <p class="big">How?</p>
+                                                        <p class="big">Mattress technologies and manufacturing processes
+                                                            have
+                                                            evolved over time, and we've kept up!</p>
+                                                    </div>
+                                                    <div class="hsls-bottom">
+                                                        <h4 class="big">Memory foam and latex</h4>
+                                                        <p class="">These materials provide superior pressure relief,
+                                                            motion
+                                                            isolation, and body contouring. Latex also offers a more
+                                                            breathable and
+                                                            responsive feel.</p>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="splide__slide">
+                                                <div class="hs-left-slide">
+                                                    <div class="hsls-top">
+                                                        <p class="big">How?</p>
+                                                        <p class="big">Mattress technologies and manufacturing processes
+                                                            have
+                                                            evolved over time, and we've kept up!</p>
+                                                    </div>
+                                                    <div class="hsls-bottom">
+                                                        <h4 class="big">Memory foam and latex</h4>
+                                                        <p class="">These materials provide superior pressure relief,
+                                                            motion
+                                                            isolation, and body contouring. Latex also offers a more
+                                                            breathable and
+                                                            responsive feel.</p>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="splide__slide">
+                                                <div class="hs-left-slide">
+                                                    <div class="hsls-top">
+                                                        <p class="big">How?</p>
+                                                        <p class="big">Mattress technologies and manufacturing processes
+                                                            have
+                                                            evolved over time, and we've kept up!</p>
+                                                    </div>
+                                                    <div class="hsls-bottom">
+                                                        <h4 class="big">Memory foam and latex</h4>
+                                                        <p class="">These materials provide superior pressure relief,
+                                                            motion
+                                                            isolation, and body contouring. Latex also offers a more
+                                                            breathable and
+                                                            responsive feel.</p>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="splide__slide">
+                                                <div class="hs-left-slide">
+                                                    <div class="hsls-top">
+                                                        <p class="big">How?</p>
+                                                        <p class="big">Mattress technologies and manufacturing processes
+                                                            have
+                                                            evolved over time, and we've kept up!</p>
+                                                    </div>
+                                                    <div class="hsls-bottom">
+                                                        <h4 class="big">Memory foam and latex</h4>
+                                                        <p class="">These materials provide superior pressure relief,
+                                                            motion
+                                                            isolation, and body contouring. Latex also offers a more
+                                                            breathable and
+                                                            responsive feel.</p>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="hs-right desk">
+                            <div class="hs-right-slider">
+                                <div class="splide right-slider" id="right-slider" role="group"
+                                    aria-label="Splide Basic HTML Example">
+                                    <div class="splide__track">
+                                        <ul class="splide__list">
+                                            <li class="splide__slide">
+                                                <div class="hs-right-slide">
+                                                    <div class="hsrs-img">
+                                                        <picture>
+                                                            <source media="(max-width:991px)"
+                                                                srcset="images/AboutPage/history-slide-1.png">
+                                                            <source media="(max-width:767px)"
+                                                                srcset="images/AboutPage/history-slide-1.png">
+                                                            <img src="images/AboutPage/history-slide-1.png"
+                                                                alt="About-Us">
+                                                        </picture>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="splide__slide">
+                                                <div class="hs-right-slide">
+                                                    <div class="hsrs-img">
+                                                        <picture>
+                                                            <source media="(max-width:991px)"
+                                                                srcset="images/AboutPage/history-slide-1.png">
+                                                            <source media="(max-width:767px)"
+                                                                srcset="images/AboutPage/history-slide-1.png">
+                                                            <img src="images/AboutPage/history-slide-1.png"
+                                                                alt="About-Us">
+                                                        </picture>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="splide__slide">
+                                                <div class="hs-right-slide">
+                                                    <div class="hsrs-img">
+                                                        <picture>
+                                                            <source media="(max-width:991px)"
+                                                                srcset="images/AboutPage/history-slide-1.png">
+                                                            <source media="(max-width:767px)"
+                                                                srcset="images/AboutPage/history-slide-1.png">
+                                                            <img src="images/AboutPage/history-slide-1.png"
+                                                                alt="About-Us">
+                                                        </picture>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="splide__slide">
+                                                <div class="hs-right-slide">
+                                                    <div class="hsrs-img">
+                                                        <picture>
+                                                            <source media="(max-width:991px)"
+                                                                srcset="images/AboutPage/history-slide-1.png">
+                                                            <source media="(max-width:767px)"
+                                                                srcset="images/AboutPage/history-slide-1.png">
+                                                            <img src="images/AboutPage/history-slide-1.png"
+                                                                alt="About-Us">
+                                                        </picture>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="splide__progress">
+                                        <div class="splide__progress__bar">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
             <!-- History Slider Section -->
 
             <div class="spacer120"></div>
 
             <!-- Values Section -->
-            <div class="value">
-                <div class="container-fluid">
-                    <div class="value-wrap">
-                        <div class="value-bg">
-                            <div class="value-bg-overlay"></div>
-                            <div class="value-bg-img">
-                                <picture>
-                                    <source media="(max-width:991px)" srcset="images/AboutPage/value-bg.png" />
-                                    <source media="(max-width:767px)" srcset="images/AboutPage/value-bg.png" />
-                                    <img src="images/AboutPage/value-bg.png" alt="value-bg" />
-                                </picture>
-                            </div>
-                        </div>
-                        <div class="value-content">
-                            <div class="value-content-top">
-                                <div class="label white mid">
-                                    Our values
+            <section class="value">
+                <div class="value-slide">
+                    <div class="container-fluid">
+                        <div class="value-wrap">
+                            <div class="value-bg">
+                                <div class="value-bg-overlay"></div>
+                                <div class="value-bg-img">
+                                    <picture>
+                                        <source media="(max-width:991px)" srcset="images/AboutPage/value-1.png" />
+                                        <source media="(max-width:767px)" srcset="images/AboutPage/value-1.png" />
+                                        <img src="images/AboutPage/value-1.png" alt="value-bg" />
+                                    </picture>
                                 </div>
-                                <h2 class="white small">Mattress Resources</h2>
-                                <p class="white big">The values that guide us here at Mattress Resources Australia can
-                                    help you trust the integrity and excellence of our products and service.</p>
                             </div>
-                            <div class="value-content-bottom">
-                                <h2 class="small">Quality</h2>
-                                <p class="big">Upholding strict standards to produce durable, high-performance sleep
-                                    products.</p>
+                            <div class="value-content">
+                                <div class="value-content-top">
+                                    <div class="label white mid">
+                                        Our values
+                                    </div>
+                                    <h2 class="white small">Mattress Resources</h2>
+                                    <p class="white big">The values that guide us here at Mattress Resources Australia
+                                        can
+                                        help you trust the integrity and excellence of our products and service.</p>
+                                </div>
+                                <div class="value-content-bottom">
+                                    <h2 class="small">Quality</h2>
+                                    <p class="big">Upholding strict standards to produce durable, high-performance sleep
+                                        products.</p>
+                                </div>
                             </div>
                         </div>
-                    </div>
 
+                    </div>
                 </div>
-            </div>
+                <div class="value-slide">
+                    <div class="container-fluid">
+                        <div class="value-wrap">
+                            <div class="value-bg">
+                                <div class="value-bg-overlay"></div>
+                                <div class="value-bg-img">
+                                    <picture>
+                                        <source media="(max-width:991px)" srcset="images/AboutPage/value-2.png" />
+                                        <source media="(max-width:767px)" srcset="images/AboutPage/value-2.png" />
+                                        <img src="images/AboutPage/value-2.png" alt="value-2" />
+                                    </picture>
+                                </div>
+                            </div>
+                            <div class="value-content">
+                                <div class="value-content-top">
+                                    <div class="label white mid">
+                                        Our values
+                                    </div>
+                                    <h2 class="white small">Mattress Resources</h2>
+                                    <p class="white big">The values that guide us here at Mattress Resources Australia
+                                        can
+                                        help you trust the integrity and excellence of our products and service.</p>
+                                </div>
+                                <div class="value-content-bottom">
+                                    <h2 class="small">Quality</h2>
+                                    <p class="big">Upholding strict standards to produce durable, high-performance sleep
+                                        products.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="value-slide">
+                    <div class="container-fluid">
+                        <div class="value-wrap">
+                            <div class="value-bg">
+                                <div class="value-bg-overlay"></div>
+                                <div class="value-bg-img">
+                                    <picture>
+                                        <source media="(max-width:991px)" srcset="images/AboutPage/value-3.png" />
+                                        <source media="(max-width:767px)" srcset="images/AboutPage/value-3.png" />
+                                        <img src="images/AboutPage/value-3.png" alt="value-3" />
+                                    </picture>
+                                </div>
+                            </div>
+                            <div class="value-content">
+                                <div class="value-content-top">
+                                    <div class="label white mid">
+                                        Our values
+                                    </div>
+                                    <h2 class="white small">Mattress Resources</h2>
+                                    <p class="white big">The values that guide us here at Mattress Resources Australia
+                                        can
+                                        help you trust the integrity and excellence of our products and service.</p>
+                                </div>
+                                <div class="value-content-bottom">
+                                    <h2 class="small">Quality</h2>
+                                    <p class="big">Upholding strict standards to produce durable, high-performance sleep
+                                        products.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="value-slide">
+                    <div class="container-fluid">
+                        <div class="value-wrap">
+                            <div class="value-bg">
+                                <div class="value-bg-overlay"></div>
+                                <div class="value-bg-img">
+                                    <picture>
+                                        <source media="(max-width:991px)" srcset="images/AboutPage/value-4.png" />
+                                        <source media="(max-width:767px)" srcset="images/AboutPage/value-4.png" />
+                                        <img src="images/AboutPage/value-4.png" alt="value-bg" />
+                                    </picture>
+                                </div>
+                            </div>
+                            <div class="value-content">
+                                <div class="value-content-top">
+                                    <div class="label white mid">
+                                        Our values
+                                    </div>
+                                    <h2 class="white small">Mattress Resources</h2>
+                                    <p class="white big">The values that guide us here at Mattress Resources Australia
+                                        can
+                                        help you trust the integrity and excellence of our products and service.</p>
+                                </div>
+                                <div class="value-content-bottom">
+                                    <h2 class="small">Quality</h2>
+                                    <p class="big">Upholding strict standards to produce durable, high-performance sleep
+                                        products.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
             <!-- Values Section -->
 
             <div class="spacer120"></div>
 
             <!-- Partnership Section -->
-            <div class="partnership">
+            <section class="partnership">
                 <div class="container">
                     <div class="partnership-wrap">
                         <div class="partnership-top">
@@ -429,13 +790,13 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </section>
             <!-- Partnership Section -->
 
             <div class="spacer120"></div>
 
             <!-- Milestone Section -->
-            <div class="milestone">
+            <section class="milestone">
                 <div class="container">
                     <div class="milestone-wrap">
                         <div class="milestone-top">
@@ -479,7 +840,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </section>
             <!-- Milestone Section -->
 
             <div class="spacer120"></div>
@@ -533,6 +894,11 @@
                             <div class="fi-title">
                                 <div class="label mid">Faqs</div>
                                 <h3 class="tiny">About Mattress Resources Australia’s Beds and Mattresses</h3>
+                            </div>
+                            <div class="faq-right mob">
+                                <div class="fir-img">
+                                    <img src="images/faq.png" alt="">
+                                </div>
                             </div>
                             <div class="fi-wrap">
                                 <div class="fi-left">
@@ -640,7 +1006,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="faq-right">
+                        <div class="faq-right desk">
                             <div class="fir-img">
                                 <img src="images/faq.png" alt="">
                             </div>
@@ -655,7 +1021,7 @@
 
             <!-- Pre-Footer -->
             <section class="pre-footer">
-                <div class="container">
+                <div class="container-fluid">
                     <div class="pf-wrap">
                         <div class="pf-left">
                             <div class="pfl-head">Mattress <span>Resources</span></div>
@@ -1019,7 +1385,116 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
         integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- <script src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js"></script>  -->
+     <script src="js/SplitText.min.js"></script>
     <script src="js/custom.js"></script>
+
+    <!-- <script>
+
+    documnt.addEventListener("DOMContentLoaded", (event) => {
+        // Initialize Lenis
+        const lenis = new Lenis();
+
+        // Use requestAnimationFrame to continuously update the scroll
+        function raf(time) {
+        lenis.raf(time);
+        requestAnimationFrame(raf);
+        }
+
+        requestAnimationFrame(raf);
+    }); 
+    </script> -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Initialize the main slider
+            var main = new Splide('#left-slider', {
+                type: 'fade',
+                pagination: false,
+                arrows: true,
+                isNavigation: true,
+                rewind: true,
+            });
+
+            // Find all elements with the class "right-slider"
+            var thumbnails = document.querySelectorAll('.right-slider');
+
+            // Array to store all Splide instances for right-slider
+            var thumbnailInstances = [];
+
+            thumbnails.forEach(function (slider) {
+                // Initialize a Splide instance for each right-slider
+                var thumbnailInstance = new Splide(slider, {
+                    type: 'fade',
+                    rewind: true,
+                    pagination: false,
+                    arrows: false,
+                    autoplay: true,
+                    perPage: 1,
+                });
+
+                // Mount the Splide instance
+                thumbnailInstance.mount();
+
+                // Store the instance for syncing
+                thumbnailInstances.push(thumbnailInstance);
+            });
+
+            // Sync main slider with the first thumbnail instance
+            if (thumbnailInstances.length > 0) {
+                main.sync(thumbnailInstances[0]);
+            }
+
+            // Mount the main slider
+            main.mount();
+        });
+
+
+    </script>
+    <script>
+        // counter animation
+
+        document.addEventListener("DOMContentLoaded", () => {
+            const counters = document.querySelectorAll(".counter span");
+            const milestone = document.querySelector(".milestone");
+
+            const startCounterAnimation = (counter) => {
+                const target = +counter.textContent; // Get the target number directly from the content
+                const duration = 1000; // Animation duration in ms
+                const stepTime = 10; // Time between each update in ms
+                const steps = duration / stepTime; // Number of steps
+                const increment = target / steps;
+
+                let current = 0;
+                counter.textContent = "0"; // Start from 0
+                const updateCounter = () => {
+                    current += increment;
+                    if (current >= target) {
+                        counter.textContent = target; // Ensure exact target value
+                        clearInterval(interval);
+                    } else {
+                        counter.textContent = Math.ceil(current);
+                    }
+                };
+
+                const interval = setInterval(updateCounter, stepTime);
+            };
+
+            const observer = new IntersectionObserver(
+                (entries) => {
+                    entries.forEach((entry) => {
+                        if (entry.isIntersecting) {
+                            counters.forEach((counter) => startCounterAnimation(counter));
+                            observer.disconnect(); // Stop observing after animation starts
+                        }
+                    });
+                },
+                { threshold: 0.5 }
+            );
+
+            observer.observe(milestone);
+        });
+
+    </script>
 </body>
 <!-- Body Ends-->
 

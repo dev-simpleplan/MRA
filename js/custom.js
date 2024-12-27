@@ -174,7 +174,7 @@ document.addEventListener("DOMContentLoaded", function () {
       console.log(chars);
 
       tl.from(chars, {
-        duration: 0.8,
+        duration: 0.5,
         opacity: 0,
         scale: 1,
         y: -20,

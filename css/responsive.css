@@ -11,16 +11,20 @@
     .collection .exp-content {
         padding-left: 0;
     }
-    .faq-section{
+
+    .faq-section {
         padding-left: 0;
     }
-    .faq-section-wrap{
+
+    .faq-section-wrap {
         padding: 0 40px;
     }
-    .exp-content{
+
+    .exp-content {
         padding-left: 0;
     }
-    .hpbc-wrap{
+
+    .hpbc-wrap {
         max-width: 100%;
     }
 }
@@ -50,7 +54,8 @@
     .partner-item {
         /* aspect-ratio: 5 / 8; */
     }
-    .history-slider{
+
+    .history-slider {
         padding-left: 0;
         padding-right: 0;
     }
@@ -436,8 +441,8 @@
 
     .test-right {
         position: relative;
-        width: 88px;
-        height: 88px;
+        width: 48px;
+        height: 48px;
         border-radius: 50%;
         overflow: hidden;
     }
@@ -453,6 +458,7 @@
     .tl-author {
         align-items: center;
         gap: 10px;
+        margin-top: 45px;
     }
 
     .testimonial .splide__arrows {
@@ -544,7 +550,7 @@
     .type .custom-button.mob {
         display: block;
         margin-top: 35px;
-        
+
     }
 
     .type .partner-item-content {
@@ -556,9 +562,11 @@
         /* transform: none; */
         opacity: 0;
     }
-    .text-box{
+
+    .text-box {
         padding-bottom: 0px;
     }
+
     .search-modal-wrap {
         width: 80%;
     }
@@ -605,59 +613,101 @@
         flex-direction: column;
         gap: 80px;
     }
-    .faq-right.desk{
+
+    .faq-right.desk {
         display: none;
     }
-    .faq-right.mob{
+
+    .faq-right.mob {
         display: block;
     }
-    .faq-right{
+
+    .faq-right {
         width: 100%;
         height: 100%;
         margin: 0;
         aspect-ratio: 5/3;
         margin-top: 40px;
     }
+
     .fir-img {
         position: static;
     }
-    .faq-left{
+
+    .faq-left {
         width: 100%;
     }
-    .accordion{
+
+    .accordion {
         margin-top: 40px;
     }
-    .about-location .loc-text{
+
+    .about-location .loc-text {
         width: 55%;
     }
-    .hs-right.mob{
+
+    .hs-right.mob {
         display: block;
     }
-    .hs-right.desk{
+
+    .hs-right.desk {
         display: none;
     }
-    .hs-left{
+
+    .hs-left {
         width: 100%;
     }
-    .hs-right{
+
+    .hs-right {
         width: 100%;
     }
+
     .hsrs-img {
         aspect-ratio: 5 / 3;
     }
-    .hs-left-slide, .hsls-bottom {
+
+    .hs-left-slide,
+    .hsls-bottom {
         margin-top: 30px;
     }
-    .history-slider{
+
+    .history-slider {
         padding-bottom: 100px;
     }
-    .value-content{
+
+    .value-content {
         gap: 70px;
+    }
+
+    .tip-item-content-wrap {
+        transform: none;
+    }
+
+    .innovation .text {
+        margin-top: 45px;
+    }
+
+    .find-feature-item .ffi-img {
+        width: 48px;
+        height: 48px;
+    }
+
+    .find-feature-item {
+        width: fit-content;
+        padding: 22px 0;
+        padding-left: 23px;
+        padding-right: 36px;
+    }
+
+    .testimonial-slide {
+        padding-bottom: 64px;
     }
 }
 
 @media only screen and (max-width: 767px) {
-    .spacer,.spacer120 {
+
+    .spacer,
+    .spacer120 {
         display: none;
     }
 
@@ -737,6 +787,7 @@
     .location {
         margin-top: 125px;
     }
+
     .location.about-location {
         margin-top: 70px;
     }
@@ -913,44 +964,69 @@
     .map iframe {
         height: 400px;
     }
-    .about-banner{
+
+    .about-banner {
         height: 100vh;
     }
-    .ab-content{
+
+    .ab-content {
         padding-bottom: 130px;
     }
-    .resources{
+
+    .resources {
         padding-top: 0;
     }
-    .rl-bottom-img{
+
+    .rl-bottom-img {
         width: 150px;
     }
+
     .value-content-bottom {
         width: 100%;
         padding: 70px 39px;
     }
+
     .partnership-middle {
         text-align: center;
         margin-top: 40px;
     }
-    .ab-content h1{
+
+    .ab-content h1 {
         font-size: 130px;
     }
-    .faq-section{
+
+    .faq-section {
         padding-top: 85px;
     }
-    .value-content-top{
+
+    .value-content-top {
         padding: 20px;
         padding-top: 40px;
     }
-    .value-content-top p{
+
+    .value-content-top p {
         margin-top: 20px;
     }
-    .partner-item{
+
+    .partner-item {
         aspect-ratio: 3/4;
     }
+
     .partner-grid {
         grid-template-columns: repeat(3, minmax(315px, 1fr));
+    }
+
+    .header-top-middle {
+        width: 132px;
+    }
+
+    .search-modal-wrap {
+        padding: 70px 20px 40px 20px;
+        gap: 30px;
+    }
+    .search-modal input {
+        padding: 14px 16px;
+        width: 95%;
     }
 }
 
@@ -958,23 +1034,29 @@
     h1 {
         font-size: 42px;
     }
-    .ab-content h1{
+
+    .ab-content h1 {
         font-size: 70px;
         line-height: 48.8px;
     }
+
     h2 {
         font-size: 28px;
-        line-height: 28px;
+        /* line-height: 28px; */
     }
-    h2.small{
+
+    h2.small {
         font-size: 32px;
     }
-    .label.mid{
+
+    .label.mid {
         font-size: 28px;
     }
-    .label.big{
+
+    .label.big {
         font-size: 32px;
     }
+
     .testimonial .test-left h3 {
         font-size: 24px;
         line-height: 29px;
@@ -987,7 +1069,7 @@
     }
 
     .exp-heading h2 {
-        line-height: 28px;
+        /* line-height: 28px; */
     }
 
     .tip-item h4.big {
@@ -1002,11 +1084,6 @@
 
     .find-feature-item .ffi-text {
         max-width: 14ch;
-    }
-
-    .find-feature-item {
-        width: fit-content;
-        padding: 27px 25px;
     }
 
     .pfl-head {
@@ -1058,33 +1135,42 @@
     .search-modal-wrap {
         width: 90%;
     }
-    .ab-content-wrap p{
+
+    .ab-content-wrap p {
         margin-top: 30px;
     }
-    .value-content-top p, .value-content-bottom p{
+
+    .value-content-top p,
+    .value-content-bottom p {
         margin-top: 20px;
     }
-    .milestone{
+
+    .milestone {
         margin-top: 50px;
     }
+
     .accordion {
         margin-top: 10px;
     }
-    .faq-section{
+
+    .faq-section {
         padding-bottom: 0;
     }
+
     .hsrs-img {
         aspect-ratio: 5 / 4;
     }
-    .partner-grid{
+
+    .partner-grid {
         gap: 16px;
     }
 }
 
 @media only screen and (max-width: 475px) {
-    .milestone-bottom{
+    .milestone-bottom {
         flex-direction: column;
     }
+
     .rl-bottom-img {
         width: 100px;
     }

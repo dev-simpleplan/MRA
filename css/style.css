@@ -101,7 +101,7 @@ h1 {
 h2 {
     font-size: 52px;
     font-weight: 400;
-    line-height: 62.4px;
+    line-height: 100%;
     letter-spacing: -0.01em;
     text-underline-position: from-font;
     text-decoration-skip-ink: none;
@@ -184,7 +184,7 @@ p.big {
     font-family: var(--infinity);
     font-size: 28px;
     font-weight: 400;
-    line-height: 55%;
+    line-height: 100%;
     text-underline-position: from-font;
     text-decoration-skip-ink: none;
     text-transform: capitalize;
@@ -706,7 +706,9 @@ Page CSS
 .exp-heading h2 {
     /* line-height: 52px; */
 }
-
+.innovation .exp-heading.heading{
+    max-width: 40ch;
+}
 .text {
     display: flex;
     flex-direction: column;
@@ -1023,6 +1025,7 @@ Page CSS
     display: flex;
     flex-direction: column;
     gap: 10px;
+    max-width: 55ch;
 }
 
 .loc-text-wrap p a {
@@ -1096,7 +1099,10 @@ Page CSS
     opacity: 0;
     transition: all .8s ease;
 }
+.tl-author{
+    transition-delay: .3s;
 
+}
 .testimonial .test-left h3 {
     text-transform: none;
     color: #F0ECE4;
@@ -1135,14 +1141,14 @@ Page CSS
 }
 
 .test-image {
-    clip-path: inset(0 0 0 100%);
-    opacity: 0;
+    /* clip-path: inset(0 0 0 100%);
+    opacity: 0; */
     transition: all .5s ease-in;
-    transition-delay: .2s;
+    transition-delay: .5s;
 }
 
 #testimonial-slider-list li.is-active .test-image {
-    clip-path: inset(0 0 0 0);
+    /* clip-path: inset(0 0 0 0); */
     opacity: 1;
 }
 
@@ -1171,6 +1177,7 @@ Page CSS
     border-radius: 0%;
     background: rgba(204, 146, 47, 1);
     transition: all .3s ease;
+    padding: 10px;
 }
 
 .testimonial .splide__arrows button[disabled] {
@@ -1266,7 +1273,7 @@ Page CSS
 }
 
 .tip-item-overlay {
-    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.35) 59.69%);
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.3) 54.4%);
     position: absolute;
     top: 0;
     left: 0;
@@ -1274,9 +1281,7 @@ Page CSS
     height: 100%;
 }
 
-.tip-item.open .tip-item-overlay {
-    background: linear-gradient(180deg, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.3) 54.4%);
-}
+
 
 .tip-item-content p {
     margin-top: 15px;
@@ -1324,10 +1329,11 @@ Page CSS
 
 .find .exp-text {
     gap: 15px;
+    margin-top: 35px;
 }
 
 .find .cta-btn {
-    margin-top: 55px;
+    margin-top: 60px;
 }
 
 .find-feature {
@@ -1432,7 +1438,9 @@ Page CSS
     height: 115px;
     /* aspect-ratio: 1/1; */
 }
-
+.pfr-text {
+    max-width: 50ch;
+}
 .pfr-text p {
     text-transform: capitalize;
     font-size: 18px;
@@ -1531,6 +1539,7 @@ footer {
     text-decoration-skip-ink: none;
     color: #fff;
     text-transform: uppercase;
+    white-space: nowrap;
 }
 
 .footer-links ul {
@@ -1736,6 +1745,10 @@ footer {
     text-underline-position: from-font;
     text-decoration-skip-ink: none;
     color: #fff;
+    transition: all 0.3s ease;
+}
+.terms-link a:hover{
+    opacity: .5;
 }
 
 .ft-left.mob,
@@ -1762,6 +1775,12 @@ footer {
 
 .footer-links ul li a:hover::after {
     transform: scaleX(1);
+}
+.social-icon {
+    transition: all 0.3s ease;
+}
+.social-icon:hover {
+    transform: scale(1.2);
 }
 
 /* footer */

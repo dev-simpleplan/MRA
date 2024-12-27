@@ -170,8 +170,15 @@ document.addEventListener("DOMContentLoaded", () => {
   // Function to toggle active class
   const toggleActiveClass = () => {
     const isActive = headerBottom.classList.contains("active");
+    const headerTransparentExists = header.classList.contains("transparent"); // Check if header.transparent exists
+
     headerBottom.classList.toggle("active", !isActive);
-    header.classList.toggle("active", !isActive);
+
+    // Only toggle 'active' on header if 'header.transparent' exists
+    if (headerTransparentExists) {
+      header.classList.toggle("active", !isActive);
+    }
+
     hamburgerIcon.classList.toggle("active", !isActive);
     body.style.overflow = isActive ? "" : "hidden"; // Enable/disable body scroll
   };

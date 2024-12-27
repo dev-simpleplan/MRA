@@ -731,7 +731,7 @@ Page CSS
 
 .exp-image-small {
     right: 48%;
-    top: 50%;
+    top: 65%;
     transform: translate(50%, -50%);
     width: 235px;
     height: 160px;
@@ -867,7 +867,6 @@ Page CSS
     position: static;
     bottom: 0%;
     left: 0;
-    transition: all .4s ease;
     transform: translateY(100%);
     opacity: 0;
 }
@@ -919,7 +918,8 @@ Page CSS
     padding-left: 24px;
     padding-right: 28px;
     padding-top: 35px;
-    padding-bottom: 31px;
+    padding-bottom: 10px;
+    transition: all .4s ease;
 }
 
 .partner-item:hover .hover-text-box {
@@ -998,7 +998,7 @@ Page CSS
 .loc-text-wrap {
     display: flex;
     flex-direction: column;
-    gap: 1px;
+    gap: 10px;
 }
 
 .loc-text-wrap p a {
@@ -1210,7 +1210,9 @@ Page CSS
     cursor: auto;
     transition: all .5s ease;
 }
-
+.tip-item h4.big{
+    transition: all .5s ease;
+}
 .tip-item.open h4.big {
     font-size: 32px;
 }

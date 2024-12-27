@@ -110,6 +110,48 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 // navbar
+// document.addEventListener("DOMContentLoaded", () => {
+//   // Select the elements
+//   const hamburgerIcon = document.querySelector(".hamburger-icon");
+//   const headerBottom = document.querySelector(".header-bottom");
+//   const header = document.querySelector("header.transparent");
+//   const body = document.body;
+
+//   // Function to toggle active class
+//   const toggleActiveClass = () => {
+//     const isActive = headerBottom.classList.contains("active");
+//     const headerTransparentExists = header.classList.contains("transparent"); // Check if header.transparent exists
+
+//     headerBottom.classList.toggle("active", !isActive);
+
+//     // Only toggle 'active' on header if 'header.transparent' exists
+//     if (headerTransparentExists) {
+//       header.classList.toggle("active", !isActive);
+//     }
+
+//     hamburgerIcon.classList.toggle("active", !isActive);
+//     body.style.overflow = isActive ? "" : "hidden"; // Enable/disable body scroll
+//   };
+
+//   // Event listener for the hamburger icon
+//   hamburgerIcon.addEventListener("click", (event) => {
+//     event.stopPropagation(); // Prevent event from bubbling
+//     toggleActiveClass();
+//   });
+
+//   // Event listener for clicking outside the header-bottom
+//   document.addEventListener("click", (event) => {
+//     if (
+//       !headerBottom.contains(event.target) &&
+//       !hamburgerIcon.contains(event.target)
+//     ) {
+//       headerBottom.classList.remove("active");
+//       header.classList.remove("active");
+//       hamburgerIcon.classList.remove("active");
+//       body.style.overflow = ""; // Restore body scroll
+//     }
+//   });
+// });
 document.addEventListener("DOMContentLoaded", () => {
   // Select the elements
   const hamburgerIcon = document.querySelector(".hamburger-icon");
@@ -117,14 +159,26 @@ document.addEventListener("DOMContentLoaded", () => {
   const header = document.querySelector("header.transparent");
   const body = document.body;
 
+  // Check if necessary elements exist
+  if (!hamburgerIcon || !headerBottom || !body) {
+    console.error(
+      "Required DOM elements (hamburgerIcon, headerBottom, body) are not found."
+    );
+    return;
+  }
+
+  if (!header) {
+    console.warn('The "header.transparent" element was not found in the DOM.');
+  }
+
   // Function to toggle active class
   const toggleActiveClass = () => {
     const isActive = headerBottom.classList.contains("active");
-    const headerTransparentExists = header.classList.contains("transparent"); // Check if header.transparent exists
+    const headerTransparentExists =
+      header && header.classList.contains("transparent");
 
     headerBottom.classList.toggle("active", !isActive);
 
-    // Only toggle 'active' on header if 'header.transparent' exists
     if (headerTransparentExists) {
       header.classList.toggle("active", !isActive);
     }
@@ -146,7 +200,9 @@ document.addEventListener("DOMContentLoaded", () => {
       !hamburgerIcon.contains(event.target)
     ) {
       headerBottom.classList.remove("active");
-      header.classList.remove("active");
+      if (header) {
+        header.classList.remove("active");
+      }
       hamburgerIcon.classList.remove("active");
       body.style.overflow = ""; // Restore body scroll
     }
@@ -179,7 +235,7 @@ document.addEventListener("DOMContentLoaded", function () {
         scale: 1,
         y: -20,
         rotationY: 180,
-        transformOrigin: "0% 50% 10",
+        transformOrigin: "10% 50% 0%",
         ease: "back",
         stagger: 0.04,
       });
@@ -219,7 +275,7 @@ document.addEventListener("DOMContentLoaded", function () {
     if (children.length > 0) {
       gsap.fromTo(
         children,
-        { opacity: 0, y: 100 }, // Initial state
+        { opacity: 0, y: 200 }, // Initial state
         {
           opacity: 1, // Final state
           y: 0, // Moves to its original position
@@ -250,7 +306,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Observe each section
     sections.forEach((section) => observer.observe(section));
-  } 
+  }
 });
 
 // paralax effect

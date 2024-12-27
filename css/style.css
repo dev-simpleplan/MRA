@@ -665,6 +665,7 @@ Page CSS
     justify-content: center;
     margin-top: 110px;
     flex-wrap: wrap;
+    overflow: hidden;
 }
 
 .cig-img {
@@ -855,14 +856,11 @@ Page CSS
     width: 100%;
     height: 100%;
     overflow: hidden;
-    overflow-y: scroll;
-    scrollbar-width: none;
-    -ms-overflow-style: none;
-
+    display: flex;
 }
 
 
-.type .partner-item-content::-webkit-scrollbar {
+.hover-text-box-wrap::-webkit-scrollbar {
     display: none;
     /* Hide scrollbar for Webkit browsers */
 }
@@ -883,6 +881,9 @@ Page CSS
     left: 0;
     transform: translateY(100%);
     opacity: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
 }
 
 .tiny-text {
@@ -918,6 +919,7 @@ Page CSS
     position: absolute;
     bottom: 0;
     opacity: 1;
+    z-index: 3;
 }
 
 .text-box p {
@@ -949,6 +951,14 @@ Page CSS
 .type .custom-button.mob {
     display: none;
 }
+.hover-text-box-wrap {
+    height: 100%;
+    overflow: hidden;
+    overflow-y: scroll;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
 
 /* .partner-item:hover .partner-item-content h4{
     opacity: 0;
@@ -2024,9 +2034,11 @@ footer {
 .history-slider .splide__list {
     height: auto;
 }
-.hs-right.mob{
+
+.hs-right.mob {
     display: none;
 }
+
 /* History slider section */
 
 /* Value section */
@@ -2332,9 +2344,11 @@ footer {
 .accordion-item:last-of-type {
     border-radius: 0;
 }
-.faq-right.mob{
+
+.faq-right.mob {
     display: none;
 }
+
 .faq-right {
     width: 34%;
     position: relative;

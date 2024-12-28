@@ -420,6 +420,13 @@ select:focus {
 
 /* Search modal */
 
+/* Animation */
+.fade-in-text {
+    transform: translateY(100%);
+    opacity: 0;
+}
+/* Animation */
+
 /* Header Css */
 header {
     position: sticky;

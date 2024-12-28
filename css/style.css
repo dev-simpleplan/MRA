@@ -420,6 +420,13 @@ select:focus {
 
 /* Search modal */
 
+/* Animation */
+.fade-in-text {
+    transform: translateY(100%);
+    opacity: 0;
+}
+/* Animation */
+ 
 /* Header Css */
 header {
     position: sticky;
@@ -713,6 +720,7 @@ Page CSS
     display: flex;
     flex-direction: column;
     margin-top: 45px;
+    overflow: hidden;
 }
 
 .exp-text {
@@ -721,6 +729,7 @@ Page CSS
 
 .cta-btn {
     margin-top: 80px;
+    overflow: hidden;
 }
 
 .exp-img {
@@ -1040,6 +1049,7 @@ Page CSS
 
 .loc-btn {
     margin-top: 30px;
+    overflow: hidden;
 }
 
 .map {

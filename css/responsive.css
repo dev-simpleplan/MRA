@@ -137,6 +137,10 @@
         width: 80%;
         transform: translateX(-100%);
         transition: all .5s ease;
+        height: calc(100vh - 66px);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
     }
 
     .header-bottom.active {
@@ -152,7 +156,6 @@
 
     .header-bottom .header-top-right.mobile {
         text-align: center;
-        margin-top: 80px;
     }
 
     .exp-content {
@@ -702,12 +705,22 @@
     .testimonial-slide {
         padding-bottom: 64px;
     }
-    .ab-content{
+
+    .ab-content {
         height: calc(100vh - 80px);
         padding-bottom: 40px;
     }
+
     .ab-content h1 {
         font-size: 130px;
+    }
+
+    .tip-item-overlay {
+        background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.35) 59.69%);
+    }
+
+    .tip-item.open .tip-item-overlay {
+        background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.35) 59.69%);
     }
 }
 
@@ -998,7 +1011,7 @@
         margin-top: 40px;
     }
 
-    
+
 
     .faq-section {
         padding-top: 85px;
@@ -1029,9 +1042,18 @@
         padding: 70px 20px 40px 20px;
         gap: 30px;
     }
+
     .search-modal input {
         padding: 14px 16px;
         width: 95%;
+    }
+
+    .tl-author .auth {
+        font-size: 14px;
+    }
+
+    .innovation .text {
+        margin-top: 35px;
     }
 }
 
@@ -1169,9 +1191,18 @@
     .partner-grid {
         gap: 16px;
     }
-    .ab-content{
+
+    .ab-content {
         /* height: calc(100vh - 240px); */
         padding-bottom: 80px;
+    }
+
+    .tip-grid {
+        grid-template-columns: repeat(3, minmax(300px, 1fr));
+    }
+
+    .tip-grid {
+        height: 460px;
     }
 }
 

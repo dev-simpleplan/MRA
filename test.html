@@ -5,9 +5,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="icon" href="" type="image/gif" sizes="16x16" />
-  <title>MRA | Home</title>
+  <title>MRA | Page Name</title>
 
   <!-- CSS Starts-->
+  <link rel="stylesheet" href="https://unpkg.com/lenis@1.1.18/dist/lenis.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css" />
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <link href="css/style.css" rel="stylesheet" />
@@ -33,7 +34,7 @@
       <button class="custom-button white big-width">search</button>
     </div>
   </div>
-  <wrapper>
+  <main role="main" data-scroll-container id="scroll-container">
     <header class="blue">
       <div class="container-fluid">
         <div class="header-wrap">
@@ -231,76 +232,30 @@
     </header>
     <div class="main">
       <!-- Banner Starts-->
-      <section class="hp-banner">
-        <div class="hp-banner-wrap">
-          <div class="hp-banner-content">
-            <div class="container-fluid">
-              <div class="hpbc-wrap">
-                <div class="hpbc-top">
-                  <h1 class="text-animation">Mattress</h1>
-                  <h1 class="text-animation">Resources</h1>
-                  <h1 class="text-animation">Australia</h1>
-                  <div class="label gold mob">
-                    with mattress Resources feel
-                  </div>
-                </div>
-                <div class="hpbc-middle">
-                  <p class="white" data-aos="fade-up" data-aos-delay="300">
-                    Welcome to Mattress Resources Australia, home to
-                    successful sleep solutions for over 50 years.
-                  </p>
-                  <p class="white" data-aos="fade-up" data-aos-delay="600">
-                    We manufacture our products to the highest standards here
-                    in Australia because we know life can be a lot sometimes,
-                    and you deserve the deeper, more revitalising sleep that
-                    comes from superior bedding.
-                  </p>
-                </div>
-                <div class="hpbc-bottom">
-                  <p class="white" data-aos="fade-up" data-aos-delay="900">
-                    Start your journey to better sleep with us today!
-                  </p>
-                  <a href="#!" class="custom-button white" data-aos="fade-up" data-aos-delay="900">store locator</a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="hp-banner-img">
-            <picture>
-              <source media="(max-width:991px)" srcset="images/Homepage/hp-img.png" />
-              <source media="(max-width:767px)" srcset="images/Homepage/hp-img.png" />
-              <img src="images/Homepage/hp-img.png" alt="Flowers" />
-            </picture>
-          </div>
-        </div>
-      </section>
-      <!-- Banner Ends-->
-
-      <div class="spacer"></div>
-
-      <div class="spacer"></div>
+      <!-- Banner Starts-->
+      
 
       <!-- Pre-Footer -->
       <section class="pre-footer">
         <div class="container-fluid">
           <div class="pf-wrap">
             <div class="pf-left">
-              <div class="pfl-head">Mattress <span>Resources</span></div>
-              <div class="pfl-img desk">
+              <div class="pfl-head letter-animation">Mattress <span>Resources</span></div>
+              <div class="pfl-img desk text-animate">
                 <picture>
                   <source media="(max-width:991px)" srcset="images/Homepage/pfl1.png" />
                   <source media="(max-width:767px)" srcset="images/Homepage/pfl1.png" />
-                  <img src="images/Homepage/pfl1.png" alt="pfl1" />
+                  <img src="images/Homepage/pfl1.png" class="fade-in-text" alt="pfl1" />
                 </picture>
                 <picture>
                   <source media="(max-width:991px)" srcset="images/Homepage/pfl2.png" />
                   <source media="(max-width:767px)" srcset="images/Homepage/pfl2.png" />
-                  <img src="images/Homepage/pfl2.png" alt="pfl2" />
+                  <img src="images/Homepage/pfl2.png" class="fade-in-text" alt="pfl2" />
                 </picture>
               </div>
             </div>
             <div class="pf-right">
-              <div class="pfr-text">
+              <div class="pfr-text text-animate slide-in-text">
                 <p>
                   Our retailers are located in prominent cities all across
                   Australia, serving diverse communities nationwide!
@@ -308,23 +263,23 @@
                 <a href="#!" class="custom-button gold">store locator</a>
               </div>
               <div class="pfl-img-wrap">
-                <div class="pfl-img mob">
+                <div class="pfl-img mob text-animate">
                   <picture>
                     <source media="(max-width:991px)" srcset="images/Homepage/pfl1.png" />
                     <source media="(max-width:767px)" srcset="images/Homepage/pfl1.png" />
-                    <img src="images/Homepage/pfl1.png" alt="pfl1" />
+                    <img src="images/Homepage/pfl1.png" class="fade-in-text" alt="pfl1" />
                   </picture>
                   <picture>
                     <source media="(max-width:991px)" srcset="images/Homepage/pfl2.png" />
                     <source media="(max-width:767px)" srcset="images/Homepage/pfl2.png" />
-                    <img src="images/Homepage/pfl2.png" alt="pfl2" />
+                    <img src="images/Homepage/pfl2.png" class="fade-in-text" alt="pfl2" />
                   </picture>
                 </div>
-                <div class="pfr-img">
+                <div class="pfr-img text-animate">
                   <picture>
                     <source media="(max-width:991px)" srcset="images/Homepage/pfr.png" />
                     <source media="(max-width:767px)" srcset="images/Homepage/pfr.png" />
-                    <img src="images/Homepage/pfr.png" alt="pfr" />
+                    <img src="images/Homepage/pfr.png" class="fade-in-text" alt="pfr" />
                   </picture>
                 </div>
               </div>
@@ -620,9 +575,10 @@
         </div>
       </div>
     </footer>
-  </wrapper>
+  </main>
 
   <!-- JS Starts-->
+  <!-- <script src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js"></script>  -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/ScrollTrigger.min.js"></script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
@@ -630,7 +586,30 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
     integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="js/SplitText.min.js"></script>
   <script src="js/custom.js"></script>
+
+  <!-- <script>
+    document.addEventListener("DOMContentLoaded", function() {
+  // Initialize Lenis
+
+  setTimeout(()=> {
+    const lenis = new Lenis({
+      duration: 1.2,
+      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),  
+   });
+
+  // Use requestAnimationFrame to continuously update the scroll
+  function raf(time) {
+    lenis.raf(time);
+    requestAnimationFrame(raf);
+  }
+
+  requestAnimationFrame(raf);
+  },200);
+  
+});
+  </script> -->
 </body>
 <!-- Body Ends-->
 

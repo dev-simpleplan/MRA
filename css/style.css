@@ -1455,7 +1455,9 @@ Page CSS
     text-decoration-skip-ink: none;
     color: var(--head);
 }
-
+.pfl-head>div{
+    white-space: nowrap;
+}
 .pfl-head span {
     color: var(--label-gold);
 }

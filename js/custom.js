@@ -4,8 +4,24 @@
 
 // nabar fixed
 
+let lastScrollY = window.scrollY;
 
+document.addEventListener("scroll", () => {
+  const header = document.querySelector("header");
+  const scrollY = window.scrollY;
 
+  // Check if scrolling down
+  if (scrollY > 142 && scrollY > lastScrollY) {
+    header.classList.add("not-visible");
+  }
+  // Check if scrolling up
+  else if (scrollY < lastScrollY) {
+    header.classList.remove("not-visible");
+  }
+
+  // Update the last scroll position
+  lastScrollY = scrollY;
+});
 
 // Function to add/remove 'active' class to the header when scrolling
 window.addEventListener("scroll", function () {

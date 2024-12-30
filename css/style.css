@@ -1460,6 +1460,7 @@ Page CSS
 }
 .pfl-head span {
     color: var(--label-gold);
+    white-space: nowrap;
 }
 
 .pfl-img {

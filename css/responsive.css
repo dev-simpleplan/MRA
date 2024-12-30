@@ -1014,7 +1014,9 @@
     .rl-bottom-img {
         width: 150px;
     }
-
+    .value{
+        margin-top: 50px;
+    }
     .value-content-bottom {
         width: 100%;
         padding: 70px 39px;

@@ -54,7 +54,8 @@ body {
     -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeLegibility;
 }
-html{
+
+html {
     scroll-behavior: smooth;
 }
 
@@ -435,6 +436,13 @@ select:focus {
     overflow: hidden;
 }
 
+.letter-animation {
+    /* opacity: 0; */
+    /* Hidden initially */
+    /* transition: none; */
+    /* Prevent unwanted transition effects */
+}
+
 /* Animation */
 
 /* Header Css */
@@ -447,12 +455,15 @@ header {
     transition: all 0.3s ease;
     transform: translateY(0%);
 }
-header.not-visible{
+
+header.not-visible {
     transform: translateY(-100%);
 }
-.header-margin{
+
+.header-margin {
     margin-top: 142px;
 }
+
 header.transparent {
     transition: all .3s ease;
 }
@@ -535,10 +546,12 @@ header.blue {
 .header-bottom ul li a svg {
     display: none;
 }
-.header-wrap ul li a svg{
+
+.header-wrap ul li a svg {
     width: 20px;
     height: 20px;
 }
+
 .header-bottom {
     margin-top: 29px;
 }
@@ -607,7 +620,8 @@ Page CSS
 .hp-banner {
     background: var(--bg-blue);
     /* height: calc(100vh - 147px); */
-    height: 100vh;
+    min-height: 100vh;
+    height: auto;
 }
 
 .hp-banner-wrap {
@@ -616,7 +630,8 @@ Page CSS
     justify-content: space-between;
     position: relative;
     background-size: contain;
-    height: 100%;
+    min-height: 100%;
+    align-items: center;
 }
 
 .hp-banner-img {
@@ -632,6 +647,9 @@ Page CSS
     width: 45%;
     position: relative;
     margin-left: auto;
+    height: 100%;
+    display: flex;
+    align-items: center;
 }
 
 .hp-banner-img img {
@@ -819,9 +837,11 @@ Page CSS
     background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.35) 56.48%);
     z-index: 1;
 }
-.partner-item-img{
+
+.partner-item-img {
     overflow: hidden;
 }
+
 .partner-item .partner-item-img img {
     transition: all 0.4s ease;
 }
@@ -1182,7 +1202,7 @@ Page CSS
 
 .test-image {
     /* clip-path: inset(0 0 0 100%); */
-    opacity: 0; 
+    opacity: 0;
     transition: all .5s ease-in;
     transition-delay: .3s;
 }
@@ -1255,9 +1275,10 @@ Page CSS
 /* Homepage testimonial */
 
 /* Homepage Tips */
-.tips{
+.tips {
     overflow: hidden;
 }
+
 .tip-content {
     margin-top: 30px;
     max-width: 60ch;
@@ -1460,15 +1481,17 @@ Page CSS
     font-size: 133.85px;
     font-weight: 400;
     line-height: 121.8px;
-    letter-spacing: -0.01em; 
+    letter-spacing: -0.01em;
     text-align: left;
     text-underline-position: from-font;
     text-decoration-skip-ink: none;
     color: var(--head);
 }
-.pfl-head>div{
+
+.pfl-head>div {
     white-space: nowrap;
 }
+
 .pfl-head span {
     color: var(--label-gold);
     white-space: nowrap;
@@ -2249,9 +2272,11 @@ footer {
     margin-top: 80px;
     overflow: hidden;
 }
-.partnership .lineChild{
+
+.partnership .lineChild {
     text-align: center !important;
 }
+
 /* Partnership section */
 
 /* Milestone section */

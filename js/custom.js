@@ -203,15 +203,17 @@ document.addEventListener("DOMContentLoaded", function () {
       var mySplitText = new SplitText(target, { type: "words,chars" }),
         chars = mySplitText.chars; // An array of all the divs that wrap each character
 
+      // Hide the target initially (opacity 0 and visibility hidden)
+      gsap.set(target, { autoAlpha: 0 });
+
+      // Set perspective for 3D effect
       gsap.set(target, { perspective: 400 });
 
-      // console.log(chars);
-
+      // Define the animation
+      tl.to(target, { autoAlpha: 1, duration: 0 }); // Make the target visible at the start (opacity 0 -> 1)
       tl.from(chars, {
         duration: 1,
         opacity: 0,
-        // scale: 0,
-        // x: 10,
         rotationY: 115,
         transformOrigin: "100% 0% 0",
         stagger: 0.03,
@@ -221,7 +223,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 
-  // Intersection Observer to check if any #letter-animation element is in view
+  // Intersection Observer to check if any .letter-animation element is in view
   const observer = new IntersectionObserver(
     (entries, observer) => {
       entries.forEach((entry) => {
@@ -242,6 +244,10 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 });
+
+
+
+
 
 // Text animation 2
 

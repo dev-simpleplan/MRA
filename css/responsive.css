@@ -704,6 +704,10 @@
     }
     .ab-content{
         height: calc(100vh - 50px);
+        padding-bottom: 40px;
+    }
+    .ab-content h1 {
+        font-size: 130px;
     }
 }
 
@@ -972,9 +976,9 @@
         height: 100vh;
     }
 
-    .ab-content {
+    /* .ab-content {
         padding-bottom: 130px;
-    }
+    } */
 
     .resources {
         padding-top: 0;
@@ -994,9 +998,7 @@
         margin-top: 40px;
     }
 
-    .ab-content h1 {
-        font-size: 130px;
-    }
+    
 
     .faq-section {
         padding-top: 85px;
@@ -1168,7 +1170,7 @@
         gap: 16px;
     }
     .ab-content{
-        height: calc(100vh - 240px);
+        /* height: calc(100vh - 240px); */
     }
 }
 

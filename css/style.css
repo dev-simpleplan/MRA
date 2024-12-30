@@ -1528,12 +1528,12 @@ footer {
 
 .ft-left {
     width: 160px;
-    height: auto;
+    height: 100%;
 }
 
 .ft-left img {
     width: 100%;
-    height: 100%;
+    height: auto;
     object-fit: contain;
 }
 

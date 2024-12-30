@@ -814,7 +814,7 @@
     }
 
     .collection {
-        margin-top: 95px;
+        margin-top: 40px;
     }
 
     .collection .exp-content {
@@ -831,7 +831,7 @@
     }
 
     .location {
-        margin-top: 125px;
+        margin-top: 60px;
     }
 
     .location.about-location {
@@ -857,7 +857,7 @@
     }
 
     section.experience.innovation {
-        margin-top: 125px;
+        margin-top: 60px;
     }
 
     .innovation .exp-content {
@@ -878,7 +878,7 @@
     }
 
     .testimonial {
-        margin-top: 155px;
+        margin-top: 60px;
     }
 
     .testimonial-slide {
@@ -891,8 +891,8 @@
     }
 
     .tips {
-        margin-top: 110px;
-        padding-top: 65px;
+        margin-top: 60px;
+        padding-top: 35px;
         padding-bottom: 14px;
     }
 
@@ -905,8 +905,8 @@
     }
 
     section.experience.find {
-        margin-top: 125px;
-        padding-top: 60px;
+        margin-top: 60px;
+        padding-top: 30px;
     }
 
     .find .cta-btn {

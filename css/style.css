@@ -584,7 +584,7 @@ Page CSS
 /* Homepage Banner */
 .hp-banner {
     background: var(--bg-blue);
-    min-height: calc(100vh - 147px);
+    height: calc(100vh - 147px);
 }
 
 .hp-banner-wrap {

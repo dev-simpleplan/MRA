@@ -437,9 +437,13 @@ header {
     position: sticky;
     top: 0;
     left: 0;
+    width: 100%;
     z-index: 10;
+    /* transform: tra; */
 }
-
+.header-margin{
+    margin-top: 142px;
+}
 header.transparent {
     transition: all .3s ease;
 }
@@ -589,7 +593,8 @@ Page CSS
 /* Homepage Banner */
 .hp-banner {
     background: var(--bg-blue);
-    height: calc(100vh - 147px);
+    /* height: calc(100vh - 147px); */
+    height: 100vh;
 }
 
 .hp-banner-wrap {

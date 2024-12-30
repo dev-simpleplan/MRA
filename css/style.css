@@ -819,10 +819,11 @@ Page CSS
     background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.35) 56.48%);
     z-index: 1;
 }
-
+.partner-item-img{
+    overflow: hidden;
+}
 .partner-item .partner-item-img img {
     transition: all 0.4s ease;
-
 }
 
 .partner-item:hover .partner-item-img img {

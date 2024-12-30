@@ -144,7 +144,7 @@ h3.tiny {
 h4 {
     font-size: 24px;
     font-weight: 400;
-    line-height: 26.47px;
+    line-height: 36.47px;
     letter-spacing: -0.01em;
     text-align: left;
     text-underline-position: from-font;
@@ -434,6 +434,7 @@ select:focus {
 
 .lineParent {
     overflow: hidden;
+    line-height: 115%;
 }
 
 /* Ensure initial state is off-screen or invisible */
@@ -849,6 +850,10 @@ Page CSS
     /* aspect-ratio: 1; */
     scale: 1.12;
 }
+.type .partner-item:hover .partner-item-img img {
+    /* aspect-ratio: 1; */
+    scale: 1;
+}
 
 
 .partner-item .partner-item-img img {
@@ -913,12 +918,6 @@ Page CSS
     height: 100%;
     overflow: hidden;
     display: flex;
-}
-
-
-.hover-text-box-wrap::-webkit-scrollbar {
-    display: none;
-    /* Hide scrollbar for Webkit browsers */
 }
 
 .type .partner-item-content p {
@@ -1012,10 +1011,25 @@ Page CSS
     height: 100%;
     overflow: hidden;
     overflow-y: scroll;
-    scrollbar-width: none;
-    -ms-overflow-style: none;
+}
+/* For WebKit-based browsers (Chrome, Edge, Safari) */
+.hover-text-box-wrap::-webkit-scrollbar {
+    width: 5px;
 }
 
+.hover-text-box-wrap::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.hover-text-box-wrap::-webkit-scrollbar-thumb {
+    border-radius: 50px;
+}
+
+/* For Firefox */
+.hover-text-box-wrap {
+    scrollbar-width: thin; /* Thin scrollbar */
+    scrollbar-color: rgb(122, 122, 122) transparent; /* Thumb color and track color */
+}
 
 /* .partner-item:hover .partner-item-content h4{
     opacity: 0;
@@ -1053,7 +1067,9 @@ Page CSS
 .collection .cta-btn {
     margin-top: 55px;
 }
-
+.collection .exp-image-big img{
+    object-position: bottom;
+}
 /* Homepage location */
 .location {
     background-color: #F1E8D6;

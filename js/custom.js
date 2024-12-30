@@ -235,7 +235,7 @@ document.addEventListener("DOMContentLoaded", function () {
         // scale: 0,
         // x: 10,
         rotationY: 115,
-        transformOrigin: "100% 0% -20",
+        transformOrigin: "100% 0% 0",
         stagger: 0.03,
       });
 

@@ -235,6 +235,10 @@
     .fm-left {
         width: 70%;
     }
+    .pfl-head {
+        font-size: 103.85px;
+        line-height: 91.8px;
+    }
 }
 
 @media only screen and (max-width: 991px) {

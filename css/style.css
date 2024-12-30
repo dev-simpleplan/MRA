@@ -425,8 +425,13 @@ select:focus {
     transform: translateY(100%);
     opacity: 0;
 }
+
+.lineParent {
+    overflow: hidden;
+}
+
 /* Animation */
- 
+
 /* Header Css */
 header {
     position: sticky;
@@ -713,9 +718,11 @@ Page CSS
 .exp-heading h2 {
     /* line-height: 52px; */
 }
-.innovation .exp-heading.heading{
+
+.innovation .exp-heading.heading {
     max-width: 40ch;
 }
+
 .text {
     display: flex;
     flex-direction: column;
@@ -962,6 +969,7 @@ Page CSS
 .type .custom-button.mob {
     display: none;
 }
+
 .hover-text-box-wrap {
     height: 100%;
     overflow: hidden;
@@ -1109,10 +1117,12 @@ Page CSS
     opacity: 0;
     transition: all .8s ease;
 }
-.tl-author{
+
+.tl-author {
     transition-delay: .3s;
 
 }
+
 .testimonial .test-left h3 {
     text-transform: none;
     color: #F0ECE4;
@@ -1226,6 +1236,9 @@ Page CSS
 /* Homepage testimonial */
 
 /* Homepage Tips */
+.tips{
+    overflow: hidden;
+}
 .tip-content {
     margin-top: 30px;
     max-width: 60ch;
@@ -1292,6 +1305,7 @@ Page CSS
     height: 100%;
     transition: all .5s ease;
 }
+
 .tip-item.open .tip-item-overlay {
     background: linear-gradient(180deg, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.3) 54.4%);
 }
@@ -1453,9 +1467,11 @@ Page CSS
     height: 115px;
     /* aspect-ratio: 1/1; */
 }
+
 .pfr-text {
     max-width: 50ch;
 }
+
 .pfr-text p {
     text-transform: capitalize;
     font-size: 18px;
@@ -1762,7 +1778,8 @@ footer {
     color: #fff;
     transition: all 0.3s ease;
 }
-.terms-link a:hover{
+
+.terms-link a:hover {
     opacity: .5;
 }
 
@@ -1791,9 +1808,11 @@ footer {
 .footer-links ul li a:hover::after {
     transform: scaleX(1);
 }
+
 .social-icon {
     transition: all 0.3s ease;
 }
+
 .social-icon:hover {
     transform: scale(1.2);
 }

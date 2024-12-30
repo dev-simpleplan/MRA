@@ -235,7 +235,7 @@ document.addEventListener("DOMContentLoaded", function () {
         // scale: 0,
         // x: 10,
         rotationY: 115,
-        transformOrigin: "100% 0% -20",
+        transformOrigin: "100% 0% 0",
         stagger: 0.03,
       });
 
@@ -264,6 +264,73 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 });
+
+// Text animation 2
+
+document.addEventListener("DOMContentLoaded", () => {
+  // Function to animate elements when they are in view
+  const animateSlideInText = (entries, observer) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        const element = entry.target;
+
+        // Apply SplitText for this specific element
+        const splitText = new SplitText(element, {
+          type: "lines",
+          linesClass: "lineParent",
+        });
+
+        // Wrap each line in a "lineChild" class
+        const lines = element.querySelectorAll(".lineParent");
+        lines.forEach((line) => {
+          const lineChild = document.createElement("div");
+          lineChild.classList.add("lineChild");
+          lineChild.style.display = "block";
+          lineChild.style.textAlign = "start";
+          lineChild.style.position = "relative";
+
+          // Move the line's text content into the new child
+          while (line.firstChild) {
+            lineChild.appendChild(line.firstChild);
+          }
+          line.appendChild(lineChild);
+        });
+
+        // Create and play the animation for the specific element
+        const tl = new TimelineMax({ repeat: 0, repeatDelay: 0.5, yoyo: true });
+        tl.staggerFrom(
+          element.querySelectorAll(".lineChild"),
+          0.75,
+          { y: 200, opacity: 0 },
+          0
+        );
+
+        // Unobserve the element after animation triggers
+        observer.unobserve(element);
+      }
+    });
+  };
+
+  // Set up the IntersectionObserver
+  const observerOptions = {
+    root: null, // Use the viewport as the root
+    threshold: 0.2, // Trigger when 20% of the element is in view
+  };
+
+  const observer = new IntersectionObserver(
+    animateSlideInText,
+    observerOptions
+  );
+
+  // Observe all elements with the class "slide-in-text"
+  const slideInTextElements = document.querySelectorAll(".slide-in-text");
+  slideInTextElements.forEach((el) => observer.observe(el));
+});
+
+// new SplitText("p", { type: "lines", linesClass: "lineChild" });
+// new SplitText("p", { type: "lines", linesClass: "lineParent" });
+// var tl = new TimelineMax({repeat:0, repeatDelay:0, yoyo:true});
+// tl.staggerFrom(".lineChild", 0.75, {y:100}, 0);
 
 // Text fade in from below
 

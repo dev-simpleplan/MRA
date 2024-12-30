@@ -2059,14 +2059,14 @@ footer {
 }
 
 .hsrs-img {
-    clip-path: inset(0 0 0 100%);
+    /* clip-path: inset(0 0 0 100%); */
     opacity: 0;
     transition: all .5s ease-in;
     transition-delay: .2s;
 }
 
 #right-slider-list li.is-active .hsrs-img {
-    clip-path: inset(0 0 0 0);
+    /* clip-path: inset(0 0 0 0); */
     opacity: 1;
 }
 

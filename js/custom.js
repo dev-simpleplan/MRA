@@ -230,14 +230,13 @@ document.addEventListener("DOMContentLoaded", function () {
       console.log(chars);
 
       tl.from(chars, {
-        duration: 0.5,
+        duration: 1,
         opacity: 0,
-        scale: 1,
-        y: -20,
-        rotationY: 180,
-        transformOrigin: "10% 50% 0%",
-        ease: "back",
-        stagger: 0.04,
+        // scale: 0,
+        // x: 10,
+        rotationY: 115,
+        transformOrigin: "100% 0% -20",
+        stagger: 0.03,
       });
 
       tl.restart(); // Trigger the animation
@@ -254,7 +253,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
       });
     },
-    { threshold: 0.3 } // Trigger when 30% of the element is visible
+    { threshold: 0.5 } // Trigger when 50% of the element is visible
   );
 
   // Get all elements with the class 'letter-animation' (or use any other selector)
@@ -279,9 +278,9 @@ document.addEventListener("DOMContentLoaded", function () {
         {
           opacity: 1, // Final state
           y: 0, // Moves to its original position
-          duration: 1,
-          ease: "ease",
-          stagger: 0.2, // Stagger delay between animations
+          duration: 0.8,
+          ease: "expo.out",
+          stagger: 0.1, // Stagger delay between animations
         }
       );
     }
@@ -301,7 +300,7 @@ document.addEventListener("DOMContentLoaded", function () {
           }
         });
       },
-      { threshold: 0.1 } // Trigger when 10% of the section is visible
+      { threshold: 0.4 } // Trigger when 10% of the section is visible
     );
 
     // Observe each section

@@ -1168,7 +1168,7 @@
         gap: 16px;
     }
     .ab-content{
-        height: calc(100vh - 50px);
+        height: calc(100vh - 240px);
     }
 }
 

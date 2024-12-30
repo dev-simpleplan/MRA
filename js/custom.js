@@ -1,5 +1,16 @@
 // lenis initiate
+document.addEventListener("DOMContentLoaded", () => {
+  // Initialize Lenis
+  const lenis = new Lenis();
 
+  // Use requestAnimationFrame to continuously update the scroll
+  function raf(time) {
+    lenis.raf(time);
+    requestAnimationFrame(raf);
+  }
+
+  requestAnimationFrame(raf);
+});
 // lenis initiate
 
 // nabar sticky
@@ -110,48 +121,6 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 // navbar
-// document.addEventListener("DOMContentLoaded", () => {
-//   // Select the elements
-//   const hamburgerIcon = document.querySelector(".hamburger-icon");
-//   const headerBottom = document.querySelector(".header-bottom");
-//   const header = document.querySelector("header.transparent");
-//   const body = document.body;
-
-//   // Function to toggle active class
-//   const toggleActiveClass = () => {
-//     const isActive = headerBottom.classList.contains("active");
-//     const headerTransparentExists = header.classList.contains("transparent"); // Check if header.transparent exists
-
-//     headerBottom.classList.toggle("active", !isActive);
-
-//     // Only toggle 'active' on header if 'header.transparent' exists
-//     if (headerTransparentExists) {
-//       header.classList.toggle("active", !isActive);
-//     }
-
-//     hamburgerIcon.classList.toggle("active", !isActive);
-//     body.style.overflow = isActive ? "" : "hidden"; // Enable/disable body scroll
-//   };
-
-//   // Event listener for the hamburger icon
-//   hamburgerIcon.addEventListener("click", (event) => {
-//     event.stopPropagation(); // Prevent event from bubbling
-//     toggleActiveClass();
-//   });
-
-//   // Event listener for clicking outside the header-bottom
-//   document.addEventListener("click", (event) => {
-//     if (
-//       !headerBottom.contains(event.target) &&
-//       !hamburgerIcon.contains(event.target)
-//     ) {
-//       headerBottom.classList.remove("active");
-//       header.classList.remove("active");
-//       hamburgerIcon.classList.remove("active");
-//       body.style.overflow = ""; // Restore body scroll
-//     }
-//   });
-// });
 document.addEventListener("DOMContentLoaded", () => {
   // Select the elements
   const hamburgerIcon = document.querySelector(".hamburger-icon");
@@ -326,13 +295,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const slideInTextElements = document.querySelectorAll(".slide-in-text");
   slideInTextElements.forEach((el) => observer.observe(el));
 });
-
-// new SplitText("p", { type: "lines", linesClass: "lineChild" });
-// new SplitText("p", { type: "lines", linesClass: "lineParent" });
-// var tl = new TimelineMax({repeat:0, repeatDelay:0, yoyo:true});
-// tl.staggerFrom(".lineChild", 0.75, {y:100}, 0);
-
-// Text fade in from below
 
 document.addEventListener("DOMContentLoaded", function () {
   // Function to animate children of the section with a staggered effect

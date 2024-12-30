@@ -1,19 +1,12 @@
 // lenis initiate
-document.addEventListener("DOMContentLoaded", () => {
-  // Initialize Lenis
-  const lenis = new Lenis();
 
-  // Use requestAnimationFrame to continuously update the scroll
-  function raf(time) {
-    lenis.raf(time);
-    requestAnimationFrame(raf);
-  }
-
-  requestAnimationFrame(raf);
-});
 // lenis initiate
 
-// nabar sticky
+// nabar fixed
+
+
+
+
 // Function to add/remove 'active' class to the header when scrolling
 window.addEventListener("scroll", function () {
   const header = document.querySelector("header");
@@ -196,7 +189,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
       gsap.set(target, { perspective: 400 });
 
-      console.log(chars);
+      // console.log(chars);
 
       tl.from(chars, {
         duration: 1,

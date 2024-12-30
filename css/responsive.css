@@ -143,7 +143,7 @@
         width: 80%;
         transform: translateX(-100%);
         transition: all .5s ease;
-        height: calc(100vh - 66px);
+        height: calc(100dvh - 66px);
         display: flex;
         flex-direction: column;
         justify-content: space-between;

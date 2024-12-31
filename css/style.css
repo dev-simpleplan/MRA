@@ -436,16 +436,18 @@ select:focus {
     overflow: hidden;
     line-height: 115%;
 }
+
 p .lineParent {
     overflow: hidden;
     line-height: 24px;
 }
+
 /* Ensure initial state is off-screen or invisible */
 .lineChild {
     opacity: 0;
     transform: translateY(200px);
-  }
-  
+}
+
 /* Animation */
 
 /* Header Css */
@@ -824,6 +826,7 @@ Page CSS
     display: grid;
     grid-template-columns: repeat(3, minmax(255px, 1fr));
     gap: 34px;
+    padding-bottom: 20px;
 }
 
 .partner-item {
@@ -854,6 +857,7 @@ Page CSS
     /* aspect-ratio: 1; */
     scale: 1.12;
 }
+
 .type .partner-item:hover .partner-item-img img {
     /* aspect-ratio: 1; */
     scale: 1;
@@ -871,7 +875,7 @@ Page CSS
     left: 0;
     bottom: 0;
     padding-left: 25px;
-    padding-bottom: 45px;
+    padding-bottom: 25px;
     overflow: hidden;
     z-index: 2;
 }
@@ -890,7 +894,7 @@ Page CSS
 /* homepage type */
 .type {
     padding-top: 120px;
-    padding-bottom: 110px;
+    padding-bottom: 90px;
     background-color: var(--bg-darkblue);
 }
 
@@ -908,6 +912,7 @@ Page CSS
 
 .type .partner-grid {
     margin-top: 30px;
+    /* padding-bottom: 20px; */
 }
 
 .partner-item-content {
@@ -1016,6 +1021,7 @@ Page CSS
     overflow: hidden;
     overflow-y: scroll;
 }
+
 /* For WebKit-based browsers (Chrome, Edge, Safari) */
 .hover-text-box-wrap::-webkit-scrollbar {
     width: 5px;
@@ -1031,8 +1037,10 @@ Page CSS
 
 /* For Firefox */
 .hover-text-box-wrap {
-    scrollbar-width: thin; /* Thin scrollbar */
-    scrollbar-color: rgb(122, 122, 122) transparent; /* Thumb color and track color */
+    scrollbar-width: thin;
+    /* Thin scrollbar */
+    scrollbar-color: rgb(122, 122, 122) transparent;
+    /* Thumb color and track color */
 }
 
 /* .partner-item:hover .partner-item-content h4{
@@ -1071,9 +1079,11 @@ Page CSS
 .collection .cta-btn {
     margin-top: 55px;
 }
-.collection .exp-image-big img{
+
+.collection .exp-image-big img {
     object-position: bottom;
 }
+
 /* Homepage location */
 .location {
     background-color: #F1E8D6;
@@ -1312,6 +1322,12 @@ Page CSS
     justify-content: space-between;
     height: 650px;
     gap: 22px;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.tip-grid::-webkit-scrollbar {
+    display: none;
 }
 
 .tip-item {
@@ -1365,13 +1381,16 @@ Page CSS
     opacity: 1;
     transition: all .5s ease;
 }
-.overlay2{
+
+.overlay2 {
     opacity: 0;
     background: linear-gradient(180deg, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.3) 54.4%);
 }
+
 .tip-item.open .tip-item-overlay {
     opacity: 0;
 }
+
 .tip-item.open .overlay2 {
     opacity: 1;
 }
@@ -1899,7 +1918,8 @@ footer {
 /* Banner section */
 .about-banner {
     width: 100%;
-    height: calc(100vh - 141px);
+    height: 100vh;
+    position: relative;
 }
 
 .ab-bg-img {
@@ -2073,6 +2093,9 @@ footer {
 }
 
 .splide__track--nav>.splide__list>.splide__slide.is-active {
+    border: none;
+}
+.splide__track--nav>.splide__list>.splide__slide{
     border: none;
 }
 
@@ -2401,12 +2424,14 @@ footer {
     text-align: left;
     color: #1A1A1A;
     font-family: var(--teodor);
+    align-items: start;
 }
 
 .acc-icon {
     display: flex;
     align-items: center;
     justify-content: center;
+    padding-top: 8px;
 }
 
 .acc-icon span {

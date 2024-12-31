@@ -298,7 +298,7 @@ document.addEventListener("DOMContentLoaded", () => {
         gsap.to(element.querySelectorAll(".lineChild"), {
           opacity: 1,    // Fade in
           y: 0,          // Move to its original position
-          stagger: 0.1,   // Stagger each line's animation
+          stagger: 0,   // Stagger each line's animation
           ease: "power3.out", // Smooth easing
           duration: 0.6,  // Duration of each animation
         });

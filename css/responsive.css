@@ -256,6 +256,15 @@
         font-size: 103.85px;
         line-height: 91.8px;
     }
+    .test-right{
+        width: 40%;
+    }
+    .exp-content{
+        width: 40%;
+    }
+    .collection .exp-content {
+        padding-left: 60px;
+    }
 }
 
 @media only screen and (max-width: 991px) {
@@ -266,7 +275,7 @@
     }
 
     h2 {
-        font-size: 38px;
+        font-size: 36px;
         /* line-height: 28px; */
     }
 
@@ -274,11 +283,11 @@
         font-size: 32px;
     }
     h2.tiny{
-        font-size: 38px;
+        font-size: 36px;
         /* line-height: 115%; */
     }
     h3.tiny{
-        font-size: 38px;
+        font-size: 36px;
         line-height: 115%;
     }
     .label.mob {

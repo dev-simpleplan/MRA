@@ -271,7 +271,7 @@
 
     .hp-banner {
         height: auto;
-        /* min-height: auto; */
+        min-height: auto;
     }
     .hp-banner-wrap {
         flex-direction: column;
@@ -294,7 +294,7 @@
     .hp-banner-img {
         position: relative;
         width: 100%;
-        aspect-ratio: 1 / 1;
+        aspect-ratio: 5 / 3;
     }
 
     .hp-banner-content .hpbc-middle {

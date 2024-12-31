@@ -265,6 +265,9 @@
     .collection .exp-content {
         padding-left: 60px;
     }
+    .pf-left{
+        width: 50%;
+    }
 }
 
 @media only screen and (max-width: 991px) {
@@ -806,6 +809,9 @@
     }
     .spacer120 {
         height: 50px;
+    }
+    .spacer{
+        height: 70px;
     }
     .faq-section{
         padding-bottom: 0; 

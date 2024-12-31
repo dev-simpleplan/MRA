@@ -285,7 +285,7 @@
     }
 
     .hpbc-wrap {
-        max-width: 80ch;
+        max-width: 100%;
         padding-top: 55px;
         text-align: center;
         margin: 0 auto;

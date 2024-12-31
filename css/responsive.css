@@ -848,7 +848,7 @@
     }
 
     .collection .exp-content {
-        padding-top: 55px;
+        padding-top: 30px;
         padding-bottom: 96px;
     }
 
@@ -887,7 +887,7 @@
     }
 
     section.experience.innovation {
-        margin-top: 60px;
+        margin-top: 30px;
     }
 
     .innovation .exp-content {
@@ -921,7 +921,7 @@
     }
 
     .tips {
-        margin-top: 60px;
+        margin-top: 30px;
         padding-top: 35px;
         padding-bottom: 14px;
     }
@@ -935,8 +935,8 @@
     }
 
     section.experience.find {
-        margin-top: 60px;
-        padding-top: 30px;
+        margin-top: 30px;
+        /* padding-top: 30px; */
     }
 
     .find .cta-btn {
@@ -948,8 +948,8 @@
     }
 
     .pre-footer {
-        margin-top: 45px;
-        padding-top: 40px;
+        margin-top: 30px;
+        padding-top: 30px;
         padding-bottom: 40px;
         margin-bottom: 75px;
     }
@@ -1051,7 +1051,7 @@
 
     .value-content-bottom {
         width: 100%;
-        padding: 40px 39px;
+        padding: 30px 20px;
     }
 
     .partnership-middle {

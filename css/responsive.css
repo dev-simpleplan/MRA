@@ -1117,6 +1117,10 @@
         width: 100%;
         aspect-ratio: 1/ 1;
     }
+    .milestone-bottom{
+        gap: 30px;
+        margin-top: 50px;
+    }
 }
 
 @media only screen and (max-width: 600px) {
@@ -1138,6 +1142,10 @@
         font-size: 32px;
     }
     h2.tiny{
+        font-size: 28px;
+        line-height: 115%;
+    }
+    h3.tiny{
         font-size: 28px;
     }
     .label.mid {

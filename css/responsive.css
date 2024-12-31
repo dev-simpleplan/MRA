@@ -815,7 +815,17 @@
     }
     .faq-section{
         padding-bottom: 0; 
+        padding-top: 45px;
     } 
+    .exp-wrapper{
+        padding: 0;
+    }
+    .partnership {
+        padding-top: 35px;
+    }
+    .pre-footer{
+        padding-top: 45px;
+    }
 }
 
 @media only screen and (max-width: 767px) {

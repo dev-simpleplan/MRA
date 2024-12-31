@@ -1761,6 +1761,7 @@ footer {
     background-color: transparent;
     outline: none;
     border: none;
+    align-self: center;
 }
 
 .fmr-bottom-form input::placeholder {

@@ -446,15 +446,13 @@
     .tip-item {
         width: 100%;
     }
-
+    .tip-item.open h4.big{
+        font-size: 26px;
+    }
     .tip-item-content a {
         display: inline-block;
         width: fit-content;
         padding: 8px 40px;
-    }
-
-    .tip-item h4.big {
-        font-size: 32px;
     }
 
     .exp-img-wrap {
@@ -1139,7 +1137,9 @@
     h2.small {
         font-size: 32px;
     }
-
+    h2.tiny{
+        font-size: 28px;
+    }
     .label.mid {
         font-size: 28px;
     }
@@ -1148,6 +1148,9 @@
         font-size: 32px;
     }
 
+    .pfr-text p{
+        font-size: 16px;
+    }
     .testimonial .test-left h3 {
         font-size: 24px;
         line-height: 29px;

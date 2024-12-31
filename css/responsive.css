@@ -218,7 +218,7 @@
         padding-left: 0;
     }
     .about-banner{
-        height: calc(100dvh - 66px);
+        height: calc(100vh - 66px);
     }
     .header-margin{
         margin-top: 62px;
@@ -1244,6 +1244,9 @@
     }
     .footer-link-wrap{
         column-gap: 90px;
+    }
+    .partner-img {
+        padding: 0 65px;
     }
 }
 

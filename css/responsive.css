@@ -218,10 +218,14 @@
         padding-left: 0;
     }
     .about-banner{
-        height: calc(100vh - 66px);
+        /* height: calc(100vh - 66px); */
+        height: 100vh;
     }
     .header-margin{
         margin-top: 62px;
+    }
+    .about-banner.header-margin{
+        margin-top: 0;
     }
     .footer-top{
         padding-right: 24px;

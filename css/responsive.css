@@ -751,6 +751,9 @@
     .footer-top {
         padding-right: 0;
     }
+    .exp-image-big img{
+        height: 100%;
+    }
 }
 
 @media only screen and (max-width: 767px) {

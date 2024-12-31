@@ -436,7 +436,10 @@ select:focus {
     overflow: hidden;
     line-height: 115%;
 }
-
+p .lineParent {
+    overflow: hidden;
+    line-height: 24px;
+}
 /* Ensure initial state is off-screen or invisible */
 .lineChild {
     opacity: 0;
@@ -1758,6 +1761,7 @@ footer {
     background-color: transparent;
     outline: none;
     border: none;
+    align-self: center;
 }
 
 .fmr-bottom-form input::placeholder {

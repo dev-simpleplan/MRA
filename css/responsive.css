@@ -1146,10 +1146,11 @@
     }
     h2.tiny{
         font-size: 28px;
-        line-height: 115%;
+        /* line-height: 115%; */
     }
     h3.tiny{
         font-size: 28px;
+        line-height: 115%;
     }
     .label.mid {
         font-size: 28px;

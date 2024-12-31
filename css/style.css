@@ -1778,6 +1778,8 @@ footer {
 
 .fmr-bottom-form button {
     padding: 8px 9px;
+    outline: none;
+    border: none;
 }
 
 .fmr-bottom-text p {

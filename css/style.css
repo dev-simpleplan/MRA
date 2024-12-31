@@ -436,7 +436,10 @@ select:focus {
     overflow: hidden;
     line-height: 115%;
 }
-
+p .lineParent {
+    overflow: hidden;
+    line-height: 24px;
+}
 /* Ensure initial state is off-screen or invisible */
 .lineChild {
     opacity: 0;

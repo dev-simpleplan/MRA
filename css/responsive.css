@@ -782,11 +782,14 @@
     .spacer120 {
         height: 50px;
     }
+    .faq-section{
+        padding-bottom: 0;
+    }
 }
 
 @media only screen and (max-width: 767px) {
 
-    .spacer {
+    .spacer,.spacer120 {
         display: none;
     }
 

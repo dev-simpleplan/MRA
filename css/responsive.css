@@ -1242,6 +1242,9 @@
     .testimonial .splide__arrows{
         bottom: 60px;
     }
+    .footer-link-wrap{
+        column-gap: 90px;
+    }
 }
 
 @media only screen and (max-width: 475px) {
@@ -1257,5 +1260,8 @@
     }
     .testimonial .splide__arrows{
         bottom: 40px;
+    }
+    .footer-link-wrap{
+        column-gap: 20px;
     }
 }

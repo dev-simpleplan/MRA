@@ -1237,7 +1237,7 @@ Page CSS
 }
 
 .testimonial-slider-wrapper {
-    margin-top: -20px;
+    /* margin-top: -20px; */
 }
 
 .testimonial .splide__arrows {
@@ -1245,7 +1245,7 @@ Page CSS
     display: flex;
     gap: 15px;
     left: 0;
-    bottom: 60px;
+    bottom: 0;
 }
 
 .testimonial .splide__arrows button {

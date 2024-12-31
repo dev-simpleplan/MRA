@@ -1121,6 +1121,9 @@
         gap: 30px;
         margin-top: 50px;
     }
+    .partnership-grid{
+        gap: 40px;
+    }
 }
 
 @media only screen and (max-width: 600px) {

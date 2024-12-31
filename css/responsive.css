@@ -474,6 +474,7 @@
 
     .test-left {
         width: 100%;
+        height: fit-content;
         text-align: center;
         display: flex;
         flex-direction: column;
@@ -571,7 +572,9 @@
     .hover-text-box.desk {
         /* display: none; */
     }
-
+    .hover-text-box{
+        padding-top: 55px;
+    }
     .type .custom-button.mob {
         display: block;
         margin-top: 35px;
@@ -1019,7 +1022,7 @@
     }
     .value-content-bottom {
         width: 100%;
-        padding: 70px 39px;
+        padding: 40px 39px;
     }
 
     .partnership-middle {
@@ -1227,6 +1230,15 @@
     .tip-grid {
         height: 460px;
     }
+    #testimonial-slider ul {
+        /* min-height: 420px; */
+    }
+    .testimonial {
+        padding-bottom: 0px;
+    }
+    .testimonial .splide__arrows{
+        bottom: 60px;
+    }
 }
 
 @media only screen and (max-width: 475px) {
@@ -1236,5 +1248,11 @@
 
     .rl-bottom-img {
         width: 100px;
+    }
+    .testimonial {
+        padding-bottom: 30px;
+    }
+    .testimonial .splide__arrows{
+        bottom: 0px;
     }
 }

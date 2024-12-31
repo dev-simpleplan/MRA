@@ -623,6 +623,7 @@ Page CSS
 .hp-banner {
     background: var(--bg-blue);
     /* height: calc(100vh - 147px); */
+    /* min-height: auto; */
     min-height: 100vh;
     height: auto;
 }

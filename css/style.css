@@ -329,20 +329,24 @@ a:focus {
     font-size: 12px;
     font-weight: 800;
     line-height: 16.8px;
-    letter-spacing: 4px;text-transform: uppercase;
+    letter-spacing: 4px;
+    text-transform: uppercase;
     display: flex;
     align-items: center;
     gap: 10px;
     transition: all .5s ease;
 }
-.custom-button2:hover{
+
+.custom-button2:hover {
     color: #fff;
-    
+
 }
-.custom-button2 svg path{
+
+.custom-button2 svg path {
     transition: all .5s ease;
 }
-.custom-button2:hover svg path{
+
+.custom-button2:hover svg path {
     stroke: #fff;
 }
 
@@ -364,6 +368,9 @@ select:focus {
 
 .spacer120 {
     height: 120px;
+}
+.spacer65 {
+    height: 65px;
 }
 
 .letter {
@@ -2556,6 +2563,12 @@ footer {
     object-fit: cover;
 }
 
+.faq-bg {
+    background: url('../images/AboutPage/cream-strip-bg.png');
+    /* background-repeat: no-repeat; */
+    background-size: contain;
+}
+
 /* FAQ */
 
 /* About Page */
@@ -2566,6 +2579,7 @@ footer {
 .australian-mattress-banner.about-banner {
     display: flex;
     align-items: flex-end;
+    min-height: 730px;
 }
 
 .australian-mattress-banner .ab-content {
@@ -2667,12 +2681,250 @@ footer {
     flex-direction: column;
     gap: 170px;
 }
+
 .pride .test-right {
     width: 35%;
 }
-.pride .testimonial-slider-wrapper{
+
+.pride .testimonial-slider-wrapper {
     margin-top: -40px;
 }
+
 /* Pride section */
+
+/* Ultimate section */
+.ultimate-section-wrap {
+    padding: 0 115px;
+    padding-top: 60px;
+    padding-bottom: 50px;
+}
+
+.ultimate-section-head {
+    text-align: center;
+}
+
+.ultimate-section-grid {
+    margin-top: 50px;
+    height: 550px;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(315px, 1fr));
+    gap: 26px;
+}
+
+.usg-item {
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+
+.usg-item-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+}
+
+.usg-item-bg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: right;
+}
+
+.usg-item-bg::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 39.9%, rgba(0, 0, 0, 0.35) 61.93%);
+    /* z-index: -1; */
+}
+
+.usg-item-content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Ultimate section */
+
+/* Unveiling section */
+.Unveiling-section-wrap {
+    padding: 50px 55px;
+}
+
+.Unveiling-section-head {
+    text-align: center;
+}
+
+.Unveiling-section-head h2 .lineParent {
+    text-align: center !important;
+}
+
+.Unveiling-section-head p .lineParent {
+    text-align: center !important;
+}
+
+.Unveiling-section-head p {
+    margin-top: 25px;
+}
+
+.Unveiling-section-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(315px, 1fr));
+    row-gap: 60px;
+    column-gap: 75px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    margin-top: 45px;
+}
+
+.Unveiling-item-content {
+    max-width: 40ch;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    gap: 15px;
+}
+
+.Unveiling-item-content h4 {
+    color: var(--head);
+    text-align: center;
+}
+
+.Unveiling-section-footer {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+    max-width: 50ch;
+    margin: 0 auto;
+    margin-top: 58px;
+}
+
+.Unveiling-section-footer p {
+    line-height: 19px;
+}
+
+.Unveiling-section-footer::before {
+    content: "";
+    width: 25px;
+    height: 1px;
+    background-color: #172A55;
+}
+
+/* Unveiling section */
+
+/* collaboration section */
+.collaboration {
+    padding-top: 105px;
+    padding-bottom: 70px;
+}
+
+.collaboration .exp-wrapper {
+    padding: 0;
+}
+
+.collaboration .exp-text {
+    margin-top: 35px;
+}
+
+.collaboration .cta-btn {
+    margin-top: 55px;
+}
+
+.collaboration .exp-image-big {
+    padding: 0;
+    width: 41%;
+}
+
+.collaboration .exp-content-wrap {
+    max-width: 52ch;
+}
+
+.collaboration .exp-image-small {
+    right: 41%;
+    top: 105%;
+    width: 210px;
+    height: 245px;
+}
+
+.collaboration .exp-content {
+    padding-top: 116px;
+    padding-bottom: 128px;
+}
+
+.collaboration p .lineParent {
+    line-height: 22px;
+}
+
+.collaboration .label {
+    font-size: 32px;
+}
+
+/* collaboration section */
+
+/* Pre-footer */
+.pre-footer2 {
+    padding: 0;
+    margin-top: 90px;
+    margin-bottom: 54px;
+}
+
+.pre-footer2 .pfl-content-wrap {
+    margin-top: 35px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.pre-footer2 .pfl-content-btn {
+    margin-top: 40px;
+}
+
+.pre-footer2 .pf-right {
+    width: 42%;
+    margin-top: 0;
+}
+
+.pre-footer2 .pfr-img {
+    padding-top: 115%;
+}
+
+.pre-footer2 .label {
+    line-height: 90%;
+}
+
+.pre-footer2 .pfl-content-wrap p a {
+    border-bottom: 1px solid var(--desc);
+    transition: all .3s ease;
+}
+
+.pre-footer2 .pfl-content-wrap p a:hover {
+    border-bottom: 1px solid var(--label-gold);
+    color: var(--label-gold);
+}
+
+.pre-footer2 .pf-wrap {
+    padding-left: 18px;
+    padding-right: 38px;
+}
+
+/* Pre-footer */
+
 
 /* Australian-Mattress page */

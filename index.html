@@ -1,4 +1,4 @@
-<html>
+<html lang="en">
 
 <head>
   <meta charset="utf-8" />
@@ -30,7 +30,7 @@
             fill="white" />
         </svg>
       </div>
-      <button class="custom-button white big-width">search</button>
+      <button class="custom-button white big-width" aria-label="search button">search</button>
     </div>
   </div>
   <wrapper">
@@ -734,8 +734,9 @@
           </div>
         </div>
         <div class="map">
-          <div style="width: 100%"><iframe width="100%" height="600" frameborder="0" scrolling="no" marginheight="0"
-              marginwidth="0"
+          <div style="width: 100%">
+            <iframe width="100%" height="600" frameborder="0" scrolling="no" marginheight="0"
+              marginwidth="0" title="Map showing the location of the MRA store"
               src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=Bray%20Park%20australia+(MRA)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"><a
                 href="https://www.gps.ie/">gps trackers</a></iframe>
           </div>
@@ -799,7 +800,7 @@
               </div>
             </div>
             <div class="testimonial-slider-wrapper">
-              <div class="splide" id="testimonial-slider" role="group" aria-label="Splide Basic HTML Example">
+              <div class="splide" id="testimonial-slider" role="slider" aria-label="Splide Basic HTML Example">
                 <div class="splide__arrows splide__arrows--ltr">
                   <button class="splide__arrow splide__arrow--prev" type="button" aria-label="Previous slide"
                     aria-controls="testimonial-slider-track" disabled="">
@@ -818,7 +819,7 @@
                 </div>
                 <div class="splide__track">
                   <ul class="splide__list">
-                    <li class="splide__slide">
+                    <li class="splide__slide" role="slider">
                       <div class="testimonial-slide">
                         <div class="test-left">
                           <div class="tl-content">
@@ -857,7 +858,7 @@
                         </div>
                       </div>
                     </li>
-                    <li class="splide__slide">
+                    <li class="splide__slide" role="slider">
                       <div class="testimonial-slide">
                         <div class="test-left">
                           <div class="tl-content">
@@ -896,7 +897,7 @@
                         </div>
                       </div>
                     </li>
-                    <li class="splide__slide">
+                    <li class="splide__slide" role="slider">
                       <div class="testimonial-slide">
                         <div class="test-left">
                           <div class="tl-content">
@@ -1413,7 +1414,7 @@
                 </div>
                 <div class="fmr-bottom-form">
                   <input type="email" placeholder="your email address" />
-                  <button>
+                  <button aria-label="submit button">
                     <svg width="6" height="9" viewBox="0 0 6 9" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path d="M1.42188 7.94297L4.94219 4.42266L1.42188 0.902344" stroke="#2E2D2D"
                         stroke-width="1.17344" stroke-linecap="round" stroke-linejoin="round" />

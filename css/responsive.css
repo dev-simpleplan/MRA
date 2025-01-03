@@ -1312,6 +1312,12 @@
     .Unveiling-section-grid{
         display: block;
     }
+    .australian-mattress-banner.about-banner{
+        min-height: 500px;
+    }
+    .usg-item-content{
+        padding-bottom: 24px;
+    }
 }
 
 @media only screen and (max-width: 600px) {

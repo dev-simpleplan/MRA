@@ -63,13 +63,23 @@
         padding-left: 0;
         padding-right: 0;
     }
+
     .ultimate-section-wrap {
         padding-left: 0;
         padding-right: 0;
     }
-    .pride.testimonial{
+
+    .pride.testimonial {
         padding-left: 0;
         padding-right: 0;
+    }
+
+    .equal .exp-content {
+        width: 50%;
+    }
+
+    .equal .exp-content-wrap {
+        width: 100%;
     }
 }
 
@@ -236,22 +246,46 @@
     .footer-top {
         padding-right: 24px;
     }
-    .australian-mattress-banner .ab-content-wrap{
+
+    .australian-mattress-banner .ab-content-wrap {
         padding-left: 0;
     }
-    .pre-footer2 .pf-wrap{
+
+    .pre-footer2 .pf-wrap {
         padding-left: 0;
         padding-right: 0;
     }
-    .Unveiling-section-grid{
+
+    .Unveiling-section-grid {
         column-gap: 40px;
         grid-template-columns: repeat(3, minmax(250px, 1fr));
     }
-    .Unveiling-section-wrap{
+
+    .Unveiling-section-wrap {
         padding-left: 0;
         padding-right: 0;
     }
-    
+
+    .unlock .exp-content {
+        padding-left: 0;
+    }
+
+    .creating {
+        padding-left: 0;
+    }
+
+    .creating-left {
+        width: 45%;
+    }
+
+    .challenges .creating-right {
+        width: 50%;
+    }
+
+    .equal .exp-content {
+        padding-left: 0;
+    }
+
 }
 
 @media only screen and (max-width: 1100px) {
@@ -270,21 +304,26 @@
 
     .pfl-head {
         font-size: 103.85px;
-        line-height: 91.8px; 
+        line-height: 91.8px;
     }
-    .test-right{
+
+    .test-right {
         width: 40%;
     }
-    .exp-content{
+
+    .exp-content {
         width: 40%;
     }
+
     .collection .exp-content {
         padding-left: 60px;
     }
-    .pf-left{
+
+    .pf-left {
         width: 50%;
     }
-    .ultimate-section-grid{
+
+    .ultimate-section-grid {
         overflow: hidden;
         overflow-x: scroll;
         padding-bottom: 20px;
@@ -306,14 +345,17 @@
     h2.small {
         font-size: 32px;
     }
-    h2.tiny{
+
+    h2.tiny {
         font-size: 36px;
         /* line-height: 115%; */
     }
-    h3.tiny{
+
+    h3.tiny {
         font-size: 36px;
         line-height: 115%;
     }
+
     .label.mob {
         display: block;
     }
@@ -322,6 +364,7 @@
         height: auto;
         min-height: auto;
     }
+
     .hp-banner-wrap {
         flex-direction: column;
         min-height: auto;
@@ -495,9 +538,11 @@
     .tip-item {
         width: 100%;
     }
-    .tip-item.open h4.big{
+
+    .tip-item.open h4.big {
         font-size: 26px;
     }
+
     .tip-item-content a {
         display: inline-block;
         width: fit-content;
@@ -512,10 +557,12 @@
     .find-bottom-wrap {
         position: relative;
     }
-    .testimonial-heading.heading{
+
+    .testimonial-heading.heading {
         max-width: 100%;
         text-align: center;
     }
+
     .test-right.desk {
         display: none;
     }
@@ -831,36 +878,46 @@
         padding-left: 16px;
         padding-right: 16px;
     }
+
     .spacer120 {
         height: 50px;
     }
-    .spacer{
+
+    .spacer {
         height: 70px;
     }
-    .faq-section{
-        padding-bottom: 0; 
+
+    .faq-section {
+        padding-bottom: 0;
         padding-top: 45px;
-    } 
-    .exp-wrapper{
+    }
+
+    .exp-wrapper {
         padding: 0;
     }
+
     .partnership {
         padding-top: 35px;
     }
-    .pre-footer{
+
+    .pre-footer {
         padding-top: 45px;
     }
-    .australian-mattress-banner .ab-content h1{
+
+    .australian-mattress-banner .ab-content h1 {
         font-size: 90px;
         line-height: 95%;
     }
-    .pride .test-right.mob{
+
+    .pride .test-right.mob {
         display: block;
     }
-    .pride .test-right.desk{
+
+    .pride .test-right.desk {
         display: none;
     }
-    .pride .test-right{
+
+    .pride .test-right {
         width: 100%;
         height: auto;
         border-radius: 0;
@@ -868,60 +925,78 @@
         margin-top: 60px;
         margin-bottom: 0;
     }
-    .testimonial-heading.heading{
+
+    .testimonial-heading.heading {
         text-align: start;
     }
+
     .testimonial-heading.heading h2 .lineParent {
         text-align: start !important;
     }
-    .pride .testimonial-slider-wrapper{
+
+    .pride .testimonial-slider-wrapper {
         margin-top: 0;
     }
+
     .pride .testimonial-slide {
         padding-top: 50px;
     }
-    .pride .testimonial-slide p .lineParent{
+
+    .pride .testimonial-slide p .lineParent {
         text-align: start !important;
     }
-    .pride .test-left{
+
+    .pride .test-left {
         gap: 50px;
     }
-    .pride-btn{
+
+    .pride-btn {
         width: 100%;
     }
-    .pride-btn a{
+
+    .pride-btn a {
         text-align: start !important;
     }
-    .pride .tl-content{
+
+    .pride .tl-content {
         width: 100%;
     }
-    .ultimate-section-grid{
+
+    .ultimate-section-grid {
         height: 450px;
     }
+
     .Unveiling-section-grid {
         grid-template-columns: repeat(2, minmax(250px, 1fr));
     }
-    .collaboration .exp-content-wrap{
+
+    .collaboration .exp-content-wrap {
         max-width: 100%;
     }
-    .collaboration .exp-image-big{
+
+    .collaboration .exp-image-big {
         width: 100%;
     }
-    .collaboration .exp-image-big img{
+
+    .collaboration .exp-image-big img {
         object-position: center 80%;
     }
+
     .collaboration .exp-image-small {
         right: 20px;
         top: -64px;
     }
+
     .collaboration .exp-content {
         padding-top: 0;
         padding-bottom: 90px;
     }
+
     .pre-footer2 .pf-left {
         /* gap: 105px; */
         width: 100%;
     }
+
     .pre-footer2 .pf-right {
         width: 100%;
         height: 100%;
@@ -929,20 +1004,160 @@
         position: static;
         aspect-ratio: 7 / 5;
     }
-    .pre-footer2 .pfr-img img{
+
+    .pre-footer2 .pfr-img img {
         position: static;
     }
-    .pre-footer2 .pf-wrap{
+
+    .pre-footer2 .pf-wrap {
         gap: 55px;
     }
-    .pre-footer2{
+
+    .pre-footer2 {
         margin-top: 0;
+    }
+
+    .sleep-tip-banner-wrap {
+        max-width: 100%;
+    }
+
+    .sleep-tips-banner .label {
+        text-align: start;
+    }
+
+    .sleep-tips-banner .ab-content-text-wrap {
+        max-width: 50ch;
+        margin-left: 0;
+    }
+
+    .unlock .exp-content {
+        padding: 50px 0;
+        width: 100%;
+    }
+
+    .unlock .text {
+        margin-top: 40px;
+    }
+
+    .unlock .exp-image-big img {
+        object-position: center 80%;
+    }
+
+    .unlock-img-mob {
+        display: block;
+        margin-top: 30px;
+    }
+
+    .unlock-img-desk {
+        display: none;
+    }
+
+    .creating-wrap {
+        flex-direction: column-reverse;
+        gap: 50px;
+    }
+
+    .creating-left {
+        width: 100%;
+        padding-top: 0;
+    }
+
+    .creating-right {
+        position: static;
+        width: 100%;
+    }
+
+    .creating-left-content {
+        max-width: 100%;
+        margin-top: 40px;
+    }
+
+    .creating-right {
+        overflow: visible;
+    }
+
+    .creating-right-wrap {
+        position: relative;
+    }
+
+    .creating-right-big {
+        width: 100%;
+        height: 100%;
+        aspect-ratio: 5 / 3;
+    }
+
+    .creating-right-small {
+        position: absolute;
+        right: 20px;
+        bottom: -50px;
+    }
+
+    .creating-right-img img {
+        object-position: center 80%;
+    }
+
+    .mind .text {
+        max-width: 100%;
+    }
+
+    .mind .exp-wrapper {
+        flex-direction: column-reverse;
+    }
+
+    .challenges .creating-left,
+    .challenges .creating-left-head,
+    .challenges .creating-left-content {
+        max-width: 100%;
+        width: 100%;
+    }
+
+    .challenges .creating-right-small {
+        position: static;
+    }
+
+    .challenges .creating-right {
+        width: 100%;
+        margin-top: 30px;
+    }
+
+    .challenges .creating-right-img {
+        width: 50%;
+        height: 100%;
+        aspect-ratio: 5 / 4;
+    }
+
+    .challenges {
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+
+    .equal .exp-wrapper {
+        flex-direction: column-reverse;
+    }
+
+    .equal .exp-image-big {
+        width: 100%;
+    }
+
+    .equal .exp-content {
+        padding-top: 45px;
+        width: 100%;
+    }
+
+    .equal-left-img {
+        aspect-ratio: 5 / 2;
+    }
+
+    .equal .exp-content {
+        padding-bottom: 40px;
     }
 }
 
 @media only screen and (max-width: 767px) {
 
-    .spacer, .spacer120, .spacer65 {
+    .spacer,
+    .spacer120,
+    .spacer65 {
         display: none;
     }
 
@@ -1271,52 +1486,115 @@
     .value-slide {
         padding: 20px 0;
     }
+
     .hp-banner-img {
         position: relative;
         width: 100%;
         aspect-ratio: 1/ 1;
     }
-    .milestone-bottom{
+
+    .milestone-bottom {
         gap: 30px;
         margin-top: 50px;
     }
-    .partnership-grid{
+
+    .partnership-grid {
         gap: 40px;
     }
+
     .australian-mattress-banner .ab-content h1 {
         font-size: 75px;
     }
-    .am-faq.faq-section{
+
+    .am-faq.faq-section {
         padding-top: 40px;
-    }   
-    .pride.testimonial{
+    }
+
+    .pride.testimonial {
         margin-top: 0;
     }
-    .ultimate-section-wrap{
+
+    .ultimate-section-wrap {
         padding-bottom: 30px;
     }
-    .collaboration{
+
+    .collaboration {
         padding-top: 60px;
         padding-bottom: 40px;
     }
-    .pre-footer2{
+
+    .pre-footer2 {
         margin-top: 0;
     }
-    .pre-foote2{
+
+    .pre-foote2 {
         margin-bottom: 0;
     }
+
     .collaboration .exp-image-small {
         width: 110px;
         height: 145px;
     }
-    .Unveiling-section-grid{
+
+    .Unveiling-section-grid {
         display: block;
     }
-    .australian-mattress-banner.about-banner{
+
+    .australian-mattress-banner.about-banner {
         min-height: 500px;
     }
-    .usg-item-content{
+
+    .usg-item-content {
         padding-bottom: 24px;
+    }
+
+    .sleep-tips-banner .ab-content h1 {
+        font-size: 70px;
+    }
+
+    .sleep-tips-banner .ab-content-text-wrap {
+        max-width: 100%;
+    }
+    .creating-left{
+        padding-bottom: 0;
+    }
+    .role{
+        height: auto;
+        margin-top: 40px;
+    }
+    .role-wrap {
+        flex-direction: column;
+        height: auto;
+        padding-bottom: 0;
+    }
+    .role-bg {
+        position: static;
+        width: 100%;
+        height: 100%;
+        z-index: 0;
+        aspect-ratio: 5/3;
+    }
+    .role-content{
+        padding: 40px 20px;
+    }
+    .challenges .creating-right{
+        margin-top: 0;
+    }
+    .mind{
+        margin-top: 50px;
+    }
+    .equal{
+        margin-top: 50px;
+    }
+    .creating-right-small {
+        width: 100px;
+        height: 115px;
+    }
+    .creating-wrap {
+        gap: 70px;
+    }
+    .faq-margin{
+        margin-bottom: 50px;
     }
 }
 
@@ -1338,14 +1616,17 @@
     h2.small {
         font-size: 32px;
     }
-    h2.tiny{
+
+    h2.tiny {
         font-size: 28px;
         /* line-height: 115%; */
     }
-    h3.tiny{
+
+    h3.tiny {
         font-size: 28px;
         line-height: 115%;
     }
+
     .label.mid {
         font-size: 28px;
     }
@@ -1354,9 +1635,10 @@
         font-size: 32px;
     }
 
-    .pfr-text p{
+    .pfr-text p {
         font-size: 16px;
     }
+
     .testimonial .test-left h3 {
         font-size: 24px;
         line-height: 29px;
@@ -1497,25 +1779,31 @@
     .partner-img {
         padding: 0 65px;
     }
+
     .australian-mattress-banner .ab-content h1 {
         font-size: 42px;
     }
-    .australian-mattress-banner .ab-content-text-wrap{
+
+    .australian-mattress-banner .ab-content-text-wrap {
         margin-top: 30px;
         gap: 15px;
     }
-    .Unveiling-item-content h4{
+
+    .Unveiling-item-content h4 {
         font-size: 22px;
     }
-    .Unveiling-item-img{
+
+    .Unveiling-item-img {
         height: 50px;
         width: 50px;
     }
-    .Unveiling-item-content{
+
+    .Unveiling-item-content {
         margin-top: 5px;
         gap: 5px;
     }
-    .Unveiling-section-footer{
+
+    .Unveiling-section-footer {
         margin-top: 40px;
     }
 }
@@ -1541,6 +1829,7 @@
         column-gap: 20px;
     }
 }
+
 @media only screen and (max-width: 375px) {
     .australian-mattress-banner .ab-content h1 {
         font-size: 40px;

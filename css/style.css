@@ -2506,6 +2506,10 @@ footer {
     line-height: 21.44px;
     letter-spacing: 0.01em;
     text-align: left;
+    margin-top: 20px;
+}
+.accordion-content-inner p:nth-child(1) {
+    margin-top: 0px;
 }
 
 .accordion-content-inner p a {
@@ -2864,12 +2868,15 @@ footer {
 .Unveiling-item-content p {
     text-align: center;
 }
-.Unveiling-section-wrap .splide__pagination{
+
+.Unveiling-section-wrap .splide__pagination {
     bottom: -30px;
 }
-.Unveiling-section-wrap .splide__pagination__page.is-active{
+
+.Unveiling-section-wrap .splide__pagination__page.is-active {
     background-color: var(--label-gold);
 }
+
 /* Unveiling section */
 
 /* collaboration section */
@@ -2890,7 +2897,8 @@ footer {
 .collaboration .cta-btn {
     margin-top: 55px;
 }
-.collaboration .cta-btn a{
+
+.collaboration .cta-btn a {
     padding: 14px 48px;
 }
 
@@ -3079,7 +3087,9 @@ footer {
 .unlock .exp-wrapper {
     padding: 0;
 }
-
+.unlock-img-mob{
+    display: none;
+}
 /* Unlock section */
 
 /* Creating section */
@@ -3124,12 +3134,14 @@ footer {
     padding-left: 16px;
 }
 
-.creating-left-content ol li p, .creating-left-content ol li {
+.creating-left-content ol li p,
+.creating-left-content ol li {
     font-size: 14px;
     font-weight: 400;
     line-height: 19.6px;
     color: #fff;
 }
+
 .creating-left-content ol li p {
     padding-left: 5px;
 }
@@ -3140,11 +3152,13 @@ footer {
     transition: all .3s ease;
     color: #fff;
 }
+
 .creating-left-content ol li a:hover {
     color: var(--label-gold);
     border-bottom: 1px solid var(--label-gold);
 }
-.creating-right{
+
+.creating-right {
     position: absolute;
     width: 50%;
     height: 100%;
@@ -3152,25 +3166,30 @@ footer {
     top: 0;
     overflow: hidden;
 }
-.creating-right-wrap{
+
+.creating-right-wrap {
     display: flex;
     gap: 20px;
     justify-content: end;
     height: 100%;
 }
-.creating-right-big{
+
+.creating-right-big {
     width: 440px;
     height: 100%;
 }
-.creating-right-small{
+
+.creating-right-small {
     width: 210px;
     height: 245px;
 }
-.creating-right-img img{
+
+.creating-right-img img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
+
 /* Creating section */
 
 /* Mind section */
@@ -3178,26 +3197,34 @@ footer {
     padding: 60px 0;
     padding-left: 70px;
 }
+
 .mind .text {
     max-width: 45ch;
     margin-top: 50px;
     gap: 20px;
 }
+
 .mind .text ul {
     gap: 15px;
 }
-.mind .text ul li p{
+
+.mind .text ul li p {
     font-size: 14px;
 }
-.mind-left-image{
+
+.mind-left-image {
     width: 108px;
     height: 124px;
     margin-top: 40px;
 }
-.mind-left-image img{
+
+.mind-left-image img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+}
+.mind-left-image.mob {
+    display: none;
 }
 /* Mind section */
 
@@ -3207,14 +3234,16 @@ footer {
     height: 100vh;
     position: relative;
 }
-.role-wrap{
+
+.role-wrap {
     width: 100%;
     height: 100%;
     display: flex;
     align-items: end;
     padding-bottom: 32px;
 }
-.role-bg{
+
+.role-bg {
     position: absolute;
     top: 0;
     left: 0;
@@ -3222,13 +3251,15 @@ footer {
     height: 100%;
     z-index: -1;
 }
-.role-bg img{
+
+.role-bg img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     object-position: center 25%;
 }
-.role-content{
+
+.role-content {
     background-color: rgba(240, 236, 228, 1);
     padding-left: 80px;
     padding-right: 70px;
@@ -3237,9 +3268,137 @@ footer {
     text-align: center;
     max-width: 82ch;
 }
-.role-content p{
+
+.role-content p {
     margin-top: 30px;
 }
+
 /* Role Section */
+
+/* Challenges section */
+.challenges {
+    background-color: transparent;
+    padding-top: 75px;
+    padding-left: 70px;
+}
+
+.challenges .creating-right-img {
+    width: 320px;
+    height: 100%;
+}
+
+.challenges .creating-right-wrap {
+    gap: 22px;
+}
+
+.challenges .creating-right {
+    width: 60%;
+}
+
+.challenges .creating-left {
+    width: 40%;
+    padding-top: 0;
+    padding-bottom: 18px;
+}
+
+.challenges .creating-left-head {
+    max-width: 50ch;
+}
+
+.challenges .creating-left-head p {
+    /* margin-top: 15px; */
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 19.6px;
+    color: #172A55;
+}
+
+.challenges .creating-left-content {
+    margin-top: 20px;
+    max-width: 50ch;
+}
+
+.challenges .creating-left-content p {
+    margin-top: 45px;
+}
+
+.challenges .creating-left-content ul {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.challenges .creating-left-content ul li {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22.4px;
+    color: var(--desc);
+    display: flex;
+    gap: 10px;
+    padding-left: 7px;
+}
+
+.challenges .creating-left-content ul li::before {
+    content: '';
+    min-width: 6px;
+    height: 6px;
+    background-color: var(--desc);
+    border-radius: 50%;
+    margin-top: 9px;
+}
+
+/* Challenges section */
+
+/* Equal section */
+.equal .exp-wrapper {
+    padding: 0;
+}
+.equal .exp-content {
+    width: fit-content;
+    padding-left: 70px;
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+.equal-left-img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 3/2;
+    margin-top: 45px;
+}
+
+.equal-left-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 65%;
+}
+.equal .exp-content-wrap {
+    max-width: 100%;
+    text-align: center;
+    width: 575px;
+}
+.equal .text{
+    margin-top: 40px;
+    max-width: 100%;
+}
+.equal .text p a{
+    font-weight: 700;
+    color: #172A55;
+    border-bottom: 1px solid #172A55;
+    transition: all .3s ease;
+}
+.equal .text p a:hover{
+    color: var(--label-gold);
+    border-bottom: 1px solid var(--label-gold);
+}
+.equal .exp-image-big{
+    width: 46%;
+}
+.equal .exp-image-big img{
+    object-position: 20% center;
+}
+/* Equal section */
+
 
 /* Sleep Tips page */

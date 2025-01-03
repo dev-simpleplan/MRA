@@ -1038,7 +1038,9 @@
     .unlock .text {
         margin-top: 40px;
     }
-
+    .unlock .text>p{
+        max-width: 100%;
+    }
     .unlock .exp-image-big img {
         object-position: center 80%;
     }

@@ -3040,7 +3040,7 @@ footer {
 .unlock .exp-content {
     padding: 150px 0;
     padding-left: 30px;
-    width: 45%;
+    width: 46%;
 }
 
 .unlock .heading p {
@@ -3058,12 +3058,14 @@ footer {
     font-weight: 700;
     line-height: 22.4px;
     color: #172A55;
+    max-width: 55ch;
 }
 
 .unlock .text ul {
     display: flex;
     flex-direction: column;
     gap: 20px;
+    padding-left: 8px;
 }
 
 .unlock .text li {
@@ -3073,11 +3075,11 @@ footer {
 
 .unlock .text li::before {
     content: '';
-    min-width: 7px;
-    height: 7px;
+    min-width: 5px;
+    height: 5px;
     background-color: var(--desc);
     border-radius: 50%;
-    margin-top: 8px;
+    margin-top: 10px;
 }
 
 .unlock .exp-content-wrap {

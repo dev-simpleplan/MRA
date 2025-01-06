@@ -81,6 +81,19 @@
     .equal .exp-content-wrap {
         width: 100%;
     }
+
+    .hypnos-banner-left-content-wrap h1 {
+        font-size: 175px;
+    }
+
+    .hypnos-banner-right-wrap {
+        padding-left: 44px;
+    }
+
+    .craftsmanship {
+        padding-left: 0;
+        padding-right: 0;
+    }
 }
 
 @media only screen and (max-width: 1200px) {
@@ -286,6 +299,25 @@
         padding-left: 0;
     }
 
+    .royal-hypnos-right {
+        padding-bottom: 50px;
+    }
+
+    .hypnos-banner-left-content,
+    .hypnos-banner-right-wrap {
+        height: calc(100% - 62px);
+    }
+
+    .royal-hypnos {
+        padding-right: 0;
+    }
+
+    .royal-hypnos-right {
+        padding-left: 40px;
+    }
+    ul#menu-legal-pages {
+        gap: 20px;
+    }
 }
 
 @media only screen and (max-width: 1100px) {
@@ -1038,9 +1070,11 @@
     .unlock .text {
         margin-top: 40px;
     }
-    .unlock .text>p{
+
+    .unlock .text>p {
         max-width: 100%;
     }
+
     .unlock .exp-image-big img {
         object-position: center 80%;
     }
@@ -1152,6 +1186,85 @@
 
     .equal .exp-content {
         padding-bottom: 40px;
+    }
+
+    .hypnos-banner-left {
+        padding-left: 20px;
+    }
+
+    .hypnos-banner-right {
+        padding-right: 20px;
+    }
+
+    .hypnos-banner-wrap {
+        flex-direction: column;
+    }
+
+    .hypnos-banner-left,
+    .hypnos-banner-right {
+        width: 100%;
+    }
+
+    .hypnos-banner-right-wrap {
+        max-width: 100%;
+    }
+
+    .hypnos-banner-right-img {
+        display: none;
+    }
+
+    .hypnos-banner-left-content,
+    .hypnos-banner-right-wrap {
+        height: 100%;
+    }
+
+    .hypnos-banner-left-content {
+        padding-top: 62px;
+    }
+
+    .hypnos-banner-right-wrap {
+        padding-left: 20px;
+    }
+
+    .royal-hypnos-wrap {
+        flex-direction: column;
+    }
+    .royal-hypnos-left{
+        width: 100%;
+        position: static;
+    }
+    .royal-hypnos-right {
+        padding: 0;
+        padding-top: 50px;
+        padding-bottom: 20px;
+        width: 100%;
+    }
+    .royal-hypnos-small {
+        grid-column: 6 / -1;
+    }
+    .royal-hypnos-right-content{
+        max-width: 100%;
+    }
+    ul#menu-legal-pages {
+        gap: 65px;
+    }
+    .craftsmanship-wrap{
+        flex-direction: column;
+    }
+    .craftsmanship-right{
+        width: 100%;
+    }
+    .craftsmanship-right-wrap{
+        max-width: 100%;
+    }
+    .craftsmanship-right-wrap .tab-img img {
+        aspect-ratio: 5 / 3;
+    }
+    .craftsmanship-left{
+        width: 100%;
+    }
+    .royal-hypnos-img{
+        height: 600px;
     }
 }
 
@@ -1557,18 +1670,22 @@
     .sleep-tips-banner .ab-content-text-wrap {
         max-width: 100%;
     }
-    .creating-left{
+
+    .creating-left {
         padding-bottom: 0;
     }
-    .role{
+
+    .role {
         height: auto;
         margin-top: 40px;
     }
+
     .role-wrap {
         flex-direction: column;
         height: auto;
         padding-bottom: 0;
     }
+
     .role-bg {
         position: static;
         width: 100%;
@@ -1576,30 +1693,64 @@
         z-index: 0;
         aspect-ratio: 5/3;
     }
-    .role-content{
+
+    .role-content {
         padding: 40px 20px;
     }
-    .challenges .creating-right{
+
+    .challenges .creating-right {
         margin-top: 0;
     }
-    .mind{
+
+    .mind {
         margin-top: 50px;
     }
-    .equal{
+
+    .equal {
         margin-top: 50px;
     }
+
     .creating-right-small {
         width: 100px;
         height: 115px;
     }
+
     .creating-wrap {
         gap: 70px;
     }
-    .faq-margin{
+
+    .faq-margin {
         margin-bottom: 50px;
     }
+
     .equal-left-img {
         aspect-ratio: 5 / 3;
+    }
+    ul#menu-legal-pages {
+        gap: 35px;
+    }
+    .hypnos-banner-right-content{
+        margin-top: 40px;
+    }
+    .craftsmanship{
+        padding-bottom: 0;
+    }
+    .hypnos-banner-left-content-wrap h1{
+        font-size: 130px;
+        line-height: 100%;
+    }
+    .hypnos-banner-left-content-wrap .label{
+        font-size: 42px;
+        margin-top: 0;
+    }
+    .craftsmanship-left-wrap{
+        margin-top: 40px;
+    }
+    .royal-hypnos-img {
+        height: 400px;
+    }
+    .royal-hypnos-small{
+        padding: 20px 0;
     }
 }
 
@@ -1810,6 +1961,16 @@
 
     .Unveiling-section-footer {
         margin-top: 40px;
+    }
+    ul#menu-legal-pages {
+        gap: 0;
+        justify-content: space-between;
+    }
+    .hypnos-banner-left-content-wrap h1 {
+        font-size: 80px;
+    }
+    .royal-hypnos-img {
+        height: 300px;
     }
 }
 

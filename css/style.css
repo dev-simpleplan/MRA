@@ -1906,6 +1906,12 @@ footer {
     opacity: .5;
 }
 
+ul#menu-legal-pages {
+    display: flex;
+    align-items: center;
+    gap: 67px;
+}
+
 .ft-left.mob,
 .footer-bottom-middle.mob {
     display: none;
@@ -2508,6 +2514,7 @@ footer {
     text-align: left;
     margin-top: 20px;
 }
+
 .accordion-content-inner p:nth-child(1) {
     margin-top: 0px;
 }
@@ -3089,9 +3096,11 @@ footer {
 .unlock .exp-wrapper {
     padding: 0;
 }
-.unlock-img-mob{
+
+.unlock-img-mob {
     display: none;
 }
+
 /* Unlock section */
 
 /* Creating section */
@@ -3225,9 +3234,11 @@ footer {
     height: 100%;
     object-fit: cover;
 }
+
 .mind-left-image.mob {
     display: none;
 }
+
 /* Mind section */
 
 /* Role Section */
@@ -3355,6 +3366,7 @@ footer {
 .equal .exp-wrapper {
     padding: 0;
 }
+
 .equal .exp-content {
     width: fit-content;
     padding-left: 70px;
@@ -3375,32 +3387,368 @@ footer {
     object-fit: cover;
     object-position: center 65%;
 }
+
 .equal .exp-content-wrap {
     max-width: 100%;
     text-align: center;
     width: 575px;
 }
-.equal .text{
+
+.equal .text {
     margin-top: 40px;
     max-width: 100%;
 }
-.equal .text p a{
+
+.equal .text p a {
     font-weight: 700;
     color: #172A55;
     border-bottom: 1px solid #172A55;
     transition: all .3s ease;
 }
-.equal .text p a:hover{
+
+.equal .text p a:hover {
     color: var(--label-gold);
     border-bottom: 1px solid var(--label-gold);
 }
-.equal .exp-image-big{
+
+.equal .exp-image-big {
     width: 46%;
 }
-.equal .exp-image-big img{
+
+.equal .exp-image-big img {
     object-position: 20% center;
 }
+
 /* Equal section */
 
-
 /* Sleep Tips page */
+
+/* Brand Hypnos page */
+
+/* Banner Section */
+.hypnos-banner {
+    height: 100vh;
+    width: 100%;
+    min-height: 700px;
+}
+
+.hypnos-banner-wrap {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+.hypnos-banner-left {
+    width: 59%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    align-items: end;
+    padding-left: 40px;
+}
+
+.hypnos-banner-left-bg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    z-index: -1;
+}
+
+.hypnos-banner-left-bg::before {
+    content: '';
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.35) 16.16%, rgba(0, 0, 0, 0) 99.54%);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+}
+
+.hypnos-banner-left-bg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hypnos-banner-left-content {
+    height: calc(100% - 142px);
+    position: relative;
+    z-index: 2;
+}
+
+.hypnos-banner-left-content-wrap {}
+
+.hypnos-banner-left-content-wrap h1 {
+    font-size: 228.25px;
+    line-height: 164.34px;
+}
+
+.hypnos-banner-left-content-wrap .label {
+    font-size: 62px;
+    text-align: end;
+    margin-top: 5px;
+}
+
+.hypnos-banner-right {
+    width: 41%;
+    display: flex;
+    align-items: end;
+    padding-right: 40px;
+    background: url('../images/cream-strip-bg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.hypnos-banner-right-img {
+    width: 165px;
+    height: 165px;
+}
+
+.hypnos-banner-right-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hypnos-banner-right-wrap {
+    height: calc(100% - 142px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-left: 84px;
+    padding-bottom: 40px;
+    max-width: 58ch;
+}
+
+.hypnos-banner-right-content {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    margin-top: 68px;
+}
+
+/* Banner Section */
+
+/* Royal Section */
+.royal-hypnos {
+    padding: 52px 0;
+    padding-right: 30px;
+    background-color: var(--bg-blue);
+}
+
+.royal-hypnos-wrap {
+    display: flex;
+    position: relative;
+}
+
+.royal-hypnos-left {
+    width: 60%;
+    position: absolute;
+    height: 100%;
+    left: 0;
+    top: 0;
+}
+
+.royal-hypnos-left-wrap {
+    display: grid;
+    position: relative;
+    grid-template-columns: repeat(12, 1fr);
+    height: 100%;
+}
+
+.royal-hypnos-big {
+    grid-row: 1;
+    grid-column: 1 / span 7;
+    height: 100%;
+}
+
+.royal-hypnos-small {
+    grid-column: 5 / -2;
+    grid-row: 1;
+    padding: 41px 0;
+    z-index: 1;
+    height: 100%;
+}
+
+.royal-hypnos-img {
+    height: 700px;
+}
+
+.royal-hypnos-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+}
+
+.royal-hypnos-right {
+    width: 45%;
+    margin-left: auto;
+    padding: 120px 0;
+    padding-left: 70px;
+}
+
+.royal-hypnos-right-content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 25px;
+    max-width: 56ch;
+}
+
+.royal-hypnos-right-content p a {
+    color: #fff;
+    font-weight: 700;
+    border-bottom: 1px solid #fff;
+    transition: all 0.3s ease;
+}
+
+.royal-hypnos-right-content p a:hover {
+    color: var(--label-gold);
+    border-bottom: 1px solid var(--label-gold);
+}
+
+/* Royal Section */
+
+/* Craftsmanship Section */
+.craftsmanship {
+    padding: 0 115px;
+    padding-top: 55px;
+    padding-bottom: 60px;
+}
+
+.craftsmanship-wrap {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.craftsmanship-left {
+    width: 50%;
+}
+
+.craftsmanship-left-head p {
+    padding-top: 10px;
+    color: #1A1A1A;
+    line-height: 22.4px;
+}
+
+.craftsmanship-left-head p a {
+    font-size: 14px;
+    color: #172A55;
+    border-bottom: 1px solid #172A55;
+    transition: all 0.3s ease;
+    font-weight: 700;
+}
+
+.craftsmanship-left-head p a:hover {
+    color: var(--label-gold);
+    border-bottom: 1px solid var(--label-gold);
+}
+
+.craftsmanship-left-wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    margin-top: 80px;
+    max-width: 34ch;
+    overflow: hidden;
+}
+
+.craftsmanship-left-wrap .tab-btn {
+    font-size: 12px;
+    font-weight: 800;
+    line-height: 16.8px;
+    letter-spacing: 4px;
+    color: var(--desc);
+    text-transform: uppercase;
+    transition: all 0.4s ease;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    transform: translateX(-12px);
+}
+
+.craftsmanship-left-wrap .tab-btn::before {
+    content: '';
+    min-width: 7.5px;
+    height: 7.5px;
+    border-radius: 50%;
+    background-color: #172A55;
+}
+
+.craftsmanship-left-wrap .tab-btn:hover {
+    color: #172A55;
+}
+
+.craftsmanship-left-wrap .tab-btn.active {
+    transform: translateX(0);
+    color: #172A55;
+}
+
+.craftsmanship-right {
+    width: 50%;
+}
+
+.craftsmanship-right-wrap {
+    max-width: 555px;
+    width: 100%;
+    margin-top: 15px;
+    overflow: hidden;
+}
+
+.craftsmanship-right-wrap .tab-img {
+    width: 100%;
+    height: auto;
+}
+
+.craftsmanship-right-wrap .tab-img img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    aspect-ratio: 5/4;
+}
+
+.craftsmanship-right-wrap p {
+    margin-top: 30px;
+    /* transform: translateY(100%); */
+    transition: all 0.4s ease;
+    -webkit-animation: slideEffect 1s;
+    animation: slideEffect 1s;
+}
+
+.craftsmanship-right-wrap .tabcontent {
+    /* display: none; */
+    display: none;
+    -webkit-animation: fadeEffect 1s;
+    animation: fadeEffect 1s;
+}
+
+/* Go from zero to full opacity */
+@keyframes fadeEffect {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideEffect {
+    from {
+        transform: translateY(100%);
+    }
+
+    to {
+        transform: translateY(0%);
+    }
+}
+
+/* Craftsmanship Section */
+
+/* Brand Hypnos page */

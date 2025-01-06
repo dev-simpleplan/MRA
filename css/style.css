@@ -3504,6 +3504,7 @@ ul#menu-legal-pages {
 .hypnos-banner-right-img {
     width: 165px;
     height: 165px;
+    overflow: hidden;
 }
 
 .hypnos-banner-right-img img {
@@ -3692,6 +3693,8 @@ ul#menu-legal-pages {
 
 .craftsmanship-right {
     width: 50%;
+    display: flex;
+    justify-content: end;
 }
 
 .craftsmanship-right-wrap {

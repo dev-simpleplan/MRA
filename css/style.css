@@ -54,7 +54,9 @@ body {
     -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeLegibility;
 }
-
+body.no-scroll{
+    overflow: hidden;
+}
 html {
     scroll-behavior: smooth;
 }
@@ -3658,7 +3660,9 @@ ul#menu-legal-pages {
     max-width: 34ch;
     overflow: hidden;
 }
-
+.craftsmanship-left-toggle{
+    display: none;
+}
 .craftsmanship-left-wrap .tab-btn {
     font-size: 12px;
     font-weight: 800;

@@ -31,6 +31,9 @@
     .header-bottom {
         margin-top: 40px;
     }
+    .royal-hypnos{
+        padding-bottom: 90px;
+    }
 }
 
 @media only screen and (max-width: 1300px) {
@@ -1751,6 +1754,9 @@
     }
     .royal-hypnos-small{
         padding: 20px 0;
+    }
+    .hypnos-banner {
+        min-height: 500px;
     }
 }
 

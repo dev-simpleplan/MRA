@@ -588,6 +588,10 @@ header.blue {
     width: 20px;
     height: 20px;
 }
+.header-bottom ul li a svg {
+    width: 12px;
+    height: 12px;
+}
 
 .header-bottom {
     margin-top: 29px;

@@ -171,7 +171,7 @@
         margin-top: 0;
         position: absolute;
         z-index: 10;
-        padding-left: 16px;
+        padding-left: 40px;
         padding-bottom: 72px;
         padding-top: 52px;
         background: var(--bg-blue);
@@ -197,7 +197,7 @@
     .header-bottom ul {
         align-items: start;
         flex-direction: column;
-        gap: 53px;
+        gap: 40px;
     }
 
     .header-bottom .header-top-right.mobile {
@@ -400,7 +400,9 @@
     .label.mob {
         display: block;
     }
-
+    .header-bottom{
+        padding-left: 20px;
+    }
     .hp-banner {
         height: auto;
         min-height: auto;

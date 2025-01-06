@@ -802,7 +802,9 @@
         aspect-ratio: 5/3;
         margin-top: 40px;
     }
-
+    .faq-right{
+        min-height: auto;
+    }
     .fir-img {
         position: static;
     }

@@ -504,7 +504,28 @@ header.not-visible {
 header.transparent {
     transition: all .3s ease;
 }
-
+.black-header .header-wrap ul li a{
+    color: #1A1A1A;
+}
+.black-header .header-wrap ul li a svg path{
+    stroke: #1A1A1A;
+}
+.black-header .header-bottom ul li a::after{
+    background-color: #1A1A1A;
+}
+.black-header.scrolled .header-wrap ul li a , .black-header.active .header-wrap ul li a{
+    color: #fff;
+}
+.black-header.scrolled .header-wrap ul li a svg path, .black-header.active .header-wrap ul li a svg path{
+    stroke: #fff;
+}
+.black-header.scrolled .header-top-right a, .black-header.active .header-top-right a{
+    background-color: #fff;
+    color: #1A1A1A;
+}
+.black-header.scrolled .header-bottom ul li a::after, .black-header.active .header-bottom ul li a::after{
+    background-color: #fff;
+}
 header.transparent.scrolled {
     background-color: var(--bg-blue);
 }
@@ -3435,7 +3456,7 @@ ul#menu-legal-pages {
 .hypnos-banner {
     height: 100vh;
     width: 100%;
-    min-height: 700px;
+    /* min-height: 700px; */
 }
 
 .hypnos-banner-wrap {
@@ -3482,6 +3503,9 @@ ul#menu-legal-pages {
     height: calc(100% - 142px);
     position: relative;
     z-index: 2;
+    padding-top: 70px;
+    padding-left: 8px;
+    padding-bottom: 30px;
 }
 
 .hypnos-banner-left-content-wrap {}
@@ -3553,10 +3577,7 @@ ul#menu-legal-pages {
 
 .royal-hypnos-left {
     width: 60%;
-    position: absolute;
-    height: 100%;
-    left: 0;
-    top: 0;
+    
 }
 
 .royal-hypnos-left-wrap {
@@ -3580,9 +3601,7 @@ ul#menu-legal-pages {
     height: 100%;
 }
 
-.royal-hypnos-img {
-    height: 700px;
-}
+
 
 .royal-hypnos-img img {
     width: 100%;
@@ -3595,7 +3614,7 @@ ul#menu-legal-pages {
     width: 45%;
     margin-left: auto;
     padding: 120px 0;
-    padding-left: 70px;
+    /* padding-left: 20px; */
 }
 
 .royal-hypnos-right-content {
@@ -3605,7 +3624,12 @@ ul#menu-legal-pages {
     margin-top: 25px;
     max-width: 56ch;
 }
-
+.royal-hypnos-right-head{
+    max-width: 50ch;
+}
+.royal-hypnos-right-head h2{
+    text-transform: capitalize;
+}
 .royal-hypnos-right-content p a {
     color: #fff;
     font-weight: 700;

@@ -32,12 +32,12 @@
         margin-top: 40px;
     }
 
-    .royal-hypnos {
-        padding-bottom: 90px;
-    }
 
     .craftsmanship-right-wrap {
         max-width: 100%;
+    }
+    .hypnos-banner-right{
+        justify-content: center;
     }
 }
 
@@ -91,7 +91,7 @@
     }
 
     .hypnos-banner-left-content-wrap h1 {
-        font-size: 175px;
+        font-size: 170px;
     }
 
     .hypnos-banner-right-wrap {
@@ -166,7 +166,9 @@
     .hamburger-icon.active span:nth-child(3) {
         transform: translateY(-7px) rotate(-45deg);
     }
-
+    .black-header .header-wrap ul li a svg path{
+        stroke: #fff;
+    }
     .header-bottom {
         margin-top: 0;
         position: absolute;
@@ -1202,7 +1204,9 @@
     .equal .exp-content {
         padding-bottom: 40px;
     }
-
+    .hypnos-banner{
+        height: auto;
+    }
     .hypnos-banner-left {
         padding-left: 20px;
     }
@@ -1232,9 +1236,15 @@
     .hypnos-banner-right-wrap {
         height: 100%;
     }
+    .hypnos-banner-wrap{
+        height: auto;
+    }
 
     .hypnos-banner-left-content {
-        padding-top: 62px;
+        padding-top: 100px;
+        padding-bottom: 100px;
+        display: flex;
+        align-items: center;
     }
 
     .hypnos-banner-right-wrap {
@@ -1855,7 +1865,8 @@
     }
 
     .hypnos-banner {
-        min-height: 560px;
+        /* min-height: 560px; */
+        height: auto;
     }
 
     .royal-hypnos {
@@ -2088,6 +2099,9 @@
     .royal-hypnos-img {
         height: 300px;
     }
+    .craftsmanship-left-toggle .tab-active-btn{
+        max-width: 35ch;
+    }
 }
 
 @media only screen and (max-width: 475px) {
@@ -2109,6 +2123,10 @@
 
     .footer-link-wrap {
         column-gap: 20px;
+    }
+    .craftsmanship-left-toggle {
+        align-items: start;
+        flex-direction: column;
     }
 }
 

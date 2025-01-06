@@ -31,10 +31,12 @@
     .header-bottom {
         margin-top: 40px;
     }
-    .royal-hypnos{
+
+    .royal-hypnos {
         padding-bottom: 90px;
     }
-    .craftsmanship-right-wrap{
+
+    .craftsmanship-right-wrap {
         max-width: 100%;
     }
 }
@@ -321,6 +323,7 @@
     .royal-hypnos-right {
         padding-left: 40px;
     }
+
     ul#menu-legal-pages {
         gap: 20px;
     }
@@ -805,9 +808,11 @@
         aspect-ratio: 5/3;
         margin-top: 40px;
     }
-    .faq-right{
+
+    .faq-right {
         min-height: auto;
     }
+
     .fir-img {
         position: static;
     }
@@ -1237,42 +1242,123 @@
     .royal-hypnos-wrap {
         flex-direction: column;
     }
-    .royal-hypnos-left{
+
+    .royal-hypnos-left {
         width: 100%;
         position: static;
     }
+
     .royal-hypnos-right {
         padding: 0;
         padding-top: 50px;
         padding-bottom: 20px;
         width: 100%;
     }
+
     .royal-hypnos-small {
         grid-column: 6 / -1;
     }
-    .royal-hypnos-right-content{
+
+    .royal-hypnos-right-content {
         max-width: 100%;
     }
+
     ul#menu-legal-pages {
         gap: 65px;
     }
-    .craftsmanship-wrap{
+
+    .craftsmanship-wrap {
         flex-direction: column;
     }
-    .craftsmanship-right{
+
+    .craftsmanship-right {
         width: 100%;
     }
-    .craftsmanship-right-wrap{
+
+    .craftsmanship-right-wrap {
         max-width: 100%;
     }
+
     .craftsmanship-right-wrap .tab-img img {
         aspect-ratio: 5 / 3;
     }
-    .craftsmanship-left{
+
+    .craftsmanship-left {
         width: 100%;
     }
-    .royal-hypnos-img{
+
+    .royal-hypnos-img {
         height: 600px;
+    }
+
+    .craftsmanship-left-toggle {
+        display: block;
+    }
+
+    .craftsmanship-left-wrap {
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        max-width: 100%;
+        width: 100%;
+        background-color: #172a55;
+        margin-top: 0;
+        padding-left: 20px;
+        justify-content: center;
+        z-index: 5;
+        transform: translateX(-200%);
+        transition: all 0.8s ease;
+    }
+
+    .craftsmanship-left-wrap.active {
+        transform: translateX(0);
+    }
+
+    .craftsmanship-left-wrap::before {
+        content: '\2715';
+        color: #fff;
+        position: absolute;
+        top: 100px;
+        right: 40px;
+    }
+
+    .craftsmanship-left-wrap .tab-btn {
+        color: #fff;
+        padding-left: 0;
+        transform: translateX(0);
+    }
+
+    .craftsmanship-left-wrap .tab-btn.active {
+        color: var(--label-gold);
+    }
+
+    .craftsmanship-left-wrap .tab-btn::before {
+        background-color: var(--label-gold);
+        display: none;
+    }
+
+    .craftsmanship-left-toggle {
+        margin-top: 40px;
+        display: flex;
+        gap: 20px;
+        align-items: end;
+    }
+
+    .craftsmanship-left-toggle .tab-toggle-btn {
+        color: var(--label-gold);
+        border-bottom: 1px solid var(--label-gold);
+        width: fit-content;
+        font-size: 14px;
+    }
+
+    .craftsmanship-left-toggle .tab-active-btn {
+        font-size: 12px;
+        font-weight: 800;
+        line-height: 16.8px;
+        letter-spacing: 4px;
+        color: #172a55;
+        text-transform: uppercase;
     }
 }
 
@@ -1646,7 +1732,7 @@
         padding-bottom: 0;
     }
 
-    
+
     .pre-foote2 {
         margin-bottom: 0;
     }
@@ -1731,39 +1817,50 @@
     .equal-left-img {
         aspect-ratio: 5 / 3;
     }
+
     ul#menu-legal-pages {
         gap: 35px;
     }
-    .hypnos-banner-right-content{
+
+    .hypnos-banner-right-content {
         margin-top: 40px;
     }
-    .craftsmanship{
+
+    .craftsmanship {
         padding-bottom: 0;
     }
-    .hypnos-banner-left-content-wrap h1{
+
+    .hypnos-banner-left-content-wrap h1 {
         font-size: 130px;
         line-height: 100%;
     }
-    .hypnos-banner-left-content-wrap .label{
+
+    .hypnos-banner-left-content-wrap .label {
         font-size: 42px;
         margin-top: 0;
     }
-    .craftsmanship-left-wrap{
+
+    .craftsmanship-left-wrap {
         margin-top: 40px;
     }
+
     .royal-hypnos-img {
         height: 400px;
     }
-    .royal-hypnos-small{
+
+    .royal-hypnos-small {
         padding: 20px 0;
     }
+
     .hypnos-banner {
         min-height: 560px;
     }
-    .royal-hypnos{
+
+    .royal-hypnos {
         padding-bottom: 20px;
     }
-    .craftsmanship{
+
+    .craftsmanship {
         padding-top: 40px;
     }
 }
@@ -1976,13 +2073,16 @@
     .Unveiling-section-footer {
         margin-top: 40px;
     }
+
     ul#menu-legal-pages {
         gap: 0;
         justify-content: space-between;
     }
+
     .hypnos-banner-left-content-wrap h1 {
         font-size: 80px;
     }
+
     .royal-hypnos-img {
         height: 300px;
     }

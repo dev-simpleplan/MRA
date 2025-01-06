@@ -1560,7 +1560,7 @@
 
 
     .faq-section {
-        padding-top: 85px;
+        padding-top: 55px;
     }
 
     .value-content-top {
@@ -1640,13 +1640,10 @@
 
     .collaboration {
         padding-top: 60px;
-        padding-bottom: 40px;
+        padding-bottom: 0;
     }
 
-    .pre-footer2 {
-        margin-top: 0;
-    }
-
+    
     .pre-foote2 {
         margin-bottom: 0;
     }
@@ -1759,6 +1756,12 @@
     }
     .hypnos-banner {
         min-height: 560px;
+    }
+    .royal-hypnos{
+        padding-bottom: 20px;
+    }
+    .craftsmanship{
+        padding-top: 40px;
     }
 }
 

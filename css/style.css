@@ -4135,36 +4135,162 @@ ul#menu-legal-pages {
     flex-direction: column;
     gap: 20px;
 }
+
 .fundamental .plush-selection-right-content li {
     color: var(--desc);
     line-height: 22px;
     padding-left: 4px;
 }
+
 .fundamental .plush-selection-right-content p {
     line-height: 22px;
 }
-.fundamental .plush-selection-right-wrap{
+
+.fundamental .plush-selection-right-wrap {
     max-width: 48ch;
 }
+
 .fundamental .plush-selection-right {
     padding-top: 63px;
     padding-bottom: 63px;
 }
-.fundamental .plush-selection-cards:nth-child(even) .plush-selection-right{
+
+.fundamental .plush-selection-cards:nth-child(even) .plush-selection-right {
     padding-left: 70px;
 }
-.fundamental .plush-selection-cards:nth-child(even) .plush-selection-right-wrap{
+
+.fundamental .plush-selection-cards:nth-child(even) .plush-selection-right-wrap {
     max-width: 56ch;
 }
+
 .fundamental .plush-selection-right-content ul li::before {
     background-color: var(--desc);
 }
-.fundamental .plush-selection-right-content ul li{
+
+.fundamental .plush-selection-right-content ul li {
     padding-left: 10px;
 }
-.fundamental .plush-selection-right-content ul{
+
+.fundamental .plush-selection-right-content ul {
     /* gap: 0; */
 }
+
 /* fundamental */
 
 /* Mattress Care Guide page */
+
+/* Technology page */
+
+/* banner section */
+.technology .ab-bg-img img {
+    object-position: center 80%;
+}
+
+.technology .ab-content h1 {
+    font-size: 165px;
+    line-height: 118px;
+}
+
+.technology .ab-content-text-wrap {
+    margin-top: 50px;
+    max-width: 75ch;
+}
+
+.technology .ab-content-text-wrap p {
+    max-width: 100%;
+    color: #fff;
+}
+
+.technology .ab-bg-overlay {
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.3) 96.61%, rgba(0, 0, 0, 0) 100%);
+}
+
+/* banner section */
+
+/* Science section */
+.science {
+    background: url('../images/blue-strip-bg.png');
+    background-size: contain;
+    padding-top: 80px;
+    padding-bottom: 60px;
+    padding-left: 125px;
+}
+
+.science-wrap {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.science-left {
+    width: 40%;
+}
+
+.science-left-top {
+    max-width: 50ch;
+}
+.science-left-bottom{
+    margin-top: 35px;
+}
+.science-left-bottom-img{
+    width: 380px;
+    height: auto;
+}
+.science-left-bottom-img img{
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    aspect-ratio: 1/1;
+}
+.science-right {
+    width: 55%;
+}
+.science-right-wrap p{
+    color: #f5f5f5;
+    margin-top: 20px;
+}
+.science-right-wrap p:nth-child(1){
+    margin-top: 0;
+}
+
+.science-right-wrap li,.science-right-wrap li a{
+    color: #f5f5f5;
+    line-height: 22px;
+}
+.science-right-wrap li a{
+    border-bottom: 1px solid #f5f5f5;
+    transition: all 0.3s ease;
+}
+.science-right-wrap li a:hover{
+    color: var(--label-gold);
+    border-bottom: 1px solid var(--label-gold);
+}
+.science-right-wrap ul li::before{
+    content: '';
+    width: 6px;
+    height: 6px;
+    background-color: #f5f5f5;
+    border-radius: 50%;
+    margin-top: 8px;
+}
+.science-right-wrap ul li{
+    display: flex;
+    gap: 10px;
+    padding-left: 8px;
+}
+.science-right-wrap ul ,.science-right-wrap ol{
+    margin-top: 20px;
+}
+.science-right-wrap ol{
+    list-style: number;
+    padding-left: 20px;
+}
+.science-right-wrap ol li{
+    padding-left: 3px;
+}
+.science-right-wrap {
+    max-width: 70ch;
+}
+/* Science section */
+
+/* Technology page */

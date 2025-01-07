@@ -341,6 +341,9 @@
     .fundamental .plush-selection-cards:nth-child(even) .plush-selection-right{
         padding-left: 0;
     }
+    .science{
+        padding-left: 0;
+    }
 }
 
 @media only screen and (max-width: 1100px) {
@@ -1419,6 +1422,22 @@
     .care-guide .ab-content h1 {
         font-size: 74px;
     }
+    .technology .ab-content h1{
+        font-size: 120px;
+    }
+    .science-wrap{
+        flex-direction: column;
+    }
+    .science-left,.science-right,.science-left-bottom-img{
+        width: 100%;
+    }
+    .science-left-bottom-img img{
+        aspect-ratio: 5 / 3;
+    }
+
+    .science-right-wrap{
+        max-width: 100%;
+    }
 }
 
 @media only screen and (max-width: 767px) {
@@ -1977,6 +1996,16 @@
     .care-guide .ab-content h1 {
         font-size: 60px;
     }
+    .technology .ab-content h1{
+        font-size: 90px;
+    }
+    .technology .ab-content-text-wrap{
+        margin-top: 30px;
+        gap: 15px;
+    }
+    .science{
+        padding: 50px 0;
+    }
 }
 
 @media only screen and (max-width: 600px) {
@@ -2211,13 +2240,20 @@
     .plush-banner-bg{
         padding-top: 80%;
     }
+    .technology .ab-content h1{
+        font-size: 60px;
+    }
+    .science-left-bottom-img img {
+        aspect-ratio: 5 / 4;
+    }
+
 }
 
 @media only screen and (max-width: 475px) {
     .milestone-bottom {
         flex-direction: column;
     }
-
+    
     .rl-bottom-img {
         width: 100px;
     }
@@ -2244,7 +2280,9 @@
     .care-guide .ab-content h1 {
         font-size: 36px;
     }
-
+    .technology .ab-content h1{
+        font-size: 50px;
+    }
 }
 
 @media only screen and (max-width: 375px) {

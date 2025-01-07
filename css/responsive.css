@@ -1872,6 +1872,9 @@
     .faq-margin {
         margin-bottom: 50px;
     }
+    .pre-margin{
+        margin-bottom: 0;
+    }
 
     .equal-left-img {
         aspect-ratio: 5 / 3;

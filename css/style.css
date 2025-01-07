@@ -3890,7 +3890,9 @@ ul#menu-legal-pages {
         linear-gradient(0deg, rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15));
 
 }
-
+.plush-banner-bg-right::before{
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.4) 19.54%, rgba(0, 0, 0, 0) 68.75%);
+}
 .plush-banner-bg-right {
     width: 50%;
     position: relative;

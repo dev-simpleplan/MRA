@@ -1946,6 +1946,9 @@
     .plush-selection-right-content ul{
         margin-top: 20px;
     }
+    .plush-banner-bottom{
+        height: auto;
+    }
 }
 
 @media only screen and (max-width: 600px) {

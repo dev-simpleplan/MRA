@@ -3834,8 +3834,8 @@ ul#menu-legal-pages {
 /* Banner Section */
 .plush-banner {
     background-color: #172A55;
-    height: 100vh;
-    min-height: 700px;
+    /* height: 100vh; */
+    /* min-height: 700px; */
     width: 100%;
     position: relative;
 }
@@ -3858,18 +3858,18 @@ ul#menu-legal-pages {
     z-index: 2;
     display: flex;
     flex-direction: column;
-    height: 100%;
+    /* height: 100%; */
 }
 
 .plush-banner-top {
-    height: 80%;
+    /* height: 80%; */
     position: relative;
 }
 
 .plush-banner-top-bg {
     display: flex;
     width: 100%;
-    height: 100%;
+    /* height: 100%; */
     gap: 140px;
 }
 
@@ -3897,11 +3897,19 @@ ul#menu-legal-pages {
     width: 50%;
     position: relative;
 }
-
+.plush-banner-bg {
+    width: 100%;
+    height: 0;
+    overflow: hidden;
+    position: relative;
+    padding-top: 40%;
+}
 .plush-banner-bg img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    position: absolute;
+    inset: 0;
 }
 
 .plush-banner-head {

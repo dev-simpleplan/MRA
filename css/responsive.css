@@ -338,6 +338,9 @@
     .plush-selection-right{
         padding-left: 70px;
     }
+    .fundamental .plush-selection-cards:nth-child(even) .plush-selection-right{
+        padding-left: 0;
+    }
 }
 
 @media only screen and (max-width: 1100px) {
@@ -1413,6 +1416,9 @@
     .plush-selection-right{
         padding-left: 30px;
     }
+    .care-guide .ab-content h1 {
+        font-size: 74px;
+    }
 }
 
 @media only screen and (max-width: 767px) {
@@ -1935,6 +1941,7 @@
     }
     .plush-selection-left-img img{
         aspect-ratio: 5/3;
+        height: auto;
     }
     .plush-selection-right{
         padding-left: 0;
@@ -1954,6 +1961,18 @@
     }
     .plush-banner-bg{
         padding-top: 70%;
+    }
+    .fundamental .plush-selection-right{
+        padding-top: 40px;
+    }
+    .fundamental .plush-selection-right-wrap, .fundamental .plush-selection-cards:nth-child(even) .plush-selection-right-wrap{
+        max-width: 100%;
+    }
+    .plush-selection-bottom {
+        margin-top: 50px;
+    }
+    .care-guide .ab-content h1 {
+        font-size: 60px;
     }
 }
 
@@ -2218,6 +2237,9 @@
     }
     .plush-selection-left-img img {
         aspect-ratio: 5 / 4;
+    }
+    .care-guide .ab-content h1 {
+        font-size: 36px;
     }
 
 }

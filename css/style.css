@@ -3920,6 +3920,9 @@ ul#menu-legal-pages {
 .plush-banner-bottom {
     margin-top: 35px;
     padding: 0 20px;
+    display: flex;
+    align-items: center;
+    height: 100%;
 }
 
 .plush-banner-bottom-wrap {

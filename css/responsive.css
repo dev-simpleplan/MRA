@@ -36,7 +36,8 @@
     .craftsmanship-right-wrap {
         max-width: 100%;
     }
-    .hypnos-banner-right{
+
+    .hypnos-banner-right {
         justify-content: center;
     }
 }
@@ -166,9 +167,11 @@
     .hamburger-icon.active span:nth-child(3) {
         transform: translateY(-7px) rotate(-45deg);
     }
-    .black-header .header-wrap ul li a svg path{
+
+    .black-header .header-wrap ul li a svg path {
         stroke: #fff;
     }
+
     .header-bottom {
         margin-top: 0;
         position: absolute;
@@ -281,7 +284,7 @@
 
     .Unveiling-section-grid {
         column-gap: 40px;
-        grid-template-columns: repeat(3, minmax(250px, 1fr));
+        grid-template-columns: repeat(6, minmax(125px, 1fr));
     }
 
     .Unveiling-section-wrap {
@@ -329,6 +332,9 @@
     ul#menu-legal-pages {
         gap: 20px;
     }
+    .plush-selection-right{
+        padding-left: 70px;
+    }
 }
 
 @media only screen and (max-width: 1100px) {
@@ -371,6 +377,19 @@
         overflow-x: scroll;
         padding-bottom: 20px;
     }
+    .plush-banner-head h1{
+        font-size: 110px;
+    }
+    .plush-selection-right {
+        padding: 80px 0;
+        padding-left: 40px;
+    }
+    .plush-selection-cards:nth-child(even) .plush-selection-right{
+        padding-left: 0;
+    }
+    .plush-banner-top-bg{
+        gap: 100px;
+    }
 }
 
 @media only screen and (max-width: 991px) {
@@ -402,9 +421,11 @@
     .label.mob {
         display: block;
     }
-    .header-bottom{
+
+    .header-bottom {
         padding-left: 20px;
     }
+
     .hp-banner {
         height: auto;
         min-height: auto;
@@ -1016,7 +1037,15 @@
     }
 
     .Unveiling-section-grid {
-        grid-template-columns: repeat(2, minmax(250px, 1fr));
+        grid-template-columns: repeat(4, minmax(120px, 1fr));
+    }
+
+    .Unveiling-item:last-child:nth-child(3n - 1) {
+        grid-column-end: -2;
+    }
+
+    .Unveiling-item:nth-last-child(2):nth-child(3n + 1) {
+        grid-column-end: auto;
     }
 
     .collaboration .exp-content-wrap {
@@ -1204,9 +1233,11 @@
     .equal .exp-content {
         padding-bottom: 40px;
     }
-    .hypnos-banner{
+
+    .hypnos-banner {
         height: auto;
     }
+
     .hypnos-banner-left {
         padding-left: 20px;
     }
@@ -1236,7 +1267,8 @@
     .hypnos-banner-right-wrap {
         height: 100%;
     }
-    .hypnos-banner-wrap{
+
+    .hypnos-banner-wrap {
         height: auto;
     }
 
@@ -1371,6 +1403,12 @@
         letter-spacing: 4px;
         color: #172a55;
         text-transform: uppercase;
+    }
+    .plush-selection-cards:nth-child(even) .plush-selection-right{
+        padding-right: 20px;
+    }
+    .plush-selection-right{
+        padding-left: 30px;
     }
 }
 
@@ -1876,6 +1914,38 @@
     .craftsmanship {
         padding-top: 40px;
     }
+    .plush-banner-head h1 {
+        font-size: 80px;
+    }
+    .plush-banner-top-bg{
+        gap: 50px;
+    }
+    .plush-selection-cards{
+        flex-direction: column;
+    }
+    .plush-selection-left{
+        position: static;
+        width: 100%;
+    }
+    .plush-selection-right{
+        width: 100%;
+    }
+    .plush-selection-left-img img{
+        aspect-ratio: 5/3;
+    }
+    .plush-selection-right{
+        padding-left: 0;
+        padding-top: 40px;
+    }
+    .plush-selection-right-content{
+        max-width: 100%;
+    }
+    .plush-selection-right-content p{
+        margin-top: 10px;
+    }
+    .plush-selection-right-content ul{
+        margin-top: 20px;
+    }
 }
 
 @media only screen and (max-width: 600px) {
@@ -2099,8 +2169,13 @@
     .royal-hypnos-img {
         height: 300px;
     }
-    .craftsmanship-left-toggle .tab-active-btn{
+
+    .craftsmanship-left-toggle .tab-active-btn {
         max-width: 35ch;
+    }
+    .plush-banner-head h1 {
+        font-size: 50px;
+        line-height: 100%;
     }
 }
 
@@ -2124,10 +2199,15 @@
     .footer-link-wrap {
         column-gap: 20px;
     }
+
     .craftsmanship-left-toggle {
         align-items: start;
         flex-direction: column;
     }
+    .plush-selection-left-img img {
+        aspect-ratio: 5 / 4;
+    }
+
 }
 
 @media only screen and (max-width: 375px) {

@@ -103,6 +103,9 @@
         padding-left: 0;
         padding-right: 0;
     }
+    .plush-banner-bg{
+        padding-top: 60%;
+    }
 }
 
 @media only screen and (max-width: 1200px) {
@@ -1949,6 +1952,9 @@
     .plush-banner-bottom{
         height: auto;
     }
+    .plush-banner-bg{
+        padding-top: 70%;
+    }
 }
 
 @media only screen and (max-width: 600px) {
@@ -2179,6 +2185,9 @@
     .plush-banner-head h1 {
         font-size: 50px;
         line-height: 100%;
+    }
+    .plush-banner-bg{
+        padding-top: 80%;
     }
 }
 

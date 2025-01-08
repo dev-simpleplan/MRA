@@ -103,7 +103,8 @@
         padding-left: 0;
         padding-right: 0;
     }
-    .plush-banner-bg{
+
+    .plush-banner-bg {
         padding-top: 60%;
     }
 }
@@ -335,14 +336,30 @@
     ul#menu-legal-pages {
         gap: 20px;
     }
-    .plush-selection-right{
+
+    .plush-selection-right {
         padding-left: 70px;
     }
-    .fundamental .plush-selection-cards:nth-child(even) .plush-selection-right{
+
+    .fundamental .plush-selection-cards:nth-child(even) .plush-selection-right {
         padding-left: 0;
     }
-    .science{
+
+    .science {
         padding-left: 0;
+    }
+
+    .store-locator {
+        padding-right: 0;
+    }
+
+    .slb-location-cards-grid {
+        padding-right: 20px;
+    }
+
+    .slbl-card {
+        padding-left: 30px;
+        padding-right: 30px;
     }
 }
 
@@ -386,17 +403,21 @@
         overflow-x: scroll;
         padding-bottom: 20px;
     }
-    .plush-banner-head h1{
+
+    .plush-banner-head h1 {
         font-size: 110px;
     }
+
     .plush-selection-right {
         padding: 80px 0;
         padding-left: 40px;
     }
-    .plush-selection-cards:nth-child(even) .plush-selection-right{
+
+    .plush-selection-cards:nth-child(even) .plush-selection-right {
         padding-left: 0;
     }
-    .plush-banner-top-bg{
+
+    .plush-banner-top-bg {
         gap: 100px;
     }
 }
@@ -1413,30 +1434,72 @@
         color: #172a55;
         text-transform: uppercase;
     }
-    .plush-selection-cards:nth-child(even) .plush-selection-right{
+
+    .plush-selection-cards:nth-child(even) .plush-selection-right {
         padding-right: 20px;
     }
-    .plush-selection-right{
+
+    .plush-selection-right {
         padding-left: 30px;
     }
+
     .care-guide .ab-content h1 {
         font-size: 74px;
     }
-    .technology .ab-content h1{
+
+    .technology .ab-content h1 {
         font-size: 120px;
     }
-    .science-wrap{
+
+    .science-wrap {
         flex-direction: column;
     }
-    .science-left,.science-right,.science-left-bottom-img{
+
+    .science-left,
+    .science-right,
+    .science-left-bottom-img {
         width: 100%;
     }
-    .science-left-bottom-img img{
+
+    .science-left-bottom-img img {
         aspect-ratio: 5 / 3;
     }
 
-    .science-right-wrap{
+    .science-right-wrap {
         max-width: 100%;
+    }
+
+    .slb-location-map {
+        width: 100%;
+        height: 500px;
+    }
+
+    .slb-location {
+        flex-direction: column;
+        gap: 40px;
+    }
+    .slb-location-cards {
+        width: 100%;
+    }
+    .slb-location-cards-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        column-gap: 30px;
+        overflow: hidden;
+        overflow-x: scroll;
+        height: auto;
+        width: 100%;
+        padding-right: 0;
+        padding-bottom: 20px;
+    }
+    .slbl-card {
+        max-width: 100%;
+        width: 100%;
+        min-width: 350px;
+        justify-self: end;
+    }
+    .slb-location-cards-grid{
+        justify-content: start;
     }
 }
 
@@ -1891,7 +1954,8 @@
     .faq-margin {
         margin-bottom: 50px;
     }
-    .pre-margin{
+
+    .pre-margin {
         margin-bottom: 0;
     }
 
@@ -1945,66 +2009,95 @@
     .craftsmanship {
         padding-top: 40px;
     }
+
     .plush-banner-head h1 {
         font-size: 80px;
     }
-    .plush-banner-top-bg{
+
+    .plush-banner-top-bg {
         gap: 50px;
     }
-    .plush-selection-cards{
+
+    .plush-selection-cards {
         flex-direction: column;
     }
-    .plush-selection-left{
+
+    .plush-selection-left {
         position: static;
         width: 100%;
     }
-    .plush-selection-right{
+
+    .plush-selection-right {
         width: 100%;
     }
-    .plush-selection-left-img img{
+
+    .plush-selection-left-img img {
         aspect-ratio: 5/3;
         height: auto;
     }
-    .plush-selection-right{
+
+    .plush-selection-right {
         padding-left: 0;
         padding-top: 40px;
     }
-    .plush-selection-right-content{
+
+    .plush-selection-right-content {
         max-width: 100%;
     }
-    .plush-selection-right-content p{
+
+    .plush-selection-right-content p {
         margin-top: 10px;
     }
-    .plush-selection-right-content ul{
+
+    .plush-selection-right-content ul {
         margin-top: 20px;
     }
-    .plush-banner-bottom{
+
+    .plush-banner-bottom {
         height: auto;
     }
-    .plush-banner-bg{
+
+    .plush-banner-bg {
         padding-top: 70%;
     }
-    .fundamental .plush-selection-right{
+
+    .fundamental .plush-selection-right {
         padding-top: 40px;
     }
-    .fundamental .plush-selection-right-wrap, .fundamental .plush-selection-cards:nth-child(even) .plush-selection-right-wrap{
+
+    .fundamental .plush-selection-right-wrap,
+    .fundamental .plush-selection-cards:nth-child(even) .plush-selection-right-wrap {
         max-width: 100%;
     }
+
     .plush-selection-bottom {
         margin-top: 50px;
     }
+
     .care-guide .ab-content h1 {
         font-size: 60px;
     }
-    .technology .ab-content h1{
+
+    .technology .ab-content h1 {
         font-size: 90px;
     }
-    .technology .ab-content-text-wrap{
+
+    .technology .ab-content-text-wrap {
         margin-top: 30px;
         gap: 15px;
     }
-    .science{
+
+    .science {
         padding: 50px 0;
+    }
+    .slb-selector-wrap{
+        flex-direction: column;
+    }
+    .slb-selector-wrap .select2-container, .slb-selector-wrap input{
+        width: 250px !important; 
+    }
+    .slb-selector-wrap .select2-container{
+        padding: 9px 20px;
     }
 }
 
@@ -2233,27 +2326,36 @@
     .craftsmanship-left-toggle .tab-active-btn {
         max-width: 35ch;
     }
+
     .plush-banner-head h1 {
         font-size: 50px;
         line-height: 100%;
     }
-    .plush-banner-bg{
+
+    .plush-banner-bg {
         padding-top: 80%;
     }
-    .technology .ab-content h1{
+
+    .technology .ab-content h1 {
         font-size: 60px;
     }
+
     .science-left-bottom-img img {
         aspect-ratio: 5 / 4;
     }
-
+    .slbl-card {
+        padding-left: 25px;
+    }
+    .slbl-card {
+        min-width: 300px;
+    }
 }
 
 @media only screen and (max-width: 475px) {
     .milestone-bottom {
         flex-direction: column;
     }
-    
+
     .rl-bottom-img {
         width: 100px;
     }
@@ -2274,13 +2376,16 @@
         align-items: start;
         flex-direction: column;
     }
+
     .plush-selection-left-img img {
         aspect-ratio: 5 / 4;
     }
+
     .care-guide .ab-content h1 {
         font-size: 36px;
     }
-    .technology .ab-content h1{
+
+    .technology .ab-content h1 {
         font-size: 50px;
     }
 }

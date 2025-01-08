@@ -2094,10 +2094,13 @@
         flex-direction: column;
     }
     .slb-selector-wrap .select2-container, .slb-selector-wrap input{
-        width: 250px !important; 
+        width: 100% !important; 
     }
     .slb-selector-wrap .select2-container{
         padding: 9px 20px;
+    }
+    .store-locator{
+        margin-top: 50px;
     }
 }
 

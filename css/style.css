@@ -484,6 +484,21 @@ p .lineParent {
 
 /* Animation */
 
+/* input style */
+/* Hide increment and decrement arrows in modern browsers */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Hide increment and decrement arrows in Firefox */
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+
+/* input style */
+
 /* Header Css */
 header {
     position: fixed;
@@ -3141,6 +3156,9 @@ ul#menu-legal-pages {
 .unlock .text li {
     display: flex;
     gap: 8px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 19.6px;
 }
 
 .unlock .text li::before {
@@ -4046,10 +4064,14 @@ ul#menu-legal-pages {
     gap: 15px;
 }
 
-.plush-selection-right-content ul li a {
+.plush-selection-right-content ul li a,
+.plush-selection-right-content ul li {
     color: #172A55;
     font-size: 14px;
     font-weight: 700;
+}
+
+.plush-selection-right-content ul li a {
     border-bottom: 1px solid #172A55;
 }
 
@@ -4229,43 +4251,53 @@ ul#menu-legal-pages {
 .science-left-top {
     max-width: 50ch;
 }
-.science-left-bottom{
+
+.science-left-bottom {
     margin-top: 35px;
 }
-.science-left-bottom-img{
+
+.science-left-bottom-img {
     width: 380px;
     height: auto;
 }
-.science-left-bottom-img img{
+
+.science-left-bottom-img img {
     width: 100%;
     height: auto;
     object-fit: cover;
     aspect-ratio: 1/1;
 }
+
 .science-right {
     width: 55%;
 }
-.science-right-wrap p{
+
+.science-right-wrap p {
     color: #f5f5f5;
     margin-top: 20px;
 }
-.science-right-wrap p:nth-child(1){
+
+.science-right-wrap p:nth-child(1) {
     margin-top: 0;
 }
 
-.science-right-wrap li,.science-right-wrap li a{
+.science-right-wrap li,
+.science-right-wrap li a {
     color: #f5f5f5;
     line-height: 22px;
 }
-.science-right-wrap li a{
+
+.science-right-wrap li a {
     border-bottom: 1px solid #f5f5f5;
     transition: all 0.3s ease;
 }
-.science-right-wrap li a:hover{
+
+.science-right-wrap li a:hover {
     color: var(--label-gold);
     border-bottom: 1px solid var(--label-gold);
 }
-.science-right-wrap ul li::before{
+
+.science-right-wrap ul li::before {
     content: '';
     width: 6px;
     height: 6px;
@@ -4273,24 +4305,299 @@ ul#menu-legal-pages {
     border-radius: 50%;
     margin-top: 8px;
 }
-.science-right-wrap ul li{
+
+.science-right-wrap ul li {
     display: flex;
     gap: 10px;
     padding-left: 8px;
 }
-.science-right-wrap ul ,.science-right-wrap ol{
+
+.science-right-wrap ul,
+.science-right-wrap ol {
     margin-top: 20px;
 }
-.science-right-wrap ol{
+
+.science-right-wrap ol {
     list-style: number;
     padding-left: 20px;
 }
-.science-right-wrap ol li{
+
+.science-right-wrap ol li {
     padding-left: 3px;
 }
+
 .science-right-wrap {
     max-width: 70ch;
 }
+
 /* Science section */
 
 /* Technology page */
+
+/* store locator page */
+
+/* banner */
+.store-locator-banner .ab-bg-overlay {
+    background: linear-gradient(122.17deg, rgba(0, 0, 0, 0.3) 90.24%, rgba(0, 0, 0, 0) 100.73%);
+}
+
+.store-locator-banner .ab-content h1 {
+    font-size: 100px;
+    line-height: 81px;
+    letter-spacing: -0.04em;
+    max-width: 18ch;
+}
+
+.store-locator-banner .ab-content-text-wrap p {
+    margin: 0;
+    max-width: 60ch;
+    color: #fff;
+}
+
+.store-locator-banner .ab-content-text-wrap {
+    margin-top: 45px;
+}
+
+/* banner */
+
+/* Store locator */
+.store-locator {
+    padding-right: 40px;
+}
+
+.store-locator-top-content {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 60ch;
+    margin-top: 25px;
+}
+
+.store-locator-bottom {
+    margin-top: 40px;
+}
+
+.slb-selector-wrap {
+    display: flex;
+    gap: 18px;
+}
+
+.slb-selector-wrap .select2-container,
+.slb-selector-wrap input {
+    background-color: transparent;
+    width: 290px !important;
+    padding: 15px 20px;
+    border: 1px solid #172A55;
+    font-size: 12px;
+    font-weight: 800;
+    line-height: 100%;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: #172A55;
+}
+
+.slb-selector-wrap input::placeholder {
+    color: #172A55;
+}
+
+.slb-selector-wrap .select2-container--default .select2-selection--single .select2-selection__rendered,
+.slb-selector-wrap .select2-container--default .select2-selection--single .select2-selection__placeholder {
+    color: #172A55;
+    font-weight: 800;
+    padding: 0;
+}
+
+.slb-selector-wrap .select2-container--default .select2-selection--single {
+    background-color: transparent;
+    border: none;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__arrow {
+    display: none;
+}
+
+.slb-selector-wrap .select2-container--default .select2-selection--single .select2-selection__rendered {
+    position: relative;
+}
+
+.slb-selector-wrap .select2-container--default .select2-selection--single .select2-selection__rendered::before {
+    content: '';
+    background: url('../images/down-arrow.svg');
+    background-size: contain;
+    width: 12px;
+    height: 6px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 10px;
+}
+
+.slb-location {
+    margin-top: 55px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.slb-location-map {
+    width: 51%;
+    background-color: #172A55;
+}
+
+.slb-location-cards {
+    width: 40%;
+}
+
+.slb-location-cards-grid {
+    width: 100%;
+    display: flex;
+    justify-content: end;
+}
+
+.slbl-card {
+    background-color: #EBDFC9;
+    padding: 0 52px;
+    padding-top: 30px;
+    padding-bottom: 25px;
+    max-width: 440px;
+    width: 100%;
+    justify-self: end;
+}
+
+.slbl-card-wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.slbl-card-top {
+    display: flex;
+    gap: 8px;
+    position: relative;
+    align-items: center;
+}
+
+.slbl-card-top::before {
+    content: '';
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #172A55;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: -17px;
+}
+
+.slbl-card-top p {
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 16.8px;
+    letter-spacing: 3px;
+    color: #172A55;
+    text-transform: uppercase;
+}
+
+.slbl-card-top .name-sep {
+    width: 1px;
+    height: 10px;
+    background-color: #172A55;
+}
+
+.slbl-card-middle>p {
+    font-size: 18px;
+}
+
+.slbl-card-middle-wrap {
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.slbl-card-middle-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.slbl-card-bottom {
+    display: flex;
+    gap: 14px;
+}
+
+.slbl-card-bottom a {
+    transition: all 0.3s ease;
+}
+
+.slbl-card-bottom a:nth-child(1) {
+    background-color: #172A55;
+    color: #fff;
+    border: 1px solid #172A55;
+
+}
+
+.slbl-card-bottom a:nth-child(1):hover {
+    background-color: transparent;
+    color: #5D5D5D;
+    border: 1px solid #5D5D5D;
+}
+
+.slbl-card-bottom a:nth-child(2) {
+    background-color: transparent;
+    color: #5D5D5D;
+    border: 1px solid #5D5D5D;
+}
+
+.slbl-card-bottom a:nth-child(2):hover {
+    background-color: #172A55;
+    color: #fff;
+    border: 1px solid #172A55;
+}
+
+.slb-location-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(1, minmax(255px, 1fr));
+    padding-right: 70px;
+    row-gap: 30px;
+    overflow: hidden;
+    overflow-y: scroll;
+    height: 650px;
+}
+
+/* Firefox */
+/* .slb-location-cards-grid {
+    scrollbar-width: thin;
+    scrollbar-color: #CC922F #D7CDBA;
+} */
+/* Main scrollbar width and height */
+.slb-location-cards-grid::-webkit-scrollbar {
+    width: 2px;
+    height: 2px;
+}
+
+/* Scrollbar thumb */
+.slb-location-cards-grid::-webkit-scrollbar-thumb {
+    background: #CC922F;
+    border-radius: 20px;
+}
+
+/* Scrollbar track */
+.slb-location-cards-grid::-webkit-scrollbar-track {
+    background: #D7CDBA;
+    border-radius: 2px;
+}
+
+#map {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+.slb-location-map {
+    position: relative;
+}
+
+/* Store locator */
+
+/* store locator page */

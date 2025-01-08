@@ -5,12 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="icon" href="" type="image/gif" sizes="16x16" />
-    <title>MRA | By Comfort - Plush Mattresses</title>
+    <title>MRA | Store store-locator-top-content</title>
 
     <!-- CSS Starts-->
     <link rel="stylesheet" href="https://unpkg.com/lenis@1.1.18/dist/lenis.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css" />
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/css/select2.min.css">
+    <link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/v3.9.2/mapbox-gl.css">
     <link href="css/style.css" rel="stylesheet" />
     <link href="css/responsive.css" rel="stylesheet" />
 
@@ -248,111 +249,187 @@
         </header>
         <div class="main">
             <!-- Banner Starts-->
-            <section class="plush-banner">
-                    <div class="plush-banner-wrap">
-                        <div class="plush-banner-top">
-                            <div class="plush-banner-top-bg">
-                                <div class="plush-banner-bg plush-banner-bg-left">
-                                    <picture>
-                                        <source media="(max-width:767px)" srcset="images/Plush-Mattress/banner-bg-left.png">
-                                        <img src="images/Plush-Mattress/banner-bg-left.png" alt="Flowers">
-                                    </picture>
-                                </div>
-                                <div class="plush-banner-bg plush-banner-bg-right">
-                                    <picture>
-                                        <source media="(max-width:767px)" srcset="images/Plush-Mattress/banner-bg-right.png">
-                                        <img src="images/Plush-Mattress/banner-bg-right.png" alt="Flowers">
-                                    </picture>
-                                </div>
+            <section class="about-banner australian-mattress-banner store-locator-banner">
+                <div class="ab-bg">
+                    <div class="ab-bg-overlay"></div>
+                    <div class="ab-bg-img">
+                        <picture>
+                            <source media="(max-width:767px)" srcset="images/Store-locator/banner-bg.jpeg" />
+                            <img src="images/Store-locator/banner-bg.jpeg" alt="banner" />
+                        </picture>
+                    </div>
+                </div>
+                <div class="ab-content">
+                    <div class="container-fluid">
+                        <div class="ab-content-wrap">
+                            <div class="label gold big">
+                                Locate your
                             </div>
-                            <div class="plush-banner-head">
-                                <h1 class="letter-animation">Plush Mattresses</h1>
-                            </div>
-                        </div>
-                        <div class="plush-banner-bottom slide-in-text">
-                            <div class="plush-banner-bottom-wrap">
-                                <p>At the end of a long, hard day, there's nothing quite like collapsing into a bed so
-                                    soft it feels like a big hug.</p>
-                                <p>At Mattresses Resources Australia, we have a wide range of plush mattresses for you
-                                    to choose from. Peaceful sleep and sweet dreams on a premium plush mattress await!
-                                </p>
+                            <h1 class="letter-animation">Nearest Mattress Resources Australia Stockist</h1>
+                            <div class="ab-content-text">
+                                <div class="ab-content-text-wrap slide-in-text">
+                                    <p>Find the perfect mattress and expert sleep advice – our store locator makes it
+                                        easy to connect with the Mattress Resources Australia retailers near you.</p>
+                                </div>
                             </div>
                         </div>
                     </div>
+                </div>
             </section>
             <!-- Banner Starts-->
 
             <div class="spacer120"></div>
 
-            <!-- Haven section -->
-            <section class="Unveiling-section haven">
-                <div class="container">
-                    <div class="Unveiling-section-wrap">
-                        <div class="Unveiling-section-head slide-in-text">
-                            <div class="label mid">
-                                Choosing Your Plush Haven
+            <!-- Store Locator-->
+            <section class="store-locator">
+                <div class="container-fluid">
+                    <div class="store-locator-wrap">
+                        <div class="store-locator-top slide-in-text">
+                            <div class="label mid">Customise Your</div>
+                            <h2>Search With Advanced Filters</h2>
+                            <div class="store-locator-top-content">
+                                <p>Don't want to travel far? Need a store that carries your favourite brand? Our
+                                    mattress store locator filters make your search a breeze.</p>
                             </div>
-                            <h2 class="">
-                                The Benefits of Soft Mattresses
-                            </h2>
-                            <p class="">What benefits can you expect from a plush mattress?
-                            </p>
                         </div>
-                        <div class="Unveiling-slider" role="group" aria-label="Splide Basic HTML Example">
-                            <div class="splide__track">
-                                <div class="Unveiling-section-grid Unveiling-section-slider text-animate">
-                                    <div class="Unveiling-item fade-in-text">
-                                        <div class="Unveiling-item-img">
-                                            <img src="images/Plush-Mattress/haven1.svg" alt="Unveiling">
+                        <div class="store-locator-bottom">
+                            <div class="slb-selector">
+                                <div class="slb-selector-wrap">
+                                    <select class="js-select2">
+                                        <option></option>
+                                        <option>Australia</option>
+                                        <option>India</option>
+                                        <option>UK</option>
+                                        <option>USA</option>
+                                    </select>
+                                    <input type="number" name="pincode" id="pincode" placeholder="Enter Pincode" />
+                                </div>
+                            </div>
+                            <div class="slb-location">
+                                <div class="slb-location-map">
+                                    <div id="map"></div>
+                                </div>
+                                <div class="slb-location-cards">
+                                    <div class="slb-location-cards-grid">
+                                        <div class="slbl-card">
+                                            <div class="slbl-card-wrap">
+                                                <div class="slbl-card-top">
+                                                    <p>Hypnos</p>
+                                                    <div class="name-sep"></div>
+                                                    <p>Tommy Bahama</p>
+                                                </div>
+                                                <div class="slbl-card-middle">
+                                                    <p>Retailer Name</p>
+                                                    <div class="slbl-card-middle-wrap">
+                                                        <div class="slbl-card-middle-item">
+                                                            <img src="images/Store-locator/mail-icon.svg" alt="mail">
+                                                            <p>loremipsum@gmail.com</p>
+                                                        </div>
+                                                        <div class="slbl-card-middle-item">
+                                                            <img src="images/Store-locator/phone-icon.svg" alt="phone">
+                                                            <p>+91 475639924783</p>
+                                                        </div>
+                                                        <div class="slbl-card-middle-item">
+                                                            <img src="images/Store-locator/loc-icon.svg" alt="location">
+                                                            <p>Australia</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="slbl-card-bottom">
+                                                    <a href="#!" class="custom-button">contact</a>
+                                                    <a href="#!" class="custom-button">direction</a>
+                                                </div>
+                                            </div>
                                         </div>
-                                        <div class="Unveiling-item-content">
-                                            <h4 class="big">Pressure relief</h4>
-                                            <p class="small">They contour to your body, providing support where you need
-                                                it and relieving pressure points.
-                                            </p>
+                                        <div class="slbl-card">
+                                            <div class="slbl-card-wrap">
+                                                <div class="slbl-card-top">
+                                                    <p>Hypnos</p>
+                                                    <div class="name-sep"></div>
+                                                    <p>Tommy Bahama</p>
+                                                </div>
+                                                <div class="slbl-card-middle">
+                                                    <p>Retailer Name</p>
+                                                    <div class="slbl-card-middle-wrap">
+                                                        <div class="slbl-card-middle-item">
+                                                            <img src="images/Store-locator/mail-icon.svg" alt="mail">
+                                                            <p>loremipsum@gmail.com</p>
+                                                        </div>
+                                                        <div class="slbl-card-middle-item">
+                                                            <img src="images/Store-locator/phone-icon.svg" alt="phone">
+                                                            <p>+91 475639924783</p>
+                                                        </div>
+                                                        <div class="slbl-card-middle-item">
+                                                            <img src="images/Store-locator/loc-icon.svg" alt="location">
+                                                            <p>Australia</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="slbl-card-bottom">
+                                                    <a href="#!" class="custom-button">contact</a>
+                                                    <a href="#!" class="custom-button">direction</a>
+                                                </div>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="Unveiling-item fade-in-text">
-                                        <div class="Unveiling-item-img">
-                                            <img src="images/Plush-Mattress/haven2.svg" alt="Unveiling">
+                                        <div class="slbl-card">
+                                            <div class="slbl-card-wrap">
+                                                <div class="slbl-card-top">
+                                                    <p>Hypnos</p>
+                                                    <div class="name-sep"></div>
+                                                    <p>Tommy Bahama</p>
+                                                </div>
+                                                <div class="slbl-card-middle">
+                                                    <p>Retailer Name</p>
+                                                    <div class="slbl-card-middle-wrap">
+                                                        <div class="slbl-card-middle-item">
+                                                            <img src="images/Store-locator/mail-icon.svg" alt="mail">
+                                                            <p>loremipsum@gmail.com</p>
+                                                        </div>
+                                                        <div class="slbl-card-middle-item">
+                                                            <img src="images/Store-locator/phone-icon.svg" alt="phone">
+                                                            <p>+91 475639924783</p>
+                                                        </div>
+                                                        <div class="slbl-card-middle-item">
+                                                            <img src="images/Store-locator/loc-icon.svg" alt="location">
+                                                            <p>Australia</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="slbl-card-bottom">
+                                                    <a href="#!" class="custom-button">contact</a>
+                                                    <a href="#!" class="custom-button">direction</a>
+                                                </div>
+                                            </div>
                                         </div>
-                                        <div class="Unveiling-item-content">
-                                            <h4 class="big">Optimal comfort</h4>
-                                            <p class="small">The soft, cushioning surface is perfect for cosy,
-                                                comfortable sleep.</p>
-                                        </div>
-                                    </div>
-                                    <div class="Unveiling-item fade-in-text">
-                                        <div class="Unveiling-item-img">
-                                            <img src="images/Plush-Mattress/haven3.svg" alt="Unveiling">
-                                        </div>
-                                        <div class="Unveiling-item-content">
-                                            <h4 class="big">Side sleeping support</h4>
-                                            <p class="small">Your shoulders and hips will sink into a plush mattress
-                                                just enough to align your spine, reducing the stress on your body for a
-                                                pain-free wake-up.</p>
-                                        </div>
-                                    </div>
-                                    <div class="Unveiling-item fade-in-text">
-                                        <div class="Unveiling-item-img">
-                                            <img src="images/Plush-Mattress/haven4.svg" alt="Unveiling">
-                                        </div>
-                                        <div class="Unveiling-item-content">
-                                            <h4 class="big">A luxurious sleep experience</h4>
-                                            <p class="small">There's a reason why plush mattresses are often the stars
-                                                in premium hotels: they provide a luxurious sleep experience. With a
-                                                plush mattress, you're not just sleeping; you're indulging.</p>
-                                        </div>
-                                    </div>
-                                    <div class="Unveiling-item fade-in-text">
-                                        <div class="Unveiling-item-img">
-                                            <img src="images/Plush-Mattress/haven5.svg" alt="Unveiling">
-                                        </div>
-                                        <div class="Unveiling-item-content">
-                                            <h4 class="big">Noise reduction</h4>
-                                            <p class="small">Plush mattresses absorb movement, making them quieter than
-                                                their firmer counterparts. So the sound of you tossing and turning is
-                                                less likely to disturb your sleeping partner, and vice versa!</p>
+                                        <div class="slbl-card">
+                                            <div class="slbl-card-wrap">
+                                                <div class="slbl-card-top">
+                                                    <p>Hypnos</p>
+                                                    <div class="name-sep"></div>
+                                                    <p>Tommy Bahama</p>
+                                                </div>
+                                                <div class="slbl-card-middle">
+                                                    <p>Retailer Name</p>
+                                                    <div class="slbl-card-middle-wrap">
+                                                        <div class="slbl-card-middle-item">
+                                                            <img src="images/Store-locator/mail-icon.svg" alt="mail">
+                                                            <p>loremipsum@gmail.com</p>
+                                                        </div>
+                                                        <div class="slbl-card-middle-item">
+                                                            <img src="images/Store-locator/phone-icon.svg" alt="phone">
+                                                            <p>+91 475639924783</p>
+                                                        </div>
+                                                        <div class="slbl-card-middle-item">
+                                                            <img src="images/Store-locator/loc-icon.svg" alt="location">
+                                                            <p>Australia</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="slbl-card-bottom">
+                                                    <a href="#!" class="custom-button">contact</a>
+                                                    <a href="#!" class="custom-button">direction</a>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -361,175 +438,12 @@
                     </div>
                 </div>
             </section>
-            <!-- Haven section -->
-
-            <div class="spacer120"></div>
-
-            <!-- Plush-Selection section -->
-             <section class="plush-selection">
-                <div class="container-fluid">
-                    <div class="plush-selection-wrapper">
-                        <div class="plush-selection-top slide-in-text">
-                            <div class="label mid"> Our Plush Mattress Selection</div>
-                            <h2 class="tiny">Comfort in Every Layer</h2>
-                            <div class="plush-selection-top-content">
-                                <p>Our <a href="https://mattressresources.com.au/therapedic-mattresses/" target="_blank">Therapedic</a>, <a href="https://mattressresources.com.au/hypnos-beds-mattresses/" target="_blank">Hypnos</a>, and <a href="https://mattressresources.com.au/tommy-bahama/" target="_blank">Tommy Bahama</a> mattress ranges incorporate various technologies and advanced materials which contribute to their softness and overall appeal.</p>
-                            </div>
-                        </div>
-                        <div class="plush-selection-bottom ">
-                            <div class="plush-selection-cards text-animate">
-                                <div class="plush-selection-left fade-in-text">
-                                    <div class="plush-selection-left-img">
-                                        <picture>
-                                            <source media="(max-width:767px)" srcset="images/Plush-Mattress/plush-selection-1.png">
-                                            <img src="images/Plush-Mattress/plush-selection-1.png" alt="Flowers">
-                                        </picture>
-                                    </div>
-                                </div>
-                                <div class="plush-selection-right fade-in-text">
-                                    <div class="plush-selection-right-wrap">
-                                        <h2 class="tiny">Gel-Infused Memory Foam</h2>
-                                        <div class="plush-selection-right-content">
-                                            <p>The body-hugging properties of memory foam combined with the cooling properties of gel will keep you comfortable and cool throughout the night.</p>
-                                            <p>Gel-infused memory foam is used in our</p>
-                                            <ul>
-                                                <li><a href="https://mattressresources.com.au/therapedic-mattresses/black-diamond/" target="_blank">Therapedic Black Diamond mattresses</a></li>
-                                                <li><a href="https://mattressresources.com.au/therapedic-mattresses/theragel-tour-theragel-t-one-fusion-mattress-mattress/" target="_blank">Therapedic Medicoil Ice mattresses</a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="plush-selection-cards text-animate">
-                                <div class="plush-selection-left fade-in-text">
-                                    <div class="plush-selection-left-img">
-                                        <picture>
-                                            <source media="(max-width:767px)" srcset="images/Plush-Mattress/plush-selection-2.png">
-                                            <img src="images/Plush-Mattress/plush-selection-2.png" alt="Flowers">
-                                        </picture>
-                                    </div>
-                                </div>
-                                <div class="plush-selection-right fade-in-text">
-                                    <div class="plush-selection-right-wrap">
-                                        <h2 class="tiny">Copper-Infused Memory Foam</h2>
-                                        <div class="plush-selection-right-content">
-                                            <p>This memory foam harnesses copper's natural antimicrobial properties to help reduce joint inflammation, improve blood circulation, and prevent microbes from growing on your mattress surface.</p>
-                                            <p>It’s featured in our</p>
-                                            <ul>
-                                                <li><a href="https://mattressresources.com.au/copperpedic/" target="_blank">Therapedic CopperPedic mattresses</a></li>
-                                                <li><a href="https://mattressresources.com.au/therapedic-mattresses/theragel-opulence-mattress/" target="_blank">Therapedic CopperPedic Ultra mattresses</a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="plush-selection-cards text-animate">
-                                <div class="plush-selection-left fade-in-text">
-                                    <div class="plush-selection-left-img">
-                                        <picture>
-                                            <source media="(max-width:767px)" srcset="images/Plush-Mattress/plush-selection-3.png">
-                                            <img src="images/Plush-Mattress/plush-selection-3.png" alt="Flowers">
-                                        </picture>
-                                    </div>
-                                </div>
-                                <div class="plush-selection-right fade-in-text">
-                                    <div class="plush-selection-right-wrap">
-                                        <h2 class="tiny">High Grade Foam</h2>
-                                        <div class="plush-selection-right-content">
-                                            <p>This high-density foam adds an extra comfort layer and is supportive and resilient, helping mattresses maintain their plush feel and structural integrity over time.</p>
-                                            <p>You can find HG foam in our</p>
-                                            <ul>
-                                                <li><a href="https://mattressresources.com.au/wp-content/uploads/2023/09/MR_HypnosBalmoral_Brochure_Sept_v1_Digital.pdf" target="_blank">Hypnos Balmoral mattresses</a></li>
-                                                <li><a href="#!" target="_blank">Hypnos Edinburgh mattresses</a></li>
-                                                <li><a href="https://mattressresources.com.au/wp-content/uploads/2023/10/MR_TommyBahama_Miami_Brochure_Renew_2023_Digital_PS.pdf" target="_blank">Tommy Bahama Renew mattresses</a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="plush-selection-cards text-animate">
-                                <div class="plush-selection-left fade-in-text">
-                                    <div class="plush-selection-left-img">
-                                        <picture>
-                                            <source media="(max-width:767px)" srcset="images/Plush-Mattress/plush-selection-4.png">
-                                            <img src="images/Plush-Mattress/plush-selection-4.png" alt="Flowers">
-                                        </picture>
-                                    </div>
-                                </div>
-                                <div class="plush-selection-right fade-in-text">
-                                    <div class="plush-selection-right-wrap">
-                                        <h2 class="tiny">Zoned Pocket Springs</h2>
-                                        <div class="plush-selection-right-content">
-                                            <p>Springs in different zones offer support that adapts to the various areas of your body for proper spinal alignment and reduced pressure points.</p>
-                                            <p>Several mattresses have between five and nine pocket spring zones, including our</p>
-                                            <ul>
-                                                <li><a href="https://mattressresources.com.au/therapedic-mattresses/therapedic-chiropractic-comfort-mattresses/" target="_blank">Therapedic Chiropractic Comfort mattresses</a></li>
-                                                <li><a href="https://mattressresources.com.au/wp-content/uploads/2023/10/MR_TommyBahama_Miami_Brochure_Serenity_2023_Digital_PS.pdf" target="_blank">Tommy Bahama Eastport Mattress</a></li>
-                                                <li><a href="https://mattressresources.com.au/wp-content/uploads/2023/10/MR_TommyBahama_Hamptons_Montauk_2023_WEB_s.pdf" target="_blank">Tommy Bahama Montauk mattresses</a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="plush-selection-cards text-animate">
-                                <div class="plush-selection-left fade-in-text">
-                                    <div class="plush-selection-left-img">
-                                        <picture>
-                                            <source media="(max-width:767px)" srcset="images/Plush-Mattress/plush-selection-5.png">
-                                            <img src="images/Plush-Mattress/plush-selection-5.png" alt="Flowers">
-                                        </picture>
-                                    </div>
-                                </div>
-                                <div class="plush-selection-right fade-in-text">
-                                    <div class="plush-selection-right-wrap">
-                                        <h2 class="tiny">Hourglass Back Support</h2>
-                                        <div class="plush-selection-right-content">
-                                            <p>Reinforced support in the middle section of the mattress provides extra lumbar support and helps maintain proper spinal alignment, especially for back and side sleepers.</p>
-                                            <p>Hourglass back support is incorporated into our</p>
-                                            <ul>
-                                                <li><a href="https://mattressresources.com.au/copperpedic/" target="_blank">Therapedic CopperPedic mattresses</a></li>
-                                                <li><a href="https://mattressresources.com.au/wp-content/uploads/2023/10/MR_TommyBahama_Miami_Brochure_Serenity_2023_Digital_PS.pdf" target="_blank">Tommy Bahama Serenity mattresses</a></li>
-                                                <li><a href="https://mattressresources.com.au/wp-content/uploads/2023/10/MR_TommyBahama_Hamptons_Freeport_2023_WEB_s.pdf" target="_blank">Tommy Bahama Freeport mattresses</a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="plush-selection-cards text-animate">
-                                <div class="plush-selection-left fade-in-text">
-                                    <div class="plush-selection-left-img">
-                                        <picture>
-                                            <source media="(max-width:767px)" srcset="images/Plush-Mattress/plush-selection-6.png">
-                                            <img src="images/Plush-Mattress/plush-selection-6.png" alt="Flowers">
-                                        </picture>
-                                    </div>
-                                </div>
-                                <div class="plush-selection-right fade-in-text">
-                                    <div class="plush-selection-right-wrap">
-                                        <h2 class="tiny">Wool</h2>
-                                        <div class="plush-selection-right-content">
-                                            <p>Wool is naturally soft and comfy. It also has temperature-regulating properties, keeping you warm in winter and cool in summer.</p>
-                                            <p>Wool is featured in our</p>
-                                            <ul>
-                                                <li><a href="https://mattressresources.com.au/therapedic-mattresses/black-diamond/" target="_blank">Therapedic Black Diamond mattresses</a></li>
-                                                <li><a href="https://mattressresources.com.au/wp-content/uploads/2023/10/MR_TommyBahama_Hamptons_Montauk_2023_WEB_s.pdf" target="_blank">Tommy Bahama Montauk mattresses</a></li>
-                                                <li><a href="https://mattressresources.com.au/wp-content/uploads/2023/10/MR_TommyBahama_Hamptons_EastportPlush_2023_WEB_s.pdf" target="_blank">Tommy Bahama Eastport mattresses</a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        
-                    </div>
-                </div>
-             </section>
-            <!-- Plush-Selection section -->
+            <!-- Store Locator-->
 
             <div class="spacer120"></div>
 
             <!-- FAQ Section -->
-            <section class="faq-section">
+            <section class="faq-section faq-margin">
                 <div class="container-fluid">
                     <div class="faq-section-wrap">
                         <div class="faq-left">
@@ -547,7 +461,8 @@
                                     <div class="faq">
                                         <div class="accordion">
                                             <div class="accordion-item">
-                                                <div class="accordion-header">What Does Plush Mean in a Mattress?
+                                                <div class="accordion-header">How Do I Use the Store Locator on Your
+                                                    Website?
                                                     <div class="acc-icon">
                                                         <span></span>
                                                         <span></span>
@@ -555,15 +470,18 @@
                                                 </div>
                                                 <div class="accordion-content">
                                                     <div class="accordion-content-inner">
-                                                        <p>In the mattress world, "plush" refers to a soft comfort
-                                                            level. Plush mattresses are designed with additional
-                                                            cushioning layers to provide this soft, cosy, and enveloping
-                                                            sleeping comfort.</p>
+                                                        <p>Our store locator is easy to use! Simply type in your post
+                                                            code, city, state, or general area. You'll see a map of the
+                                                            stores near you and a list showing addresses, distances,
+                                                            phone numbers, and hours of operation. </p>
+                                                        <p>You can use the filters to narrow your search if you need to
+                                                            find a store with specific features or products.</p>
                                                     </div>
                                                 </div>
                                             </div>
                                             <div class="accordion-item">
-                                                <div class="accordion-header"> Are Plush Mattresses Any Good?
+                                                <div class="accordion-header">Can I Access the Store Locator on My
+                                                    Mobile Device or Tablet?
                                                     <div class="acc-icon">
                                                         <span></span>
                                                         <span></span>
@@ -571,16 +489,15 @@
                                                 </div>
                                                 <div class="accordion-content">
                                                     <div class="accordion-content-inner">
-                                                        <p>If you’re after a soft, cushioned mattress, a plush mattress
-                                                            is a good choice! They’re exceptionally comfortable,
-                                                            especially if you’re a side sleeper or just prefer a more
-                                                            contouring feel from a mattress.
+                                                        <p>Yes! Our store locator is optimised for your phone, tablet,
+                                                            or computer, giving you on-the-go access.
                                                         </p>
                                                     </div>
                                                 </div>
                                             </div>
                                             <div class="accordion-item">
-                                                <div class="accordion-header">Is a Plush Mattress Better for Your Back?
+                                                <div class="accordion-header">What Filtering Options Are Available on
+                                                    the Store Locator To Help Me Find the Right Store?
                                                     <div class="acc-icon">
                                                         <span></span>
                                                         <span></span>
@@ -588,10 +505,8 @@
                                                 </div>
                                                 <div class="accordion-content">
                                                     <div class="accordion-content-inner">
-                                                        <p>A plush mattress can be better for your back if you prefer a
-                                                            softer surface that contours to your body. However, the
-                                                            ideal mattress firmness for back health varies based on
-                                                            personal comfort preferences and sleep positions.</p>
+                                                        <p>You can filter by distance, brand availability, and specific
+                                                            product lines. </p>
                                                     </div>
                                                 </div>
                                             </div>
@@ -610,78 +525,6 @@
 
             </section>
             <!-- FAQ Section -->
-
-            <div class="spacer120"></div>
-
-            <!-- Pre-Footer -->
-            <section class="pre-footer pre-footer2">
-                <div class="container-fluid">
-                    <div class="pf-wrap">
-                        <div class="pf-left">
-                            <div class="pf-left-wrap">
-                                <div class="pfl-head">
-                                    <div class="label mid">The Invitation to</div>
-                                    <h2 class="slide-in-text">Superior Slumber</h2>
-                                </div>
-                                <div class="pfl-content">
-                                    <div class="pfl-content-wrap">
-                                        <p class="slide-in-text">Where can you buy the best plush mattress in Australia
-                                            for comfortable, dreamy sleep? </p>
-                                        <p class="slide-in-text">
-                                            Visit a Mattress Resources Australia <a
-                                                href="https://mattressresources.com.au/retailers/"
-                                                target="_blank">retailer near you</a> to browse our luxurious range of
-                                            plush mattresses today. <br>
-                                            If you have any questions or need personalised advice, fill out this <a
-                                                href="https://mattressresources.com.au/contact/" target="_blank">online
-                                                form</a>, and we'll get in touch shortly to help you.</p>
-                                    </div>
-                                    <div class="pfl-content-btn">
-                                        <a href="#!" class="custom-button">store locator</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="pfl-img desk text-animate">
-                                <picture>
-                                    <source media="(max-width:991px)" srcset="images/Homepage/pfl1.png" />
-                                    <source media="(max-width:767px)" srcset="images/Homepage/pfl1.png" />
-                                    <img src="images/Homepage/pfl1.png" class="fade-in-text" alt="pfl1" />
-                                </picture>
-                                <picture>
-                                    <source media="(max-width:991px)" srcset="images/Homepage/pfl2.png" />
-                                    <source media="(max-width:767px)" srcset="images/Homepage/pfl2.png" />
-                                    <img src="images/Homepage/pfl2.png" class="fade-in-text" alt="pfl2" />
-                                </picture>
-                            </div>
-                        </div>
-                        <div class="pf-right">
-                            <div class="pfl-img-wrap">
-                                <div class="pfl-img mob text-animate">
-                                    <picture>
-                                        <source media="(max-width:991px)" srcset="images/Homepage/pfl1.png" />
-                                        <source media="(max-width:767px)" srcset="images/Homepage/pfl1.png" />
-                                        <img src="images/Homepage/pfl1.png" class="fade-in-text" alt="pfl1" />
-                                    </picture>
-                                    <picture>
-                                        <source media="(max-width:991px)" srcset="images/Homepage/pfl2.png" />
-                                        <source media="(max-width:767px)" srcset="images/Homepage/pfl2.png" />
-                                        <img src="images/Homepage/pfl2.png" class="fade-in-text" alt="pfl2" />
-                                    </picture>
-                                </div>
-                                <div class="pfr-img text-animate">
-                                    <picture>
-                                        <source media="(max-width:991px)" srcset="images/Homepage/pfr.png" />
-                                        <source media="(max-width:767px)" srcset="images/Homepage/pfr.png" />
-                                        <img src="images/Homepage/pfr.png" class="fade-in-text" alt="pfr" />
-                                    </picture>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <!-- Pre-Footer -->
-
 
             <div class="spacer"></div>
         </div>
@@ -991,72 +834,92 @@
     <!-- <script src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js"></script>  -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/ScrollTrigger.min.js"></script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
         integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.min.js"></script>
+    <script src="https://api.mapbox.com/mapbox-gl-js/v3.9.2/mapbox-gl.js"></script>
     <script src="js/SplitText.min.js"></script>
     <script src="js/custom.js"></script>
 
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            function applySliderClasses() {
-                // Check screen width
-                const isSmallScreen = window.innerWidth <= 767;
-
-                // Select elements
-                const slider = document.querySelector('.Unveiling-slider');
-                const sectionGrid = document.querySelector('.Unveiling-section-slider');
-                const items = document.querySelectorAll('.Unveiling-item');
-
-                if (slider && sectionGrid && items.length > 0) {
-                    if (isSmallScreen) {
-                        // Add classes for small screens
-                        slider.classList.add('splide');
-                        sectionGrid.classList.add('splide__list');
-                        sectionGrid.classList.remove('Unveiling-section-grid');
-                        items.forEach(item => item.classList.add('splide__slide'));
-                        items.forEach(item => item.classList.remove('fade-in-text'));
-
-                        // Initialize Splide after adding classes
-                        initializeSplide();
-                    } else {
-                        // Remove classes for larger screens
-                        slider.classList.remove('splide');
-                        sectionGrid.classList.remove('splide__list');
-                        sectionGrid.classList.add('Unveiling-section-grid');
-                        items.forEach(item => item.classList.remove('splide__slide'));
-                        items.forEach(item => item.classList.add('fade-in-text'));
-                    }
-                }
-            }
-
-            function initializeSplide() {
-                const splideElement = document.querySelector('.splide');
-                if (splideElement && !splideElement.classList.contains('splide-initialized')) {
-                    var splide = new Splide('.splide', {
-                        type: 'loop',
-                        perPage: 1,
-                        perMove: 1,
-                        gap: 30,
-                        pagination: true,
-                        arrows: false,
-                    });
-
-                    splide.mount();
-                    // Add a marker class to prevent re-initialization
-                    splideElement.classList.add('splide-initialized');
-                }
-            }
-
-            // Run function on load and resize
-            window.addEventListener('load', applySliderClasses);
-            window.addEventListener('resize', applySliderClasses);
+    <!-- <script>
+        $(document).ready(function () {
+            $(".js-select2").select2({
+                closeOnSelect: true,
+                placeholder: 'Select Brand'
+            });
         });
     </script>
 
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            mapboxgl.accessToken = 'pk.eyJ1IjoiYW5zaHVscHJhZGhhbiIsImEiOiJjbTVudGp5dXAwZDBoMnFyNHQ0d2h4MnA3In0.olPoaNDYb57RkJs1UAvTtA';
+            const map = new mapboxgl.Map({
+                container: 'map',
+                style: 'mapbox://styles/anshulpradhan/cm5nu98sg008901sd9t0i7hd8',
+                center: [12.550343, 55.665957],
+                zoom: 8
+            });
 
+            // Create a default Marker and add it to the map.
+            const marker1 = new mapboxgl.Marker()
+                .setLngLat([12.554729, 55.70651])
+                .addTo(map);
+
+            // Create a default Marker, colored black, rotated 45 degrees.
+            const marker2 = new mapboxgl.Marker()
+                .setLngLat([12.65147, 55.608166])
+                .addTo(map);
+        });
+    </script> -->
+
+    <script>
+        $(document).ready(function () {
+            // Initialize Select2
+            $(".js-select2").select2({
+                closeOnSelect: true,
+                placeholder: 'Select Location'
+            });
+
+            // Mapbox setup
+            mapboxgl.accessToken = 'pk.eyJ1IjoiYW5zaHVscHJhZGhhbiIsImEiOiJjbTVudGp5dXAwZDBoMnFyNHQ0d2h4MnA3In0.olPoaNDYb57RkJs1UAvTtA';
+            const map = new mapboxgl.Map({
+                container: 'map',
+                style: 'mapbox://styles/anshulpradhan/cm5nu98sg008901sd9t0i7hd8',
+                center: [12.550343, 55.665957],
+                zoom: 2
+            });
+
+            // Location data
+            const locations = {
+                "Australia": { lng: 133.7751, lat: -25.2744 },
+                "India": { lng: 78.9629, lat: 20.5937 },
+                "UK": { lng: -3.4360, lat: 55.3781 },
+                "USA": { lng: -95.7129, lat: 37.0902 }
+            };
+
+            // Handle location selection
+            $(".js-select2").on('select2:select', function (e) {
+                const selectedLocation = e.params.data.text; // Get the selected location name
+                const coordinates = locations[selectedLocation];
+
+                if (coordinates) {
+                    // Fly to the selected location
+                    map.flyTo({
+                        center: [coordinates.lng, coordinates.lat],
+                        zoom: 8
+                    });
+
+                    // Add a marker at the new location
+                    new mapboxgl.Marker()
+                        .setLngLat([coordinates.lng, coordinates.lat])
+                        .addTo(map);
+                }
+            });
+        });
+
+    </script>
 </body>
 <!-- Body Ends-->
 

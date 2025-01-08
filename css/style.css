@@ -4338,7 +4338,7 @@ ul#menu-legal-pages {
 
 /* banner */
 .store-locator-banner .ab-bg-overlay {
-    background: linear-gradient(122.17deg, rgba(0, 0, 0, 0.3) 90.24%, rgba(0, 0, 0, 0) 100.73%);
+    background: linear-gradient(122.17deg, rgb(0 0 0 / 57%) 90.24%, rgba(0, 0, 0, 0) 100.73%)
 }
 
 .store-locator-banner .ab-content h1 {

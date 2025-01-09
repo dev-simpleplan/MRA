@@ -247,90 +247,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
 // Text animation 2
 
-// document.addEventListener("DOMContentLoaded", () => {
-//   // Function to create the structure of the text (SplitText and wrapping)
-//   const createTextStructure = (element) => {
-//     // Apply SplitText only if it hasn't been applied already
-//     if (!element.classList.contains('split-text-applied')) {
-//       const splitText = new SplitText(element, {
-//         type: "lines",
-//         linesClass: "lineParent",
-//       });
-
-//       // Mark that SplitText has been applied
-//       element.classList.add('split-text-applied');
-
-//       // Wrap each line in a "lineChild" class
-//       const lines = element.querySelectorAll(".lineParent");
-//       lines.forEach((line) => {
-//         const lineChild = document.createElement("div");
-//         lineChild.classList.add("lineChild");
-//         lineChild.style.display = "block";
-//         lineChild.style.position = "relative";
-
-//         // Move the line's text content into the new child
-//         while (line.firstChild) {
-//           lineChild.appendChild(line.firstChild);
-//         }
-//         line.appendChild(lineChild);
-//       });
-//     }
-//   };
-
-//   // Function to animate elements when they come into view
-//   const animateSlideInText = (entries, observer) => {
-//     entries.forEach((entry) => {
-//       if (entry.isIntersecting) {
-//         const element = entry.target;
-
-//         // If the element has already been animated, prevent re-animation
-//         if (element.classList.contains('animated')) {
-//           return;
-//         }
-
-//         // Mark element as animated
-//         element.classList.add('animated');
-
-//         // Ensure the text element becomes visible once it enters the viewport
-//         gsap.set(element, { opacity: 1 });  // Set opacity to 1 before animation
-
-//         // GSAP animation: Animate each line from its initial state
-//         gsap.to(element.querySelectorAll(".lineChild"), {
-//           opacity: 1,    // Fade in
-//           y: 0,          // Move to its original position
-//           stagger: 0,   // Stagger each line's animation
-//           ease: "power3.out", // Smooth easing
-//           duration: 0.6,  // Duration of each animation
-//         });
-
-//         // Unobserve the element after the animation triggers
-//         observer.unobserve(element);
-//       }
-//     });
-//   };
-
-//   // Set up the IntersectionObserver
-//   const observerOptions = {
-//     root: null, // Use the viewport as the root
-//     threshold: 0.2, // Trigger when 20% of the element is in view
-//   };
-
-//   const observer = new IntersectionObserver(
-//     animateSlideInText,
-//     observerOptions
-//   );
-
-//   // Observe all elements with the class "slide-in-text"
-//   const slideInTextElements = document.querySelectorAll(".slide-in-text");
-//   slideInTextElements.forEach((el) => {
-//     // Create the text structure right away
-//     createTextStructure(el);
-
-//     // Observe the element for animation when it comes into view
-//     observer.observe(el);
-//   });
-// });
-
 document.addEventListener("DOMContentLoaded", () => {
   // Function to create the structure of the text (SplitText and wrapping)
   const createTextStructure = (element) => {
@@ -405,7 +321,7 @@ document.addEventListener("DOMContentLoaded", () => {
   );
 
   // Observe all <p>, <h2>, and <li> elements inside elements with the class "slide-in-text"
-  const slideInTextElements = document.querySelectorAll(".slide-in-text p, .slide-in-text h2, .slide-in-text li , .slide-in-text .animate-btn");
+  const slideInTextElements = document.querySelectorAll(".slide-in-text p, .slide-in-text h2, .slide-in-text .animate-btn");
   slideInTextElements.forEach((el) => {
     // Create the text structure right away
     createTextStructure(el);

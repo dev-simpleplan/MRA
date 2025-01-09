@@ -113,7 +113,7 @@ h2 {
     letter-spacing: -0.01em;
     text-underline-position: from-font;
     text-decoration-skip-ink: none;
-    text-transform: none;
+    text-transform: capitalize;
 }
 
 h2.small {
@@ -253,6 +253,7 @@ a:focus {
 }
 
 .container-fluid {
+    width: 100%;
     padding: 0 40px;
 }
 
@@ -1368,6 +1369,8 @@ Page CSS
 
 .testimonial .splide__arrows button:hover svg path {
     stroke: rgb(0, 0, 0);
+}
+.testimonial .splide__arrows button svg path {
     transition: all .3s ease;
 
 }
@@ -4561,7 +4564,7 @@ ul#menu-legal-pages {
     row-gap: 30px;
     overflow: hidden;
     overflow-y: scroll;
-    height: 650px;
+    height: 620px;
 }
 
 /* Firefox */
@@ -4601,3 +4604,483 @@ ul#menu-legal-pages {
 /* Store locator */
 
 /* store locator page */
+
+/* Construction Design page */
+
+/* Banner section */
+.construction-banner {
+    width: 100%;
+    height: 100vh;
+    min-height: 700px;
+    background: url(../images/blue-strip-bg.png);
+    background-size: contain;
+    display: flex;
+    align-items: end;
+}
+
+.construction-banner-wrap {
+    width: 100%;
+    height: calc(100% - 142px);
+    position: relative;
+}
+
+.construction-banner-bg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 50px;
+}
+
+.construction-banner-bg-img {
+    width: 38%;
+    position: relative;
+}
+
+.construction-banner-bg-img::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.3) 20.85%);
+}
+
+.construction-banner-bg-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.construction-banner-content {
+    position: relative;
+    z-index: 3;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.construction-banner-content h1 {
+    font-size: 120px;
+    line-height: 86.4px;
+    letter-spacing: -0.04em;
+    max-width: 15ch;
+}
+
+.construction-banner-content .label {
+    font-size: 44px;
+    margin-top: 30px;
+}
+
+.construction-banner-content-wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 42ch;
+    margin-left: auto;
+}
+
+.construction-banner-content-wrap p {
+    color: #fff;
+    line-height: 22px;
+}
+
+/* Banner section */
+
+/* Dream section */
+.dream {
+    position: relative;
+    width: 100%;
+    height: auto;
+}
+
+.dream-bg {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    inset: 0;
+    display: flex;
+}
+
+.dream-bg-big {
+    width: 52%;
+}
+
+.dream-bg-small {
+    width: 48%;
+    padding-top: 57px;
+    padding-bottom: 35px;
+}
+
+.dream-bg-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.dream-content {
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 99px;
+    padding-bottom: 77px;
+    position: relative;
+    z-index: 2;
+}
+
+.dream-content-wrap {
+    background-color: #F0ECE4;
+    max-width: 845px;
+    width: 100%;
+    padding: 0 98px;
+    padding-top: 70px;
+    padding-bottom: 85px;
+}
+
+.dream-content-top h2 {
+    line-height: 52px;
+    text-transform: capitalize;
+}
+
+.dream-content-top p {
+    margin-top: 28px;
+    max-width: 58ch;
+}
+
+.dream-content-bottom {
+    margin-top: 65px;
+    max-width: 60ch;
+
+}
+
+.dream-content-bottom p a {
+    color: #172A55;
+    border-bottom: 1px solid #172A55;
+    font-weight: 700;
+    transition: all 0.3s ease;
+    font-size: 14px;
+}
+
+.dream-content-bottom p a:hover {
+    color: var(--label-gold);
+    border-bottom: 1px solid var(--label-gold);
+}
+
+.dream-content-bottom ul {
+    margin-top: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.dream-content-bottom ul li {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    color: var(--desc);
+    display: flex;
+    gap: 8px;
+    padding-left: 7px;
+}
+
+.dream-content-bottom ul li::before {
+    content: "";
+    min-width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background-color: var(--desc);
+    margin-top: 9px;
+}
+
+/* Dream section */
+
+/* Durable section */
+.durable {
+    background-color: transparent;
+    padding-top: 90px;
+    padding-bottom: 90px;
+}
+
+.durable .creating-left {
+    width: 42%;
+    padding-top: 30px;
+    padding-bottom: 0;
+}
+
+.durable .creating-right {
+    width: 55%;
+}
+
+.durable .creating-left-content {
+    margin-top: 25px;
+    max-width: 55ch;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.durable-left-img {
+    margin-top: 145px;
+    width: 210px;
+    height: 140px;
+}
+
+.durable-left-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+}
+
+.durable .creating-right-small {
+    width: 36%;
+    height: 100%;
+}
+
+.durable .creating-right-right {
+    width: 61%;
+    height: 100%;
+}
+
+/* Durable section */
+
+/* Art section */
+.art {
+    padding: 64px 0;
+    padding-left: 30px;
+    background: url('../images/cream-strip-bg2.png');
+    background-size: cover;
+}
+
+.art-wrap {
+    display: flex;
+    gap: 20px;
+    position: relative;
+}
+
+.art-left {
+    width: 40%;
+    padding-top: 100px;
+    padding-bottom: 110px;
+}
+
+.art-left-top .art-left-top-wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 20px;
+    max-width: 57ch;
+}
+
+.art-left-bottom {
+    margin-top: 110px;
+}
+
+.art-left-bottom h4 {
+    color: var(--head);
+}
+
+.art-left-bottom .art-left-bottom-wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 15px;
+    max-width: 52ch;
+}
+
+.art-right {
+    width: 57%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.art-right-img {
+    width: 100%;
+    height: 100%;
+}
+
+.art-right-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Art section */
+
+/* customisation section */
+.customisation-top p {
+    margin-top: 15px;
+}
+
+.customisation-bottom {
+    margin-top: 50px;
+}
+
+.customisation-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(250px, 1fr));
+    column-gap: 15px;
+    row-gap: 30px;
+}
+
+.customisation-card {
+    width: 100%;
+    height: 585px;
+    position: relative;
+    background-color: #172A55;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+.customisation-card:hover .customisation-card-img img{
+    scale: 1.1;
+}
+
+.customisation-card-img::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.5) 77.32%);
+    z-index: 2;
+}
+
+.customisation-card-img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.customisation-card-img img {
+    transition: all 0.5s ease;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.customisation-card-text {
+    width: 100%;
+    height: 100%;
+    padding: 30px 16px;
+    position: relative;
+    z-index: 4;
+    display: flex;
+    align-items: end;
+}
+.customisation-card p{
+    padding: 0 33px;
+    text-align: center;
+    color: #fff;
+}
+/* customisation section */
+
+/* Latest Section */
+.latest{
+    background-color: #172A55;
+    position: relative;
+}
+.latest-wrap{
+    display: flex;
+}
+.latest-left{
+    width: 40%;
+    position: absolute;
+    inset: 0;
+}
+.latest-left-img{
+    width: 100%;
+    height: 100%;
+}
+.latest-left-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.latest-right{
+    width: 55%;
+    margin-left: auto;
+    padding-top: 75px;
+    padding-bottom: 100px; 
+}
+.latest-right-wrap {
+    max-width: 68ch;
+}
+.latest-right-top p{
+    margin-top: 15px;
+    color: #fff;
+    font-size: 18px;
+    line-height: 25px;
+}
+.latest-right-bottom{
+    margin-top: 45px;
+}
+.latest-right-bottom-wrap ul{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.latest-right-bottom-wrap ul li{
+    color: #fff;
+    font-size: 18px;
+    line-height: 25px;
+    display: flex;
+    gap: 11px;
+    padding-left: 10px;
+}
+.latest-right-bottom-wrap ul li::before{
+    content: '';
+    min-width: 7px;
+    height: 7px;
+    background-color: #fff;
+    border-radius: 50%;
+    margin-top: 9px;
+}
+/* Latest Section */
+
+/* Trust Section */
+.trust .exp-image-big {
+    width: 42%;
+}
+.trust .exp-image-small {
+    right: 60%;
+    top: 95%;
+    width: 210px;
+    height: 205px;
+}
+.trust .exp-content{
+    width: 59%;
+}
+.trust .exp-content-wrap {
+    max-width: 70ch;
+}
+.trust .text {
+    margin-top: 40px;
+    max-width: 56ch;
+}
+.trust .text p a{
+    color: #172A55;
+    font-weight: 700;
+    border-bottom: 1px solid #172A55;
+    transition: all 0.3s ease;
+}
+.trust .text p a:hover{
+    color: var(--label-gold);
+    border-bottom: 1px solid var(--label-gold);
+}
+
+
+/* Trust Section */
+
+/* Construction Design page */

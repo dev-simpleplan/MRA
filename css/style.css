@@ -4983,6 +4983,12 @@ ul#menu-legal-pages {
     text-align: center;
     color: #fff;
 }
+.art-right.mob{
+    display: none;
+}
+.customisation .splide__arrows{
+    display: none;
+}
 /* customisation section */
 
 /* Latest Section */

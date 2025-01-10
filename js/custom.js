@@ -321,7 +321,7 @@ document.addEventListener("DOMContentLoaded", () => {
   );
 
   // Observe all <p>, <h2>, and <li> elements inside elements with the class "slide-in-text"
-  const slideInTextElements = document.querySelectorAll(".slide-in-text p, .slide-in-text h2, .slide-in-text .animate-btn");
+  const slideInTextElements = document.querySelectorAll(".slide-in-text p, .slide-in-text h2, .slide-in-text h4, .slide-in-text .animate-btn");
   slideInTextElements.forEach((el) => {
     // Create the text structure right away
     createTextStructure(el);

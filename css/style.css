@@ -179,12 +179,25 @@ p.small {
     line-height: 21px;
 }
 
+.small p {
+    font-size: 14px;
+    line-height: 21px;
+}
+
 p.big {
     font-size: 18px;
     line-height: 25px;
 }
 
-.white {
+.big p {
+    font-size: 18px;
+    line-height: 25px;
+}
+
+.white p {
+    color: var(--white);
+}
+p.white {
     color: var(--white);
 }
 
@@ -557,6 +570,10 @@ header.transparent {
 }
 
 header.transparent.scrolled {
+    background-color: var(--bg-blue);
+}
+
+header.scrolled {
     background-color: var(--bg-blue);
 }
 
@@ -1370,6 +1387,7 @@ Page CSS
 .testimonial .splide__arrows button:hover svg path {
     stroke: rgb(0, 0, 0);
 }
+
 .testimonial .splide__arrows button svg path {
     transition: all .3s ease;
 
@@ -4617,10 +4635,12 @@ ul#menu-legal-pages {
     display: flex;
     align-items: end;
 }
+
 .construction-banner-inner {
     width: 100%;
     height: auto;
 }
+
 .construction-banner-wrap {
     width: 100%;
     height: calc(100% - 142px);
@@ -4918,9 +4938,11 @@ ul#menu-legal-pages {
     transform: translateY(-10%);
     object-fit: cover;
 }
-.art-right.mob{
+
+.art-right.mob {
     display: none;
 }
+
 /* Art section */
 
 /* customisation section */
@@ -4948,7 +4970,8 @@ ul#menu-legal-pages {
     align-items: center;
     overflow: hidden;
 }
-.customisation-card:hover .customisation-card-img img{
+
+.customisation-card:hover .customisation-card-img img {
     scale: 1.1;
 }
 
@@ -4986,66 +5009,77 @@ ul#menu-legal-pages {
     display: flex;
     align-items: end;
 }
-.customisation-card p{
+
+.customisation-card p {
     padding: 0 33px;
     text-align: center;
     color: #fff;
 }
 
-.customisation .splide__arrows{
+.customisation .splide__arrows {
     display: none;
 }
+
 /* customisation section */
 
 /* Latest Section */
-.latest{
+.latest {
     background-color: #172A55;
     position: relative;
 }
-.latest-wrap{
+
+.latest-wrap {
     display: flex;
 }
-.latest-left{
+
+.latest-left {
     width: 40%;
     position: absolute;
     inset: 0;
 }
-.latest-left-img{
+
+.latest-left-img {
     width: 100%;
     height: 100%;
     overflow: hidden;
 }
-.latest-left-img img{
+
+.latest-left-img img {
     width: 100%;
     height: 110%;
     transform: translateY(-10%);
     object-fit: cover;
 }
 
-.latest-right{
+.latest-right {
     width: 55%;
     margin-left: auto;
     padding-top: 75px;
-    padding-bottom: 100px; 
+    padding-bottom: 100px;
 }
+
 .latest-right-wrap {
     max-width: 68ch;
 }
-.latest-right-top p{
+
+.latest-right-top p {
     margin-top: 15px;
     color: #fff;
     font-size: 18px;
     line-height: 25px;
 }
-.latest-right-bottom{
+
+.latest-right-bottom {
     margin-top: 45px;
 }
-.latest-right-bottom-wrap ul{
+
+.latest-right-bottom-wrap ul {
     display: flex;
     flex-direction: column;
     gap: 5px;
 }
-.latest-right-bottom-wrap ul li{
+
+.latest-right-bottom-wrap ul li {
     color: #fff;
     font-size: 18px;
     line-height: 25px;
@@ -5053,7 +5087,8 @@ ul#menu-legal-pages {
     gap: 11px;
     padding-left: 10px;
 }
-.latest-right-bottom-wrap ul li::before{
+
+.latest-right-bottom-wrap ul li::before {
     content: '';
     min-width: 7px;
     height: 7px;
@@ -5061,40 +5096,138 @@ ul#menu-legal-pages {
     border-radius: 50%;
     margin-top: 9px;
 }
+
 /* Latest Section */
 
 /* Trust Section */
 .trust .exp-image-big {
     width: 42%;
 }
+
 .trust .exp-image-small {
     right: 60%;
     top: 95%;
     width: 210px;
     height: 205px;
 }
-.trust .exp-content{
+
+.trust .exp-content {
     width: 59%;
 }
+
 .trust .exp-content-wrap {
     max-width: 70ch;
 }
+
 .trust .text {
     margin-top: 40px;
     max-width: 56ch;
 }
-.trust .text p a{
+
+.trust .text p a {
     color: #172A55;
     font-weight: 700;
     border-bottom: 1px solid #172A55;
     transition: all 0.3s ease;
 }
-.trust .text p a:hover{
+
+.trust .text p a:hover {
     color: var(--label-gold);
     border-bottom: 1px solid var(--label-gold);
 }
 
-
 /* Trust Section */
 
 /* Construction Design page */
+
+/* Hospitality Mattress page */
+
+/* banner section */
+.hospitality-mattress .ab-bg-overlay {
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.4) 17.02%, rgba(0, 0, 0, 0) 100%);
+}
+
+.hospitality-mattress .ab-content h1 {
+    font-size: 82px;
+    line-height: 86.92px;
+    letter-spacing: -0.04em;
+    max-width: 20ch;
+}
+.hospitality-mattress .ab-content-wrap{
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+}
+.hospitality-mattress .ab-content-text-wrap{
+    gap: 20px;
+    margin-top: 50px;
+}
+.hospitality-mattress .ab-content-text-wrap p{
+    max-width: 100%;
+}
+.hospitality-mattress .ab-content-text-wrap{
+    max-width: 70ch;
+}
+/* banner section */
+
+/* Choice section */
+.choice-head{
+    max-width: 75ch;
+}
+.choice-grid{
+    margin-top: 55px;
+}
+.choice-grid-wrap{
+    display: grid;
+    grid-template-columns: repeat(3, minmax(255px, 1fr));
+    gap: 20px;
+}
+.choice-item-bottom{
+    width: 100%;
+    display: flex;
+    justify-content: end;
+}
+.choice-item-bottom-img{
+    width: 115px;
+    height: 100px;
+}
+.choice-item-bottom-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.choice-item{
+    background-color: #EDE6DA;
+    padding-left: 34px;
+    padding-right: 21px;
+    padding-top: 55px;
+    padding-bottom: 26px;
+}
+.choice-item-top{
+    max-width: 35ch;
+}
+.choice-item-top h4{
+    color: var(--head);
+}
+.choice-item-middle{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 50ch;
+}
+.choice-item-wrap{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    justify-content: space-between;
+}
+/* Choice section */
+
+
+/* Hospitality Mattress page */

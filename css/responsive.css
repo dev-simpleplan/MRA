@@ -377,7 +377,9 @@
     .art {
         padding-left: 0;
     }
-
+    .construction-banner-bg{
+        height: calc(100% - 62px);
+    }
 
 }
 
@@ -2379,6 +2381,31 @@
     .customisation {
         padding-bottom: 90px;
         padding-top: 40px;
+    }
+    .construction-banner-bg{
+        position: static;
+        height: auto;
+        padding-bottom: 30px;
+    }
+    .construction-banner-bg-img {
+        width: 100%;
+    }
+    .construction-banner-wrap {
+        height: auto;
+    }
+    .construction-banner{
+        min-height: auto;
+        height: auto;
+        flex-direction: column;
+    }
+    .construction-banner-bg-img {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 3 / 2;
+    }
+    .construction-banner-wrap {
+        height: auto;
+        padding-bottom: 50px;
     }
 }
 

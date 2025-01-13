@@ -2600,6 +2600,12 @@
     .seamless .exp-content{
         padding-top: 0;
     }
+    .superior {
+        padding-right: 0px;
+    }
+    .superior-middle{
+        padding: 0 20px;
+    }
 }
 
 @media only screen and (max-width: 600px) {

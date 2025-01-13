@@ -5507,6 +5507,7 @@ ul#menu-legal-pages {
     display: flex;
     gap: 30px;
     justify-content: space-between;
+    align-items: stretch;
 }
 .guest-bottom-left{
     display: flex;
@@ -5531,6 +5532,11 @@ ul#menu-legal-pages {
 }
 .guest-bottom-right{
     width: 36%;
+    display: flex;
+}
+.guest-bottom-right-img{
+    display: flex;
+    height: 100%;
 }
 /* Guest Section */
 

@@ -251,14 +251,14 @@ document.addEventListener("DOMContentLoaded", () => {
   // Function to create the structure of the text (SplitText and wrapping)
   const createTextStructure = (element) => {
     // Apply SplitText only if it hasn't been applied already
-    if (!element.classList.contains('split-text-applied')) {
+    if (!element.classList.contains("split-text-applied")) {
       const splitText = new SplitText(element, {
         type: "lines",
         linesClass: "lineParent",
       });
 
       // Mark that SplitText has been applied
-      element.classList.add('split-text-applied');
+      element.classList.add("split-text-applied");
 
       // Wrap each line in a "lineChild" class
       const lines = element.querySelectorAll(".lineParent");
@@ -284,23 +284,23 @@ document.addEventListener("DOMContentLoaded", () => {
         const element = entry.target;
 
         // If the element has already been animated, prevent re-animation
-        if (element.classList.contains('animated')) {
+        if (element.classList.contains("animated")) {
           return;
         }
 
         // Mark element as animated
-        element.classList.add('animated');
+        element.classList.add("animated");
 
         // Ensure the text element becomes visible once it enters the viewport
-        gsap.set(element, { opacity: 1 });  // Set opacity to 1 before animation
+        gsap.set(element, { opacity: 1 }); // Set opacity to 1 before animation
 
         // GSAP animation: Animate each line from its initial state
         gsap.to(element.querySelectorAll(".lineChild"), {
-          opacity: 1,    // Fade in
-          y: 0,          // Move to its original position
-          stagger: 0,   // Stagger each line's animation
+          opacity: 1, // Fade in
+          y: 0, // Move to its original position
+          stagger: 0, // Stagger each line's animation
           ease: "power3.out", // Smooth easing
-          duration: 0.6,  // Duration of each animation
+          duration: 0.6, // Duration of each animation
         });
 
         // Unobserve the element after the animation triggers
@@ -321,7 +321,9 @@ document.addEventListener("DOMContentLoaded", () => {
   );
 
   // Observe all <p>, <h2>, and <li> elements inside elements with the class "slide-in-text"
-  const slideInTextElements = document.querySelectorAll(".slide-in-text p, .slide-in-text h2, .slide-in-text h4, .slide-in-text .animate-btn");
+  const slideInTextElements = document.querySelectorAll(
+    ".slide-in-text p, .slide-in-text h2, .slide-in-text h4, .slide-in-text .animate-btn"
+  );
   slideInTextElements.forEach((el) => {
     // Create the text structure right away
     createTextStructure(el);
@@ -331,56 +333,106 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
+// document.addEventListener("DOMContentLoaded", function () {
+//   // Function to animate children of the section with a staggered effect
+//   const animateTextOnScroll = (section) => {
+//     const children = section.querySelectorAll(".fade-in-text"); // Select target child elements
+//     if (children.length > 0) {
+//       gsap.fromTo(
+//         children,
+//         { opacity: 0, y: 200 }, // Initial state
+//         {
+//           opacity: 1, // Final state
+//           y: 0, // Moves to its original position
+//           duration: 0.8,
+//           ease: "expo.out",
+//           stagger: 0.1, // Stagger delay between animations
+//         }
+//       );
+//     }
+//   };
 
+//   // Select all sections with the 'text-animate' class
+//   const sections = document.querySelectorAll(".text-animate");
 
+//   if (sections.length > 0) {
+//     // Create a single Intersection Observer instance for better performance
+//     const observer = new IntersectionObserver(
+//       (entries) => {
+//         entries.forEach((entry) => {
+//           if (entry.isIntersecting) {
+//             animateTextOnScroll(entry.target); // Animate the section's children
+//             observer.unobserve(entry.target); // Unobserve the section after animating
+//           }
+//         });
+//       },
+//       { threshold: 0.4 } // Trigger when 10% of the section is visible
+//     );
 
+//     // Observe each section
+//     sections.forEach((section) => observer.observe(section));
+//   }
+// });
+// Simple animation initializer
+function initAnimations() {
+  const animated = new Set();
 
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          const elements = entry.target.querySelectorAll(".fade-in-text");
 
+          if (elements.length) {
+            const toAnimate = Array.from(elements).filter(
+              (el) => !animated.has(el)
+            );
 
-
-
-
-
-document.addEventListener("DOMContentLoaded", function () {
-  // Function to animate children of the section with a staggered effect
-  const animateTextOnScroll = (section) => {
-    const children = section.querySelectorAll(".fade-in-text"); // Select target child elements
-    if (children.length > 0) {
-      gsap.fromTo(
-        children,
-        { opacity: 0, y: 200 }, // Initial state
-        {
-          opacity: 1, // Final state
-          y: 0, // Moves to its original position
-          duration: 0.8,
-          ease: "expo.out",
-          stagger: 0.1, // Stagger delay between animations
+            if (toAnimate.length) {
+              gsap.fromTo(
+                toAnimate,
+                { opacity: 0, y: 100 },
+                {
+                  opacity: 1,
+                  y: 0,
+                  duration: 0.8,
+                  ease: "expo.out",
+                  stagger: 0.1,
+                  onStart: () => toAnimate.forEach((el) => animated.add(el)),
+                }
+              );
+            }
+          }
         }
-      );
-    }
+      });
+    },
+    { threshold: 0.2 }
+  );
+
+  // Observe existing and handle new elements
+  const observeElements = () => {
+    document
+      .querySelectorAll(".text-animate")
+      .forEach((section) => observer.observe(section));
   };
 
-  // Select all sections with the 'text-animate' class
-  const sections = document.querySelectorAll(".text-animate");
+  observeElements();
 
-  if (sections.length > 0) {
-    // Create a single Intersection Observer instance for better performance
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            animateTextOnScroll(entry.target); // Animate the section's children
-            observer.unobserve(entry.target); // Unobserve the section after animating
-          }
-        });
-      },
-      { threshold: 0.4 } // Trigger when 10% of the section is visible
-    );
+  // Handle dynamic content
+  new MutationObserver(observeElements).observe(document.body, {
+    childList: true,
+    subtree: true,
+  });
+}
 
-    // Observe each section
-    sections.forEach((section) => observer.observe(section));
+// Initialize when GSAP is ready
+(function checkGSAP() {
+  if (typeof gsap !== "undefined") {
+    initAnimations();
+  } else {
+    setTimeout(checkGSAP, 100);
   }
-});
+})();
 
 // paralax effect
 

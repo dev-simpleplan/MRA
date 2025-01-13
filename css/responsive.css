@@ -377,8 +377,22 @@
     .art {
         padding-left: 0;
     }
-    .construction-banner-bg{
+
+    .construction-banner-bg {
         height: calc(100% - 62px);
+    }
+
+    .long-lasting .exp-content,
+    .seamless .exp-content {
+        padding: 100px 0;
+    }
+
+    .guest {
+        padding-left: 0;
+    }
+
+    .superior-wrapper {
+        height: 700px;
     }
 
 }
@@ -1698,11 +1712,99 @@
     .construction-banner-bg-img {
         width: 80%;
     }
+
     .fir-img img {
         object-position: center 90%;
     }
-    .value-content-bottom{
+
+    .value-content-bottom {
         padding: 50px;
+    }
+
+    .choice-grid-wrap {
+        grid-template-columns: repeat(3, minmax(500px, 1fr));
+        padding-bottom: 20px;
+        overflow: hidden;
+        overflow-x: scroll;
+    }
+
+    .hospitality-mattress .ab-content h1 {
+        font-size: 65px;
+    }
+
+    .long-lasting .exp-content-wrap {
+        max-width: 100%;
+    }
+
+    .seamless .exp-content {
+        padding-top: 50px;
+        padding-bottom: 90px;
+    }
+
+    .long-lasting .exp-content {
+        padding-top: 50px;
+        padding-bottom: 40px;
+    }
+
+    .superior-wrapper {
+        height: 500px;
+    }
+
+    .superior-img-wrap img {
+        height: 100%;
+    }
+
+    .superior-img-wrap {
+        transform: none;
+    }
+
+    .superior-img {
+        width: 40%;
+    }
+
+    .superior-right {
+        display: none;
+    }
+
+    .superior {
+        padding-right: 20px;
+    }
+
+    .seamless .exp-image-big {
+        width: 100%;
+    }
+
+    .choice,
+    .seamless,
+    .long-lasting,
+    .superior,
+    .guest,
+    .accommodation {
+        margin-top: 50px;
+    }
+
+    .accommodation-top {
+        max-width: 50ch;
+    }
+
+    .seamless .exp-image-small {
+        right: 20px;
+        top: -55px;
+        width: 140px;
+        height: 150px;
+    }
+
+    .seamless .exp-content-wrap,
+    .seamless .text {
+        max-width: 100%;
+    }
+
+    .guest-bottom-right {
+        width: 45%;
+    }
+
+    .guest-bottom-left {
+        gap: 150px;
     }
 }
 
@@ -2352,63 +2454,151 @@
     .dream-content-bottom ul {
         margin-top: 15px;
     }
+
     .dream-content-top p {
         margin-top: 20px;
         max-width: 100%;
     }
-    .construction-banner{
+
+    .construction-banner {
         min-height: 500px;
     }
+
     .durable .creating-right-small {
         width: 100px;
         height: 130px;
     }
-    .durable .creating-left{
+
+    .durable .creating-left {
         padding-top: 0;
     }
+
     .trust .exp-image-small {
         width: 110px;
         height: 105px;
     }
+
     .trust .exp-content {
         width: 100%;
         padding-bottom: 60px;
     }
-    .latest-right-top p , .latest-right-bottom-wrap ul li{
+
+    .latest-right-top p,
+    .latest-right-bottom-wrap ul li {
         font-size: 16px;
         line-height: 22px;
     }
+
     .latest-right-bottom {
         margin-top: 25px;
     }
+
     .customisation {
         padding-bottom: 90px;
         padding-top: 40px;
     }
-    .construction-banner-bg{
+
+    .construction-banner-bg {
         position: static;
         height: auto;
         padding-bottom: 30px;
     }
+
     .construction-banner-bg-img {
         width: 100%;
     }
+
     .construction-banner-wrap {
         height: auto;
     }
-    .construction-banner{
+
+    .construction-banner {
         min-height: auto;
         height: auto;
         flex-direction: column;
     }
+
     .construction-banner-bg-img {
         width: 100%;
         height: auto;
         aspect-ratio: 3 / 2;
     }
+
     .construction-banner-wrap {
         height: auto;
         padding-bottom: 50px;
+    }
+
+    .hospitality-mattress .ab-content h1 {
+        font-size: 50px;
+    }
+
+    .choice-grid-wrap {
+        grid-template-columns: repeat(3, minmax(400px, 1fr));
+    }
+
+    .accommodation-bottom {
+        flex-direction: column;
+    }
+
+    .accommodation-card {
+        width: 100%;
+        padding: 40px;
+    }
+
+    .accommodation-card-content-wrap {
+        max-width: 100%;
+    }
+
+    .accommodation {
+        padding-bottom: 50px;
+    }
+
+    .choice-item {
+        padding: 20px;
+    }
+
+    .choice-item p {
+        font-size: 12px;
+    }
+
+    .superior-wrapper {
+        height: auto;
+        flex-direction: column-reverse;
+    }
+
+    .superior-middle-content {
+        max-width: 100%;
+    }
+
+    .superior-img {
+        width: 100%;
+    }
+
+    .superior-img-wrap {
+        aspect-ratio: 7/5;
+    }
+
+    .guest-bottom {
+        flex-direction: column-reverse;
+    }
+
+    .guest-bottom-right , .guest-bottom-left{
+        width: 100%;
+    }
+
+    .guest-bottom-right-img {
+        aspect-ratio: 7 / 5;
+    }
+
+    .guest-bottom-left-content {
+        max-width: 100%;
+    }
+    .guest-bottom-left {
+        gap: 50px;
+    }
+    .seamless .exp-content{
+        padding-top: 0;
     }
 }
 
@@ -2670,12 +2860,30 @@
     .construction-banner-content h1 {
         font-size: 50px;
     }
+
     .dream-content-wrap {
         padding: 25px;
     }
-    .latest-left-img img , .art-right-img img , .durable .creating-right-big{
+
+    .latest-left-img img,
+    .art-right-img img,
+    .durable .creating-right-big {
         aspect-ratio: 5 / 4;
     }
+
+    .hospitality-mattress .ab-content h1 {
+        font-size: 35px;
+    }
+
+    .choice-grid-wrap {
+        grid-template-columns: repeat(3, minmax(300px, 1fr));
+    }
+
+    .accommodation-card,
+    .accommodation-card-content-wrap {
+        padding: 20px;
+    }
+
 }
 
 @media only screen and (max-width: 475px) {

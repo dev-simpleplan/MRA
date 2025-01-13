@@ -263,10 +263,13 @@
                                 <h1 class="letter-animation">Custom Mattress Solutions</h1>
                                 <div class="label">For Design projects</div>
                                 <div class="construction-banner-content-wrap slide-in-text">
-                                    <p>In architectural projects, building developments, and interior design projects, smart
-                                        mattress choices lay the foundation for clients’ sound sleep and sweet dreams night
+                                    <p>In architectural projects, building developments, and interior design projects,
+                                        smart
+                                        mattress choices lay the foundation for clients’ sound sleep and sweet dreams
+                                        night
                                         after night.</p>
-                                    <p>Mattress Resources Australia's commercial Hypnos and Tommy Bahama mattresses blend
+                                    <p>Mattress Resources Australia's commercial Hypnos and Tommy Bahama mattresses
+                                        blend
                                         luxury and comfort, elevating every project's value and client experience.</p>
                                 </div>
                             </div>
@@ -439,7 +442,7 @@
                             <h2>Tailored Mattresses for Unique Spaces</h2>
                             <p>We have mattress sizes to fit any space:</p>
                         </div>
-                        <div class="customisation-bottom text-animate">
+                        <div class="customisation-bottom">
                             <div class="customisation-slider" role="group" aria-label="Splide Basic HTML Example">
                                 <div class="splide__arrows splide__arrows--ltr">
                                     <button class="splide__arrow splide__arrow--prev" type="button"
@@ -461,7 +464,7 @@
                                     </button>
                                 </div>
                                 <div class="splide__track">
-                                    <div class="customisation-grid customisation-section-slider">
+                                    <div class="customisation-grid customisation-section-slider text-animate">
                                         <div class="customisation-card fade-in-text">
                                             <div class="customisation-card-img">
                                                 <img src="images/construction-design/customisation1.png"
@@ -1316,6 +1319,65 @@
             window.addEventListener('resize', applySliderClasses);
         });
     </script>
+
+    <!-- <script>
+        // Simple animation initializer
+        function initAnimations() {
+            const animated = new Set();
+
+            const observer = new IntersectionObserver(
+                (entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            const elements = entry.target.querySelectorAll('.fade-in-card');
+
+                            if (elements.length) {
+                                const toAnimate = Array.from(elements).filter(el => !animated.has(el));
+
+                                if (toAnimate.length) {
+                                    gsap.fromTo(
+                                        toAnimate,
+                                        { opacity: 0, y: 100 },
+                                        {
+                                            opacity: 1,
+                                            y: 0,
+                                            duration: 0.8,
+                                            ease: "expo.out",
+                                            stagger: 0.1,
+                                            onStart: () => toAnimate.forEach(el => animated.add(el))
+                                        }
+                                    );
+                                }
+                            }
+                        }
+                    });
+                },
+                { threshold: 0.2 }
+            );
+
+            // Observe existing and handle new elements
+            const observeElements = () => {
+                document.querySelectorAll('.card-animate').forEach(section => observer.observe(section));
+            };
+
+            observeElements();
+
+            // Handle dynamic content
+            new MutationObserver(observeElements).observe(document.body, {
+                childList: true,
+                subtree: true
+            });
+        }
+
+        // Initialize when GSAP is ready
+        (function checkGSAP() {
+            if (typeof gsap !== 'undefined') {
+                initAnimations();
+            } else {
+                setTimeout(checkGSAP, 100);
+            }
+        })();
+    </script> -->
 
 </body>
 <!-- Body Ends-->

@@ -2617,10 +2617,12 @@ ul#menu-legal-pages {
     gap: 12px;
     padding-left: 8px;
 }
-.accordion-content-inner ul{
+
+.accordion-content-inner ul {
     margin-top: 20px;
 }
-.accordion-content-inner ul:nth-child(1){
+
+.accordion-content-inner ul:nth-child(1) {
     margin-top: 0px;
 }
 
@@ -5581,12 +5583,16 @@ ul#menu-legal-pages {
 /* Boat and Caravan Mattresses page */
 
 /* Banner section */
+.boat-caravan-banner{
+    position: relative;
+}
 .boat-caravan-banner .construction-banner-content {
     padding-left: 0;
 }
 
 .boat-caravan-banner .construction-banner-bg {
     height: 100%;
+    min-height: 700px;
     padding-bottom: 0;
 }
 
@@ -5910,7 +5916,7 @@ ul#menu-legal-pages {
     display: flex;
     gap: 135px;
     align-items: stretch;
-    
+
 }
 
 .sleeping-left {
@@ -5962,7 +5968,8 @@ ul#menu-legal-pages {
     flex-direction: column;
     gap: 15px;
 }
-.sleeping-right-content p{
+
+.sleeping-right-content p {
     line-height: 25px;
 }
 
@@ -5980,16 +5987,19 @@ ul#menu-legal-pages {
     padding-left: 25px;
     color: var(--desc);
 }
-.sleeping-right-content ul li a{
+
+.sleeping-right-content ul li a {
     color: #172A55;
     border-bottom: 1px solid #172A55;
     font-weight: 700;
     transition: all 0.3s ease;
 }
-.sleeping-right-content ul li a:hover{
+
+.sleeping-right-content ul li a:hover {
     color: var(--label-gold);
     border-bottom: 1px solid var(--label-gold);
 }
+
 .sleeping-right-content ul li::before {
     content: '';
     width: 6px;
@@ -6002,5 +6012,77 @@ ul#menu-legal-pages {
 }
 
 /* Sleeping Section */
+
+/* clean section */
+.clean .text ul li {
+    font-size: 18px;
+    line-height: 28px;
+}
+
+.clean .text ul li::before {
+    min-width: 6px;
+    height: 6px;
+    margin-top: 12px;
+}
+
+.clean .exp-image-big {
+    width: 50%;
+}
+
+.clean .text {
+    max-width: 52ch;
+}
+
+.clean .exp-content {
+    padding-top: 150px;
+    padding-bottom: 130px;
+    padding-left: 70px;
+}
+
+/* clean section */
+
+/* Why section */
+.why .exp-wrapper {
+    background: none;
+}
+
+.why .exp-image-big {
+    width: 43%;
+}
+
+.why .exp-content {
+    width: 57%;
+    padding: 230px 0;
+    padding-left: 130px;
+}
+
+.why .exp-content-wrap {
+    max-width: 75ch;
+}
+
+.why .text {
+    max-width: 100%;
+}
+.why .exp-image-small {
+    right: 59%;
+    top: 90%;
+    width: 210px;
+    height: 205px;
+}
+
+.why .text p a {
+    color: #172A55;
+    border-bottom: 1px solid #172A55;
+    font-weight: 700;
+    transition: all 0.3s ease;
+    font-size: 14px;
+}
+
+.why .text p a:hover {
+    color: var(--label-gold);
+    border-bottom: 1px solid var(--label-gold);
+}
+
+/* Why section */
 
 /* Boat and Caravan Mattresses page */

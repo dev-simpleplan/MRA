@@ -444,11 +444,27 @@ document.addEventListener("DOMContentLoaded", () => {
     document.querySelectorAll(".pSection").forEach((section) => {
       const pContents = section.querySelectorAll(".pContent");
       const pImages = section.querySelectorAll(".pImage");
+      const pBox = section.querySelectorAll(".pBox");
 
       // Animate .pContent elements
       if (pContents.length > 0) {
         gsap.to(pContents, {
           yPercent: -200,
+          opacity: 1,
+          ease: "none",
+          scrollTrigger: {
+            trigger: section,
+            start: "top bottom",
+            end: "bottom top",
+            scrub: true,
+          },
+        });
+      }
+
+      // Animate .pBox elements
+      if (pBox.length > 0) {
+        gsap.to(pBox, {
+          yPercent: -40,
           opacity: 1,
           ease: "none",
           scrollTrigger: {

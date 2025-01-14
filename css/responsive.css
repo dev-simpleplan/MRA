@@ -394,6 +394,9 @@
     .superior-wrapper {
         height: 700px;
     }
+    .construction-banner-content{
+        padding-left: 0;
+    }
 
 }
 

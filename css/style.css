@@ -481,7 +481,7 @@ select:focus {
 
 /* Animation */
 .fade-in-text {
-    transform: translateY(100%);
+    transform: translateY(200%);
     opacity: 0;
 }
 
@@ -5923,6 +5923,7 @@ ul#menu-legal-pages {
     width: 41%;
     height: auto;
     position: relative;
+    overflow: hidden;
 }
 
 .sleeping-left-img {
@@ -5930,6 +5931,7 @@ ul#menu-legal-pages {
     width: 100%;
     position: absolute;
     inset: 0;
+    transform: translateY(-10%);
 }
 
 .sleeping-left-img img {

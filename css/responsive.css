@@ -115,6 +115,13 @@
     .construction-banner-bg-img {
         width: 70%;
     }
+
+    .high-sea.royal-hypnos,
+    .marine,
+    .clean .exp-content {
+        padding-left: 0;
+    }
+
 }
 
 @media only screen and (max-width: 1200px) {
@@ -394,10 +401,58 @@
     .superior-wrapper {
         height: 700px;
     }
-    .construction-banner-content{
+
+    .construction-banner-content {
         padding-left: 0;
     }
 
+    .high-sea .royal-hypnos-right {
+        padding-left: 0;
+        width: 40%;
+        padding: 130px 0;
+    }
+
+    .sleeping-wrapper {
+        gap: 40px;
+    }
+
+    .boat .art-left {
+        padding: 130px 0;
+        padding-right: 40px;
+        padding-left: 67px;
+    }
+
+    .marine .creating-right {
+        width: 50%;
+    }
+
+    .marine .creating-left {
+        width: 45%;
+    }
+
+    .caravan-content {
+        transform: translateY(20%);
+    }
+
+    .clean .exp-content {
+        width: 50%;
+    }
+
+    .clean .exp-image-big {
+        width: 45%;
+    }
+
+    .why .exp-content {
+        padding-left: 90px;
+    }
+
+    .boat .art-left {
+        width: 50%;
+    }
+
+    .boat .art-right {
+        width: 50%;
+    }
 }
 
 @media only screen and (max-width: 1100px) {
@@ -464,6 +519,10 @@
 
     .customisation-card {
         height: 440px;
+    }
+
+    .why .exp-content {
+        padding-left: 90px;
     }
 }
 
@@ -1609,6 +1668,7 @@
     .art-right-img img {
         height: auto;
         aspect-ratio: 5 / 3;
+        transform: none;
     }
 
     .art-left-bottom {
@@ -1808,6 +1868,203 @@
 
     .guest-bottom-left {
         gap: 150px;
+    }
+
+    .boat .art-wrap {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .boat .art-left {
+        padding: 0 20px;
+        padding-top: 0px;
+        padding-bottom: 0;
+        width: 100%;
+    }
+
+    .boat .art-left-top .art-left-top-wrap {
+        max-width: 100%;
+    }
+
+    .boat .art-right {
+        width: 100%;
+        margin-top: 0;
+    }
+
+    .high-sea .royal-hypnos-right {
+        width: 100%;
+    }
+
+    .high-sea .royal-hypnos-left {
+        width: 100%;
+        position: static;
+        height: auto;
+    }
+
+    .high-sea-left-wrap {
+        position: relative;
+        aspect-ratio: 5/3;
+    }
+
+    .high-sea {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .high-sea-small {
+        width: 210px;
+        height: 210px;
+        right: 20px;
+        left: auto;
+        top: -55px;
+        padding: 0;
+    }
+
+    .high-sea .royal-hypnos-right {
+        padding-left: 0;
+        width: 40%;
+        padding-top: 50px;
+        padding-bottom: 90px;
+    }
+
+    .high-sea .royal-hypnos-right {
+        width: 100%;
+    }
+
+    .high-sea .royal-hypnos-right-head {
+        max-width: 100%;
+    }
+
+    .high-sea .royal-hypnos-right-content {
+        max-width: 100%;
+    }
+
+    .marine .creating-wrap {
+        flex-direction: column;
+        gap: 90px;
+    }
+
+    .marine .creating-right,
+    .marine .creating-left {
+        width: 100%;
+    }
+
+    .marine .creating-left-content {
+        max-width: 100%;
+    }
+
+    .marine {
+        padding-top: 50px;
+    }
+
+    .marine .creating-left {
+        padding-bottom: 0;
+    }
+
+    .marine .creating-right-small {
+        right: 20px;
+        bottom: auto;
+        top: -55px;
+    }
+
+    .caravan-content,
+    .caravan-bg {
+        transform: none;
+    }
+
+    .caravan {
+        height: auto;
+        display: flex;
+        padding: 100px 0;
+    }
+
+    .caravan-bg img {
+        height: 100%;
+    }
+
+    .sleeping-wrapper {
+        flex-direction: column;
+    }
+
+    .sleeping-left {
+        width: 100%;
+        height: auto;
+    }
+
+    .sleeping-left-img {
+        position: static;
+        aspect-ratio: 5/3;
+        transform: none;
+    }
+
+    .sleeping-left-img img {
+        height: 100%;
+        object-position: center 75%;
+    }
+
+    .sleeping-right {
+        width: 100%;
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+
+    .sleeping-right-wrap {
+        max-width: 100%;
+    }
+
+    .sleeping {
+        padding-top: 50px;
+        padding-bottom: 0;
+    }
+
+    .clean {
+        margin-top: 0;
+    }
+
+    .clean .exp-content {
+        width: 100%;
+    }
+
+    .clean .exp-content {
+        padding-bottom: 50px;
+        padding-top: 40px;
+    }
+
+    .clean .exp-wrapper {
+        flex-direction: column-reverse;
+        padding-top: 50px;
+    }
+
+    .why .exp-content {
+        width: 100%;
+        margin: 0;
+        padding-bottom: 0px;
+        padding-top: 90px;
+    }
+
+    .why .exp-content-wrap {
+        max-width: 100%;
+    }
+
+    .why .exp-image-big {
+        width: 100%;
+    }
+
+    .why .exp-wrapper {
+        flex-direction: column-reverse;
+    }
+
+    .why .exp-image-small {
+        top: auto;
+        bottom: -65px;
+    }
+
+    .collection .exp-text {
+        gap: 10px;
+    }
+
+    .construction-banner-content h1 {
+        font-size: 90px;
     }
 }
 
@@ -2586,7 +2843,8 @@
         flex-direction: column-reverse;
     }
 
-    .guest-bottom-right , .guest-bottom-left{
+    .guest-bottom-right,
+    .guest-bottom-left {
         width: 100%;
     }
 
@@ -2597,17 +2855,84 @@
     .guest-bottom-left-content {
         max-width: 100%;
     }
+
     .guest-bottom-left {
         gap: 50px;
     }
-    .seamless .exp-content{
+
+    .seamless .exp-content {
         padding-top: 0;
     }
+
     .superior {
         padding-right: 0px;
     }
-    .superior-middle{
+
+    .superior-middle {
         padding: 0 20px;
+    }
+
+    .boat-caravan-banner {
+        height: 100vh;
+        min-height: 500px;
+        justify-content: center;
+    }
+
+    .boat-caravan-banner .construction-banner-bg {
+        position: absolute;
+    }
+
+    .boat-caravan-banner .construction-banner-content {
+        padding-bottom: 0;
+    }
+
+    .boat-caravan-banner .construction-banner-wrap {
+        padding-bottom: 0;
+    }
+
+    .boat-caravan-banner .construction-banner-content-wrap {
+        max-width: 100%;
+    }
+
+    .high-sea-small,
+    .why .exp-image-small,
+    .marine .creating-right-small {
+        width: 120px;
+        height: 120px;
+    }
+
+    .caravan-content {
+        padding: 40px;
+    }
+
+    .sleeping-right-content ul {
+        gap: 10px;
+    }
+
+    .clean .exp-wrapper {
+        gap: 40px;
+    }
+
+    .why .exp-wrapper {
+        gap: 70px;
+    }
+
+    .why .exp-content {
+        padding: 0;
+    }
+
+    .why .text {
+        margin-top: 20px;
+    }
+
+    .marine .creating-left-content p,
+    .marine .creating-left-content ul li,
+    .sleeping-right-content p,
+    .sleeping-right-content ul li,
+    .sleeping-right-content ul li a,
+    .clean .text p,
+    .clean .text ul li {
+        font-size: 16px;
     }
 }
 
@@ -2893,6 +3218,19 @@
         padding: 20px;
     }
 
+    .why .exp-image-small {
+        top: auto;
+    }
+
+    .caravan {
+        padding: 50px 0;
+    }
+
+    .caravan-content {
+        width: 100%;
+        max-width: 100%;
+        padding: 20px;
+    }
 }
 
 @media only screen and (max-width: 475px) {
@@ -2937,5 +3275,8 @@
 @media only screen and (max-width: 375px) {
     .australian-mattress-banner .ab-content h1 {
         font-size: 40px;
+    }
+    .boat-caravan-banner .construction-banner-content h1 {
+        font-size: 42px;
     }
 }

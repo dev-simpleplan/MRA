@@ -6152,6 +6152,7 @@ ul#menu-legal-pages {
 
 .premium-card {
     position: relative;
+    display: flex;
 }
 
 .premium-card-bg {

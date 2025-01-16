@@ -2617,10 +2617,12 @@ ul#menu-legal-pages {
     gap: 12px;
     padding-left: 8px;
 }
-.accordion-content-inner ol{
+
+.accordion-content-inner ol {
     list-style: number;
     padding-left: 20px;
 }
+
 .accordion-content-inner ol li {
     font-size: 16px;
     font-weight: 400;
@@ -2630,11 +2632,13 @@ ul#menu-legal-pages {
 }
 
 
-.accordion-content-inner ul , .accordion-content-inner ol {
+.accordion-content-inner ul,
+.accordion-content-inner ol {
     margin-top: 20px;
 }
 
-.accordion-content-inner ul:nth-child(1) , .accordion-content-inner ol:nth-child(1){
+.accordion-content-inner ul:nth-child(1),
+.accordion-content-inner ol:nth-child(1) {
     margin-top: 0px;
 }
 
@@ -5275,6 +5279,24 @@ ul#menu-legal-pages {
     max-width: 50ch;
 }
 
+.choice-item-middle ul li {
+    font-size: 14px;
+    line-height: 19.6px;
+    position: relative;
+    padding-left: 22px;
+}
+
+.choice-item-middle ul li::before {
+    content: '';
+    position: absolute;
+    top: 8px;
+    left: 7px;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: #fff;
+}
+
 .choice-item-wrap {
     width: 100%;
     height: 100%;
@@ -6345,39 +6367,47 @@ ul#menu-legal-pages {
 /* Solution Section */
 
 /* Bulk Section */
-.bulk{
+.bulk {
     background: url('../images/cream-strip-bg2.png');
     background-size: contain;
     padding: 100px 0px;
 }
+
 .bulk .Unveiling-slider {
     margin-top: 100px;
 }
-.bulk .Unveiling-item-content{
+
+.bulk .Unveiling-item-content {
     max-width: 42ch;
 }
-.bulk .Unveiling-section-grid{
+
+.bulk .Unveiling-section-grid {
     column-gap: 40px;
 }
-.bulk .Unveiling-section-wrap{
+
+.bulk .Unveiling-section-wrap {
     padding-top: 0;
     padding-bottom: 0;
 }
+
 /* Bulk Section */
 
 /* Who section */
-.who-animate{
+.who-animate {
     width: 100%;
     height: auto;
     overflow: hidden;
 }
-.who-bottom.mob{
+
+.who-bottom.mob {
     display: none;
 }
-.who-bottom{
+
+.who-bottom {
     margin-top: 40px;
 }
-.card{
+
+.card {
     background-color: #E6DDC9;
     padding-top: 40px;
     padding-bottom: 34px;
@@ -6389,18 +6419,21 @@ ul#menu-legal-pages {
     overflow: hidden;
     filter: brightness(1);
 }
-.card-wrap{
+
+.card-wrap {
     height: 100%;
     display: flex;
     flex-direction: column;
 }
-.card-bottom{
+
+.card-bottom {
     margin-top: 10px;
     display: flex;
     gap: 6px;
     height: 100%;
 }
-.card-bottom-left{
+
+.card-bottom-left {
     max-width: 38ch;
     display: flex;
     flex-direction: column;
@@ -6408,28 +6441,34 @@ ul#menu-legal-pages {
     justify-content: space-between;
     align-items: start;
 }
-.card-bottom-left p{
+
+.card-bottom-left p {
     font-size: 14px;
     line-height: 21px;
 }
-.card-bottom-right{
+
+.card-bottom-right {
     display: flex;
     height: 100%;
     align-items: end;
     padding-top: 90px;
 }
-.card-bottom-right-img{
+
+.card-bottom-right-img {
     width: 170px;
     height: 145px;
 }
-.card-bottom-right-img img{
+
+.card-bottom-right-img img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
+
 .card-top {
     max-width: 45ch;
 }
+
 .cards-container {
     position: relative;
     width: 100%;
@@ -6437,8 +6476,206 @@ ul#menu-legal-pages {
     display: flex;
     gap: 20px;
 }
+
 /* Who section */
 
-
-
 /* Commercial Page */
+
+/* Mining Industry Page */
+
+/* Banner section */
+.mining-banner .ab-content-wrap {
+    padding-left: 0;
+}
+
+.mining-banner .ab-content h1 {
+    font-size: 82px;
+    line-height: 82px;
+    max-width: 20ch;
+}
+
+.mining-banner .ab-content-text-wrap {
+    margin-top: 40px;
+    max-width: 50ch;
+}
+
+.mining-banner .ab-content-text-wrap p {
+    max-width: 100%;
+}
+
+.mining-banner .ab-bg-overlay {
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.4) 76.22%, rgba(0, 0, 0, 0) 100%);
+}
+
+.mining-banner .ab-bg-img img {
+    object-position: center;
+}
+
+/* Banner section */
+
+/* Operation Section */
+.operation {
+    padding-top: 40px;
+}
+
+.operation .choice-head-content {
+    margin-top: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.operation .choice-head-content p {
+    color: #172A55;
+}
+
+.operation .choice-head-content p a {
+    color: #172A55;
+    font-weight: 700;
+    border-bottom: 1px solid #172A55;
+    transition: all 0.3s ease-in-out;
+}
+
+.operation .choice-head-content p a:hover {
+    color: var(--label-gold);
+    border-bottom: 1px solid var(--label-gold);
+}
+
+.operation .choice-grid {
+    margin-top: 20px;
+}
+
+.operation .choice-grid-text {
+    margin-bottom: 25px;
+}
+
+.operation .choice-grid-text p {
+    font-size: 14px;
+    font-weight: 700;
+    color: #172A55;
+}
+
+.operation .choice-item {
+    background-color: #172A55;
+    padding-left: 28px;
+    padding-right: 34px;
+    padding-top: 40px;
+    padding-bottom: 16px;
+}
+
+.operation .choice-item-bottom-img {
+    width: 130px;
+    height: 130px;
+}
+
+.operation .choice-item-top h4 {
+    color: var(--white);
+}
+
+.operation .choice-item-wrap {
+    gap: 10px;
+}
+
+/* Operation Section */
+
+/* Camp Section */
+.camp {
+    position: relative;
+    padding: 136px 0;
+}
+
+.camp-bg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.camp-bg img {
+    width: 100%;
+    height: 110%;
+    object-fit: cover;
+    transform: translateY(-10%);
+}
+
+.camp-wrap {
+    background-color: #F0ECE4;
+    padding: 150px 89px;
+    width: fit-content;
+    transform: translateY(20%);
+}
+
+.camp-bottom {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 62ch;
+}
+
+/* Camp Section */
+
+/* logistic Section */
+.logistic .text {
+    max-width: 100%;
+    margin-top: 20px;
+}
+
+.logistic .text>p {
+    color: var(--desc);
+    font-weight: 400;
+    max-width: 56ch;
+}
+
+.logistic .mind-left-image {
+    width: 210px;
+    height: 225px;
+    margin-top: 70px;
+}
+
+.logistic .exp-content {
+    padding-top: 136px;
+    padding-bottom: 60px;
+}
+
+/* logistic Section */
+
+/* Heavy-Duty section */
+.heavy-duty .exp-image-big {
+    width: 43%;
+}
+
+.heavy-duty .exp-image-small {
+    right: 57%;
+    top: 90%;
+    width: 210px;
+    height: 205px;
+}
+
+.heavy-duty .exp-content {
+    width: 57%;
+}
+
+.heavy-duty .exp-content {
+    padding-left: 161px;
+    padding-top: 190px;
+    padding-bottom: 170px;
+}
+
+.heavy-duty .exp-content-wrap {
+    max-width: 58ch;
+}
+
+.heavy-duty .exp-text {
+    max-width: 56ch;
+}
+
+.heavy-duty .exp-wrapper {
+    background: none;
+}
+
+
+/* Heavy-Duty section */
+
+/* Mining Industry Page */

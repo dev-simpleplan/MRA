@@ -48,6 +48,10 @@
     .why .exp-content {
         padding-left: 130px;
     }
+
+    .heavy-duty .exp-content {
+        padding-left: 161px;
+    }
 }
 
 @media only screen and (max-width: 1300px) {
@@ -470,6 +474,21 @@
     .commercial-banner .construction-banner-content h1 {
         font-size: 19.5vw;
     }
+
+    .operation .choice-grid-wrap {
+        grid-template-columns: repeat(3, minmax(500px, 1fr));
+        padding-bottom: 20px;
+        overflow: hidden;
+        overflow-x: scroll;
+    }
+    .logistic .exp-content {
+        padding: 60px 0;
+    }
+    .heavy-duty .exp-content{
+        padding-top: 70px;
+        padding-bottom: 70px;
+    }
+    
 }
 
 @media only screen and (max-width: 1100px) {
@@ -540,6 +559,9 @@
 
     .why .exp-content {
         padding-left: 90px;
+    }
+    .heavy-duty .exp-content {
+        padding-left: 120px;
     }
 
 }
@@ -2128,6 +2150,7 @@
         margin-bottom: 40px;
         justify-content: end;
     }
+
     #who-slider .splide__arrows button {
         position: static;
         opacity: 1;
@@ -2136,14 +2159,52 @@
         background: rgba(204, 146, 47, 1);
         transition: all .4s ease;
     }
+
     #who-slider .splide__arrows button:hover {
         background: rgb(255, 255, 255);
     }
+
     #who-slider .splide__arrows button svg path {
         transition: all .4s ease;
     }
+
     #who-slider .splide__arrows button:hover svg path {
         stroke: rgb(0, 0, 0);
+    }
+    .camp-wrap{
+        transform: translateY(0);
+        margin: 0 auto;
+    }
+    .logistic .exp-wrapper{
+        flex-direction: column-reverse;
+    }
+    .logistic .text {
+        margin-top: 20px;
+        gap: 10px;
+    }
+    .logistic .mind-left-image{
+        margin-top: 30px;
+    }
+    .heavy-duty .exp-content-wrap , .heavy-duty .exp-text{
+        max-width: 100%;
+    }
+    .heavy-duty .exp-content{
+        width: 100%;
+    }
+    .heavy-duty .exp-content {
+        padding-top: 50px;
+        padding-bottom: 100px;
+    }
+    .heavy-duty .exp-image-small {
+        width: 150px;
+        height: 155px;
+    }
+    .heavy-duty .exp-image-big {
+        width: 100%;
+    }
+    .camp-bg img{
+        height: 100%;
+        transform: translateY(0%);
     }
 }
 
@@ -3082,46 +3143,87 @@
     .premium-bottom .splide__arrows {
         top: -60px;
     }
-    .who-bottom{
+
+    .who-bottom {
         margin-top: 20px;
     }
-    .who-animate{
+
+    .who-animate {
         margin-top: 50px;
     }
-    .bulk{
+
+    .bulk {
         padding: 60px 0;
         margin-top: 50px;
     }
+
     .bulk .Unveiling-slider {
         margin-top: 50px;
     }
+
     .card-bottom {
         flex-direction: column-reverse;
         gap: 20px;
     }
-    .card-bottom-right{
+
+    .card-bottom-right {
         padding-top: 20px;
     }
-    .card-bottom-left{
+
+    .card-bottom-left {
         max-width: 100%;
         gap: 20px;
     }
+
     .card-bottom-right-img {
         width: 100%;
         height: auto;
         aspect-ratio: 5 / 3;
     }
+
     .card-top {
         max-width: 100%;
     }
-    .card-bottom-right{
+
+    .card-bottom-right {
         height: auto;
     }
-    #who-slider .slide-card{
+
+    #who-slider .slide-card {
         padding: 20px;
     }
-    .card-top{
+
+    .card-top {
         font-size: 24px;
+    }
+    .operation {
+        padding-top: 0px;
+    }
+    .camp {
+        margin-top: 50px;
+    }
+    .logistic {
+        margin-top: 70px;
+    }
+    .heavy-duty .text {
+        margin-top: 30px;
+    }
+    .logistic .mind-left-image {
+        width: 150px;
+        height: 175px;
+    }
+    .heavy-duty .exp-content {
+        padding-top: 0px;
+        padding-bottom: 95px;
+    }
+    .camp {
+        padding: 70px 0;
+    }
+    .camp-wrap{
+        padding: 50px;
+    }
+    .operation .choice-grid-wrap {
+        grid-template-columns: repeat(3, minmax(400px, 1fr));
     }
 }
 
@@ -3433,6 +3535,15 @@
 
     .commercial-banner .construction-banner-content-head {
         width: fit-content;
+    }
+    .operation .choice-grid-wrap {
+        grid-template-columns: repeat(3, minmax(300px, 1fr));
+    }
+    .camp-wrap {
+        padding: 20px;
+    }
+    .camp {
+        padding: 30px 0;
     }
 }
 

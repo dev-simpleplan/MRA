@@ -3082,7 +3082,49 @@
     .premium-bottom .splide__arrows {
         top: -60px;
     }
+    .who-bottom{
+        margin-top: 20px;
+    }
+    .who-animate{
+        margin-top: 50px;
+    }
+    .bulk{
+        padding: 60px 0;
+        margin-top: 50px;
+    }
+    .bulk .Unveiling-slider {
+        margin-top: 50px;
+    }
+    .card-bottom {
+        flex-direction: column-reverse;
+        gap: 20px;
+    }
+    .card-bottom-right{
+        padding-top: 20px;
+    }
+    .card-bottom-left{
+        max-width: 100%;
+        gap: 20px;
+    }
+    .card-bottom-right-img {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 5 / 3;
+    }
+    .card-top {
+        max-width: 100%;
+    }
+    .card-bottom-right{
+        height: auto;
+    }
+    #who-slider .slide-card{
+        padding: 20px;
+    }
+    .card-top{
+        font-size: 24px;
+    }
 }
+
 
 @media only screen and (max-width: 600px) {
     h1 {

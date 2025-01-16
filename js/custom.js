@@ -333,47 +333,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-// document.addEventListener("DOMContentLoaded", function () {
-//   // Function to animate children of the section with a staggered effect
-//   const animateTextOnScroll = (section) => {
-//     const children = section.querySelectorAll(".fade-in-text"); // Select target child elements
-//     if (children.length > 0) {
-//       gsap.fromTo(
-//         children,
-//         { opacity: 0, y: 200 }, // Initial state
-//         {
-//           opacity: 1, // Final state
-//           y: 0, // Moves to its original position
-//           duration: 0.8,
-//           ease: "expo.out",
-//           stagger: 0.1, // Stagger delay between animations
-//         }
-//       );
-//     }
-//   };
 
-//   // Select all sections with the 'text-animate' class
-//   const sections = document.querySelectorAll(".text-animate");
-
-//   if (sections.length > 0) {
-//     // Create a single Intersection Observer instance for better performance
-//     const observer = new IntersectionObserver(
-//       (entries) => {
-//         entries.forEach((entry) => {
-//           if (entry.isIntersecting) {
-//             animateTextOnScroll(entry.target); // Animate the section's children
-//             observer.unobserve(entry.target); // Unobserve the section after animating
-//           }
-//         });
-//       },
-//       { threshold: 0.4 } // Trigger when 10% of the section is visible
-//     );
-
-//     // Observe each section
-//     sections.forEach((section) => observer.observe(section));
-//   }
-// });
-// Simple animation initializer
 function initAnimations() {
   const animated = new Set();
 
@@ -391,7 +351,7 @@ function initAnimations() {
             if (toAnimate.length) {
               gsap.fromTo(
                 toAnimate,
-                { opacity: 0, y: 100 },
+                { opacity: 0, y: 200 },
                 {
                   opacity: 1,
                   y: 0,

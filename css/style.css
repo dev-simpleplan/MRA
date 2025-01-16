@@ -6334,6 +6334,7 @@ ul#menu-legal-pages {
     position: absolute;
     bottom: 0;
     left: -110px;
+    z-index: 1;
 }
 
 .solution-right-big {
@@ -6364,7 +6365,7 @@ ul#menu-legal-pages {
 /* Bulk Section */
 
 /* Who section */
-.who{
+.who-animate{
     width: 100%;
     height: auto;
     overflow: hidden;

@@ -5261,6 +5261,8 @@ ul#menu-legal-pages {
     padding-right: 21px;
     padding-top: 55px;
     padding-bottom: 26px;
+    display: flex;
+    height: 100%;
 }
 
 .choice-item-top {

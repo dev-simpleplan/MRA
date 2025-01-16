@@ -2617,12 +2617,24 @@ ul#menu-legal-pages {
     gap: 12px;
     padding-left: 8px;
 }
+.accordion-content-inner ol{
+    list-style: number;
+    padding-left: 20px;
+}
+.accordion-content-inner ol li {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22.4px;
+    color: #5d5d5d;
+    padding-left: 8px;
+}
 
-.accordion-content-inner ul {
+
+.accordion-content-inner ul , .accordion-content-inner ol {
     margin-top: 20px;
 }
 
-.accordion-content-inner ul:nth-child(1) {
+.accordion-content-inner ul:nth-child(1) , .accordion-content-inner ol:nth-child(1){
     margin-top: 0px;
 }
 
@@ -2899,14 +2911,11 @@ ul#menu-legal-pages {
 
 .Unveiling-section-grid {
     display: grid;
-    /* grid-template-columns: repeat(3, minmax(315px, 1fr)); */
     grid-template-columns: repeat(6, minmax(150px, 1fr));
     row-gap: 60px;
-    column-gap: 75px;
+    column-gap: 60px;
     text-align: center;
-    /* align-items: center; */
     justify-content: center;
-    /* margin-top: 45px; */
 }
 
 .Unveiling-item {
@@ -2929,8 +2938,10 @@ ul#menu-legal-pages {
     grid-column-end: 5;
 }
 
+
+
 .Unveiling-item-content {
-    max-width: 40ch;
+    max-width: 39ch;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
@@ -3118,7 +3129,7 @@ ul#menu-legal-pages {
 
 .pre-footer2 .pf-left {
     gap: 105px;
-    width: 47%;
+    width: 48%;
 }
 
 /* Pre-footer */
@@ -4662,6 +4673,7 @@ ul#menu-legal-pages {
     background-size: contain;
     display: flex;
     align-items: end;
+    position: relative;
 }
 
 .construction-banner-inner {
@@ -5583,9 +5595,10 @@ ul#menu-legal-pages {
 /* Boat and Caravan Mattresses page */
 
 /* Banner section */
-.boat-caravan-banner{
+.boat-caravan-banner {
     position: relative;
 }
+
 .boat-caravan-banner .construction-banner-content {
     padding-left: 0;
 }
@@ -6065,6 +6078,7 @@ ul#menu-legal-pages {
 .why .text {
     max-width: 100%;
 }
+
 .why .exp-image-small {
     right: 59%;
     top: 90%;
@@ -6088,3 +6102,341 @@ ul#menu-legal-pages {
 /* Why section */
 
 /* Boat and Caravan Mattresses page */
+
+/* Commercial Page */
+
+/* Banner Section */
+.commercial-banner .construction-banner-content {
+    padding-left: 0;
+}
+
+.commercial-banner .construction-banner-bg {
+    justify-content: start;
+    padding-bottom: 0;
+}
+
+.commercial-banner .construction-banner-bg-img {
+    width: 66%;
+}
+
+.commercial-banner .construction-banner-bg-img::before {
+    display: none;
+}
+
+.commercial-banner .construction-banner-content h1 {
+    max-width: 100%;
+    font-size: 19.7vw;
+    line-height: 75%;
+}
+
+.commercial-banner .construction-banner-content .label {
+    text-align: end;
+    margin-top: 10px;
+}
+
+.commercial-banner .construction-banner-content-wrap {
+    margin-top: 40px;
+}
+
+/* Banner Section */
+
+/* Premium Section */
+.premium {
+    padding: 70px 0;
+    padding-left: 30px;
+}
+
+.premium-bottom {
+    margin-top: 50px;
+}
+
+.premium-card {
+    position: relative;
+}
+
+.premium-card-bg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    inset: 0;
+    z-index: -1;
+}
+
+.premium-card-bg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.premium-card-bg::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.55) 38.88%, rgba(0, 0, 0, 0) 66.89%),
+        linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.2) 35.7%);
+}
+
+.premium-card-wrap {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    justify-content: space-between;
+}
+
+.premium-card-top {
+    max-width: 41ch;
+    padding-left: 35px;
+    padding-top: 54px;
+}
+
+.premium-card-top p {
+    font-size: 12px;
+    line-height: 16.8px;
+    margin-top: 15px;
+}
+
+.premium-card-bottom {
+    padding: 48px 32px;
+    margin-left: auto;
+    max-width: 57ch;
+    background-color: #172A55;
+}
+
+.premium-card-bottom p {
+    font-size: 12px;
+    line-height: 16.8px;
+}
+
+.premium-card-bottom-wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.premium-card-bottom li {
+    font-size: 12px;
+    line-height: 16.8px;
+    padding-left: 19px;
+    position: relative;
+}
+
+.premium-card-bottom li::before {
+    content: '';
+    min-width: 5px;
+    height: 5px;
+    background-color: #fff;
+    border-radius: 50%;
+    position: absolute;
+    top: 6px;
+    left: 5px;
+}
+
+.premium-card-bottom a {
+    color: #fff;
+    border-bottom: 1px solid #fff;
+    transition: all 0.3s ease;
+}
+
+.premium-card-bottom a:hover {
+    color: var(--label-gold);
+    border-bottom: 1px solid var(--label-gold);
+}
+
+.premium-bottom .splide__list {
+    height: auto;
+}
+
+.premium-bottom .splide__arrows {
+    display: flex;
+    gap: 15px;
+    position: absolute;
+    right: 0;
+    top: -80px;
+}
+
+.premium-bottom .splide__arrows button {
+    position: static;
+    opacity: 1;
+    transform: none;
+    border-radius: 0%;
+    background: rgba(204, 146, 47, 1);
+    transition: all .4s ease;
+}
+
+.premium-bottom .splide__arrows button:hover {
+    background: rgb(255, 255, 255);
+}
+
+.premium-bottom .splide__arrows button:hover svg path {
+    stroke: rgb(0, 0, 0);
+}
+
+.premium-bottom .splide__arrows button svg path {
+    transition: all .4s ease;
+}
+
+/* Premium Section */
+
+/* Solution Section */
+.solution {
+    background-color: #172A55;
+    padding: 70px 0;
+    padding-left: 115px;
+}
+
+.solution-wrapper {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+
+.solution-left {
+    width: 45%;
+    padding-top: 100px;
+    padding-bottom: 230px;
+}
+
+.solution-left p {
+    margin-top: 30px;
+    max-width: 60ch;
+}
+
+.solution-left .cta-btn {
+    margin-top: 48px;
+}
+
+.solution-right {
+    width: 37%;
+    height: 100%;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.solution-right-img {
+    width: 100%;
+    height: 100%;
+}
+
+.solution-right-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.solution-right-small {
+    width: 338px;
+    height: 289px;
+    position: absolute;
+    bottom: 0;
+    left: -110px;
+}
+
+.solution-right-big {
+    padding-bottom: 58px;
+}
+
+/* Solution Section */
+
+/* Bulk Section */
+.bulk{
+    background: url('../images/cream-strip-bg2.png');
+    background-size: contain;
+    padding: 100px 0px;
+}
+.bulk .Unveiling-slider {
+    margin-top: 100px;
+}
+.bulk .Unveiling-item-content{
+    max-width: 42ch;
+}
+.bulk .Unveiling-section-grid{
+    column-gap: 40px;
+}
+.bulk .Unveiling-section-wrap{
+    padding-top: 0;
+    padding-bottom: 0;
+}
+/* Bulk Section */
+
+/* Who section */
+.who{
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+}
+.who-bottom.mob{
+    display: none;
+}
+.who-bottom{
+    margin-top: 40px;
+}
+.card{
+    background-color: #E6DDC9;
+    padding-top: 40px;
+    padding-bottom: 34px;
+    padding-left: 38px;
+    padding-right: 27px;
+    height: auto;
+    min-width: 550px;
+    height: auto;
+    overflow: hidden;
+    filter: brightness(1);
+}
+.card-wrap{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.card-bottom{
+    margin-top: 10px;
+    display: flex;
+    gap: 6px;
+    height: 100%;
+}
+.card-bottom-left{
+    max-width: 38ch;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-between;
+    align-items: start;
+}
+.card-bottom-left p{
+    font-size: 14px;
+    line-height: 21px;
+}
+.card-bottom-right{
+    display: flex;
+    height: 100%;
+    align-items: end;
+    padding-top: 90px;
+}
+.card-bottom-right-img{
+    width: 170px;
+    height: 145px;
+}
+.card-bottom-right-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.card-top {
+    max-width: 45ch;
+}
+.cards-container {
+    position: relative;
+    width: 100%;
+    height: auto;
+    display: flex;
+    gap: 20px;
+}
+/* Who section */
+
+
+
+/* Commercial Page */

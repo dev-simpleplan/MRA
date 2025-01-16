@@ -44,6 +44,7 @@
     .hypnos-banner-right {
         justify-content: center;
     }
+
     .why .exp-content {
         padding-left: 130px;
     }
@@ -456,6 +457,19 @@
     .boat .art-right {
         width: 50%;
     }
+
+    .premium,
+    .solution {
+        padding-left: 0;
+    }
+
+    .solution-left {
+        padding-bottom: 130px;
+    }
+
+    .commercial-banner .construction-banner-content h1 {
+        font-size: 19.5vw;
+    }
 }
 
 @media only screen and (max-width: 1100px) {
@@ -527,6 +541,7 @@
     .why .exp-content {
         padding-left: 90px;
     }
+
 }
 
 @media only screen and (max-width: 991px) {
@@ -2069,8 +2084,66 @@
     .construction-banner-content h1 {
         font-size: 90px;
     }
+
     .marine .creating-right-img img {
         object-position: center;
+    }
+
+    /* Handle single orphan item when there are 3 items total */
+    .Unveiling-item:last-child:nth-child(3) {
+        grid-column: 2 / span 2;
+        /* Center the last item by spanning 4 columns */
+    }
+
+    .who-bottom.desk {
+        display: none;
+    }
+
+    .who-bottom.mob {
+        display: block;
+    }
+
+    #who-slider .splide__list {
+        height: auto;
+    }
+
+    #who-slider .slide-card {
+        height: auto;
+        background-color: #E6DDC9;
+        padding-top: 40px;
+        padding-bottom: 34px;
+        padding-left: 38px;
+        padding-right: 27px;
+    }
+
+    .card-bottom {
+
+        justify-content: space-between;
+    }
+
+    #who-slider .splide__arrows {
+        display: flex;
+        gap: 15px;
+        position: static;
+        margin-bottom: 40px;
+        justify-content: end;
+    }
+    #who-slider .splide__arrows button {
+        position: static;
+        opacity: 1;
+        transform: none;
+        border-radius: 0%;
+        background: rgba(204, 146, 47, 1);
+        transition: all .4s ease;
+    }
+    #who-slider .splide__arrows button:hover {
+        background: rgb(255, 255, 255);
+    }
+    #who-slider .splide__arrows button svg path {
+        transition: all .4s ease;
+    }
+    #who-slider .splide__arrows button:hover svg path {
+        stroke: rgb(0, 0, 0);
     }
 }
 
@@ -2940,6 +3013,75 @@
     .clean .text ul li {
         font-size: 16px;
     }
+
+    .commercial-banner {
+        min-height: 500px;
+        height: 100vh;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .commercial-banner .construction-banner-bg {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+    }
+
+    .commercial-banner .construction-banner-bg-img {
+        width: 100%;
+    }
+
+    .solution-right {
+        width: 100%;
+        height: 100%;
+        position: relative;
+    }
+
+    .solution-wrapper {
+        flex-direction: column-reverse;
+    }
+
+    .solution-left {
+        width: 100%;
+    }
+
+    .solution-left p {
+        max-width: 100%;
+    }
+
+    .solution-left {
+        padding-top: 30px;
+        padding-bottom: 0px;
+    }
+
+    .solution-left .cta-btn {
+        margin-top: 30px;
+    }
+
+    .solution-right-small {
+        width: 138px;
+        height: 189px;
+        bottom: 0;
+        left: auto;
+        right: 20px;
+    }
+
+    .solution-right-big {
+        aspect-ratio: 5 / 4;
+    }
+
+    .premium-card-bottom {
+        padding: 20px;
+    }
+
+    .premium-bottom {
+        margin-top: 70px;
+    }
+
+    .premium-bottom .splide__arrows {
+        top: -60px;
+    }
 }
 
 @media only screen and (max-width: 600px) {
@@ -3237,6 +3379,19 @@
         max-width: 100%;
         padding: 20px;
     }
+
+    .premium-card-top {
+        max-width: 100%;
+        padding: 20px;
+    }
+
+    .commercial-banner .construction-banner-content h1 {
+        font-size: 18vw;
+    }
+
+    .commercial-banner .construction-banner-content-head {
+        width: fit-content;
+    }
 }
 
 @media only screen and (max-width: 475px) {
@@ -3276,13 +3431,23 @@
     .technology .ab-content h1 {
         font-size: 50px;
     }
+
+    .solution-right-small {
+        width: 100px;
+        height: 120px;
+    }
 }
 
 @media only screen and (max-width: 375px) {
     .australian-mattress-banner .ab-content h1 {
         font-size: 40px;
     }
+
     .boat-caravan-banner .construction-banner-content h1 {
         font-size: 42px;
+    }
+
+    .pfl-head>div {
+        white-space: wrap;
     }
 }

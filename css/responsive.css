@@ -481,14 +481,19 @@
         overflow: hidden;
         overflow-x: scroll;
     }
+
     .logistic .exp-content {
         padding: 60px 0;
     }
-    .heavy-duty .exp-content{
+
+    .heavy-duty .exp-content {
         padding-top: 70px;
         padding-bottom: 70px;
     }
-    
+
+    .contact {
+        padding: 0;
+    }
 }
 
 @media only screen and (max-width: 1100px) {
@@ -560,6 +565,7 @@
     .why .exp-content {
         padding-left: 90px;
     }
+
     .heavy-duty .exp-content {
         padding-left: 120px;
     }
@@ -2171,40 +2177,55 @@
     #who-slider .splide__arrows button:hover svg path {
         stroke: rgb(0, 0, 0);
     }
-    .camp-wrap{
+
+    .camp-wrap {
         transform: translateY(0);
         margin: 0 auto;
     }
-    .logistic .exp-wrapper{
+
+    .logistic .exp-wrapper {
         flex-direction: column-reverse;
     }
+
     .logistic .text {
         margin-top: 20px;
         gap: 10px;
     }
-    .logistic .mind-left-image{
+
+    .logistic .mind-left-image {
         margin-top: 30px;
     }
-    .heavy-duty .exp-content-wrap , .heavy-duty .exp-text{
+
+    .heavy-duty .exp-content-wrap,
+    .heavy-duty .exp-text {
         max-width: 100%;
     }
-    .heavy-duty .exp-content{
+
+    .heavy-duty .exp-content {
         width: 100%;
     }
+
     .heavy-duty .exp-content {
         padding-top: 50px;
         padding-bottom: 100px;
     }
+
     .heavy-duty .exp-image-small {
         width: 150px;
         height: 155px;
     }
+
     .heavy-duty .exp-image-big {
         width: 100%;
     }
-    .camp-bg img{
+
+    .camp-bg img {
         height: 100%;
         transform: translateY(0%);
+    }
+
+    .contact {
+        padding-top: 50px;
     }
 }
 
@@ -3196,34 +3217,86 @@
     .card-top {
         font-size: 24px;
     }
+
     .operation {
         padding-top: 0px;
     }
+
     .camp {
         margin-top: 50px;
     }
+
     .logistic {
         margin-top: 70px;
     }
+
     .heavy-duty .text {
         margin-top: 30px;
     }
+
     .logistic .mind-left-image {
         width: 150px;
         height: 175px;
     }
+
     .heavy-duty .exp-content {
         padding-top: 0px;
         padding-bottom: 95px;
     }
+
     .camp {
         padding: 70px 0;
     }
-    .camp-wrap{
+
+    .camp-wrap {
         padding: 50px;
     }
+
     .operation .choice-grid-wrap {
         grid-template-columns: repeat(3, minmax(400px, 1fr));
+    }
+
+    .contact {
+        padding-top: 120px;
+        padding-bottom: 40px;
+    }
+
+    .contact-text {
+        margin-top: 25px;
+    }
+
+    .contact-form {
+        margin-top: 50px;
+        gap: 30px;
+    }
+
+    .form-group-wrap {
+        flex-direction: column;
+    }
+
+    .contact-info {
+        flex-direction: column;
+        gap: 40px;
+        margin-top: 60px;
+    }
+
+    .contact-info-items {
+        gap: 10px;
+        margin-top: 25px;
+    }
+    .contact-info-item h4 a {
+        font-size: 20px;
+    }
+    .contact-info-item img {
+        width: 25px;
+        height: 25px;
+        margin-top: 5px;
+    }
+    .contact-info-socials{
+        margin-top: 25px;
+    }
+    .contact-info-item {
+        align-items: start;
     }
 }
 
@@ -3536,14 +3609,28 @@
     .commercial-banner .construction-banner-content-head {
         width: fit-content;
     }
+
     .operation .choice-grid-wrap {
         grid-template-columns: repeat(3, minmax(300px, 1fr));
     }
+
     .camp-wrap {
         padding: 20px;
     }
+
     .camp {
         padding: 60px 0;
+    }
+    .form-group{
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .phone-input{
+        margin: 0;
+        gap: 10px;
+    }
+    .inquiry-arrow{
+        right: 10px;
     }
 }
 
@@ -3588,6 +3675,9 @@
     .solution-right-small {
         width: 100px;
         height: 120px;
+    }
+    .contact-info-item h4 a {
+        font-size: 16px;
     }
 }
 

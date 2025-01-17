@@ -130,11 +130,12 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 // navbar
+
 document.addEventListener("DOMContentLoaded", () => {
   // Select the elements
   const hamburgerIcon = document.querySelector(".hamburger-icon");
   const headerBottom = document.querySelector(".header-bottom");
-  const header = document.querySelector("header.transparent");
+  const header = document.querySelector("header"); // Select header regardless of class
   const body = document.body;
 
   // Check if necessary elements exist
@@ -145,20 +146,14 @@ document.addEventListener("DOMContentLoaded", () => {
     return;
   }
 
-  if (!header) {
-    console.warn('The "header.transparent" element was not found in the DOM.');
-  }
-
   // Function to toggle active class
   const toggleActiveClass = () => {
     const isActive = headerBottom.classList.contains("active");
-    const headerTransparentExists =
-      header && header.classList.contains("transparent");
 
     headerBottom.classList.toggle("active", !isActive);
 
-    if (headerTransparentExists) {
-      header.classList.toggle("active", !isActive);
+    if (header) {
+      header.classList.toggle("active", !isActive); // Always toggle header active
     }
 
     hamburgerIcon.classList.toggle("active", !isActive);
@@ -179,7 +174,7 @@ document.addEventListener("DOMContentLoaded", () => {
     ) {
       headerBottom.classList.remove("active");
       if (header) {
-        header.classList.remove("active");
+        header.classList.remove("active"); // Ensure header becomes inactive
       }
       hamburgerIcon.classList.remove("active");
       body.style.overflow = ""; // Restore body scroll
@@ -332,7 +327,6 @@ document.addEventListener("DOMContentLoaded", () => {
     observer.observe(el);
   });
 });
-
 
 function initAnimations() {
   const animated = new Set();

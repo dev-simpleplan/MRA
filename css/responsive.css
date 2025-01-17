@@ -2227,6 +2227,18 @@
     .contact {
         padding-top: 50px;
     }
+    .faq-page .faq-filter {
+        width: 100%;
+    }
+    .faq-page .faq-tab .tab{
+        flex-wrap: nowrap;
+        overflow: hidden;
+        overflow-x: auto;
+        padding-bottom: 20px;
+    }
+    .faq-page .accordion {
+        margin-top: 2s0px;
+    }
 }
 
 @media only screen and (max-width: 767px) {
@@ -3297,6 +3309,9 @@
     }
     .contact-info-item {
         align-items: start;
+    }
+    .faq-page{
+        margin-bottom: 50px;
     }
 }
 

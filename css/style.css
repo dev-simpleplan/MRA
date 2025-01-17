@@ -589,6 +589,9 @@ header.transparent.scrolled .header-top-middle {
 header.transparent.active {
     background-color: var(--bg-blue);
 }
+header.active {
+    background-color: var(--bg-blue);
+}
 
 header.transparent.active .header-top-middle {
     background-color: transparent;

@@ -3398,6 +3398,9 @@
         font-size: 28px;
         line-height: 100%;
     }
+    .testimonial-banner {
+        min-height: 500px;
+    }
 }
 
 

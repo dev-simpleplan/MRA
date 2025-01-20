@@ -3426,6 +3426,9 @@
     .partner-card{
         min-width: 400px;
     }
+    .pre-footer3-content{
+        padding: 60px 10px;
+    }
 }
 
 
@@ -3783,6 +3786,7 @@
     .newsletter-form input{
         width: 100%;
     }
+    
 }
 
 @media only screen and (max-width: 475px) {

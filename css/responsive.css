@@ -2279,9 +2279,23 @@
         position: relative;
         padding: 60px 90px;
     }
+
     .testimonial-banner-text h1 {
         font-size: 115px;
     }
+
+    .partner-section-grid {
+        grid-template-columns: repeat(auto-fill, minmax(255px, 1fr));
+    }
+
+    .partner-section-bottom {
+        margin-top: 40px;
+    }
+
+    .partner-cards {
+        margin-top: 30px;
+    }
+
 }
 
 @media only screen and (max-width: 767px) {
@@ -3390,16 +3404,30 @@
     .newsletter-wrap-in {
         padding: 40px 30px;
     }
+
     .testimonial-banner-text h1 {
         font-size: 85px;
         line-height: 100%;
     }
-    .testimonial-banner-text .label{
+
+    .testimonial-banner-text .label {
         font-size: 28px;
         line-height: 100%;
     }
+
     .testimonial-banner {
         min-height: 500px;
+    }
+    .partner-section-grid {
+        display: flex;
+        overflow: hidden;
+        overflow-x: auto;
+    }
+    .partner-card{
+        min-width: 400px;
+    }
+    .pre-footer3-content{
+        padding: 60px 10px;
     }
 }
 
@@ -3743,13 +3771,22 @@
         gap: 0px;
         flex-direction: column;
     }
-    .newsletter-form input{
+
+    .newsletter-form input {
         padding-top: 15px;
         padding-bottom: 15px;
     }
+
     .testimonial-banner-text h1 {
         font-size: 70px;
     }
+    .partner-card{
+        min-width: 300px;
+    }
+    .newsletter-form input{
+        width: 100%;
+    }
+    
 }
 
 @media only screen and (max-width: 475px) {
@@ -3798,9 +3835,11 @@
     .contact-info-item h4 a {
         font-size: 16px;
     }
+
     .testimonial-banner-text h1 {
         font-size: 47px;
     }
+   
 }
 
 @media only screen and (max-width: 375px) {

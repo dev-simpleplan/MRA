@@ -161,7 +161,11 @@ h4.big {
     letter-spacing: -0.04em;
 }
 
-h5 {}
+h5 {
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 30.8px;
+}
 
 h6 {}
 
@@ -7300,6 +7304,7 @@ select#flag-dropdown {
     position: relative;
     padding-bottom: 3px;
 }
+
 .testimonial-section-filter ul li a::before {
     content: '';
     width: 0;
@@ -7311,6 +7316,7 @@ select#flag-dropdown {
     transition: all .4s ease;
 
 }
+
 .testimonial-section-filter ul li a:hover::before {
     width: 100%;
 }
@@ -7429,7 +7435,7 @@ select#flag-dropdown {
 
 .tsb-right-bottom a:hover {
     color: var(--label-gold);
-    border-bottom:1px solid var(--label-gold);
+    border-bottom: 1px solid var(--label-gold);
 }
 
 .tsb-right-top {
@@ -7541,6 +7547,7 @@ select#flag-dropdown {
     color: #172A55;
     text-transform: uppercase;
 }
+
 .newsletter-form input::placeholder {
     color: #172A55;
 }
@@ -7552,3 +7559,75 @@ select#flag-dropdown {
 /* Newsletter */
 
 /* testimonial Page */
+
+/* Partner page */
+
+/* Banner section */
+.partner-banner .testimonial-banner-text {
+    text-align: center;
+}
+
+.partner-banner .testimonial-banner-text .label {
+    font-size: 52px;
+}
+
+.partner-banner .testimonial-banner-content {
+    margin: 0 auto;
+    margin-top: 45px;
+    max-width: 60ch;
+}
+
+.partner-banner .testimonial-banner-bg::before {
+    background: #000000a3;
+}
+
+/* Banner section */
+
+/* Partner section */
+.partner-section .testimonial-section-filter ul li a {
+    font-size: 12px;
+    font-weight: 800;
+    line-height: 16.8px;
+    letter-spacing: 4px;
+    color: var(--desc);
+    transition: all .4s ease;
+}
+
+.partner-section .testimonial-section-filter ul li a:hover {
+    color: #172A55;
+}
+
+.partner-section-bottom {
+    margin-top: 100px;
+}
+
+.partner-cards {
+    margin-top: 55px;
+}
+
+.partner-section-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(255px, 1fr));
+    row-gap: 80px;
+    column-gap: 29px;
+}
+.partner-card-bottom{
+    max-width: 40ch;
+    margin-top: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.partner-card-top{
+    aspect-ratio: 4/5;
+    width: 100%;
+    height: auto;
+}
+.partner-card-top img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+/* Partner section */
+
+/* Partner page */

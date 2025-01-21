@@ -656,6 +656,9 @@ header.blue {
     transform: scaleX(0);
     transform-origin: center;
 }
+.header-bottom > ul > li > a::after {
+    bottom: 36px;
+}
 
 .header-bottom ul li a:hover::after {
     transform: scaleX(1);
@@ -729,6 +732,76 @@ header.blue {
     justify-content: space-between;
     align-items: center;
 }
+.header-bottom > ul > li > a {
+    display: inline;
+    padding-bottom: 40px;
+}
+
+/* Navbar drop */
+.nav-drop {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    height: auto;
+    width: 48%;
+    background-color: #F0ECE4;
+    padding: 0;
+    padding-left: 40px;
+    padding-right: 32px;
+    z-index: 10;
+    transition: all .5s ease;
+    display: flex;
+    justify-content: space-between;
+    overflow: hidden;
+    gap: 33px;
+    clip-path: inset(0 0 100% 0);
+}
+
+.nav-drop-left {
+    /* width: 45%; */
+}
+
+.nav-drop-right {
+    /* width: 52%; */
+    display: flex;
+    justify-content: end;
+}
+
+.nav-drop-left ul {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    align-items: start;
+}
+
+.nav-drop-left ul li a {
+    color: #1A1A1A;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 18px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+.nav-drop-right-img{
+    max-width: 317px;
+    height: auto;
+    aspect-ratio: 4/3;
+}
+.nav-drop-right-img img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: top;
+}
+.header-bottom > ul > li:hover .nav-drop {
+    clip-path: inset(0 0 0 0);
+    padding: 32px;
+    padding-left: 40px;
+} 
+.nav-drop-left > ul > li > a::after{
+    background-color: #1A1A1A;
+}  
+/* Navbar drop */
 
 /* Header Css */
 /* 
@@ -7611,23 +7684,33 @@ select#flag-dropdown {
     row-gap: 80px;
     column-gap: 29px;
 }
-.partner-card-bottom{
+
+.partner-card-bottom {
     max-width: 40ch;
     margin-top: 25px;
     display: flex;
     flex-direction: column;
     gap: 10px;
 }
-.partner-card-top{
+
+.partner-card-top {
     aspect-ratio: 4/5;
     width: 100%;
     height: auto;
+    overflow: hidden;
 }
-.partner-card-top img{
+
+.partner-card-top img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    transition: all .4s ease;
 }
+
+.partner-card:hover img {
+    transform: scale(1.05);
+}
+
 /* Partner section */
 
 /* Partner page */

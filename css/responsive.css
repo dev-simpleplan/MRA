@@ -56,6 +56,9 @@
     .testimonial-section {
         padding-left: 0;
     }
+    .nav-drop-right-img{
+        /* max-width: 100%; */
+    }
 }
 
 @media only screen and (max-width: 1300px) {

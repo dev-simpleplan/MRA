@@ -2137,7 +2137,18 @@ ul#menu-legal-pages {
     object-fit: cover;
     object-position: center 75%;
 }
-
+.about-banner .ab-bg-img::before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: url(../images/Australian-Mattress/banner-bg-overlay.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
 .ab-bg-overlay {
     position: absolute;
     top: 0;
@@ -4430,14 +4441,18 @@ ul#menu-legal-pages {
 /* banner section */
 
 /* Science section */
+.science-section{
+    position: relative;
+}
 .science {
     background: url('../images/blue-strip-bg.png');
     background-size: contain;
     padding-top: 80px;
     padding-bottom: 60px;
     padding-left: 125px;
+    position: sticky;
+    top: 0;
 }
-
 .science-wrap {
     display: flex;
     justify-content: space-between;
@@ -4496,20 +4511,23 @@ ul#menu-legal-pages {
     color: var(--label-gold);
     border-bottom: 1px solid var(--label-gold);
 }
-
+.science-right-wrap ul li{
+    position: relative;
+}
 .science-right-wrap ul li::before {
     content: '';
     width: 6px;
     height: 6px;
     background-color: #f5f5f5;
     border-radius: 50%;
-    margin-top: 8px;
+    position: absolute;
+    top: 8px;
+    left: -8px;
 }
 
 .science-right-wrap ul li {
-    display: flex;
-    gap: 10px;
     padding-left: 8px;
+    margin-left: 15px;
 }
 
 .science-right-wrap ul,
@@ -7633,7 +7651,7 @@ select#flag-dropdown {
 
 /* testimonial Page */
 
-/* Partner page */
+/* News and Update page */
 
 /* Banner section */
 .partner-banner .testimonial-banner-text {
@@ -7712,5 +7730,41 @@ select#flag-dropdown {
 }
 
 /* Partner section */
+
+/* News and Update page */
+
+/* Partner Page */
+.partner-banner .ab-bg-overlay {
+    background: linear-gradient(180deg, rgba(0, 0, 0, 40%) 93.7%, rgba(0, 0, 0, 0.14) 100%);
+}
+.partner-banner .ab-bg-img::before {
+    background: url(../images/Partner/banner-bg-strip.png);
+    background-size: contain;
+}
+.partner-banner .ab-content-wrap{
+    padding-left: 0;
+}
+
+.partner-banner .ab-content-wrap p{
+    margin-top: 40px;
+}
+
+.benefits-section .Unveiling-section-head {
+    text-align: left;
+}
+.benefits-section .Unveiling-item-img{
+    margin: 0;
+}
+.benefits-section .Unveiling-item-content h4 , .benefits-section .Unveiling-item-content p{
+    text-align: left;
+}
+.benefits-section .Unveiling-slider {
+    margin-top: 80px;
+}
+.benefits-section .Unveiling-item-content{
+    margin: 0;
+    margin-top: 20px;
+}
+
 
 /* Partner page */

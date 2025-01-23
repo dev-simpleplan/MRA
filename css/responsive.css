@@ -3432,6 +3432,16 @@
     .pre-footer3-content{
         padding: 60px 10px;
     }
+    .benefits-section .Unveiling-item-img{
+        margin: 0 auto;
+    }
+    .benefits-section .Unveiling-item-content h4 , .benefits-section .Unveiling-item-content p{
+        text-align: center;
+    }
+    .benefits-section .Unveiling-item-content{
+        margin: 0 auto;
+        margin-top: 20px;
+    }
 }
 
 

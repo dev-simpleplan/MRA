@@ -56,7 +56,8 @@
     .testimonial-section {
         padding-left: 0;
     }
-    .nav-drop-right-img{
+
+    .nav-drop-right-img {
         /* max-width: 100%; */
     }
 }
@@ -583,6 +584,16 @@
 
     .testimonial-banner-text h1 {
         font-size: 155px;
+    }
+
+    .benefits-section .Unveiling-section-grid {
+        gap: 20px;
+    }
+
+    .trusted-brands-item-content {
+        height: 100%;
+        gap: 150px;
+        justify-content: space-between;
     }
 }
 
@@ -2299,6 +2310,34 @@
         margin-top: 30px;
     }
 
+    .benefits-section .Unveiling-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .benefits-section .Unveiling-item-content h3,
+    .benefits-section .Unveiling-item-content p {
+        text-align: center;
+    }
+
+    .trusted-brands-item-content {
+        height: 100%;
+        gap: 55px;
+        justify-content: space-between;
+    }
+
+    .access-card-content h4 {
+        line-height: 100%;
+    }
+
+    .access-card:hover {
+        width: 50%;
+    }
+
+    .exceptional .camp-wrap {
+        margin-left: 0;
+    }
 }
 
 @media only screen and (max-width: 767px) {
@@ -3421,26 +3460,94 @@
     .testimonial-banner {
         min-height: 500px;
     }
+
     .partner-section-grid {
         display: flex;
         overflow: hidden;
         overflow-x: auto;
     }
-    .partner-card{
+
+    .partner-card {
         min-width: 400px;
     }
-    .pre-footer3-content{
+
+    .pre-footer3-content {
         padding: 60px 10px;
     }
-    .benefits-section .Unveiling-item-img{
+
+    .benefits-section .Unveiling-item-img {
         margin: 0 auto;
     }
-    .benefits-section .Unveiling-item-content h4 , .benefits-section .Unveiling-item-content p{
+
+    .benefits-section .Unveiling-item-content h4,
+    .benefits-section .Unveiling-item-content p {
         text-align: center;
     }
-    .benefits-section .Unveiling-item-content{
+
+    .benefits-section .Unveiling-item-content {
         margin: 0 auto;
         margin-top: 20px;
+    }
+
+    .trusted-brands-item {
+        min-width: 400px;
+    }
+
+    .trusted-brands-grid {
+        display: flex;
+        gap: 20px;
+        overflow: hidden;
+        overflow-x: auto;
+        padding-bottom: 20px;
+    }
+
+    .trusted-brands {
+        margin-top: 50px;
+    }
+
+    .benefits-section {
+        margin-top: 30px;
+    }
+
+    .access {
+        margin-top: 50px;
+        padding: 50px 0;
+    }
+
+    .access-top {
+        flex-direction: column;
+    }
+
+    .access-top-right {
+        max-width: 100%;
+        margin-top: 15px;
+    }
+
+    .access-grid {
+        overflow: hidden;
+        overflow-x: auto;
+        padding-bottom: 20px;
+    }
+
+    .access-card {
+        min-width: 400px;
+    }
+
+    .access-card:hover {
+        width: inherit;
+    }
+    .partner-banner .ab-content h1 {
+        font-size: 67px;
+        line-height: 100%;
+    }
+    .partner-banner .ab-content-wrap p {
+        margin-top: 10px;
+    }
+    section.about-banner.partner-banner{
+        min-height: 500px;
+    }
+    .tbic-top-img {
+        width: 180px;
     }
 }
 
@@ -3793,13 +3900,27 @@
     .testimonial-banner-text h1 {
         font-size: 70px;
     }
-    .partner-card{
+
+    .partner-card {
         min-width: 300px;
     }
-    .newsletter-form input{
+
+    .newsletter-form input {
         width: 100%;
     }
-    
+
+    .trusted-brands-item {
+        padding: 20px;
+    }
+    .trusted-brands-item {
+        min-width: 330px;
+    }
+    .access-card {
+        min-width: 330px;
+    }
+    .exceptional .camp-wrap {
+        padding: 40px;
+    }
 }
 
 @media only screen and (max-width: 475px) {
@@ -3852,7 +3973,15 @@
     .testimonial-banner-text h1 {
         font-size: 47px;
     }
-   
+    .trusted-brands-item {
+        min-width: 300px;
+    }
+    .access-card {
+        min-width: 300px;
+    }
+    .exceptional .camp-wrap {
+        padding: 20px;
+    }
 }
 
 @media only screen and (max-width: 375px) {

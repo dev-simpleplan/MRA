@@ -96,7 +96,7 @@ document.addEventListener("DOMContentLoaded", () => {
 document.addEventListener("DOMContentLoaded", function () {
   const sliderElement = document.getElementById("testimonial-slider");
   if (sliderElement) {
-    var splide = new Splide(".splide", {
+    var splide = new Splide(sliderElement, {
       type: "fade",
       pagination: false,
       rewind: false,

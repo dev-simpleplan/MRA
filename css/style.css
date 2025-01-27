@@ -7747,9 +7747,10 @@ select#flag-dropdown {
 /* News and Update page */
 
 /* Partner Page */
-section.about-banner.partner-banner{
+section.about-banner.partner-banner {
     min-height: 700px;
 }
+
 .partner-banner .ab-bg-overlay {
     background: linear-gradient(180deg, rgba(0, 0, 0, 40%) 93.7%, rgba(0, 0, 0, 0.14) 100%);
 }
@@ -7828,16 +7829,19 @@ section.about-banner.partner-banner{
 .exceptional .camp-bottom {
     max-width: 55ch;
 }
-.trusted-brands-bottom{
+
+.trusted-brands-bottom {
     margin-top: 65px;
 }
-.trusted-brands-item{
+
+.trusted-brands-item {
     padding: 0 40px;
     padding-top: 42px;
     padding-bottom: 57px;
     position: relative;
     overflow: hidden;
 }
+
 .trusted-brands-grid {
     display: grid;
     grid-template-columns: repeat(2, minmax(120px, 1fr));
@@ -7846,14 +7850,15 @@ section.about-banner.partner-banner{
 }
 
 
-.trusted-brands-item-bg{
+.trusted-brands-item-bg {
     position: absolute;
     inset: 0;
     width: 100%;
     height: 100%;
     transition: all .4s ease;
 }
-.trusted-brands-item-bg::before{
+
+.trusted-brands-item-bg::before {
     content: '';
     background: linear-gradient(180deg, rgba(0, 0, 0, 0) 42.47%, rgba(0, 0, 0, 0.35) 60.71%);
     position: absolute;
@@ -7862,98 +7867,117 @@ section.about-banner.partner-banner{
     height: 100%;
     z-index: 1;
 }
-.trusted-brands-item-bg img{
+
+.trusted-brands-item-bg img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
-.trusted-brands-item-content{
+
+.trusted-brands-item-content {
     display: flex;
     flex-direction: column;
     gap: 255px;
     position: relative;
     z-index: 2;
 }
-.tbic-bottom .animate-btn{
+
+.tbic-bottom .animate-btn {
     margin-top: 30px;
 }
-.tbic-bottom p{
+
+.tbic-bottom p {
     line-height: 22px;
 }
-.tbic-top-img{
+
+.tbic-top-img {
     width: 250px;
     height: 85px;
 }
-.tbic-top-img img{
+
+.tbic-top-img img {
     width: 100%;
     height: 100%;
     object-fit: contain;
 }
-.trusted-brands-item:hover .trusted-brands-item-bg{
+
+.trusted-brands-item:hover .trusted-brands-item-bg {
     transform: scale(1.1);
 }
-.tbic-bottom .animate-btn a{
+
+.tbic-bottom .animate-btn a {
     padding: 8px 39px;
 }
 
-.access{
+.access {
     background-color: #172A55;
     padding-top: 70px;
     padding-bottom: 100px;
 }
-.access-top-right{
+
+.access-top-right {
     max-width: 50ch;
     display: flex;
     flex-direction: column;
     gap: 15px;
     margin-top: 55px;
 }
-.access-top{
+
+.access-top {
     display: flex;
     justify-content: space-between;
 }
-.access-bottom{
+
+.access-bottom {
     margin-top: 65px;
 }
-.access-grid{
+
+.access-grid {
     display: flex;
     justify-content: space-between;
     gap: 20px;
 }
-.access-card{
+
+.access-card {
     width: 33%;
     padding: 26px 21px;
     height: 335px;
     position: relative;
     transition: all .6s ease;
 }
-.access-card:hover{
+
+.access-card:hover {
     width: 42%;
 }
-.access-card-wrap{
+
+.access-card-wrap {
     width: 100%;
     height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: end;
 }
-.access-card-content{
+
+.access-card-content {
     position: relative;
     z-index: 2;
     max-width: 30ch;
 }
-.access-card-content p{
+
+.access-card-content p {
     line-height: 22px;
     margin-top: 10px;
 }
-.access-card-img{
+
+.access-card-img {
     position: absolute;
     inset: 0;
     width: 100%;
     height: 100%;
     z-index: 1;
 }
-.access-card-img::before{
+
+.access-card-img::before {
     content: '';
     position: absolute;
     inset: 0;
@@ -7962,10 +7986,135 @@ section.about-banner.partner-banner{
     background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.3) 44.45%);
     z-index: 1;
 }
-.access-card-img img{
+
+.access-card-img img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
 /* Partner page */
+
+/* Brand Main Page */
+.main-brand-banner .construction-banner-bg {
+    padding-bottom: 0;
+}
+
+.main-brand-banner .construction-banner-bg-img::before {
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.3) 74.56%, rgba(0, 0, 0, 0) 100%);
+}
+
+.main-brand-banner .construction-banner-content-wrap {
+    margin: 0;
+}
+
+.main-brand-banner .construction-banner-content {
+    padding: 0;
+}
+
+.main-brand-banner .construction-banner-content h1 {
+    font-size: 14.5vw;
+    line-height: 100%;
+    max-width: 100%;
+}
+
+.main-brand-banner .construction-banner-content-wrap {
+    max-width: 50ch;
+}
+
+.main-brand-banner .construction-banner-bg-img {
+    width: 66%;
+}
+
+
+.exclusive-slider {
+    margin-top: 50px;
+}
+
+.exclusive-card {
+    position: relative;
+    padding-left: 35px;
+    padding-top: 50px;
+}
+
+.exclusive-card-bg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.exclusive-card-bg::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.55) 38.88%, rgba(0, 0, 0, 0) 66.89%),
+        linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.2) 35.7%);
+    z-index: 1;
+}
+
+.exclusive-card-bg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.exclusive-card-wrap {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 75px;
+    /* height: 100%; */
+    width: 100%;
+    /* justify-content: space-between; */
+}
+
+.exclusive-card-bottom {
+    background-color: #172A55;
+    padding: 50px 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 73ch;
+    margin-left: auto;
+}
+
+.exclusive-card-bottom ul {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.exclusive-card-bottom ul li {
+    position: relative;
+    padding-left: 24px;
+}
+
+.exclusive-card-bottom ul li::before {
+    content: '';
+    position: absolute;
+    left: 8px;
+    top: 9px;
+    min-width: 6px;
+    height: 6px;
+    background-color: #fff;
+    border-radius: 50%;
+}
+
+.exclusive-card-bottom ul li a {
+    color: #fff;
+    border-bottom: 1px solid #fff;
+    transition: all .3s ease;
+}
+
+.exclusive-card-bottom ul li a:hover {
+    color: var(--label-gold);
+    border-bottom: 1px solid var(--label-gold);
+}
+#exclusive-slider .splide__list{
+    height: auto;
+}
+/* Brand Main Page */

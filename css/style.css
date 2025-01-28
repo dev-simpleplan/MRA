@@ -278,6 +278,7 @@ a:focus {
     width: 100%;
     padding: 0 40px;
 }
+
 .container-left {
     width: 100%;
     padding-left: 40px;
@@ -8133,6 +8134,7 @@ section.about-banner.partner-banner {
     right: 40px;
     top: -85px;
 }
+
 #exclusive-slider .splide__arrows button {
     position: static;
     opacity: 1;
@@ -8141,42 +8143,50 @@ section.about-banner.partner-banner {
     background: rgba(204, 146, 47, 1);
     transition: all .3s ease;
 }
-.mattress-partner{
+
+.mattress-partner {
     padding: 0 115px;
     padding-top: 55px;
 }
-.mattress-partner-head{
+
+.mattress-partner-head {
     text-align: center;
 }
-.mattress-partner-head p{
+
+.mattress-partner-head p {
     margin: 0 auto;
     max-width: 50ch;
     margin-top: 15px;
 }
-.mattress-partner-grid{
+
+.mattress-partner-grid {
     margin-top: 40px;
     display: grid;
     grid-template-columns: repeat(3, minmax(200px, 1fr));
     gap: 26px;
 }
-.mattress-partner-card{
+
+.mattress-partner-card {
     padding: 0 24px;
     padding-top: 30px;
     padding-bottom: 50px;
     position: relative;
     overflow: hidden;
 }
-.mattress-partner-card:hover .mattress-partner-card-bg{
+
+.mattress-partner-card:hover .mattress-partner-card-bg {
     transform: scale(1.1);
 }
-.mattress-partner-card-bg{
+
+.mattress-partner-card-bg {
     position: absolute;
     inset: 0;
     width: 100%;
     height: 100%;
     transition: all .6s ease;
 }
-.mattress-partner-card-bg::before{
+
+.mattress-partner-card-bg::before {
     content: '';
     background: linear-gradient(180deg, rgba(0, 0, 0, 0) 39.9%, rgba(0, 0, 0, 0.35) 61.93%);
     position: absolute;
@@ -8184,25 +8194,164 @@ section.about-banner.partner-banner {
     width: 100%;
     height: 100%;
 }
-.mattress-partner-card-bg img{
+
+.mattress-partner-card-bg img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
-.mattress-partner-card-wrap{
+
+.mattress-partner-card-wrap {
     position: relative;
     z-index: 2;
     display: flex;
     flex-direction: column;
     gap: 320px;
 }
-.mattress-partner-card-content p a{
+
+.mattress-partner-card-content p a {
     color: #fff;
     border-bottom: 1px solid #fff;
     transition: all .3s ease;
 }
-.mattress-partner-card-content p a:hover{
+
+.mattress-partner-card-content p a:hover {
     color: var(--label-gold);
     border-bottom: 1px solid var(--label-gold);
 }
+
 /* Brand Main Page */
+
+/* Troubleshoot page */
+
+.trouble-shoot {
+    margin-top: 140px;
+    padding: 0 105px;
+}
+
+.trouble-shoot-top {
+    text-align: center;
+}
+
+.trouble-shoot-middle {
+    margin-top: 70px;
+    display: flex;
+    justify-content: center;
+    gap: 45px;
+}
+
+.trouble-shoot-middle ul {
+    display: flex;
+    align-items: center;
+    gap: 45px;
+}
+
+
+.trouble-shoot-middle ul li a {
+    font-size: 14px;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 800;
+    letter-spacing: 4px;
+    color: #858585;
+    position: relative;
+    transition: all .3s ease;
+}
+
+.trouble-shoot-middle ul li a:hover {
+    color: #172A55;
+}
+
+.trouble-shoot-middle ul li a:hover::before {
+    width: 100%;
+}
+
+.trouble-shoot-middle ul li a::before {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: -3px;
+    width: 0;
+    height: 1px;
+    background-color: #172A55;
+    transition: all .3s ease;
+}
+
+.trouble-shoot-select {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.trouble-shoot-select a {
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 800;
+    letter-spacing: 4px;
+    color: #172A55;
+}
+
+.trouble-shoot-select img {
+    width: 14px;
+    height: 8px;
+    object-fit: contain;
+}
+.trouble-shoot-bottom{
+    margin-top: 90px;
+}
+.trouble-shoot-grid{
+    display: grid;
+    grid-template-columns: repeat(3, minmax(200px, 1fr));
+    column-gap: 29px;
+    row-gap: 94px;
+}
+.trouble-shoot-card{
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+.trouble-shoot-grid.splide__list{
+    height: auto;
+}
+.trouble-shoot-card-img{
+    width: 100%;
+    height: auto;
+    aspect-ratio: 5/6;
+}
+.trouble-shoot-card-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.trouble-shoot-card-text{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    height: 100%;
+}
+.trouble-shoot-card-text-wrap{
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+    align-items: start;
+    height: 100%;
+    justify-content: space-between;
+}
+.trouble-shoot-footer{
+    display: flex;
+    flex-direction: column;
+    gap: 45px;
+    align-items: center;
+    background-color: #E5DCCA;
+    padding: 100px 0;
+    margin-top: 80px;
+}
+.trouble-shoot-footer h2{
+    margin: 0 auto;
+    max-width: 18ch;
+    text-align: center;
+}
+.trouble-shoot .splide__arrows{
+    display: none;
+}
+/* Troubleshoot page */

@@ -65,6 +65,10 @@
         padding-left: 0;
         padding-right: 0;
     }
+
+    .trouble-shoot {
+        padding: 0;
+    }
 }
 
 @media only screen and (max-width: 1300px) {
@@ -523,6 +527,11 @@
 
     .mattress-partner-card-wrap {
         gap: 200px;
+    }
+
+    .trouble-shoot {
+        padding: 0;
+        margin-top: 80px;
     }
 }
 
@@ -2377,8 +2386,62 @@
     .mattress-partner-card-wrap {
         gap: 150px;
     }
-    #exclusive-slider .splide__arrows{
+
+    #exclusive-slider .splide__arrows {
         right: 0;
+    }
+
+    .trouble-shoot-grid {
+        display: flex;
+        gap: 0;
+    }
+
+    .trouble-shoot-middle {
+        flex-direction: column;
+    }
+
+    .trouble-shoot-middle {
+        gap: 25px;
+    }
+
+    .trouble-shoot-bottom {
+        margin-top: 30px;
+    }
+
+    .trouble-shoot .splide__arrows {
+        display: flex;
+        gap: 15px;
+        position: static;
+        margin-bottom: 40px;
+        justify-content: end;
+    }
+
+    .trouble-shoot .splide__arrows button {
+        position: static;
+        opacity: 1;
+        transform: none;
+        border-radius: 0%;
+        background: rgba(204, 146, 47, 1);
+        transition: all .3s ease;
+    }
+
+    .trouble-shoot-middle ul {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        justify-content: space-between;
+        overflow: hidden;
+        overflow-x: auto;
+        padding-bottom: 20px;
+    }
+
+    .trouble-shoot-middle ul li {
+        white-space: nowrap;
+    }
+
+    .trouble-shoot-footer {
+        gap: 25px;
+        padding: 60px 0;
     }
 }
 
@@ -3595,28 +3658,36 @@
     .tbic-top-img {
         width: 180px;
     }
-    .exclusive{
+
+    .exclusive {
         margin-top: 50px;
     }
-    .exclusive-card{
+
+    .exclusive-card {
         padding-left: 0;
     }
-    .exclusive-card-top{
+
+    .exclusive-card-top {
         padding-left: 20px;
     }
-    .main-brand-banner .construction-banner-bg-img{
+
+    .main-brand-banner .construction-banner-bg-img {
         width: 100%;
     }
+
     .main-brand-banner .construction-banner-content-wrap {
         margin-top: 20px;
         max-width: 100%;
     }
-    .construction-banner-content{
+
+    .construction-banner-content {
         margin-top: 30px;
     }
+
     .main-brand-banner .construction-banner-content h1 {
         font-size: 10vw;
     }
+
     .mattress-partner-card {
         padding: 20px;
     }
@@ -4059,6 +4130,7 @@
     .exceptional .camp-wrap {
         padding: 20px;
     }
+
     .mattress-partner-card {
         min-width: 300px;
     }

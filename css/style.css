@@ -278,6 +278,10 @@ a:focus {
     width: 100%;
     padding: 0 40px;
 }
+.container-left {
+    width: 100%;
+    padding-left: 40px;
+}
 
 .container {
     max-width: 1500px;
@@ -8035,6 +8039,8 @@ section.about-banner.partner-banner {
     position: relative;
     padding-left: 35px;
     padding-top: 50px;
+    width: 100%;
+    height: 100%;
 }
 
 .exclusive-card-bg {
@@ -8067,9 +8073,9 @@ section.about-banner.partner-banner {
     display: flex;
     flex-direction: column;
     gap: 75px;
-    /* height: 100%; */
+    height: 100%;
     width: 100%;
-    /* justify-content: space-between; */
+    justify-content: space-between;
 }
 
 .exclusive-card-bottom {
@@ -8114,7 +8120,89 @@ section.about-banner.partner-banner {
     color: var(--label-gold);
     border-bottom: 1px solid var(--label-gold);
 }
-#exclusive-slider .splide__list{
+
+#exclusive-slider .splide__list {
     height: auto;
+}
+
+#exclusive-slider .splide__arrows {
+    position: absolute;
+    display: flex;
+    justify-content: end;
+    gap: 15px;
+    right: 40px;
+    top: -85px;
+}
+#exclusive-slider .splide__arrows button {
+    position: static;
+    opacity: 1;
+    transform: none;
+    border-radius: 0%;
+    background: rgba(204, 146, 47, 1);
+    transition: all .3s ease;
+}
+.mattress-partner{
+    padding: 0 115px;
+    padding-top: 55px;
+}
+.mattress-partner-head{
+    text-align: center;
+}
+.mattress-partner-head p{
+    margin: 0 auto;
+    max-width: 50ch;
+    margin-top: 15px;
+}
+.mattress-partner-grid{
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(200px, 1fr));
+    gap: 26px;
+}
+.mattress-partner-card{
+    padding: 0 24px;
+    padding-top: 30px;
+    padding-bottom: 50px;
+    position: relative;
+    overflow: hidden;
+}
+.mattress-partner-card:hover .mattress-partner-card-bg{
+    transform: scale(1.1);
+}
+.mattress-partner-card-bg{
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    transition: all .6s ease;
+}
+.mattress-partner-card-bg::before{
+    content: '';
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 39.9%, rgba(0, 0, 0, 0.35) 61.93%);
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+}
+.mattress-partner-card-bg img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.mattress-partner-card-wrap{
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 320px;
+}
+.mattress-partner-card-content p a{
+    color: #fff;
+    border-bottom: 1px solid #fff;
+    transition: all .3s ease;
+}
+.mattress-partner-card-content p a:hover{
+    color: var(--label-gold);
+    border-bottom: 1px solid var(--label-gold);
 }
 /* Brand Main Page */

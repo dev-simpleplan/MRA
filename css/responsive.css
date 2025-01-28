@@ -60,6 +60,11 @@
     .nav-drop-right-img {
         /* max-width: 100%; */
     }
+
+    .mattress-partner {
+        padding-left: 0;
+        padding-right: 0;
+    }
 }
 
 @media only screen and (max-width: 1300px) {
@@ -138,6 +143,10 @@
         padding-left: 0;
     }
 
+    .mattress-partner {
+        padding-left: 50px;
+        padding-right: 50px;
+    }
 }
 
 @media only screen and (max-width: 1200px) {
@@ -506,6 +515,15 @@
     .testimonial-section {
         padding-left: 0;
     }
+
+    .mattress-partner {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .mattress-partner-card-wrap {
+        gap: 200px;
+    }
 }
 
 @media only screen and (max-width: 1100px) {
@@ -600,7 +618,8 @@
 @media only screen and (max-width: 991px) {
 
     .container-fluid,
-    .container {
+    .container,
+    .container-left {
         padding: 0 20px;
     }
 
@@ -2338,6 +2357,29 @@
     .exceptional .camp-wrap {
         margin-left: 0;
     }
+
+    .mattress-partner-grid {
+        display: flex;
+        overflow: hidden;
+        overflow-x: auto;
+        padding-bottom: 20px;
+    }
+
+    .mattress-partner-card {
+        min-width: 400px;
+    }
+
+    .mattress-partner {
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+
+    .mattress-partner-card-wrap {
+        gap: 150px;
+    }
+    #exclusive-slider .splide__arrows{
+        right: 0;
+    }
 }
 
 @media only screen and (max-width: 767px) {
@@ -3536,18 +3578,47 @@
     .access-card:hover {
         width: inherit;
     }
+
     .partner-banner .ab-content h1 {
         font-size: 67px;
         line-height: 100%;
     }
+
     .partner-banner .ab-content-wrap p {
         margin-top: 10px;
     }
-    section.about-banner.partner-banner{
+
+    section.about-banner.partner-banner {
         min-height: 500px;
     }
+
     .tbic-top-img {
         width: 180px;
+    }
+    .exclusive{
+        margin-top: 50px;
+    }
+    .exclusive-card{
+        padding-left: 0;
+    }
+    .exclusive-card-top{
+        padding-left: 20px;
+    }
+    .main-brand-banner .construction-banner-bg-img{
+        width: 100%;
+    }
+    .main-brand-banner .construction-banner-content-wrap {
+        margin-top: 20px;
+        max-width: 100%;
+    }
+    .construction-banner-content{
+        margin-top: 30px;
+    }
+    .main-brand-banner .construction-banner-content h1 {
+        font-size: 10vw;
+    }
+    .mattress-partner-card {
+        padding: 20px;
     }
 }
 
@@ -3912,12 +3983,15 @@
     .trusted-brands-item {
         padding: 20px;
     }
+
     .trusted-brands-item {
         min-width: 330px;
     }
+
     .access-card {
         min-width: 330px;
     }
+
     .exceptional .camp-wrap {
         padding: 40px;
     }
@@ -3973,14 +4047,20 @@
     .testimonial-banner-text h1 {
         font-size: 47px;
     }
+
     .trusted-brands-item {
         min-width: 300px;
     }
+
     .access-card {
         min-width: 300px;
     }
+
     .exceptional .camp-wrap {
         padding: 20px;
+    }
+    .mattress-partner-card {
+        min-width: 300px;
     }
 }
 

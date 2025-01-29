@@ -2482,7 +2482,9 @@ ul#menu-legal-pages {
     z-index: 3;
     justify-content: space-between;
 }
-
+.value-content-top.mob{
+    display: none;
+}
 .value-content-top {
     padding-top: 65px;
     padding-left: 39px;

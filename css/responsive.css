@@ -1056,7 +1056,11 @@
     }
 
     .faq-right.mob {
-        display: block;
+        /* display: block; */
+    }
+
+    .accordion {
+        margin-top: 55px;
     }
 
     .faq-right {
@@ -1079,9 +1083,6 @@
         width: 100%;
     }
 
-    .accordion {
-        margin-top: 40px;
-    }
 
     .about-location .loc-text {
         width: 55%;
@@ -1368,7 +1369,7 @@
     }
 
     .creating-wrap {
-        flex-direction: column-reverse;
+        flex-direction: column;
         gap: 50px;
     }
 
@@ -1404,11 +1405,15 @@
     .creating-right-small {
         position: absolute;
         right: 20px;
-        bottom: -50px;
+        top: -50px;
     }
 
     .creating-right-img img {
-        object-position: center 80%;
+        object-position: bottom;
+    }
+
+    .challenges .creating-right-img img {
+        object-position: top;
     }
 
     .mind .text {
@@ -1416,7 +1421,24 @@
     }
 
     .mind .exp-wrapper {
-        flex-direction: column-reverse;
+        flex-direction: column;
+    }
+
+    .mind-left-image.desk {
+        display: none;
+    }
+
+    .mind-left-image.mob {
+        display: block;
+        margin-top: 0;
+        position: absolute;
+        right: 20px;
+        bottom: -30px;
+        z-index: 2;
+    }
+
+    .unlock .exp-wrapper {
+        overflow: visible;
     }
 
     .challenges .creating-left,
@@ -1428,6 +1450,7 @@
 
     .challenges .creating-right-small {
         position: static;
+        display: none;
     }
 
     .challenges .creating-right {
@@ -1436,18 +1459,19 @@
     }
 
     .challenges .creating-right-img {
-        width: 50%;
+        width: 100%;
         height: 100%;
-        aspect-ratio: 5 / 4;
+        aspect-ratio: 5 / 3;
     }
 
     .challenges {
+        margin-top: 40px;
         padding-top: 40px;
         padding-bottom: 40px;
     }
 
     .equal .exp-wrapper {
-        flex-direction: column-reverse;
+        flex-direction: column;
     }
 
     .equal .exp-image-big {
@@ -1459,12 +1483,16 @@
         width: 100%;
     }
 
+    .equal .exp-content-wrap {
+        text-align: start;
+    }
+
     .equal-left-img {
-        aspect-ratio: 5 / 2;
+        display: none;
     }
 
     .equal .exp-content {
-        padding-bottom: 40px;
+        padding-bottom: 50px;
     }
 
     .hypnos-banner {
@@ -1501,6 +1529,10 @@
         height: 100%;
     }
 
+    .hypnos-banner-left-content-wrap {
+        width: 100%;
+    }
+
     .hypnos-banner-wrap {
         height: auto;
     }
@@ -1508,8 +1540,15 @@
     .hypnos-banner-left-content {
         padding-top: 100px;
         padding-bottom: 100px;
+        padding-left: 0;
         display: flex;
         align-items: center;
+        width: 100%;
+        text-align: center;
+    }
+
+    .hypnos-banner-left-content-wrap .label {
+        text-align: center;
     }
 
     .hypnos-banner-right-wrap {
@@ -1517,7 +1556,7 @@
     }
 
     .royal-hypnos-wrap {
-        flex-direction: column;
+        flex-direction: column-reverse;
     }
 
     .royal-hypnos-left {
@@ -1528,7 +1567,7 @@
     .royal-hypnos-right {
         padding: 0;
         padding-top: 50px;
-        padding-bottom: 20px;
+        padding-bottom: 60px;
         width: 100%;
     }
 
@@ -1734,6 +1773,7 @@
 
     .durable-left-img {
         margin-top: 40px;
+        display: none;
     }
 
     .art-right.desk {
@@ -2443,6 +2483,9 @@
         gap: 25px;
         padding: 60px 0;
     }
+    .sleeping-right-img{
+        display: none;
+    }
 }
 
 @media only screen and (max-width: 767px) {
@@ -2713,11 +2756,60 @@
 
     .value {
         margin-top: 50px;
+        margin-bottom: 30px;
     }
 
     .value-content-bottom {
-        width: 100%;
+        max-width: 318px;
         padding: 30px 20px;
+        margin-top: 170px;
+        padding-bottom: 60px;
+    }
+
+    .value-content-bottom p {
+        font-size: 14px;
+        margin-top: 10px;
+        line-height: 21px;
+    }
+
+    .value-content-top {
+        margin-bottom: 45px;
+    }
+
+    .value-slide {
+        position: static;
+        height: auto;
+    }
+
+    .value .splide__list {
+        height: auto;
+    }
+
+    .value .splide__pagination {
+        position: static;
+
+    }
+
+    .value .splide__pagination__page.is-active {
+        background: #172A55;
+    }
+
+    .value .splide__pagination__page {
+        background: transparent;
+        border: 1px solid #172A55;
+        opacity: 1;
+    }
+
+    .value-content-top .label {
+        color: var(--label-gold);
+    }
+
+    .value-content-top h2 {
+        color: var(--head);
+    }
+
+    .value-content-top p {
+        color: var(--desc);
     }
 
     .partnership-middle {
@@ -2735,8 +2827,16 @@
         padding-top: 55px;
     }
 
+    .value-content-top.desk {
+        display: none;
+    }
+
+    .value-content-top.mob {
+        display: block;
+    }
+
     .value-content-top {
-        padding: 20px;
+        padding: 0px;
         padding-top: 40px;
     }
 
@@ -2851,11 +2951,11 @@
 
     .role {
         height: auto;
-        margin-top: 40px;
+        margin-top: 100px;
     }
 
     .role-wrap {
-        flex-direction: column;
+        flex-direction: column-reverse;
         height: auto;
         padding-bottom: 0;
     }
@@ -3138,7 +3238,7 @@
     .construction-banner-bg {
         position: static;
         height: auto;
-        padding-bottom: 30px;
+        padding-bottom: 0px;
     }
 
     .construction-banner-bg-img {
@@ -3152,18 +3252,19 @@
     .construction-banner {
         min-height: auto;
         height: auto;
-        flex-direction: column;
+        flex-direction: column-reverse;
     }
 
     .construction-banner-bg-img {
         width: 100%;
         height: auto;
-        aspect-ratio: 3 / 2;
+        aspect-ratio: 1;
     }
 
     .construction-banner-wrap {
         height: auto;
         padding-bottom: 50px;
+        text-align: center;
     }
 
     .hospitality-mattress .ab-content h1 {
@@ -3681,7 +3782,7 @@
     }
 
     .construction-banner-content {
-        margin-top: 30px;
+        margin-top: 75px;
     }
 
     .main-brand-banner .construction-banner-content h1 {
@@ -3690,6 +3791,20 @@
 
     .mattress-partner-card {
         padding: 20px;
+    }
+
+    .counter {
+        font-size: 42px;
+    }
+
+    .milestone-item p {
+        font-size: 16px;
+    }
+    .boat-caravan-banner .construction-banner-content h1 {
+        max-width: 100%;
+    }
+    .boat-caravan-banner .construction-banner-content{
+        justify-content: center;
     }
 }
 
@@ -3828,7 +3943,7 @@
     }
 
     .accordion {
-        margin-top: 10px;
+        margin-top: 30px;
     }
 
     .faq-section {
@@ -3913,7 +4028,7 @@
     }
 
     .royal-hypnos-img {
-        height: 300px;
+        height: 370px;
     }
 
     .craftsmanship-left-toggle .tab-active-btn {
@@ -4066,6 +4181,22 @@
     .exceptional .camp-wrap {
         padding: 40px;
     }
+
+    .hypnos-banner-left-content-wrap h1 {
+        font-size: 42px !important;
+        font-size: 42px;
+        font-weight: 400;
+        line-height: 37.8px;
+        letter-spacing: -0.02em;
+    }
+
+    .hypnos-banner-left-content-wrap .label {
+        text-align: center;
+        font-size: 35px !important;
+        font-weight: 400;
+        line-height: 35.1px;
+    }
+
 }
 
 @media only screen and (max-width: 475px) {
@@ -4134,17 +4265,19 @@
     .mattress-partner-card {
         min-width: 300px;
     }
+    .boat-caravan-banner .construction-banner-content h1 {
+        font-size: 28px;
+    }
+    .boat-caravan-banner .construction-banner-content p {
+        font-size: 14px;
+        line-height: 19px;
+    }
 }
 
 @media only screen and (max-width: 375px) {
     .australian-mattress-banner .ab-content h1 {
         font-size: 40px;
     }
-
-    .boat-caravan-banner .construction-banner-content h1 {
-        font-size: 42px;
-    }
-
     .pfl-head>div {
         white-space: wrap;
     }

@@ -497,10 +497,10 @@
     }
 
     .operation .choice-grid-wrap {
-        grid-template-columns: repeat(3, minmax(500px, 1fr));
-        padding-bottom: 20px;
-        overflow: hidden;
-        overflow-x: scroll;
+        display: flex;
+        overflow: visible;
+        overflow-x: visible;
+        gap: 0;
     }
 
     .logistic .exp-content {
@@ -3568,11 +3568,6 @@
     .camp-wrap {
         padding: 50px;
     }
-
-    .operation .choice-grid-wrap {
-        grid-template-columns: repeat(3, minmax(400px, 1fr));
-    }
-
     .contact {
         padding-top: 120px;
         padding-bottom: 40px;
@@ -3805,6 +3800,12 @@
     }
     .boat-caravan-banner .construction-banner-content{
         justify-content: center;
+    }
+    .operation .choice-item-bottom{
+        display: none;
+    }
+    .operation .choice-grid-wrap{
+        height: auto;
     }
 }
 
@@ -4116,10 +4117,6 @@
 
     .commercial-banner .construction-banner-content-head {
         width: fit-content;
-    }
-
-    .operation .choice-grid-wrap {
-        grid-template-columns: repeat(3, minmax(300px, 1fr));
     }
 
     .camp-wrap {

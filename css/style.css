@@ -6753,6 +6753,19 @@ ul#menu-legal-pages {
 .operation .choice-item-wrap {
     gap: 10px;
 }
+.operation .splide__pagination{
+    position: static;
+    margin-top: 20px;
+}
+.operation .splide__pagination__page.is-active{
+    background: #172A55;
+}
+.operation .splide__pagination__page{
+    background: transparent;
+    border: 1px solid #172A55;
+    transform: scale(1);
+    opacity: 1;
+}
 
 /* Operation Section */
 

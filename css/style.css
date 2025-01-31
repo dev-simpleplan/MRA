@@ -3933,6 +3933,7 @@ ul#menu-legal-pages {
     display: flex;
     justify-content: space-between;
     gap: 30px;
+    position: relative;
 }
 
 .craftsmanship-left {
@@ -4013,6 +4014,7 @@ ul#menu-legal-pages {
     width: 50%;
     display: flex;
     justify-content: end;
+    
 }
 
 .craftsmanship-right-wrap {
@@ -4039,16 +4041,18 @@ ul#menu-legal-pages {
     /* transform: translateY(100%); */
     transition: all 0.4s ease;
     -webkit-animation: slideEffect 1s;
-    animation: slideEffect 1s;
 }
 
 .craftsmanship-right-wrap .tabcontent {
     /* display: none; */
     display: none;
+    flex-direction: column;
     -webkit-animation: fadeEffect 1s;
     animation: fadeEffect 1s;
 }
-
+.craftsmanship-left-wrap.mob{
+    display: none;
+}
 /* Go from zero to full opacity */
 @keyframes fadeEffect {
     from {
@@ -4069,6 +4073,7 @@ ul#menu-legal-pages {
         transform: translateY(0%);
     }
 }
+
 
 /* Craftsmanship Section */
 
@@ -8370,3 +8375,25 @@ section.about-banner.partner-banner {
     display: none;
 }
 /* Troubleshoot page */
+
+
+.science-section .splide__list{
+    height: auto;
+}
+.science-section .splide__pagination__page{
+    border: 1px solid #172A55;
+    background: transparent;
+    opacity: 1;
+    transform: scale(1);
+}
+.science-section .splide__pagination__page.is-active{
+    background-color: #172A55;
+}
+.science-section .splide__pagination {
+    position: static;
+    margin-top: 20px;
+}
+
+.science-left-bottom.mob{
+    display: none;
+}

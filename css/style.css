@@ -818,6 +818,7 @@ header.blue {
     text-transform: uppercase;
     white-space: nowrap;
 }
+
 .nav-drop-right-img {
     max-width: 100%;
     height: auto;
@@ -865,7 +866,8 @@ header.blue {
 .nav-drop-left-list:nth-child(1) ul {
     margin-top: 24px;
 }
-.nav-drop-right-text{
+
+.nav-drop-right-text {
     position: absolute;
     inset: 0;
     padding: 18px 15px;
@@ -874,7 +876,8 @@ header.blue {
     justify-content: end;
     z-index: 2;
 }
-.nav-drop-right-text::before{
+
+.nav-drop-right-text::before {
     content: '';
     position: absolute;
     inset: 0;
@@ -883,9 +886,11 @@ header.blue {
     background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.35) 59.69%);
     z-index: -1;
 }
-.nav-drop-bread{
+
+.nav-drop-bread {
     display: none;
 }
+
 /* Navbar drop */
 
 /* Header Css */
@@ -8491,4 +8496,179 @@ section.about-banner.partner-banner {
 
 .science-left-bottom.mob {
     display: none;
+}
+
+
+
+.quiz-container {
+    width: 100%;
+    margin: 50px auto;
+    overflow: hidden;
+}
+
+.progress-bar {
+    width: 100%;
+    height: auto;
+    position: relative;
+}
+
+.progress {
+    height: 7px;
+    background: #CC922F;
+    width: 0;
+    transition: width 0.3s ease;
+}
+
+.quiz-sections {
+    padding: 20px;
+    margin-top: 80px;
+}
+
+.quiz-step {
+    display: none;
+    text-align: center;
+}
+
+#back {
+    background-color: transparent;
+    border: 1px solid #172A55;
+    color: #172A55;
+}
+
+#back:hover {
+    background-color: #172A55;
+    border: 1px solid #172A55;
+    color: #fff;
+}
+
+#next:hover {
+    background-color: transparent;
+    border: 1px solid #172A55;
+    color: #172A55;
+}
+
+.quiz-nav {
+    display: flex;
+    justify-content: space-between;
+    margin-top: -60px;
+}
+
+.quiz-nav button {
+    border: none;
+}
+
+#back:disabled {
+    cursor: not-allowed;
+}
+
+
+/* Show the current step */
+.quiz-step.active {
+    display: block;
+}
+
+.quiz-step-head {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.quiz-step-head .label {
+    color: #172A55;
+}
+
+.quiz-step-select {
+    display: flex;
+    justify-content: center;
+    gap: 75px;
+    align-items: center;
+}
+
+.selector-option {
+    border: none;
+    background-color: transparent;
+    color: #000;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.selector-option::before {
+    content: '';
+    width: 20px;
+    height: 20px;
+    background-color: #172A55;
+    border: 1px solid #172A55;
+    transition: all .4s ease;
+    opacity: .1;
+}
+
+.selector-option.active::before {
+    opacity: 1;
+}
+
+.quiz-step-picker {
+    margin-top: 70px;
+}
+
+.quiz-step-image {
+    width: 130px;
+    height: 147px;
+    margin: 0 auto;
+    margin-top: 100px;
+}
+
+.quiz-step-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.selector-container {
+    display: flex;
+    gap: 2rem;
+    background-color: #f4f4f4;
+    padding: 1rem;
+    border-radius: 0.5rem;
+}
+
+.control-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.control-label {
+    font-size: 1rem;
+    color: #000;
+}
+
+.control {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.btn {
+    background-color: #d8a039;
+    border: none;
+    color: white;
+    padding: 8px 7px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #b47f2b;
+}
+
+.value {
+    font-size: 22px;
+    color: #000;
+}
+.btn.increase{
+    transform: rotate(180deg);
 }

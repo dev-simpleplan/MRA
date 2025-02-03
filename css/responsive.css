@@ -594,9 +594,11 @@
         width: 120%;
     }
     .mega-menu{
-        padding-bottom: 30px;
+        padding-bottom: 90px;
     }
-
+    .header-bottom>ul>li:hover .nav-drop{
+        padding-bottom: 90px;
+    }
     .mega-menu .nav-drop-left {
         justify-content: space-between;
         flex-wrap: wrap;
@@ -634,8 +636,7 @@
         order: 1;
     }
     .overflow-hidden{
-        overflow: hidden;
-        overflow-y: hidden;
+        overflow: unset;
     }
 }
 

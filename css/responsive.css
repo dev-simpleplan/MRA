@@ -593,10 +593,17 @@
         margin-left: -40px;
         width: 120%;
     }
-
+    .mega-menu{
+        padding-bottom: 90px;
+    }
+    .header-bottom>ul>li:hover .nav-drop{
+        padding-bottom: 90px;
+    }
     .mega-menu .nav-drop-left {
         justify-content: space-between;
         flex-wrap: wrap;
+        overflow: hidden;
+        overflow-y: auto;
     }
     .nav-drop-left-list{
         width: 45%;
@@ -627,6 +634,9 @@
     }
     .nav-drop-left-list:nth-child(5){
         order: 1;
+    }
+    .overflow-hidden{
+        overflow: unset;
     }
 }
 

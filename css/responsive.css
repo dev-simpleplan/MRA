@@ -597,6 +597,8 @@
     .mega-menu .nav-drop-left {
         justify-content: space-between;
         flex-wrap: wrap;
+        overflow: hidden;
+        overflow-y: auto;
     }
     .nav-drop-left-list{
         width: 45%;
@@ -628,6 +630,7 @@
     .nav-drop-left-list:nth-child(5){
         order: 1;
     }
+    
 }
 
 @media only screen and (max-width: 1100px) {

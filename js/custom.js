@@ -2,6 +2,42 @@
 
 // lenis initiate
 
+// navbar mobile
+document.querySelectorAll(".header-bottom > ul > li").forEach((li) => {
+  li.addEventListener("click", function (event) {
+    event.stopPropagation();
+
+    // Remove "show" class from all .nav-drop elements
+    document.querySelectorAll(".header-bottom .nav-drop").forEach((drop) => {
+      drop.classList.remove("show");
+    });
+
+    // Add "show" class to the .nav-drop inside the clicked li
+    const navDrop = this.querySelector(".nav-drop");
+    if (navDrop) {
+      navDrop.classList.add("show");
+
+      // Add event listener to .nav-drop-bread inside this li
+      const navDropBread = navDrop.querySelector(".nav-drop-bread");
+      if (navDropBread) {
+        navDropBread.addEventListener("click", function (e) {
+          e.stopPropagation();
+          navDrop.classList.remove("show");
+        });
+      }
+    }
+  });
+});
+
+// Close dropdown when clicking outside
+document.addEventListener("click", function () {
+  document.querySelectorAll(".header-bottom .nav-drop").forEach((drop) => {
+    drop.classList.remove("show");
+  });
+});
+
+// navbar mobile
+
 // nabar fixed
 
 let lastScrollY = window.scrollY;

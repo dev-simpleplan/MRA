@@ -151,6 +151,10 @@
         padding-left: 50px;
         padding-right: 50px;
     }
+
+    .mega-menu {
+        left: -280%;
+    }
 }
 
 @media only screen and (max-width: 1200px) {
@@ -532,6 +536,97 @@
     .trouble-shoot {
         padding: 0;
         margin-top: 80px;
+    }
+
+    .header-bottom>ul>li>a {
+        display: flex;
+    }
+
+    .header-bottom>ul>li {
+        position: static;
+    }
+
+    .nav-drop-right,
+    .nav-drop-sep {
+        display: none;
+    }
+
+    .nav-drop {
+        background-color: #172a55;
+        width: 100%;
+        min-height: 100vh;
+        inset: 0;
+        clip-path: inset(0 0 0 0);
+        flex-direction: column;
+        justify-content: start;
+        transform: translateX(-200%);
+        gap: 20px;
+    }
+
+    .nav-drop.show {
+        clip-path: inset(0);
+        transform: translateX(0%);
+    }
+
+    .header-bottom>ul>li:hover .nav-drop {
+        clip-path: inset(0 0 0 0);
+        padding: 0;
+        padding-left: 40px;
+    }
+
+    .nav-drop-left ul li a {
+        color: #fff;
+    }
+
+    .nav-drop-bread {
+        display: flex;
+        align-items: center;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 21px;
+        letter-spacing: 2px;
+        color: #7A7A7A;
+        text-transform: uppercase;
+        background-color: #fff;
+        padding: 12px 30px;
+        gap: 4px;
+        margin-left: -40px;
+        width: 120%;
+    }
+
+    .mega-menu .nav-drop-left {
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    .nav-drop-left-list{
+        width: 45%;
+    }
+    .nav-drop-left-list ul {
+        gap: 15px;
+    }
+    .mega-menu ul li a::after {
+        background-color: #fff;
+    }
+    .mega-menu .nav-drop-left {
+        gap: 40px;
+    }
+    .nav-drop-left-list:nth-child(1) ul{
+        margin-top: 0;
+    }
+    .nav-drop-left-list:nth-child(1){
+        order: 5;
+    }
+    .nav-drop-left-list:nth-child(2){
+        order: 4;
+    }
+    .nav-drop-left-list:nth-child(3){
+        order: 3;
+    }
+    .nav-drop-left-list:nth-child(4){
+        order: 2;
+    }
+    .nav-drop-left-list:nth-child(5){
+        order: 1;
     }
 }
 

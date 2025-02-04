@@ -1131,7 +1131,7 @@ Page CSS
 }
 
 .partner-item .partner-item-img img {
-    transition: all 0.4s ease;
+    transition: all 0.6s ease;
 }
 
 .partner-item:hover .partner-item-img img {
@@ -7798,6 +7798,10 @@ select#flag-dropdown {
 /* Banner section */
 
 /* Partner section */
+.partner-section .testimonial-section-filter ul {
+    padding-bottom: 20px;
+}
+
 .partner-section .testimonial-section-filter ul li button {
     font-size: 12px;
     font-weight: 800;
@@ -7810,7 +7814,9 @@ select#flag-dropdown {
     text-transform: uppercase;
     cursor: pointer;
     position: relative;
+    white-space: nowrap;
 }
+
 .partner-section .testimonial-section-filter ul li button::before {
     content: '';
     width: 0;
@@ -7825,6 +7831,7 @@ select#flag-dropdown {
 .partner-section .testimonial-section-filter ul li button:hover {
     color: #172A55;
 }
+
 .partner-section .testimonial-section-filter ul li button:hover::before {
     width: 100%;
 }
@@ -7874,6 +7881,7 @@ select#flag-dropdown {
 .partner-section .testimonial-section-filter ul li button.active {
     color: #172A55;
 }
+
 .partner-section .testimonial-section-filter ul li button.active::before {
     width: 100%;
 }
@@ -8601,6 +8609,10 @@ section.about-banner.partner-banner {
     text-align: center;
 }
 
+#quiz-result {
+    display: none;
+}
+
 #back {
     background-color: transparent;
     border: 1px solid #172A55;
@@ -8674,6 +8686,9 @@ section.about-banner.partner-banner {
     display: flex;
     align-items: center;
     gap: 15px;
+    white-space: nowrap;
+    font-size: 18px;
+    line-height: 25.2px;    
 }
 
 .selector-option::before {
@@ -8762,4 +8777,13 @@ section.about-banner.partner-banner {
     display: flex;
     flex-direction: column;
     gap: 45px;
+}
+
+.quiz-result .text {
+    max-width: 55ch;
+    margin-top: 15px;
+}
+
+.quiz-result .partner-grid {
+    margin-top: 40px;
 }

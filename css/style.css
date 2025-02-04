@@ -7798,17 +7798,35 @@ select#flag-dropdown {
 /* Banner section */
 
 /* Partner section */
-.partner-section .testimonial-section-filter ul li a {
+.partner-section .testimonial-section-filter ul li button {
     font-size: 12px;
     font-weight: 800;
     line-height: 16.8px;
     letter-spacing: 4px;
     color: var(--desc);
     transition: all .4s ease;
+    background-color: transparent;
+    border: none;
+    text-transform: uppercase;
+    cursor: pointer;
+    position: relative;
+}
+.partner-section .testimonial-section-filter ul li button::before {
+    content: '';
+    width: 0;
+    height: 1px;
+    background-color: #172A55;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    transition: all .4s ease;
 }
 
-.partner-section .testimonial-section-filter ul li a:hover {
+.partner-section .testimonial-section-filter ul li button:hover {
     color: #172A55;
+}
+.partner-section .testimonial-section-filter ul li button:hover::before {
+    width: 100%;
 }
 
 .partner-section-bottom {
@@ -7850,6 +7868,43 @@ select#flag-dropdown {
 
 .partner-card:hover img {
     transform: scale(1.05);
+}
+
+/* Create an active/current tablink class */
+.partner-section .testimonial-section-filter ul li button.active {
+    color: #172A55;
+}
+.partner-section .testimonial-section-filter ul li button.active::before {
+    width: 100%;
+}
+
+/* Style the tab content */
+.partner-section .tabcontent {
+    display: none;
+    padding: 6px 12px;
+    -webkit-animation: fadeEffect 1s;
+    animation: fadeEffect 1s;
+}
+
+/* Fade in tabs */
+@-webkit-keyframes fadeEffect {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeEffect {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
 }
 
 /* Partner section */
@@ -8502,26 +8557,43 @@ section.about-banner.partner-banner {
 
 .quiz-container {
     width: 100%;
-    margin: 50px auto;
-    overflow: hidden;
+    margin: 100px auto;
+    /* overflow: hidden; */
+    position: relative;
 }
 
 .progress-bar {
     width: 100%;
     height: auto;
     position: relative;
+    height: 7px;
+    background: #cc922f80;
 }
 
 .progress {
-    height: 7px;
-    background: #CC922F;
     width: 0;
     transition: width 0.3s ease;
+    position: relative;
+}
+
+.progress::before {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: -10px;
+    width: 38px;
+    height: 30px;
+    background: url('../images/Matchmaker/progress.svg');
+}
+
+.progress-no {
+    padding-top: 20px;
+    display: flex;
+    justify-content: end;
 }
 
 .quiz-sections {
-    padding: 20px;
-    margin-top: 80px;
+    margin-top: 60px;
 }
 
 .quiz-step {
@@ -8541,6 +8613,10 @@ section.about-banner.partner-banner {
     color: #fff;
 }
 
+#next {
+    border: 1px solid #172A55;
+}
+
 #next:hover {
     background-color: transparent;
     border: 1px solid #172A55;
@@ -8550,7 +8626,10 @@ section.about-banner.partner-banner {
 .quiz-nav {
     display: flex;
     justify-content: space-between;
-    margin-top: -60px;
+    /* margin-top: -60px; */
+    position: absolute;
+    bottom: 0;
+    width: 100%;
 }
 
 .quiz-nav button {
@@ -8581,7 +8660,9 @@ section.about-banner.partner-banner {
     display: flex;
     justify-content: center;
     gap: 75px;
+    row-gap: 40px;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 .selector-option {
@@ -8610,7 +8691,9 @@ section.about-banner.partner-banner {
 }
 
 .quiz-step-picker {
+    margin: 0 auto;
     margin-top: 70px;
+    max-width: 780px;
 }
 
 .quiz-step-image {
@@ -8669,6 +8752,14 @@ section.about-banner.partner-banner {
     font-size: 22px;
     color: #000;
 }
-.btn.increase{
+
+.btn.increase {
     transform: rotate(180deg);
+}
+
+.quiz-step-select-wrap {
+    margin-top: 65px;
+    display: flex;
+    flex-direction: column;
+    gap: 45px;
 }

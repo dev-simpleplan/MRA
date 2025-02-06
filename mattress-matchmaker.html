@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="icon" href="images/favicon.png" type="image/gif" sizes="16x16" />
-    <title>MRA | Home</title>
+    <title>MRA | Mattress Matchmaker</title>
 
     <!-- CSS Starts-->
     <link rel="stylesheet" href="https://unpkg.com/lenis@1.1.18/dist/lenis.css">
@@ -405,7 +405,7 @@
                     <div class="quiz-container">
                         <div class="progress-bar" id="progress-bar">
                             <div class="progress" id="progress"></div>
-                            <div class="progress-no" id="progress-no"><span>1</span>/10</div>
+                            <div class="progress-no" id="progress-no"><span id="total-quiz-prog">1</span>/ <span id="total-quiz-steps">10</span></div>
                         </div>
 
                         <div class="quiz-sections">
@@ -1007,114 +1007,8 @@
         <script src="js/custom.js"></script>
 
 
+
         <!-- <script>
-            // Get references to elements
-            const steps = document.querySelectorAll(".quiz-step");
-            const progressEl = document.getElementById("progress");
-            const backBtn = document.getElementById("back");
-            const nextBtn = document.getElementById("next");
-            const progressNo = document.getElementById("progress-no").querySelector("span");
-
-            let currentStep = 0;
-
-            // Function to show the current step
-            function showStep() {
-                steps.forEach((step, index) => {
-                    step.style.display = index === currentStep ? "block" : "none";
-                });
-
-                // Update progress bar
-                progressEl.style.width = `${((currentStep + 1) / steps.length) * 100}%`;
-
-                // Update step number
-                progressNo.textContent = currentStep + 1;
-
-                // Enable/disable navigation buttons
-                backBtn.disabled = currentStep === 0;
-                nextBtn.textContent = currentStep === steps.length - 1 ? "Finish" : "Proceed";
-            }
-
-            // Function to check if current step requires option selection
-            function requiresSelection() {
-                return steps[currentStep].querySelector(".selector-option") !== null;
-            }
-
-            // Function to validate if an option is selected
-            function isOptionSelected() {
-                const currentStepElement = steps[currentStep];
-                const selectedOption = currentStepElement.querySelector(".selector-option.active");
-                return selectedOption !== null;
-            }
-
-            // Event listeners for navigation
-            backBtn.addEventListener("click", () => {
-                if (currentStep > 0) {
-                    currentStep--;
-                    showStep();
-                }
-            });
-
-            nextBtn.addEventListener("click", () => {
-                if (requiresSelection() && !isOptionSelected()) {
-                    alert("Please select an option before proceeding.");
-                    return;
-                }
-
-                if (currentStep < steps.length - 1) {
-                    currentStep++;
-                    showStep();
-                } else {
-                    alert("Quiz Completed!");
-                    // Optionally navigate elsewhere or reset quiz
-                }
-            });
-
-            // Initialize the first step
-            showStep();
-
-            // Selector option click event
-            document.querySelectorAll('.selector-option').forEach(button => {
-                button.addEventListener('click', () => {
-                    // Ensure only one button has the "active" class in the current step
-                    const parentStep = button.closest(".quiz-step");
-                    parentStep.querySelectorAll('.selector-option').forEach(btn => btn.classList.remove('active'));
-                    button.classList.add('active');
-                });
-            });
-
-            // Ensure one option is always checked by default if present
-            steps.forEach(step => {
-                const defaultActive = step.querySelector('.selector-option.active');
-                if (defaultActive) {
-                    defaultActive.classList.add('active');
-                }
-            });
-
-            // Value Increment/Decrement Functionality
-            document.querySelectorAll('.control-group').forEach(group => {
-                const valueElement = group.querySelector('.value');
-                let value = parseInt(valueElement.textContent);
-
-                const isAge = valueElement.textContent.includes("Years");
-                const unit = isAge ? "Years" : "Kg";
-
-                group.querySelector('.increase').addEventListener('click', () => {
-                    value++;
-                    valueElement.textContent = `${value} ${unit}`;
-                });
-
-                group.querySelector('.decrease').addEventListener('click', () => {
-                    if (value > 0) {
-                        value--;
-                        valueElement.textContent = `${value} ${unit}`;
-                    }
-                });
-            });
-
-
-
-        </script> -->
-        <script>
             // Get references to elements
             const steps = document.querySelectorAll(".quiz-step");
             const progressEl = document.getElementById("progress");
@@ -1224,7 +1118,131 @@
                 });
             });
 
+        </script> -->
+
+        <script>
+            // Get references to elements
+            const steps = document.querySelectorAll(".quiz-step");
+            const progressEl = document.getElementById("progress");
+            const backBtn = document.getElementById("back");
+            const nextBtn = document.getElementById("next");
+            const progressNo = document.getElementById("total-quiz-prog");
+            const progressStep = document.getElementById("total-quiz-steps");
+            const stepResult = document.getElementById("quiz-result");
+            const stepBar = document.getElementById("progress-bar");
+
+            let currentStep = 0;
+
+            // Function to show the current step
+            function showStep() {
+                steps.forEach((step, index) => {
+                    step.style.display = index === currentStep ? "block" : "none";
+                });
+
+                // Update progress bar
+                progressEl.style.width = `${(currentStep / (steps.length - 1)) * 100}%`;
+
+                // Update step number
+                progressNo.textContent = currentStep + 1;
+                progressStep.textContent = steps.length;
+
+
+
+                // Enable/disable navigation buttons
+                if (currentStep === 0) {
+                    backBtn.disabled = true;
+                    backBtn.style.cursor = "not-allowed";
+                } else {
+                    backBtn.disabled = false;
+                    backBtn.style.cursor = "pointer";
+                }
+
+                nextBtn.style.display = currentStep === steps.length ? "none" : "inline-block";
+            }
+
+            // Function to check if current step requires option selection
+            function requiresSelection() {
+                return steps[currentStep].querySelector(".selector-option") !== null;
+            }
+
+            // Function to validate if an option is selected
+            function isOptionSelected() {
+                const currentStepElement = steps[currentStep];
+                const selectedOption = currentStepElement.querySelector(".selector-option.active");
+                return selectedOption !== null;
+            }
+
+            // Event listeners for navigation
+            backBtn.addEventListener("click", () => {
+                if (currentStep > 0) {
+                    currentStep--;
+                    showStep();
+                }
+            });
+
+            nextBtn.addEventListener("click", () => {
+                if (requiresSelection() && !isOptionSelected()) {
+                    alert("Please select an option before proceeding.");
+                    return;
+                }
+
+                if (currentStep < steps.length - 1) {
+                    currentStep++;
+                    showStep();
+                } else {
+                    // Hide all quiz steps and buttons, show result section
+                    steps.forEach(step => step.style.display = "none");
+                    backBtn.style.display = "none";
+                    nextBtn.style.display = "none";
+                    stepBar.style.display = "none";
+                    stepResult.style.display = "block";
+                }
+            });
+
+            // Initialize the first step
+            showStep();
+
+            // Selector option click event
+            document.querySelectorAll('.selector-option').forEach(button => {
+                button.addEventListener('click', () => {
+                    // Ensure only one button has the "active" class in the current step
+                    const parentStep = button.closest(".quiz-step");
+                    parentStep.querySelectorAll('.selector-option').forEach(btn => btn.classList.remove('active'));
+                    button.classList.add('active');
+                });
+            });
+
+            // Ensure one option is always checked by default if present
+            steps.forEach(step => {
+                const defaultActive = step.querySelector('.selector-option.active');
+                if (defaultActive) {
+                    defaultActive.classList.add('active');
+                }
+            });
+
+            // Value Increment/Decrement Functionality
+            document.querySelectorAll('.control-group').forEach(group => {
+                const valueElement = group.querySelector('.value');
+                let value = parseInt(valueElement.textContent);
+
+                const isAge = valueElement.textContent.includes("Years");
+                const unit = isAge ? "Years" : "Kg";
+
+                group.querySelector('.increase').addEventListener('click', () => {
+                    value++;
+                    valueElement.textContent = `${value} ${unit}`;
+                });
+
+                group.querySelector('.decrease').addEventListener('click', () => {
+                    if (value > 0) {
+                        value--;
+                        valueElement.textContent = `${value} ${unit}`;
+                    }
+                });
+            });
+
         </script>
+
 
 
 </body>

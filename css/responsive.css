@@ -2586,7 +2586,7 @@
 
     .trouble-shoot-grid {
         display: flex;
-        gap: 0;
+        gap: 30px;
     }
 
     .trouble-shoot-middle {
@@ -2599,6 +2599,9 @@
 
     .trouble-shoot-bottom {
         margin-top: 30px;
+        overflow: hidden;
+        overflow-x: auto;
+        padding-bottom: 20px;
     }
 
     .trouble-shoot .splide__arrows {
@@ -2647,6 +2650,26 @@
 
     .science-left-bottom.mob {
         display: block;
+    }
+
+    .trouble-shoot-card {
+        min-width: 400px;
+    }
+
+    .blog-inner-content {
+        flex-direction: column;
+    }
+
+    .blog-inner-left {
+        max-width: 100%;
+    }
+
+    .blog-inner-right {
+        max-width: 100%;
+    }
+
+    .blog-inner-content .blog-inner-right img {
+        aspect-ratio: 5/3;
     }
 }
 
@@ -4005,8 +4028,42 @@
         font-size: 16px;
         align-self: flex-start;
     }
-    .selector-option::before{
+
+    .selector-option::before {
         flex-shrink: 0;
+    }
+
+    .blog-inner h1 {
+        font-size: 40px;
+    }
+
+    .blog-inner h2 {
+        font-size: 34px;
+    }
+
+    .blog-inner h3 {
+        font-size: 28px;
+    }
+
+    .blog-inner h4 {
+        font-size: 24px;
+    }
+
+    .blog-inner h5 {
+        font-size: 20px;
+    }
+
+    .blog-inner h6 {
+        font-size: 18px;
+    }
+
+    .blog-inner {
+        margin-top: 50px;
+    }
+
+    .blog-inner-banner .testimonial-banner-text h1 {
+        font-size: 32px;
+        line-height: 100%;
     }
 }
 
@@ -4395,6 +4452,14 @@
         line-height: 35.1px;
     }
 
+    .blog-time {
+        gap: 5px;
+        flex-direction: column;
+        margin-bottom: 30px;
+    }
+    .blog-inner-content .blog-inner-right img {
+        aspect-ratio: 5 / 4;
+    }
 }
 
 @media only screen and (max-width: 475px) {
@@ -4480,6 +4545,10 @@
     .quiz-step-age {
         display: flex;
         flex-direction: column;
+    }
+
+    .trouble-shoot-card {
+        min-width: 280px;
     }
 }
 

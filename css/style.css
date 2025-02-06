@@ -8415,7 +8415,7 @@ section.about-banner.partner-banner {
 }
 
 
-.trouble-shoot-middle ul li a {
+.trouble-shoot-middle ul li button {
     font-size: 14px;
     text-transform: uppercase;
     font-size: 14px;
@@ -8424,17 +8424,29 @@ section.about-banner.partner-banner {
     color: #858585;
     position: relative;
     transition: all .3s ease;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-family: var(--lato);
 }
 
-.trouble-shoot-middle ul li a:hover {
+.trouble-shoot-middle ul li button:hover {
     color: #172A55;
 }
 
-.trouble-shoot-middle ul li a:hover::before {
+.trouble-shoot-middle ul li button.active {
+    color: #172A55;
+}
+
+.trouble-shoot-middle ul li button:hover::before {
     width: 100%;
 }
 
-.trouble-shoot-middle ul li a::before {
+.trouble-shoot-middle ul li button.active::before {
+    width: 100%;
+}
+
+.trouble-shoot-middle ul li button::before {
     content: '';
     position: absolute;
     bottom: -2px;
@@ -8534,6 +8546,14 @@ section.about-banner.partner-banner {
     display: none;
 }
 
+.trouble-shoot .tabcontent {
+    display: none;
+    -webkit-animation: fadeEffect 1s;
+    animation: fadeEffect 1s;
+}
+
+
+
 /* Troubleshoot page */
 
 
@@ -8587,7 +8607,7 @@ section.about-banner.partner-banner {
 .progress::before {
     content: '';
     position: absolute;
-    right: 0;
+    right: -10px;
     top: -10px;
     width: 38px;
     height: 30px;
@@ -8688,7 +8708,7 @@ section.about-banner.partner-banner {
     gap: 15px;
     white-space: nowrap;
     font-size: 18px;
-    line-height: 25.2px;    
+    line-height: 25.2px;
 }
 
 .selector-option::before {
@@ -8787,3 +8807,171 @@ section.about-banner.partner-banner {
 .quiz-result .partner-grid {
     margin-top: 40px;
 }
+
+/* Blog-inner page */
+
+/* banner */
+.blog-inner-banner::before {
+    display: none;
+}
+
+.blog-inner-banner .testimonial-banner-bg::before {
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.45) 8.81%, rgba(0, 0, 0, 0) 100%);
+}
+
+.blog-inner-banner .testimonial-banner-text h1 {
+    font-size: 52px;
+    font-weight: 400;
+    line-height: 54.6px;
+    letter-spacing: -0.01em;
+    text-align: center;
+}
+
+.blog-inner-banner .testimonial-banner-text {
+    max-width: 110ch;
+}
+
+.blog-time {
+    display: flex;
+    color: #fff;
+    gap: 15px;
+    font-size: 12px;
+    font-weight: 800;
+    line-height: 16.8px;
+    letter-spacing: 4px;
+    text-align: center;
+    text-transform: uppercase;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.blog-inner h1 {
+    font-size: 48px;
+    letter-spacing: -0.01em;
+    color: var(--head);
+}
+
+.blog-inner h2 {
+    font-size: 40px;
+    letter-spacing: -0.01em;
+    color: var(--head);
+}
+
+.blog-inner h3 {
+    font-size: 32px;
+    letter-spacing: -0.01em;
+    color: var(--head);
+}
+
+.blog-inner h4 {
+    font-size: 28px;
+    letter-spacing: -0.01em;
+    color: var(--head);
+}
+
+.blog-inner h5 {
+    font-size: 24px;
+    letter-spacing: -0.01em;
+    color: var(--head);
+}
+
+.blog-inner h6 {
+    font-size: 20px;
+    letter-spacing: -0.01em;
+    color: var(--head);
+}
+
+.blog-inner-content p {
+    /* margin-top: 35px; */
+}
+.blog-inner-content ul{
+    list-style: disc;
+}
+.blog-inner-content ol{
+    list-style: number;
+}
+.blog-inner-content ul , .blog-inner-content ol{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    color: var(--desc);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    padding-left: 25px;
+}
+
+.blog-inner-left {
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+    max-width: 60ch;
+}
+
+.blog-inner-right {
+    max-width: 560px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 42px;
+}
+
+.blog-inner-right br {
+    margin-top: 42px;
+}
+
+.blog-inner-content .blog-inner-right img {
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 5/4;
+    object-fit: cover;
+}
+
+.blog-inner-content {
+    display: flex;
+    justify-content: space-between;
+    gap: 100px;
+}
+
+.blog-inner-share {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+    margin-top: 52px;
+}
+
+.blog-inner-share-title {
+    font-size: 12px;
+    font-weight: 800;
+    line-height: 16.8px;
+    letter-spacing: 4px;
+    color: #172A55;
+    text-transform: uppercase;
+}
+
+.blog-inner-share-icon {
+    display: flex;
+    gap: 24px;
+    align-items: center;
+}
+
+.blog-inner-share-icon a {
+    width: 24px;
+    height: 24px;
+    transition: all .4s ease;
+}
+
+.blog-inner-share-icon a img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.blog-inner-share-icon a:hover {
+    transform: translateY(-5px);
+}
+
+/* banner */
+
+/* Blog-inner page */

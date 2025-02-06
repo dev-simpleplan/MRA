@@ -593,52 +593,67 @@
         margin-left: -40px;
         width: 120%;
     }
-    .mega-menu{
+
+    .mega-menu {
         padding-bottom: 90px;
     }
-    .header-bottom>ul>li:hover .nav-drop{
+
+    .header-bottom>ul>li:hover .nav-drop {
         padding-bottom: 90px;
     }
+
     .mega-menu .nav-drop-left {
         justify-content: space-between;
         flex-wrap: wrap;
         overflow: hidden;
         overflow-y: auto;
     }
-    .nav-drop-left-list{
+
+    .nav-drop-left-list {
         width: 45%;
     }
+
     .nav-drop-left-list ul {
         gap: 15px;
     }
+
     .mega-menu ul li a::after {
         background-color: #fff;
     }
+
     .mega-menu .nav-drop-left {
         gap: 40px;
     }
-    .nav-drop-left-list:nth-child(1) ul{
+
+    .nav-drop-left-list:nth-child(1) ul {
         margin-top: 0;
     }
-    .nav-drop-left-list:nth-child(1){
+
+    .nav-drop-left-list:nth-child(1) {
         order: 5;
     }
-    .nav-drop-left-list:nth-child(2){
+
+    .nav-drop-left-list:nth-child(2) {
         order: 4;
     }
-    .nav-drop-left-list:nth-child(3){
+
+    .nav-drop-left-list:nth-child(3) {
         order: 3;
     }
-    .nav-drop-left-list:nth-child(4){
+
+    .nav-drop-left-list:nth-child(4) {
         order: 2;
     }
-    .nav-drop-left-list:nth-child(5){
+
+    .nav-drop-left-list:nth-child(5) {
         order: 1;
     }
-    .overflow-hidden{
+
+    .overflow-hidden {
         overflow: unset;
     }
-    .nav-drop-left>ul>li>a::after{
+
+    .nav-drop-left>ul>li>a::after {
         background-color: #fff;
     }
 }
@@ -2906,6 +2921,7 @@
         margin-bottom: 30px;
     }
 
+
     .value-content-bottom {
         max-width: 318px;
         padding: 30px 20px;
@@ -3959,6 +3975,39 @@
     .operation .choice-grid-wrap {
         height: auto;
     }
+
+    .quiz-nav {
+        position: static;
+        margin-top: 30px;
+    }
+
+    .quiz-step-select {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .quiz-container {
+        margin-top: 150px;
+    }
+
+    .quiz-step-picker {
+        max-width: 600px;
+    }
+
+    .quiz-sections .value {
+        margin: 0;
+    }
+
+    .selector-option {
+        align-items: flex-start;
+        text-align: left;
+        white-space: wrap;
+        font-size: 16px;
+        align-self: flex-start;
+    }
+    .selector-option::before{
+        flex-shrink: 0;
+    }
 }
 
 
@@ -4422,6 +4471,15 @@
     .boat-caravan-banner .construction-banner-content p {
         font-size: 14px;
         line-height: 19px;
+    }
+
+    .quiz-step-select {
+        column-gap: 15px;
+    }
+
+    .quiz-step-age {
+        display: flex;
+        flex-direction: column;
     }
 }
 

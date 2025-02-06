@@ -403,7 +403,7 @@
             <section class="quiz">
                 <div class="container">
                     <div class="quiz-container">
-                        <div class="progress-bar">
+                        <div class="progress-bar" id="progress-bar">
                             <div class="progress" id="progress"></div>
                             <div class="progress-no" id="progress-no"><span>1</span>/10</div>
                         </div>
@@ -454,7 +454,7 @@
                                     <h2 class="tiny">Pick a suitable age & weight for yourself</h2>
                                 </div>
                                 <div class="quiz-step-picker">
-                                    <div class="quiz-step-select">
+                                    <div class="quiz-step-select quiz-step-age">
                                         <!-- Age Selector -->
                                         <div class="control-group">
                                             <div class="control">
@@ -597,7 +597,93 @@
                             </div>
                             <!-- Additional steps can go here -->
                         </div>
-
+                        <div class="quiz-result" id="quiz-result">
+                            <div class="partner">
+                                <div class="partner-wrap">
+                                    <div class="partner-heading heading">
+                                        <div class="label">mattress Matchmaker</div>
+                                        <h2 class="slide-in-text">Recommendations</h2>
+                                    </div>
+                                    <div class="partner-text text text-animate">
+                                        <p class="slide-in-text">Based on what choices you have made, her are the
+                                            mattress recommendations from us. We hope they will suit your
+                                            preferences.
+                                        </p>
+                                    </div>
+                                    <div class="partner-grid text-animate">
+                                        <div class="partner-item fade-in-text">
+                                            <a href="#!">
+                                                <div class="partner-item-overlay"></div>
+                                                <div class="partner-item-img">
+                                                    <picture>
+                                                        <source media="(max-width:991px)"
+                                                            srcset="images/Homepage/partner1.png" />
+                                                        <source media="(max-width:767px)"
+                                                            srcset="images/Homepage/partner1.png" />
+                                                        <img src="images/Homepage/partner1.png" alt="Flowers" />
+                                                    </picture>
+                                                </div>
+                                                <div class="partner-item-content">
+                                                    <h3>Therapedic</h3>
+                                                    <p class="white small">
+                                                        "The mattress sleeping the world" since 1957. They hold
+                                                        the coveted Mattress Design Award for engineering
+                                                        innovation, quality, and value.
+                                                    </p>
+                                                    <p class="custom-button gold">Explore Products</p>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="partner-item fade-in-text">
+                                            <a href="#!">
+                                                <div class="partner-item-overlay"></div>
+                                                <div class="partner-item-img">
+                                                    <picture>
+                                                        <source media="(max-width:991px)"
+                                                            srcset="images/Homepage/partner2.png" />
+                                                        <source media="(max-width:767px)"
+                                                            srcset="images/Homepage/partner2.png" />
+                                                        <img src="images/Homepage/partner2.png" alt="Flowers" />
+                                                    </picture>
+                                                </div>
+                                                <div class="partner-item-content">
+                                                    <h3>Hypnos</h3>
+                                                    <p class="white small">
+                                                        Hypnos has been crafting "the most comfortable beds in
+                                                        the world" for 120 years. Their customers include the
+                                                        British royal family!
+                                                    </p>
+                                                    <p class="custom-button gold">Explore Products</p>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="partner-item fade-in-text">
+                                            <a href="#!">
+                                                <div class="partner-item-overlay"></div>
+                                                <div class="partner-item-img">
+                                                    <picture>
+                                                        <source media="(max-width:991px)"
+                                                            srcset="images/Homepage/partner3.png" />
+                                                        <source media="(max-width:767px)"
+                                                            srcset="images/Homepage/partner3.png" />
+                                                        <img src="images/Homepage/partner3.png" alt="Flowers" />
+                                                    </picture>
+                                                </div>
+                                                <div class="partner-item-content">
+                                                    <h3>Tommy Bahamas</h3>
+                                                    <p class="white small">
+                                                        Life is "one long weekend" with these mattresses,
+                                                        designed to captivate a feeling of relaxation and island
+                                                        living.
+                                                    </p>
+                                                    <p class="custom-button gold">Explore Products</p>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                         <div class="quiz-nav">
                             <button id="back" class="custom-button" disabled>Go Back</button>
                             <button id="next" class="custom-button blue">Proceed</button>
@@ -920,87 +1006,8 @@
         <script src="js/SplitText.min.js"></script>
         <script src="js/custom.js"></script>
 
+
         <!-- <script>
-            // Get references to elements
-            const steps = document.querySelectorAll(".quiz-step");
-            const progressEl = document.getElementById("progress");
-            const backBtn = document.getElementById("back");
-            const nextBtn = document.getElementById("next");
-
-            let currentStep = 0;
-
-            // Function to show the current step
-            function showStep() {
-                steps.forEach((step, index) => {
-                    step.style.display = index === currentStep ? "block" : "none";
-                });
-
-                // Update progress bar
-                progressEl.style.width = `${((currentStep + 1) / steps.length) * 100}%`;
-
-                // Enable/disable navigation buttons
-                backBtn.disabled = currentStep === 0;
-                nextBtn.textContent = currentStep === steps.length - 1 ? "Finish" : "Proceed";
-            }
-
-            // Event listeners for navigation
-            backBtn.addEventListener("click", () => {
-                if (currentStep > 0) {
-                    currentStep--;
-                    showStep();
-                }
-            });
-
-            nextBtn.addEventListener("click", () => {
-                if (currentStep < steps.length - 1) {
-                    currentStep++;
-                    showStep();
-                } else {
-                    alert("Quiz Completed!");
-                    // Optionally navigate elsewhere or reset quiz
-                }
-            });
-
-            // Initialize the first step
-            showStep();
-        </script>
-        <script>
-            document.querySelectorAll('.selector-option').forEach(button => {
-                button.addEventListener('click', () => {
-                    // Ensure only one button has the "active" class
-                    document.querySelectorAll('.selector-option').forEach(btn => btn.classList.remove('active'));
-                    button.classList.add('active');
-                });
-            });
-
-            // Ensure one option is always checked by default
-            document.querySelector('.selector-option.active')?.classList.add('active');
-        </script>
-
-        <script>
-            document.querySelectorAll('.control-group').forEach(group => {
-                const valueElement = group.querySelector('.value');
-                let value = parseInt(valueElement.textContent);
-
-                const isAge = valueElement.textContent.includes("Years");
-                const unit = isAge ? "Years" : "Kg";
-
-                group.querySelector('.increase').addEventListener('click', () => {
-                    value++;
-                    valueElement.textContent = `${value} ${unit}`;
-                });
-
-                group.querySelector('.decrease').addEventListener('click', () => {
-                    if (value > 0) {
-                        value--;
-                        valueElement.textContent = `${value} ${unit}`;
-                    }
-                });
-            });
-
-        </script> -->
-
-        <script>
             // Get references to elements
             const steps = document.querySelectorAll(".quiz-step");
             const progressEl = document.getElementById("progress");
@@ -1106,7 +1113,120 @@
 
 
 
+        </script> -->
+        <script>
+            // Get references to elements
+            const steps = document.querySelectorAll(".quiz-step");
+            const progressEl = document.getElementById("progress");
+            const backBtn = document.getElementById("back");
+            const nextBtn = document.getElementById("next");
+            const progressNo = document.getElementById("progress-no").querySelector("span");
+            const stepResult = document.getElementById("quiz-result");
+            const stepBar = document.getElementById("progress-bar");
+
+            let currentStep = 0;
+
+            // Function to show the current step
+            function showStep() {
+                steps.forEach((step, index) => {
+                    step.style.display = index === currentStep ? "block" : "none";
+                });
+
+                // Update progress bar
+                progressEl.style.width = `${((currentStep + 1) / steps.length) * 100}%`;
+
+                // Update step number
+                progressNo.textContent = currentStep + 1;
+
+                // Enable/disable navigation buttons
+                backBtn.style.display = currentStep === steps.length ? "none" : "inline-block";
+                nextBtn.style.display = currentStep === steps.length ? "none" : "inline-block";
+            }
+
+            // Function to check if current step requires option selection
+            function requiresSelection() {
+                return steps[currentStep].querySelector(".selector-option") !== null;
+            }
+
+            // Function to validate if an option is selected
+            function isOptionSelected() {
+                const currentStepElement = steps[currentStep];
+                const selectedOption = currentStepElement.querySelector(".selector-option.active");
+                return selectedOption !== null;
+            }
+
+            // Event listeners for navigation
+            backBtn.addEventListener("click", () => {
+                if (currentStep > 0) {
+                    currentStep--;
+                    showStep();
+                }
+            });
+
+            nextBtn.addEventListener("click", () => {
+                if (requiresSelection() && !isOptionSelected()) {
+                    alert("Please select an option before proceeding.");
+                    return;
+                }
+
+                if (currentStep < steps.length - 1) {
+                    currentStep++;
+                    showStep();
+                } else {
+                    // Hide all quiz steps and buttons, show result section
+                    steps.forEach(step => step.style.display = "none");
+                    backBtn.style.display = "none";
+                    nextBtn.style.display = "none";
+                    stepBar.style.display = "none";
+                    stepResult.style.display = "block";
+                }
+            });
+
+            // Initialize the first step
+            showStep();
+
+            // Selector option click event
+            document.querySelectorAll('.selector-option').forEach(button => {
+                button.addEventListener('click', () => {
+                    // Ensure only one button has the "active" class in the current step
+                    const parentStep = button.closest(".quiz-step");
+                    parentStep.querySelectorAll('.selector-option').forEach(btn => btn.classList.remove('active'));
+                    button.classList.add('active');
+                });
+            });
+
+            // Ensure one option is always checked by default if present
+            steps.forEach(step => {
+                const defaultActive = step.querySelector('.selector-option.active');
+                if (defaultActive) {
+                    defaultActive.classList.add('active');
+                }
+            });
+
+            // Value Increment/Decrement Functionality
+            document.querySelectorAll('.control-group').forEach(group => {
+                const valueElement = group.querySelector('.value');
+                let value = parseInt(valueElement.textContent);
+
+                const isAge = valueElement.textContent.includes("Years");
+                const unit = isAge ? "Years" : "Kg";
+
+                group.querySelector('.increase').addEventListener('click', () => {
+                    value++;
+                    valueElement.textContent = `${value} ${unit}`;
+                });
+
+                group.querySelector('.decrease').addEventListener('click', () => {
+                    if (value > 0) {
+                        value--;
+                        valueElement.textContent = `${value} ${unit}`;
+                    }
+                });
+            });
+
         </script>
+
+
 </body>
 <!-- Body Ends-->
 

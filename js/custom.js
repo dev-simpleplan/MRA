@@ -3,38 +3,9 @@
 // lenis initiate
 
 // navbar mobile
-// document.querySelectorAll(".header-bottom > ul > li").forEach((li) => {
-//   li.addEventListener("click", function (event) {
-//     event.stopPropagation();
 
-//     // Remove "show" class from all .nav-drop elements
-//     document.querySelectorAll(".header-bottom .nav-drop").forEach((drop) => {
-//       drop.classList.remove("show");
-//     });
 
-//     // Add "show" class to the .nav-drop inside the clicked li
-//     const navDrop = this.querySelector(".nav-drop");
-//     if (navDrop) {
-//       navDrop.classList.add("show");
-
-//       // Add event listener to .nav-drop-bread inside this li
-//       const navDropBread = navDrop.querySelector(".nav-drop-bread");
-//       if (navDropBread) {
-//         navDropBread.addEventListener("click", function (e) {
-//           e.stopPropagation();
-//           navDrop.classList.remove("show");
-//         });
-//       }
-//     }
-//   });
-// });
-
-// // Close dropdown when clicking outside
-// document.addEventListener("click", function () {
-//   document.querySelectorAll(".header-bottom .nav-drop").forEach((drop) => {
-//     drop.classList.remove("show");
-//   });
-// });
+// Close dropdown when clicking outside
 
 document.querySelectorAll(".header-bottom > ul > li").forEach((li) => {
   li.addEventListener("click", function (event) {
@@ -44,6 +15,12 @@ document.querySelectorAll(".header-bottom > ul > li").forEach((li) => {
     document.querySelectorAll(".header-bottom .nav-drop").forEach((drop) => {
       drop.classList.remove("show");
     });
+
+    // Remove "active" class from .main-wrapper
+    const mainWrapper = document.querySelector(".main-wrapper");
+    if (mainWrapper) {
+      mainWrapper.classList.remove("active");
+    }
 
     // Add "show" class to the .nav-drop inside the clicked li
     const navDrop = this.querySelector(".nav-drop");
@@ -58,6 +35,11 @@ document.querySelectorAll(".header-bottom > ul > li").forEach((li) => {
           e.stopPropagation();
           navDrop.classList.remove("show");
           toggleHeaderOverflow();
+
+          // Also remove "active" from .main-wrapper when closing dropdown
+          if (mainWrapper) {
+            mainWrapper.classList.remove("active");
+          }
         });
       }
     }
@@ -66,13 +48,22 @@ document.querySelectorAll(".header-bottom > ul > li").forEach((li) => {
   });
 });
 
+
 // Close dropdown when clicking outside
 document.addEventListener("click", function () {
   document.querySelectorAll(".header-bottom .nav-drop").forEach((drop) => {
     drop.classList.remove("show");
   });
+
+  // Remove "active" class from .main-wrapper when clicking outside
+  const mainWrapper = document.querySelector(".main-wrapper");
+  if (mainWrapper) {
+    mainWrapper.classList.remove("active");
+  }
+
   toggleHeaderOverflow();
 });
+
 
 // Function to toggle overflow-hidden on .header-bottom
 function toggleHeaderOverflow() {
@@ -225,6 +216,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const headerBottom = document.querySelector(".header-bottom");
   const header = document.querySelector("header"); // Select header regardless of class
   const body = document.body;
+  const main = document.querySelector(".main-wrapper")
 
   // Check if necessary elements exist
   if (!hamburgerIcon || !headerBottom || !body) {
@@ -246,6 +238,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     hamburgerIcon.classList.toggle("active", !isActive);
     body.style.overflow = isActive ? "" : "hidden"; // Enable/disable body scroll
+    main.classList.toggle("active", !isActive); 
   };
 
   // Event listener for the hamburger icon

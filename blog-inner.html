@@ -33,7 +33,7 @@
             <button class="custom-button white big-width" aria-label="search button">search</button>
         </div>
     </div>
-    <main role="main" data-scroll-container id="scroll-container">
+    <main class="main-wrapper" role="main" data-scroll-container id="scroll-container">
         <header class="">
             <div class="container-fluid">
                 <div class="header-wrap">
@@ -490,6 +490,121 @@
 
             <div class="spacer120"></div>
 
+            <!-- Similar blogs  -->
+            <section class="similar-blog">
+                <div class="container-fluid">
+                    <div class="similar-blog-inner">
+                        <div class="similar-blog-head">
+                            <div class="similar-blog-head-text">
+                                <div class="label">Our</div>
+                                <h2>related blogs</h2>
+                            </div>
+                            <div class="similar-blog-head-btn">
+                                <a href="#!" class="custom-button blue">Read More</a>
+                            </div>
+                        </div>
+                        <div class="similar-blog-grid">
+                            <div class="splide" role="group" aria-label="Splide Basic HTML Example">
+                                <div class="splide__arrows splide__arrows--ltr">
+                                    <button class="splide__arrow splide__arrow--prev" type="button"
+                                        aria-label="Previous slide" aria-controls="testimonial-slider-track"
+                                        disabled="">
+                                        <svg width="9" height="15" viewBox="0 0 9 15" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M1.64865 1.49219L7.64865 7.49219L1.64865 13.4922" stroke="white"
+                                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                            </path>
+                                        </svg>
+                                    </button>
+                                    <button class="splide__arrow splide__arrow--next" type="button"
+                                        aria-label="Next slide" aria-controls="testimonial-slider-track">
+                                        <svg width="9" height="15" viewBox="0 0 9 15" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M1.64865 1.49219L7.64865 7.49219L1.64865 13.4922" stroke="white"
+                                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                            </path>
+                                        </svg>
+                                    </button>
+                                </div>
+                                <div class="splide__track">
+                                    <div class="splide__list">
+                                        <div class="splide__slide">
+                                            <a href="#!">
+                                                <div class="trouble-shoot-card">
+                                                    <div class="trouble-shoot-card-img">
+                                                        <img src="images/blog-inner/sb1.png" alt="card-img">
+                                                    </div>
+                                                    <div class="trouble-shoot-card-text">
+                                                        <div class="blog-publish-date">
+                                                            21 October 2023. 04 mins. Read
+                                                        </div>
+                                                        <h5>Unlocking Tranquility: Delve into 'The Science of Sweet Dreams.</h5>
+                                                        <div class="trouble-shoot-card-text-wrap small">
+                                                            <p>Stay in the know with our News and Updates section, your
+                                                                go-to
+                                                                source for
+                                                                the latest happenings in the world of sleep. </p>
+                                                            <div class="blog-author">A micahel</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="splide__slide">
+                                            <a href="#!">
+                                                <div class="trouble-shoot-card">
+                                                    <div class="trouble-shoot-card-img">
+                                                        <img src="images/blog-inner/sb2.png" alt="card-img">
+                                                    </div>
+                                                    <div class="trouble-shoot-card-text">
+                                                        <div class="blog-publish-date">
+                                                            21 October 2023. 04 mins. Read
+                                                        </div>
+                                                        <h5>Unlocking Tranquility: Delve into 'The Science of Sweet Dreams.</h5>
+                                                        <div class="trouble-shoot-card-text-wrap small">
+                                                            <p>Stay in the know with our News and Updates section, your
+                                                                go-to
+                                                                source for
+                                                                the latest happenings in the world of sleep. </p>
+                                                            <div class="blog-author">A micahel</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="splide__slide">
+                                            <a href="#!">
+                                                <div class="trouble-shoot-card">
+                                                    <div class="trouble-shoot-card-img">
+                                                        <img src="images/troubleshoot/tsc1.png" alt="card-img">
+                                                    </div>
+                                                    <div class="trouble-shoot-card-text">
+                                                        <div class="blog-publish-date">
+                                                            21 October 2023. 04 mins. Read
+                                                        </div>
+                                                        <h5>Unlocking Tranquility: Delve into 'The Science of Sweet Dreams.</h5>
+                                                        <div class="trouble-shoot-card-text-wrap small">
+                                                            <p>Stay in the know with our News and Updates section, your
+                                                                go-to
+                                                                source for
+                                                                the latest happenings in the world of sleep. </p>
+                                                            <div class="blog-author">A micahel</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Similar blogs  -->
+
+            <div class="spacer120"></div>
+
             <!-- News letter -->
             <section class="newsletter">
                 <div class="container">
@@ -856,6 +971,25 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.1.0-rc.0/js/select2.min.js"></script>
     <script src="js/SplitText.min.js"></script>
     <script src="js/custom.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var splide = new Splide('.splide', {
+                gap: 43,
+                perPage: 3,
+                perMove: 1,
+                arrows: false,
+                breakpoints: {
+                    991: { perPage: 2.5, type: 'loop', arrows: true, },
+                    768: { perPage: 1.5, arrows: false },
+                    600: { perPage: 1 },
+                },
+            });
+
+            splide.mount();
+        });
+
+    </script>
 
 </body>
 <!-- Body Ends-->

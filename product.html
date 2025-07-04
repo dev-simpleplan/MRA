@@ -326,9 +326,7 @@
       height: 100%;
       object-fit: contain;
     }
-    .ball-tabs .tabcontent {
-      margin-top: 40px;
-    }
+    
     .ball-tabs-wrap{
       display: flex;
       flex-direction: column;
@@ -336,11 +334,22 @@
     }
     .ball-tabs {
         margin-top: 100px;
+        position: relative;
     }
     .ball-tab-btn {
         display: flex;
         gap: 46px;
+        padding: 20px 0;
+        margin-bottom: 20px;
+        position: sticky;
+        top: 0px;
+        background-color: #f0ece5;
+        transition: all .3s ease;
     }  
+    .ball-tab-btn.down{
+      top: 146.7px;
+      transition: all .3s ease;
+    }
     .ball-tab-btn a {
         background: none;
         outline: none;
@@ -626,6 +635,9 @@
       .prod-header.scrolled .search-icon svg path, .prod-header.active .search-icon svg path{
         stroke: #fff !important; 
       }
+      .ball-tab-btn.down{
+        top: 62px;
+      }
     }
     @media only screen and (max-width: 1100px) {
       .ball-wrap {
@@ -708,8 +720,10 @@
           .ball-tab-btn {
               gap: 30px;
               row-gap: 15px;
-              flex-wrap: wrap;
+              overflow: hidden;
+              overflow-x: auto;
           }
+          
           .ball-spec-wrap {
               flex-direction: column;
           }
@@ -746,8 +760,11 @@
           .prod-var,.prod-icon-text,.prod-desc,.prod-usp {
               margin-top: 30px;
           }
-          .pu-elem img{
-            height: 26px;
+          .pu-elem img {
+              height: auto;
+              max-width: 30px;
+              max-height: 40px;
+              margin: 0 auto;
           }
           .pu-elem p{
             font-size: 16px;
@@ -2397,6 +2414,58 @@
       });
 
     </script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const links = document.querySelectorAll(".ball-tab-btn a");
+    const tabContainer = document.querySelector(".ball-tab-btn");
+    let lastScrollTop = window.pageYOffset || document.documentElement.scrollTop;
+  
+    // Scroll to anchor with responsive offset
+    links.forEach(link => {
+      link.addEventListener("click", function (e) {
+        e.preventDefault();
+        const targetId = this.getAttribute("href").substring(1);
+        const targetEl = document.getElementById(targetId);
+  
+        if (targetEl) {
+          const rect = targetEl.getBoundingClientRect();
+  
+          // Set offset based on screen width
+          const offset = window.innerWidth > 1200 ? 200 : 120;
+  
+          const offsetTop = rect.top + window.pageYOffset - offset;
+  
+          window.scrollTo({
+            top: offsetTop,
+            behavior: "smooth"
+          });
+        }
+  
+        // Manage active class
+        links.forEach(l => l.classList.remove("active"));
+        this.classList.add("active");
+      });
+    });
+  
+    // Detect scroll direction and toggle 'down' class
+    window.addEventListener("scroll", function () {
+      const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+  
+      if (currentScroll < lastScrollTop) {
+        // Scrolling up
+        tabContainer.classList.add("down");
+      } else {
+        // Scrolling down
+        tabContainer.classList.remove("down");
+      }
+  
+      lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
+    });
+  });
+  </script>
+  
+  
     
 </body>
 <!-- Body Ends-->
